@@ -1,0 +1,88 @@
+footer {
+    background-color: #e09c4c;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    @media (max-width: 992px) {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @media (max-width: 992px) {
+            flex-direction: column;
+            padding: 15px 0;
+        }
+        .column {
+            color: #fff;
+            width: 300px;
+            line-height: 1.4;
+            font-family: 'Proxima-Regular', sans-serif;
+            a {
+                color: #fff;
+                font-family: 'Proxima-Bold', sans-serif;
+            }
+            &:first-child {
+                text-align: left;
+                @media (max-width: 992px) {
+                    text-align: center;
+                }
+            }
+            &:last-child {
+                text-align: right;
+                @media (max-width: 992px) {
+                    text-align: center;
+                }
+            }
+        }
+        .social {
+            display: flex;
+            align-items: center;
+            @media (max-width: 992px) {
+                margin: 15px 0;
+            }
+            a {
+                &:after {
+                    content: "";
+                    color: #f0cea6;
+                    font-size: 16px;
+                    margin-left: 15px;
+                    font-family: 'icomoon';
+                    transition: all 0.35s linear;
+                }
+                &:hover {
+                    &:after {
+                        color: #333b4d;
+                        transition: all 0.35s linear;
+                    }
+                }
+                &.facebook {
+                    &:after {
+                        content: "\e904";
+                    }
+                }
+                &.google {
+                    &:after {
+                        content: "\e905";
+                    }
+                }
+                &.behance {
+                    &:after {
+                        content: "\e901";
+                    }
+                }
+                &.youtube {
+                    &:after {
+                        content: "\e909";
+                    }
+                }
+                &.tweet {
+                    &:after {
+                        content: "\e908";
+                    }
+                }
+            }
+        }
+    }
+}

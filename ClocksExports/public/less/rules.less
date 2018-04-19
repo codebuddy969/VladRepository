@@ -1,0 +1,79 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,300i,400,600,700');
+
+/*  font-family: 'Rubik', sans-serif;   */
+
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?avaqn0');
+    src:  url('../fonts/icomoon.eot?avaqn0#iefix') format('embedded-opentype'),
+          url('../fonts/icomoon.ttf?avaqn0') format('truetype'),
+          url('../fonts/icomoon.woff?avaqn0') format('woff'),
+          url('../fonts/icomoon.svg?avaqn0#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html,body,div,ul,li,p,h1,h2,h3,h4,h5,h6,button,a,input {
+    margin: 0;
+    padding: 0;
+    color: #b8b8b8;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-weight: 400;
+    border: none;
+    outline: none;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Rubik', sans-serif;
+}
+a, button, a:hover, button:hover {
+    transition: all 0.35s linear;
+}
+.container {
+    max-width: 1170px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+
+.generic-button {
+    width: 264px;
+    height: 75px;
+    color: #735700;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 45px;
+    border-radius: 3px;
+    background-color: #ffc400;
+    border: 1px solid transparent;
+    &:after {
+        margin-left: 25px;
+        content: url(../img/icons/arrow.svg);
+    }
+    &:hover {
+        border: 1px solid #ffc400;
+        background-color: #fff;
+    }
+}
+.title {
+    color: #505050;
+    font-size: 35px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+}
+.subtitle {
+    color: #84784f;
+    font-size: 16px;
+    font-weight: 300;
+    max-width: 460px;
+    line-height: 1.6;
+    margin: 15px auto 0;
+    text-align: center;
+    @media (max-width: 992px) {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}

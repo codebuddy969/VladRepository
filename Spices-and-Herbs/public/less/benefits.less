@@ -1,0 +1,70 @@
+.benefits {
+    padding-top: 175px;
+    padding-bottom: 120px;
+    background-position: 9% center;
+    background-repeat: no-repeat;
+    background-image: url(../img/oil-bottles.png);
+    @media (max-width: 1600px) {
+        background-size: 600px;
+    }
+    @media (max-width: 1200px) {
+        background-size: 450px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        background-position: 2% center;
+    }
+    @media (max-width: 992px) {
+        background-image: none;
+    }
+    .info-block {
+        max-width: 730px;
+        margin: 0 0 0 auto;
+        @media (max-width: 1600px) {
+            max-width: 550px;
+        }
+        @media (max-width: 992px) {
+            max-width: 100%;
+        }
+        >.title {
+            margin-bottom: 95px;
+            @media (max-width: 1600px) {
+                margin-bottom: 30px;
+            }
+            @media (max-width: 768px) {
+                text-align: center;
+            }
+        }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            @media (max-width: 576px) {
+                flex-direction: column;
+            }
+            .column {
+                width: 41%;
+                margin-bottom: 75px;
+                @media (max-width: 1600px) {
+                    width: 48%;
+                }
+                @media (max-width: 1200px) {
+                    margin-bottom: 30px;
+                }
+                @media (max-width: 768px) {
+                    width: 100%;
+                    text-align: center;
+                }
+                .title {
+                    font-size: 24px;
+                    font-weight: 700;
+                    text-transform: none;
+                    font-family: 'Roboto', sans-serif;
+                }
+                p {
+                    margin-top: 20px;
+                    line-height: 1.6;
+                }
+            }
+        }
+    }
+}

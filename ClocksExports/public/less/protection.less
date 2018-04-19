@@ -1,0 +1,47 @@
+.protection {
+    display: flex;
+    padding: 140px 85px 130px 50px;
+    box-sizing: border-box;
+    justify-content: space-between;
+    background-color: #fff;
+    @media (max-width: 1200px) {
+        padding: 30px 85px 30px;
+        flex-wrap: wrap;
+    }
+    @media (max-width: 768px) {
+        padding: 30px 15px;
+    }
+    .column {
+        width: 465px;
+        display: flex;
+        justify-content: space-between;
+        @media (max-width: 1200px) {
+            width: 410px;
+            margin: 15px auto;
+        }
+        @media (max-width: 480px) {
+            flex-direction: column;
+        }
+        .icon {
+            @media (max-width: 480px) {
+                margin: 0 auto;
+            }
+        }
+        .info {
+            @media (max-width: 480px) {
+                margin: 0 auto;
+            }
+            h3 {
+                color: #333;
+                font-size: 18px;
+                font-weight: 700;
+                margin-bottom: 10px;
+                text-transform: uppercase;
+            }
+            p {
+                font-size: 16px;
+                line-height: 2.0;
+            }
+        }
+    }
+}

@@ -1,0 +1,135 @@
+@charset "utf-8";
+
+@import "mixins";
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon/icomoon.eot?avaqn0');
+    src:  url('../fonts/icomoon/icomoon.eot?avaqn0#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon/icomoon.ttf?avaqn0') format('truetype'),
+        url('../fonts/icomoon/icomoon.woff?avaqn0') format('woff'),
+        url('../fonts/icomoon/icomoon.svg?avaqn0#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Futura-medium';
+    src: url('../fonts/Futura/Futura-medium/futura-medium.eot');
+    src: url('../fonts/Futura/Futura-medium/futura-medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Futura/Futura-medium/futura-medium.woff2') format('woff2'),
+        url('../fonts/Futura/Futura-medium/futura-medium.woff') format('woff'),
+        url('../fonts/Futura/Futura-medium/futura-medium.ttf')  format('truetype'),
+        url('../fonts/Futura/Futura-medium/futura-medium.svg#svgFontName') format('svg');
+}
+
+@font-face {
+    font-family: 'Futura-m-italic';
+    src: url('../fonts/Futura/Futura-m-italic/futura-m-italic.eot');
+    src: url('../fonts/Futura/Futura-m-italic/futura-m-italic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Futura/Futura-m-italic/futura-m-italic.woff2') format('woff2'),
+        url('../fonts/Futura/Futura-m-italic/futura-m-italic.woff') format('woff'),
+        url('../fonts/Futura/Futura-m-italic/futura-m-italic.ttf')  format('truetype'),
+        url('../fonts/Futura/Futura-m-italic/futura-m-italic.svg#svgFontName') format('svg');
+}
+
+@font-face {
+    font-family: 'Futura-m-cond';
+    src: url('../fonts/Futura/Futura-m-cond/futura-m-cond.eot');
+    src: url('../fonts/Futura/Futura-m-cond/futura-m-cond.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Futura/Futura-m-cond/futura-m-cond.woff2') format('woff2'),
+        url('../fonts/Futura/Futura-m-cond/futura-m-cond.woff') format('woff'),
+        url('../fonts/Futura/Futura-m-cond/futura-m-cond.ttf')  format('truetype'),
+        url('../fonts/Futura/Futura-m-cond/futura-m-cond.svg#svgFontName') format('svg');
+}
+
+html,body,div,ul,li,p,h1,h2,h3,h4,h5,h6,button,a,input,textarea {
+    margin: 0;
+    padding: 0;
+    color: #000;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    font-weight: 400;
+    list-style: none;
+    line-height: 1.0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+a,a:hover, {
+    transition: all 0.35s linear;
+}
+
+::placeholder {
+    font-size: 18px;
+    color: #a4a4a4;
+    font-weight: 300;
+}
+
+::-webkit-input-placeholder {
+    font-size: 18px;
+    color: #a4a4a4;
+    font-weight: 300;
+}
+
+::-moz-placeholder {
+    font-size: 18px;
+    color: #a4a4a4;
+    font-weight: 300;
+}
+
+:-ms-input-placeholder {
+    font-size: 18px;
+    color: #a4a4a4;
+    font-weight: 300;
+}
+
+.container {
+    max-width: 1170px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+
+.title-about {
+    font-size: 48px;
+    color: @black-color;
+    font-family: 'Futura-medium', sans-serif;
+}
+
+p, strong {
+    font-size: 24px;
+    display: block;
+    line-height: 1.0;
+    color: @black-color;
+}
+
+.btn-transparent {
+    width: 262px;
+    height: 66px;
+    display: flex;
+    font-size: 18px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: 1px solid #000;
+    font-family: 'Futura-medium', sans-serif;
+}
+
+.formErrorContent {
+    width: 100%;
+    background: #c6a8a8;
+    position: relative;
+    color: #fff;
+    min-width: 120px;
+    font-size: 11px;
+    border: 2px solid #ddd;
+}

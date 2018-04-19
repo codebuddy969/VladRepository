@@ -1,0 +1,133 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: 'impact';
+  src: url('../fonts/impact/impact.eot');
+  src: url('../fonts/impact/impact.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/impact/impact.woff2') format('woff2'),
+       url('../fonts/impact/impact.woff') format('woff'),
+       url('../fonts/impact/impact.ttf')  format('truetype'),
+       url('../fonts/impact/impact.svg#svgFontName') format('svg');
+}
+
+@font-face {
+  font-family: 'carlito-Bold';
+  src: url('../fonts/Carlito/Bold/carlitobold.eot');
+  src: url('../fonts/Carlito/Bold/carlitobold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Carlito/Bold/carlitobold.woff2') format('woff2'),
+       url('../fonts/Carlito/Bold/carlitobold.woff') format('woff'),
+       url('../fonts/Carlito/Bold/carlitobold.ttf')  format('truetype'),
+       url('../fonts/Carlito/Bold/carlitobold.svg#svgFontName') format('svg');
+}
+
+@font-face {
+  font-family: 'carlito-Regular';
+  src: url('../fonts/Carlito/Regular/carlito.eot');
+  src: url('../fonts/Carlito/Regular/carlito.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Carlito/Regular/carlito.woff2') format('woff2'),
+       url('../fonts/Carlito/Regular/carlito.woff') format('woff'),
+       url('../fonts/Carlito/Regular/carlito.ttf')  format('truetype'),
+       url('../fonts/Carlito/Regular/carlito.svg#svgFontName') format('svg');
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon/icomoon.eot?avaqn0');
+    src:  url('../fonts/icomoon/icomoon.eot?avaqn0#iefix') format('embedded-opentype'),
+          url('../fonts/icomoon/icomoon.ttf?avaqn0') format('truetype'),
+          url('../fonts/icomoon/icomoon.woff?avaqn0') format('woff'),
+          url('../fonts/icomoon/icomoon.svg?avaqn0#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html,body,div,ul,li,p,h1,h2,h3,h4,h5,h6,button,a,input {
+    margin: 0;
+    padding: 0;
+    color: #000;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    font-weight: 400;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'carlito-Regular', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+a,a:hover, {
+    transition: all 0.35s linear;
+}
+//header, main, footer {
+//    width: 1920px;
+//    z-index: 1;
+//    position: relative;
+//}
+.container {
+    max-width: 1565px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+.bck {
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 1920px;
+    height: 6467px;
+    position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(/HOME.jpg);
+}
+.btn {
+    width: 262px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 35px;
+    font-size: 18px;
+    color: #584d0b;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: none;
+    font-family: 'carlito-Bold', sans-serif;
+    background: linear-gradient( 0deg, rgb(252,216,35) 0%, rgb(255,227,49) 50%, rgb(255,245,150) 100%);
+    box-shadow: 0px 0px 73px 0px rgba(247, 211, 29, 0.55);
+    &:hover {
+        color: #fff;
+        background: linear-gradient( 0deg, rgb(60,186,228) 0%, rgb(130,207,201) 100%);
+        box-shadow: 0px 0px 43px 0px rgba(130, 207, 201, 0.73);
+        transition: none;
+    }
+}
+
+.title-light {
+    color: #353535;
+    font-size: 80px;
+    line-height: 1.0;
+    font-family: 'carlito-Bold', sans-serif;
+    @media (max-width: 1200px) {
+        font-size: 50px;
+    }
+}
+
+.title-bold {
+    color: #353535;
+    font-size: 100px;
+    font-family: 'impact', sans-serif;
+    @media (max-width: 1580px) {
+        font-size: 68px;
+    }
+    @media (max-width: 992px) {
+        font-size: 50px;
+    }
+    @media (max-width: 768px) {
+        text-align: center;
+    }
+}

@@ -1,0 +1,158 @@
+.search {
+    padding-top: 80px;
+    @media (max-width: 1200px) {
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 30px;
+    }
+    .row {
+        display: flex;
+        justify-content: space-between;
+        @media (max-width: 768px) {
+            flex-direction: column;
+            text-align: center;
+        }
+        h2 {
+            .title;
+            @media (max-width: 768px) {
+                max-width: 100%;
+                padding-bottom: 15px;
+            }
+        }
+        .dropdowns {
+            display: flex;
+            align-items: center;
+            @media (max-width: 768px) {
+                justify-content: center;
+            }
+            @media (max-width: 600px) {
+                flex-direction: column;
+            }
+            .dropdown {
+                position: relative;
+                width: 170px;
+                input {
+                    font-size: 16px;
+                    width: 100%;
+                    background-color: transparent;
+                }
+                ul {
+                    width: 100%;
+                    top: 26px;
+                    font-size: 16px;
+                    position: absolute;
+                    display: none;
+                    background-color: #fff;
+                    li {
+                        cursor: pointer;
+                        font-size: 16px;
+                        padding: 7px 5px;
+                        &:hover {
+                            color: #fff;
+                            background-color: #333;
+                        }
+                    }
+                    .licolor {
+                        color: #fff;
+                        background-color: #333;
+                    }
+                }
+                &:after {
+                    top: 0;
+                    right: 0;
+                    position: absolute;
+                    content: url('../img/icons/dropdown_arrow.svg');
+                }
+                &:last-child {
+                    margin-left: 95px;
+                    @media (max-width: 1200px) {
+                        margin-left: 25px;
+                    }
+                    @media (max-width: 600px) {
+                        margin-left: 0;
+                        margin-top: 15px;
+                    }
+                }
+                .show {
+                    z-index: 10;
+                    display: block;
+                }
+            }
+        }
+    }
+    .products {
+        margin-top: 60px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        @media (max-width: 1200px) {
+            max-width: 570px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 30px;
+        }
+        .item {
+            width: 264px;
+            margin-bottom: 30px;
+            @media (max-width: 600px) {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .item-image {
+                background-color: #f6f6f6;
+                min-height: 200px;
+                display: flex;
+                width: 100%;
+                align-items: center;
+                justify-content: center;
+            }
+            .item-info {
+                color: #191919;
+                position: relative;
+                padding: 15px 0;
+                .name {
+                    font-size: 16px;
+                }
+                .price {
+                    font-size: 18px;
+                    margin-top: 10px;
+                    font-family: 'Circular-Bold', sans-serif;
+                    span {
+                        color: #bfbfbf;
+                        margin-left: 15px;
+                        text-decoration: line-through;
+                    }
+                }
+                .discount {
+                    top: 0;
+                    right: -10px;
+                    bottom: 0;
+                    height: 15px;
+                    margin: auto;
+                    font-size: 16px;
+                    position: absolute;
+                    -webkit-transform: rotate(90deg);
+                    -moz-transform: rotate(90deg);
+                    -o-transform: rotate(90deg);
+                    -ms-transform: rotate(90deg);
+                    transform: rotate(90deg);
+                }
+            }
+        }
+    }
+    .more-button {
+        width: 165px;
+        color: #191919;
+        font-size: 24px;
+        margin: 0 0 0 auto;
+        display: block;
+        font-family: 'Circular-Bold', sans-serif;
+        &:after {
+            margin-left: 15px;
+            display: inline-block;
+            vertical-align: middle;
+            content: url('../img/icons/arrow.svg');
+        }
+    }
+}

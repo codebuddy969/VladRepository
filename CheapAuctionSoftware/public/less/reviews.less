@@ -1,0 +1,62 @@
+.reviews {
+    padding-top: 80px;
+    padding-bottom: 100px;
+    @media (max-width: 1200px) {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .row {
+        margin-top: 75px;
+        display: flex;
+        justify-content: space-between;
+        @media (max-width: 1200px) {
+            margin-top: 30px;
+        }
+        @media (max-width: 768px) {
+            flex-direction: column;
+        }
+        .column {
+            width: 47%;
+            @media (max-width: 768px) {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            .icon {
+                &:before {
+                    content: "\e90a";
+                    color: #fd892c;
+                    font-size: 42px;
+                    font-family: 'icomoon';
+                }
+            }
+            .author {
+                color: #343434;
+                font-size: 18px;
+                margin-top: 50px;
+                font-family: 'AvertaBold', sans-serif;
+                @media (max-width: 768px) {
+                    margin-top: 20px;
+                }
+                span {
+                    float: right;
+                    font-family: 'AvertaLight', sans-serif;
+                    &:before {
+                        content: "\e904";
+                        font-family: 'icomoon';
+                        margin-right: 15px;
+                    }
+                }
+            }
+            p {
+                color: #aaa;
+                font-size: 16px;
+                margin-top: 20px;
+                line-height: 1.8;
+                font-family: 'AvertaLight', sans-serif;
+                @media (max-width: 768px) {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

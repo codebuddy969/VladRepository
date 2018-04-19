@@ -1,0 +1,104 @@
+.reviews {
+    padding-top: 90px;
+    min-height: 715px;
+    background-color: #fff;
+    @media (max-width: 1200px) {
+        padding-top: 30px;
+    }
+    > h2 {
+        .title
+    }
+    > p {
+        .subtitle
+    }
+    .container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 130px;
+        position: relative;
+        @media (max-width: 1200px) {
+            margin-top: 30px;
+            flex-direction: column;
+        }
+        .review-container {
+            max-width: 400px;
+            text-align: center;
+            padding: 40px 60px;
+            background-color: #fff;
+            position: relative;
+            z-index: 1;
+            left: 0;
+            right: 0;
+            margin: auto;
+            cursor: pointer;
+            transition: all 0.15s linear;
+            box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.06);
+            @media (max-width: 1400px) {
+                max-width: 320px;
+            }
+            @media (max-width: 1200px) {
+                max-width: 80%;
+                position: static;
+                margin-bottom: 25px;
+            }
+            @media (max-width: 768px) {
+                max-width: 90%;
+                padding: 25px 15px;
+            }
+            p {
+                color: #e1e1e1;
+                font-size: 11px;
+                font-weight: 300;
+                font-style: italic;
+                line-height: 1.8;
+                margin-top: 35px;
+                @media (max-width: 1200px) {
+                    font-size: 16px;
+                }
+            }
+            h3 {
+                color: #6f6f6f;
+                font-size: 13px;
+                text-align: center;
+                margin-top: 28px;
+                span {
+                    color: #e1e1e1;
+                    display: block;
+                    font-size: 12px;
+                    margin-top: 3px;
+                }
+            }
+            &:first-child {
+                left: 0;
+                right: auto;
+                @media (max-width: 1400px) {
+                    left: 80px;
+                }
+            }
+            &:last-child {
+                left: auto;
+                right: 0;
+                @media (max-width: 1400px) {
+                    right: 80px;
+                }
+            }
+        }
+        .review-hover {
+            z-index: 2;
+            transform: scale(1.4);
+            @media (max-width: 1200px) {
+                transform: none;
+            }
+            p {
+                color: #b8b8b8;
+            }
+            h3 {
+                color: #333333;
+                span {
+                    color: #9ea0a4;
+                    display: block;
+                }
+            }
+        }
+    }
+}

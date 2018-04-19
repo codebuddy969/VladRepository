@@ -1,0 +1,157 @@
+.benefits {
+    padding-top: 120px;
+    padding-bottom: 115px;
+    @media (max-width: 1200px) {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .subtitle {
+        margin-top: 45px;
+        max-width: 350px;
+        line-height: 1.6;
+        @media (max-width: 1200px) {
+            margin-top: 30px;
+        }
+    }
+    .container {
+        margin-top: 50px;
+        min-height: 650px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url(../img/golden-ring.png);
+        @media (max-width: 1400px) {
+            background-size: 460px;
+        }
+        @media (max-width: 1200px) {
+            margin-top: 0;
+            background-image: none;
+        }
+        @media (max-width: 992px) {
+            min-height: 550px;
+        }
+        @media (max-width: 768px) {
+            flex-direction: column;
+            padding: 0;
+        }
+        .column-container {
+            width: 33%;
+            .column-title {
+                color: #272535;
+                font-size: 45px;
+                margin-top: 40px;
+                font-family: 'Playfair Display', serif;
+                @media (max-width: 1200px) {
+                    margin-top: 15px;
+                }
+                @media (max-width: 992px) {
+                    font-size: 30px;
+                }
+            }
+            .column-info {
+                color: #676671;
+                font-weight: 300;
+                margin-top: 25px;
+                font-size: 18px;
+                max-width: 210px;
+                line-height: 1.3;
+                @media (max-width: 992px) {
+                    max-width: 100%;
+                }
+            }
+            &.left {
+                padding-top: 55px;
+                .column {
+                    padding-bottom: 120px;
+                    &:last-child {
+                        padding-bottom: 0;
+                    }
+                    @media (max-width: 1200px) {
+                        padding-bottom: 60px;
+                    }
+                    @media (max-width: 992px) {
+                        text-align: center;
+                    }
+                    @media (max-width: 768px) {
+                        padding-bottom: 0;
+                        padding-left: 15px;
+                        padding-right: 15px;
+                    }
+                    @media (max-width: 576px) {
+                        margin: 15px auto;
+                    }
+                }
+                @media (max-width: 768px) {
+                    width: 100%;
+                    display: flex;
+                    padding-top: 30px;
+                    padding-bottom: 15px;
+                    align-items: center;
+                    justify-content: center;
+                }
+                @media (max-width: 576px) {
+                    flex-direction: column;
+                }
+            }
+            &.middle {
+                display: flex;
+                align-items: center;
+                text-align: center;
+                justify-content: center;
+                .column-title {
+                    color: #fff;
+                }
+                .column-info {
+                    color: #d4d3d8;
+                    max-width: 220px;
+                    margin: 30px auto 0;
+                }
+                @media (max-width: 1200px) {
+                    background-color: #211e35;
+                }
+                @media (max-width: 768px) {
+                    width: 100%;
+                    padding-top: 30px;
+                    padding-bottom: 30px;
+                }
+            }
+            &.right {
+                padding-top: 55px;
+                .column {
+                    margin: 0 0 0 auto;
+                    max-width: 340px;
+                    padding-bottom: 120px;
+                    &:last-child {
+                        padding-bottom: 0;
+                    }
+                    @media (max-width: 1200px) {
+                        padding: 0 15px 60px 15px;
+                    }
+                    @media (max-width: 992px) {
+                        text-align: center;
+                    }
+                    @media (max-width: 768px) {
+                        padding-bottom: 0;
+                        padding-left: 15px;
+                        padding-right: 15px;
+                    }
+                    @media (max-width: 576px) {
+                        margin: 15px auto;
+                    }
+                }
+                @media (max-width: 768px) {
+                    width: 100%;
+                    display: flex;
+                    padding-top: 15px;
+                    align-items: center;
+                    justify-content: center;
+                }
+                @media (max-width: 576px) {
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+}

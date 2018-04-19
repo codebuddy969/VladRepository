@@ -1,0 +1,897 @@
+@charset "utf-8";
+
+/*------------------------------------------------------------------ Font Face */
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700');
+
+/*------------------------------------------------------------------ General Css */
+
+body {
+    background-color: rgb(234, 238, 242);
+}
+html,body,ul,h1,h2,h3,h4,h5,h6,p {
+    margin: 0;
+    padding: 0;
+}
+ol, ul {
+	list-style: none;
+}
+textarea:focus, input:focus{
+    outline: 0;
+}
+a {
+    color: inherit;
+    font-weight: inherit; 
+    transition: all 0.35s linear;
+    text-decoration: none !important;
+}
+li {
+    transition: all 0.35s linear;
+}
+a:hover,li:hover {
+    transition: all 0.35s linear;
+}
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+section {
+    margin: 0 auto;
+    max-width: 1300px;
+    background-color: rgb(234, 238, 242);
+}
+
+/*------ Modification of Select Element --------*/
+
+.select {
+    width: 100%;
+}
+.select select::-ms-expand {
+    display: none;
+}
+.select select {
+    width: 100%;
+    height: 48px;
+    outline: none;
+    cursor: pointer;
+    appearance: none;
+    font-weight: 600;
+    padding: 0 0 0 15px;
+    color: rgb(18, 42, 55);
+    -webkit-appearance: none;
+    border: 1px solid rgb(210, 213, 217);
+    font-family: 'Montserrat', sans-serif;
+}
+@-moz-document url-prefix() {
+    .select{
+        overflow: hidden;
+        border-radius: 4px; 
+        position: relative; 
+        border: 1px solid #CCC; 
+    }
+    .select select { 
+        width: 110% !important;  
+        border: none !important;
+        background-position: right 30px center !important; 
+    }
+}
+.select_arrow {
+    top: 20px;
+    width: 0;
+	height: 0;
+    right: 15px;
+    margin: auto;
+    cursor: pointer;
+    position: absolute;
+	border-left: 7px solid transparent;
+	border-right: 7px solid transparent;
+	border-top: 8px solid rgb(148, 160, 167);
+}
+
+/*------------------------------------------------------------------ Classes used for JQuery  */
+
+.expanded {
+    height: 52px !important;
+    z-index: 5;
+}
+.blue_background {
+    transition: none;
+    background-color: rgb(52, 152, 219) !important; 
+}
+.select_background {
+    transition: none;
+    color: rgb(255, 255, 255) !important; 
+    background-color: rgb(52, 152, 219) !important; 
+}
+.radio_active,
+.checkbox_active {
+    position: relative;
+    border: 2px solid rgb(18, 42, 55) !important; 
+}
+.radio_active span {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 16px;
+    height: 16px;
+    margin: auto;
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgb(18, 42, 55); 
+}
+.checkbox_active span {
+    right: 0;
+    top: 0;
+    left: 0;
+    width: 12px;
+    height: 20px;
+    margin: auto;
+    position: absolute;
+    transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    border-right: 3px solid rgb(18, 42, 55);
+    border-bottom: 3px solid rgb(18, 42, 55);
+}
+.form_question_dark {
+    background-color: rgb(18, 42, 55) !important; 
+}
+.display {
+    display: block !important; 
+}
+.hidden {
+    display: none!important;
+}
+/*------------------------------------------------------------------ Css Code */
+
+.form_container {
+    z-index: 1;
+    opacity: 1;
+    width: 100%;
+    line-height: 1;
+    font-size: 14px;
+    font-weight: 400;
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*---------------------- Code Responsible for Sidebar Style ----------------------*/
+
+.sidebar {
+    top: 160px;
+    position: fixed;
+    width: 272px;
+    z-index: 15;
+    vertical-align: top;
+    display: inline-block;
+    background-color: rgb(33, 42, 50);
+}
+.sidebar ul {
+    width: 100%;
+}
+.sidebar a {
+    width: 100%;
+    cursor: pointer;
+    padding: 19px 0;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    display: inline-block;
+    color: rgb(237, 237, 237);
+    background-color: rgb(33, 42, 50);
+}
+.sidebar a:hover {
+    background-color: rgb(52, 152, 219);
+}
+.sidebar a:hover .sidebar_icon {
+    transition: none;
+    background-color: transparent;
+}
+.sidebar span {
+    display: inline-block;
+    vertical-align: middle;
+}
+.sidebar_icon {
+    width: 34px;
+    height: 34px;
+    position: relative;
+    text-align: center;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 10px 0 23px;
+    vertical-align: middle;
+    transition: none;
+    background-color: rgba(0, 0, 0, 0.122);
+}
+.sidebar_icon img {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    position: absolute;
+}
+.sidebar_text {
+    width: 72%;
+}
+
+/*---------------------- Code Responsible for Content Block ----------------------*/
+
+.content_container {
+    left: 0;
+    width: 586px;
+    margin: 160px 0 0 384px;
+    display: inline-block;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+.content {
+    padding: 0 0 103px 0;
+}
+.form_block {
+    padding: 0 0 0 15px;
+}
+.form_title {
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(61, 72, 77);
+}
+.form_row {
+    margin: 32px 0;
+    min-height: 42px;
+    position: relative;
+}
+.text_row {
+    padding: 13px 0 !important;
+}
+.text_row .question_block {
+    margin: -2px 0 0 0;
+}
+.text_row .text_content {
+    width: 322px;
+}
+.text_row .text_content_small {
+    width: 212px;
+}
+.text_row .big_left,
+.text_row .extrasmall_right {
+    display: inline-block !important;
+    vertical-align: middle !important;
+}
+.text_row .extrasmall_right {
+    margin: 0 13px 0 0;
+}
+.form_row > div {
+    font-weight: 500;
+    display: inline-block;
+    color: rgb(18, 42, 55);
+    vertical-align: middle;
+}
+.row_label {
+    width: 205px;
+    line-height: 16px;
+}
+.row_label_top {
+    vertical-align: top !important;
+}
+.row_label code {
+    color: inherit;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+}
+.remove {
+    display: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+.remove:hover {
+    text-decoration: underline;
+}
+.input_block {
+    width: 323px;
+    position: relative;
+}
+.input_block_100 {
+    width: 100%;
+    position: relative;
+}
+.form_input {
+    width: 100%;
+    height: 50px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 1px;
+    padding: 0 13px;
+    letter-spacing: 0.45px;
+    color: rgb( 18,42,55 );
+    border: 1px solid rgb(210, 213, 217);
+    background-color: rgb(249, 249, 249);
+    font-family: 'Montserrat', sans-serif;
+}
+.question_block {
+    float: right;
+    margin: 12px 0 0 0;
+}
+.form_question {
+    width: 21px;
+    height: 21px;
+    cursor: help;
+    display: block;
+    font-size: 16px;
+    padding: 3px 0 0 0;
+    border-radius: 50%;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background-color: rgb(148, 160, 167);
+}
+.help_block {
+    top: -15px;
+    width: 272px;
+    right: -304px;
+    padding: 20px 0;
+    position: absolute;
+    border-left: 1px solid rgb(170, 180, 186);
+}
+.form_row .help_block,
+.help_block_close,
+.help_block hr {
+    display: none;
+}
+.help_block p {
+    font-size: 12px;
+    line-height: 18px;
+    padding: 0 0 0 22px;
+}
+.help_block strong {
+    display: block;
+    margin: 10px 0 5px;
+}
+.help_block a {
+    font-weight: 700;
+    text-decoration: underline !important;
+}
+.help_block_close {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin: 15px auto 0;
+    transform: rotate(225deg);
+    -o-transform: rotate(225deg);
+    -ms-transform: rotate(225deg);
+    -moz-transform: rotate(225deg);
+    -webkit-transform: rotate(225deg);
+    border-right: 2px solid rgb(170, 180, 186);
+    border-bottom: 2px solid rgb(170, 180, 186);
+}
+.help_block:before {
+    right: 0;
+    top: 24px;
+    left: -14px;
+    content: "";
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    background-color: rgb(234, 238, 242);
+    border-right: 1px solid rgb(170, 180, 186);
+    border-bottom: 1px solid rgb(170, 180, 186);
+}
+.small_left,
+.small_right {
+    width: 151px;
+    position: relative;
+}
+.small_left {
+    margin: 0 15px 0 0;
+}
+.address,
+.change {
+    vertical-align: middle;
+    display: inline-block;
+}
+.address {
+    width: 220px;
+    padding: 0 0 0 16px;
+}
+.change span {
+    cursor: pointer;
+    color: rgb(52, 152, 219);
+}
+.text_content .input_block {
+    display: none;
+}
+.big_left {
+    width: 212px;
+}
+.extrasmall_right {
+    width: 92px;
+    margin: 0 0 0 15px;
+}
+
+/*---------------------- Versicherungsnehmer ----------------------*/
+
+.content_2 {
+    padding: 0 0 144px 0;
+    position: relative;
+}
+.insured_block .form_row {
+    margin: 31px 0;
+}
+.insured_block .row_label {
+    width: 315px;
+    padding: 0 77px 0 0;
+}
+.insured_block .input_block {
+    width: 212px;
+}
+.ui-datepicker {
+    width: 212px !important;
+}
+.ui-widget-header {
+    background: rgb(206, 235, 255) !important;
+}
+.form_date,
+.form_date {
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: 96% center;
+    background-image: url(../img/icons/calendar-icon.svg);
+}
+.select_212px,
+.input_212px {
+    width: 212px;
+    position: relative;
+}
+.insured_block .text_row {
+    margin: 30px 0;
+}
+.status {
+    width: 151px;
+    display: inline-block;
+}
+.insured_block .radio_block {
+    width: 96px;
+}
+.radio_block {
+    width: 155px;
+    cursor: pointer;
+}
+.radio_option,
+.radio_circle {
+    display: inline-block;
+    vertical-align: middle;
+}
+.radio_circle {
+    width: 30px;
+    height: 30px;
+    margin: 0 6px 0 0;
+    border-radius: 50%;
+    border: 2px solid rgb(210, 213, 217);
+    background-color: rgb(255, 255, 255);
+}
+
+/*---------------------- Angaben zu Ihrem neuen Fahrzeug ----------------------*/
+
+.content_3 {
+    padding: 0 0 141px 0;
+}
+.auto_block .form_row {
+    margin: 31px 0;    
+}
+.input_152px {
+    width: 152px;
+    position: relative;
+}
+.input_152px input {
+    font-weight: 500;
+    text-align: right;
+    padding: 4px 48px 0 13px;
+}
+.input_152px:after {
+    top: 20px;
+    right: 20px;
+    content: 'km';
+    position: absolute;
+    color: rgb(141, 148, 142);
+}
+.select_block {
+    width: 321px;
+    position: relative;
+    background-color: transparent;
+}
+.auto_block .help_block {
+    top: -23px;
+    padding: 0 0 14px 0;
+}
+.auto_block .help_block:before {
+    top: 34px;
+}
+
+/*---------------------- Vorversicherung & Schäden ----------------------*/
+
+.insurance_block .row_label {
+    line-height: 18px;
+}
+.insurance_block .radio_block {
+    margin: -7px 0 0 0;
+}
+.insurance_block .form_row {
+    margin: 30px 0;
+}
+.insurance_block .form_row_spec {
+    margin: 38px 0 34px;
+}
+.insurance_block .form_row_spec .question_block {
+    margin: 6px 0 0 0;
+}
+.insurance_block .form_row_spec .help_block:before {
+    top: 19px;
+}
+.insurance_block .form_row_spec2 {
+    margin: 27px 0;
+}
+.insurance_block .form_row_spec3 {
+    margin: 7px 0;
+    cursor: pointer;
+}
+.insurance_block .form_row_spec2 .question_block {
+    margin: -3px 0 0 0;
+}
+.insurance_block .form_row_spec3 .question_block {
+    margin: 0 0 0 0;
+}
+.insurance_block .form_row_spec2 .help_block:before {
+    top: 10px;
+}
+.insurance_block .form_row_spec3 .help_block:before {
+    top: 13px;
+}
+.insurance_block .form_row_spec4 {
+    margin: 10px 0;
+}
+.insurance_block .form_row_spec4 .link {
+    float: right;
+    cursor: pointer;
+    margin: 0 40px 0 0;
+    color: rgb(52, 152, 219);
+}
+.insurance_block .form_wrapper {
+    width: 56%;
+}
+.insurance_block .form_wrapper .radio_block {
+    margin: 0 0 12px;
+}
+.checkbox_quad,
+.checkbox_option {
+    display: inline-block;
+    vertical-align: middle;
+}
+.checkbox_quad {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin: 0 12px 0 0;
+    border: 2px solid rgb(210, 213, 217);
+    background-color: rgb(255, 255, 255);
+}
+
+/*--------------------------- Rabatte ---------------------------*/
+
+.content_5 {
+    padding: 0 0 160px 0;
+}
+.discounts_block .form_row {
+    margin: 31px 0;
+}
+.discounts_block .form_row_spec1 {
+    margin: 42px 0 0;
+}
+.discounts_block .form_row_spec2 {
+    margin: 38px 0 0;
+}
+.discounts_block .form_row_spec3 {
+    margin: 31px 0;
+}
+.discounts_block .form_row_spec4 {
+    margin: 40px 0 0;
+}
+.discounts_block .form_row_spec5 {
+    margin: 26px 0;
+}
+.discounts_block .form_row_spec6 {
+    margin: 32px 0 41px;
+}
+.discounts_block .form_row_spec7 {
+    margin: 32px 0 38px;
+}
+/*  Question block  */
+
+.discounts_block .form_row_spec1 .question_block,
+.discounts_block .form_row_spec2 .question_block {
+    margin: 2px 0 0 0;
+}
+.discounts_block .form_row_spec4 .question_block {
+    margin: 5px 0 0 0;
+}
+.discounts_block .form_row_spec7 .question_block {
+    margin: 2px 0 0 0;
+}
+/*  Help block  */
+
+.discounts_block .form_row_spec1 .help_block:before,
+.discounts_block .form_row_spec2 .help_block:before {
+    top: 13px;
+}
+.discounts_block .form_row_spec4 .help_block:before {
+    top: 16px;
+}
+.discounts_block .form_row_spec5 .help_block:before {
+    top: 24px;
+}
+.discounts_block .form_row_spec7 .help_block:before {
+    top: 14px;
+}
+
+/*---------------------- Optionale Leistungen ----------------------*/
+
+.content_6 {
+    padding: 0 0 214px 0;
+}
+.price {
+    width: 101px;
+    text-align: right;
+    line-height: 18px;
+}
+.services_block input {
+    font-weight: 500;
+    color: rgb(141, 148, 152);
+}
+.services_block .checkbox_quad {
+    margin: 0 22px 0 0;
+}
+
+/*  -------------------------  */
+
+.services_block .form_row {
+    cursor: pointer;
+}
+.services_block .form_row_spec2 {
+    margin: 43px 0 0;        
+}
+.services_block .form_row_spec2 .row_label {
+    width: 420px;
+}
+.services_block .form_row_spec2 strong,
+.services_block .form_row_spec4 strong {
+    display: block;
+}
+.services_block .form_row_spec2 .question_block,
+.services_block .form_row_spec4 .question_block {
+    margin: 5px 0 0 0;
+}
+.services_block .form_row_spec2 .help_block:before,
+.services_block .form_row_spec4 .help_block:before {
+    top: 17px;
+}
+
+/*  ----------------------------------------  */
+
+.services_block .form_row_spec3 .row_label {
+    width: 530px;
+}
+.services_block .form_row_spec3 .row_label {
+    width: 530px;
+}
+.services_block .form_row_spec3 span {
+    line-height: 18px;
+}
+.services_block .form_row_spec3 .checkbox_option {
+    width: 83%;
+}
+.services_block .form_row_spec3 h5 {
+    font-weight: 400;
+    margin: 12px 0 6px 55px;
+    color: rgb(18, 42, 55);
+}
+.services_block .form_row_spec3 .input_block {
+    margin: 0 0 0 55px;
+}
+
+/*  ----------------------------------------  */
+
+.services_block .form_row_spec4 {
+    margin: 34px 0 0;        
+}
+.services_block .form_row_spec4 .row_label {
+    width: 420px;
+}
+
+/*--------------- Ihre Bankverbindung zum Lastschriftverfahren ---------------*/
+
+.content_7 {
+    padding: 0 0 50px 0;
+}
+.banking_block .radio_block {
+    width: 320px;
+}
+
+/*  ------------------------  */
+
+.banking_block .form_row_spec1 {
+    margin: 42px 0 0;
+}
+.banking_block .form_row_spec2 {
+    margin: 7px 0 0;
+}
+.banking_block .form_row_spec3 {
+    margin: 18px 0 0;
+}
+.banking_block .form_row_spec4 {
+    margin: 29px 0 0;
+}
+
+/*  ----------------------------------------  */
+
+.banking_block .form_row_spec1 .question_block {
+    margin: 0 0 0 0;
+}
+.banking_block .form_row_spec1 .help_block:before {
+    top: 12px;
+}
+
+.banking_block .form_row_spec4 .row_label {
+    font-size: 12px;
+    width: 530px;
+    font-weight: 400;
+}
+.banking_block .form_row_spec4 .checkbox_quad {
+    margin: 0 19px 0 0;
+}
+.banking_block .form_row_spec4 .checkbox_option {
+    width: 88%;
+}
+
+/*--------------- Weiter und zur Antrags-Übersichtsseite ---------------*/
+
+.content_button p {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+}
+.dark_button {
+    width: 294px;
+    display: block;
+    padding: 14px 0;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 16px;
+    margin: 26px auto;
+    border-radius: 3px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background-color: rgb(22, 50, 64);
+    border: 1px solid rgb(210, 213, 217);
+}
+.dark_button:hover {
+    background-color: rgb(17, 38, 49);
+}
+.dark_button span {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/*------------------------------------------------------------------ Burger Icon */
+
+.burger {
+    top: 20px;
+    left: 20px;
+    z-index: 4;
+    padding: 15px;
+    display: none;
+    position: fixed;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: rgb(33, 42, 50);
+    -webkit-box-shadow: 0px 0px 0px 5px rgba(0,0,0,0.08);
+    -moz-box-shadow: 0px 0px 0px 5px rgba(0,0,0,0.08);
+    box-shadow: 0px 0px 0px 5px rgba(0,0,0,0.08);
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+.content_container.move {
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    left: 272px !important;
+}
+.burger.move {
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    left: 302px !important;
+}
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    margin: 6px 0;
+    transition: 0.4s;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+}
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+.change .bar2 {opacity: 0;}
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -7px) ;
+    transform: rotate(45deg) translate(-8px, -7px) ;
+}
+
+/*------------------------------------------------------------------ Input Form Style */
+
+.sort_data,
+.input_results,
+.input_results_norm {
+    display: none;
+    font-size: 12px;
+    -webkit-box-shadow: 0px 15px 28px -13px rgba(0,0,0,0.46);
+    -moz-box-shadow: 0px 15px 28px -13px rgba(0,0,0,0.46);
+    box-shadow: 0px 15px 28px -13px rgba(0,0,0,0.46);
+}
+.sort_data li,
+.input_results li,
+.input_results_norm li {
+    cursor: pointer;
+    padding: 15px 15px;
+    border: 1px solid rgb(237, 237, 237);
+    background-color: rgb(249, 249, 249);
+}
+.input_results_norm {
+    top: 48px;
+    width: 100%;
+    position: absolute;
+}
+.sort_data li:hover,
+.input_results li:hover,
+.input_results_norm li:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb( 18,42,55 );
+}
+.numb {
+    display: none;
+}
+.data_result {
+    width: 100%;
+    max-height: 300px;
+    overflow: auto;
+    position: absolute;
+}
+.shadow {
+    -webkit-box-shadow: 0px 15px 28px -13px rgba(0,0,0,0.46);
+    -moz-box-shadow: 0px 15px 28px -13px rgba(0,0,0,0.46);
+    box-shadow: 0px 15px 28px -13px rgba(0,0,0,0.46);
+}
+.z_index {
+    z-index: 10;
+}
+.focus {
+    color: rgb(255, 255, 255) !important;
+    background-color: rgb( 18,42,55 ) !important;
+}

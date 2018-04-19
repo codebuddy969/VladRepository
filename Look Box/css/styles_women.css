@@ -1,0 +1,709 @@
+@charset "utf8";
+
+/*  font-family: 'Open Sans', sans-serif;    */
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
+
+@font-face{
+  font-family: 'gilroy_extralight2';
+  src: url('../fonts/GilroyL/GilroyL.eot');
+  src: local('GilroyL'), local('GilroyL'),
+       url('../fonts/GilroyL/GilroyL.woff') format('woff'),
+       url('../fonts/GilroyL/GilroyL.ttf') format('truetype'),
+       url('../fonts/GilroyL/GilroyL.svg#Roboto') format('svg');
+}
+@font-face{
+  font-family: 'gilroy_extrabold2';
+  src: url('../fonts/GilroyE/GilroyE.eot');
+  src: local('GilroyE'), local('GilroyE'),
+       url('../fonts/GilroyE/GilroyE.woff') format('woff'),
+       url('../fonts/GilroyE/GilroyE.ttf') format('truetype'),
+       url('../fonts/GilroyE/GilroyE.svg#Roboto') format('svg');
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-weight: 300;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.top_photo {
+    width: 100%;
+    height: 600px;
+}
+.top_photo_image {
+    width: 100%;
+    height: 600px;
+    text-align: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+.top_photo_image img {
+    margin: 151px auto 0 auto;
+}
+.top_photo_image1 {
+    background-image: url(../img/women-smiling.jpg),
+    linear-gradient(to top, rgba(0, 0, 0, 0.7), #ffffff 50%);
+}
+.top_photo_image2 {
+    background-image: url(../img/women-smiling.jpg),
+    linear-gradient(to top, rgba(0, 0, 0, 0.7), #ffffff 50%);
+}
+.top_photo_image span:nth-of-type(1) {
+    display: inline-block;
+    padding: 12px 19px 12px 17px;
+    font-family: 'gilroy_extrabold2';
+    font-size: 24px;
+    line-height: 1.04;
+    letter-spacing: 1.2px;
+    text-align: center;
+    color: #535353;
+    border-radius: 4px;
+    margin-top: 28px;
+    background-color: #ffffff;
+    text-transform: uppercase;
+}
+.top_photo_image span:nth-of-type(2) {
+    display: block;
+    margin: 64px auto 0 auto;
+    width: 418px;
+    font-family: 'Open Sans', sans-serif; 
+    font-size: 16px;
+    line-height: 1.56;
+    text-align: center;
+    color: #ffffff;
+}
+.top_photo_image a:nth-child(4) {
+    display: inline-block;
+    font-family: 'gilroy_extralight2';
+    font-size: 18px;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 26px;
+    border-radius: 4px;
+    padding: 17px 35px 16px 34px;
+    background-color: #c14867;
+    text-transform: uppercase;
+    transition: all 0.35s linear;
+}
+.top_photo_image a:nth-child(4):hover {
+    background-color: #a22f4d;
+    transition: all 0.35s linear;
+}
+
+/************************************************************************* CAROUSEL */
+
+.slick-dots {
+    bottom: 30px;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
+.slick-slide {
+    position: relative;
+    height: 600px !important;
+}
+.slick-dots li {
+    width: 10px;
+    height: 10px;
+    margin: 0 6px 0 6px;
+    display: inline-block;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #4f536a;
+}
+.slick-active {
+    background-color: #fff !important;
+}
+.slick-dots button {
+    display: none;
+}
+
+/************************************************************************************************* ------- */
+
+.grey_block {
+    width: 100%;
+    height: 400px;
+    text-align: right;
+    background-color: #3a3a3c;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100% bottom;
+    background-image: url(../img/women-in-glasses-smiling.jpg);
+}
+.grey_block span:nth-child(1) {
+    display: block;
+    text-align: center;
+    font-family: 'gilroy_extralight2';
+    font-size: 36px;
+    padding-top: 65px;
+    margin: 0 auto 0 auto;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+.grey_block span:nth-child(2) {
+    display: inline-block;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+    margin-top: 108px;
+    color: #ffffff;
+    text-align: center;
+    padding-right: 115px;
+    text-transform: uppercase;
+}
+
+.clothes span, 
+.furniture span, 
+.white_suit span, 
+.wall span {
+    font-weight: 300;
+}
+
+.clothes:before,
+.furniture:before,
+.white_suit:before,
+.wall:before {
+    content: "";
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+.clothes {
+    width: 100%;
+    height: 400px;
+    background-color: #3a3a3c;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: left;
+    background-position: 100% center;
+    background-image: url(../img/clothes-on-white-wood.jpg); 
+}
+.clothes span {
+    display: inline-block;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    color: #535353;
+    line-height: 1.25;
+    text-align: center;
+    color: #535353;
+    padding-left: 146px;
+    vertical-align: middle;
+}
+.furniture {
+    width: 100%;
+    height: 400px;
+    background-color: #3a3a3c;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: right;
+    background-position: 20% 35%;
+    background-image: url(../img/clothes-in-carton-box.jpg),
+             linear-gradient(to left, rgba(0, 0, 0, 0.4), #ffffff 50%);
+    background-blend-mode: overlay;
+}
+.furniture span {
+    display: inline-block;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    margin-right: 127px;
+    text-align: center;
+    color: #ffffff;
+    vertical-align: middle;
+}
+.white_suit {
+    width: 100%;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: left;
+    background-position: 10% 35%;
+    background-image: url(../img/girl-on-the-beach-smiling.jpg);
+}
+.white_suit span {
+    display: inline-block;
+    text-align: center;
+    padding-left: 118px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    text-align: center; 
+    line-height: 1.25;
+    text-align: center;
+    color: #ffffff;
+    vertical-align: middle;
+}
+.wall {
+    width: 100%;
+    height: 400px;
+    background-color: #3a3a3c;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: right;
+    background-position: 0% 70%;
+    background-image: url(../img/women-typing-on-notebook.jpg),
+        linear-gradient(to left, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0) 50%);
+    background-blend-mode: screen; 
+}
+.wall span {
+    display: inline-block;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    padding-right: 131px;
+    text-align: center;
+    line-height: 1.25;
+    color: #535353;
+    vertical-align: middle;
+}
+
+/************************************************************************************************* ------- */
+
+.anqetue {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 0 auto;
+}
+.anqetue span:nth-child(1) {
+    display: block;
+    font-family: 'gilroy_extralight2';
+    font-size: 36px;
+    font-weight: 300;
+    text-align: center;
+    color: #535353;
+    margin: 65px 0 54px 0;
+    text-transform: uppercase;
+}
+.anqetue img {
+    float: right;
+    width: 600px;
+    height: 600px;
+    background-image: linear-gradient(to left, rgba(131, 131, 131, 0.3), rgba(131, 131, 131, 0.3) 50%);
+    background-blend-mode:saturation;  
+}
+.anqetue span:nth-of-type(2) {
+    display: inline-block;
+    width: 350px;
+    position: relative;
+    margin: 108px 0 0 107px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    text-align: left;
+    color: #535353;    
+}
+
+.anqetue span:nth-of-type(2):before {
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    z-index: -1;
+    content: url(../img/double-arrow.png);
+}
+.anqetue span:nth-of-type(2):after {
+    position: absolute;
+    right: -40px;
+    bottom: -30px;
+    z-index: -1;
+    content: url(../img/double-arrow.png);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+.anqetue a:nth-child(4) {
+    display: inline-block;
+    font-family: 'gilroy_extralight2';
+    font-size: 18px;
+    text-align: center;
+    color: #ffffff;
+    margin: 100px 0 0 107px;
+    border-radius: 4px;
+    padding: 17px 35px 16px 34px;
+    background-color: #c14867;
+    text-transform: uppercase;
+    transition: all 0.35s linear;
+}
+.anqetue a:nth-child(4):hover {
+    background-color: #a22f4d;
+    transition: all 0.35s linear;
+}
+
+
+/************************************************************************************************* ------- */
+
+.results > span {
+    display: block;
+    font-family: 'gilroy_extralight2';
+    font-size: 36px;
+    font-weight: 300;
+    text-align: center;
+    color: #535353;
+    padding: 119px 0 79px 0;
+    text-transform: uppercase;
+    clear: both;
+}
+
+.results div {
+    width: 100%;
+    display: block;
+    min-height: 338px;
+}
+.results div div {
+    width: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.results div span {
+    width: 350px;
+    display: inline-block;
+    vertical-align: top;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #000000;
+    vertical-align: middle;
+}
+
+.results div:nth-of-type(2),
+.results div:nth-of-type(4),
+.results div:nth-of-type(6) {
+    text-align: right;
+}
+.results div:nth-of-type(1) span,
+.results div:nth-of-type(3) span,
+.results div:nth-of-type(5) span {
+    padding-left: 139px;
+}
+.results div:nth-of-type(2) span,
+.results div:nth-of-type(4) span,
+.results div:nth-of-type(6) span {
+    text-align: right;
+    padding-right: 139px;
+}
+.results div:nth-of-type(1) div {;
+    background-image: url(../img/girl-on-stairs.jpg),
+        linear-gradient(to left, rgba(131, 131, 131, 0.3), rgba(131, 131, 131, 0.3) 50%);
+    background-blend-mode:saturation;
+}
+.results div:nth-of-type(2) div {
+    background-image: url(../img/child-kiss-mother.jpg),
+        linear-gradient(to left, rgba(131, 131, 131, 0.3), rgba(131, 131, 131, 0.3) 50%);
+    background-blend-mode:saturation;    
+}
+.results div:nth-of-type(3) div {
+    background-image: url(../img/women-hat.jpg),
+        linear-gradient(to left, rgba(131, 131, 131, 0.3), rgba(131, 131, 131, 0.3) 50%);
+    background-blend-mode:saturation;    
+}
+.results div:nth-of-type(4) div {
+    background-image: url(../img/women-look-back-smiling.jpg),
+        linear-gradient(to left, rgba(131, 131, 131, 0.3), rgba(131, 131, 131, 0.3) 50%);
+    background-blend-mode:saturation;    
+}
+.results div:nth-of-type(5) div {
+    background-image: url(../img/business-people.jpg),
+        linear-gradient(to left, rgba(131, 131, 131, 0.3), rgba(131, 131, 131, 0.3) 50%);
+    background-blend-mode:saturation;    
+}
+.results div:nth-of-type(6) div {
+    background-image: url(../img/business-meeting.jpg),
+        linear-gradient(to left, rgba(131, 131, 131, 0.3), rgba(131, 131, 131, 0.3) 50%);
+    background-blend-mode:saturation;    
+}
+
+/************************************************************************************************* ------- */
+
+.prices {
+    width: 100%;
+    background-color: #f8f8f8;
+}
+.prices > span:nth-of-type(1) {
+    display: block;
+    font-family: 'gilroy_extralight2';
+    font-size: 36px;
+    font-weight: 300;
+    line-height: 1.11;
+    text-align: center;
+    padding-top: 76px;
+    color: #535353;
+    text-transform: uppercase;
+}
+.prices > span:nth-of-type(2),
+.prices > span:nth-of-type(3) {
+    display: block;
+    padding-top: 30px;
+    font-family: 'gilroy_extrabold2';
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 1.5;
+    text-align: center;
+    color: #535353;
+    text-transform: uppercase;
+}
+.prices_container {
+    text-align: center;
+}
+.prices_box {
+    margin: 0 25px 60px 25px;
+    text-align: center;
+    display: inline-block;
+}
+.prices_container .prices_box div:nth-of-type(1) {
+    width: 316px;
+    height: 240px;
+    position: relative;
+    overflow: hidden;
+}
+.prices_container .prices_box:nth-child(2) div:nth-of-type(1) {
+    background-position: center 55%;
+    background-size: 180%;
+    background-repeat: no-repeat;
+    background-image: url(../img/clothes1.jpg);
+}
+.prices_container .prices_box:nth-child(3) div:nth-of-type(1) {
+    background-position: center 70%;
+    background-size: 180%;
+    background-repeat: no-repeat;
+    background-image: url(../img/clothes2.jpg);
+}
+.prices_container .prices_box:nth-child(4) div:nth-of-type(1) {
+    background-position: center 60%;
+    background-size: 160%;
+    background-repeat: no-repeat;
+    background-image: url(../img/clothes3.jpg);
+}
+.prices_common {
+    display: block;
+}
+.prices_common div {
+    display: inline-block;
+    width: 316px;
+    margin: 45px 25px 44px 25px;
+}
+.prices_common div > span {
+    display: inline-block;
+    font-family: 'gilroy_extralight2';
+    font-size: 16px;
+    font-weight: 300;
+    color: #000000;
+    padding: 8px 14px 8px 14px;
+    border-radius: 16px;
+    background-color: #ffffff;
+}
+.prices_common div:nth-child(1) {
+    text-align: right; 
+}
+.prices_common div:nth-child(2)  {
+    text-align: center; 
+}
+.prices_common div:nth-child(3) {
+    text-align: left; 
+}
+
+/* White Block Overlapping Main Image */
+
+.prices_box div:nth-of-type(2) {
+    width: 260px;
+    padding: 62px 10px 18px 10px;
+    border-radius: 4px;
+    box-shadow: 2.1px 4.5px 10px 0 rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    margin: -150px auto 0 auto;
+    background-color: #fff;
+}
+.prices_box div:nth-of-type(2) span {
+    display: block;    
+}
+.prices_box div:nth-of-type(2) span:nth-child(1) {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    color: #535353;
+    text-transform: uppercase;
+}
+.prices_box div:nth-of-type(2) span:nth-child(2) {
+  font-family: 'gilroy_extrabold2';
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 0.95;
+  text-align: center;
+  color: #c14867;
+  margin-top: 45px;
+}
+.prices_box div:nth-of-type(2) a:nth-child(3) {
+    display: inline-block;
+    font-family: 'gilroy_extralight2';
+    font-size: 16px;
+    text-align: center;
+    color: #ffffff;
+    margin: 29px 0 0 0;
+    border-radius: 4px;
+    padding: 10px 50px 10px 50px;
+    background-color: #c14867;
+    transition: all 0.35s linear;
+}
+.prices_box div:nth-of-type(2) a:nth-child(3):hover {
+    background-color: #a22f4d;
+    transition: all 0.35s linear;
+}
+.prices > span:nth-of-type(3) {
+    display: block;
+    padding: 22px 0 47px 0;
+}
+
+/************************************************************************************************* ------- */
+
+.additions {
+    text-align: center;
+}
+.additions > div {
+    width: 200px;
+    margin: 0 50px 90px 50px;
+    padding: 30px 10px 44px 10px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    display: inline-block;
+    box-shadow: 2.1px 4.5px 10px 0 rgba(0, 0, 0, 0.1);
+}
+.additions > div span:nth-of-type(1) {
+    display: block;
+    font-family: 'gilroy_extralight2';
+    font-size: 16.3px;
+    text-align: center;
+    color: #535353;
+    text-transform: uppercase;
+    padding-top: 20px;
+}
+.additions > div span:nth-of-type(2) {
+    font-family: 'gilroy_extrabold2';
+    font-size: 36px;
+    line-height: 0.95;
+    text-align: center;
+    color: #c14867;
+    display: block;
+    margin-top: 31px;
+}
+.additions > div span:nth-of-type(2) span {
+    display: inline-block;
+    font-family: 'gilroy_extralight2';
+    font-size: 24px;
+    padding-top: 10px;
+}
+
+/************************************************************************************************* ------- */
+
+.feedback {
+    width: 100%;
+    padding: 41px 0 48px 0;
+    text-align: center;
+    background-color: #c14867;
+}
+.feedback a {
+    font-family: 'gilroy_extralight2';
+    font-size: 30px;
+    text-align: center;
+    color: #c14867;
+    padding: 19px 30px 19px 30px;
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #ffffff;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    transition: all 0.35s linear;
+}
+.feedback a:hover {
+    color: #fff;
+    background-color: transparent;
+    border-color: #fff;
+    transition: all 0.35s linear;
+}
+
+/************************************************************************************************* FOOTER */
+
+.footer {
+    width: 100%;
+    min-height: 63px;
+    position: relative;
+    text-align: center;
+    padding: 60px 0 60px 0;
+    background-color: #535353;
+}
+.footer_shadow {
+    top: 0;
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    opacity: 0.15;
+    background: #535353; 
+    background: -webkit-linear-gradient(#000001, #535353);
+    background: -o-linear-gradient(#000001, #535353); 
+    background: -moz-linear-gradient(#000001, #535353); 
+    background: linear-gradient(#000001, #535353);
+}
+.footer_container {
+    max-width: 1200px;
+    text-align: justify;
+    margin: 0 auto 0 auto;
+    padding: 0 140px 0 110px;
+}
+.footer_container:after {
+    width: 100%;
+    height: 0px;
+    visibility: hidden;
+    overflow: hidden;
+    content: '';
+    display: inline-block;
+}
+.footer_container > div {
+    vertical-align: top;
+    display: inline-block;
+    font-family: 'gilroy_extralight2';
+    font-size: 10px;
+    font-weight: 300;
+    color: #ffffff;
+    text-align: center;
+}
+.footer_container > div img {
+    display: block;
+    margin-bottom: 24px;
+}
+.footer_container > div:nth-child(1) {
+    text-align: left;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+.footer_container > div:nth-child(1) span {
+    display: block;
+    margin-bottom: 16px;
+}
+.footer_container > div:nth-child(1) img {
+    display: inline-block;
+    margin-right: 20px;
+}
+.footer_container > div:nth-child(2) {
+    text-transform: uppercase;
+}
+.footer_container > div:nth-child(3) {
+    text-align: right;
+    vertical-align: bottom;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}

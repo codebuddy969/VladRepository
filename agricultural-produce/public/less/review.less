@@ -1,0 +1,75 @@
+@font-Roboto: 'Roboto',
+sans-serif;
+@font-Anton: 'Anton',
+sans-serif;
+.review-wrapper {
+    background: #ffffff;
+    overflow: hidden;
+    .review {
+        justify-content: space-between;
+        margin: 70px -20px 30px;
+        overflow: hidden;
+        @media(max-width: 767px) {
+            margin-top: 30px;
+        }
+        @media(max-width: 480px) {
+            margin-top: 50px;
+        }
+        .block {
+            display: flex;
+            @media(max-width: 767px) {
+                flex-direction: column;
+            }
+            .item {
+                background: #f7f7f7;
+                margin: 20px;
+                padding: 50px 35px;
+                transition: all ease 0.5s;
+                @media(max-width: 992px) {
+                    padding: 30px 15px;
+                }
+                @media(max-width: 767px) {
+                    margin: 10px 20px;
+                }
+                @media(max-width: 480px) {
+                    text-align: center;
+                }
+                .date-wrapper {
+                    max-width: 540px;
+                }
+                .name {
+                    font-family: @font-Roboto;
+                    font-size: 22px;
+                    font-weight: 700;
+                    color: #000000;
+                }
+                .date {
+                    font-size: 18px;
+                    margin-top: 5px;
+                    font-style: italic;
+                    color: rgba(0, 0, 0, 0.7);
+                }
+                p {
+                    margin-top: 65px;
+                    font-size: 18px;
+                    max-width: 540px;
+                    color: rgba(0, 0, 0, 0.7);
+                    line-height: 26px;
+                    @media(max-width: 992px) {
+                        font-size: 14px;
+                        margin-top: 30px;
+                        line-height: 20px;
+                    }
+                    @media (max-width: 320px) {
+                        width: 100%;
+                        font-size: 14px;
+                    }
+                }
+                &:hover {
+                    box-shadow: 0 0 32px 0px rgba(191, 191, 191, 0.65);
+                    transition: all ease 0.5s;
+                }
+            }
+        }
+    }
+}

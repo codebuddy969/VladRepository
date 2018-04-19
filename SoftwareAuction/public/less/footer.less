@@ -1,0 +1,78 @@
+footer {
+    background-color: #f8f8f8;
+    .container {
+        padding: 55px 15px;
+        display: flex;
+        justify-content: space-between;
+        @media (max-width: 1200px) {
+            padding: 30px 15px;
+        }
+        @media (max-width: 480px) {
+            flex-direction: column;
+            align-items: center;
+        }
+        .copyright {
+            color: #9699ae;
+            max-width: 250px;
+            line-height: 1.5;
+            font-family: 'Muller Light', sans-serif;
+            @media (max-width: 480px) {
+                text-align: center;
+            }
+            a {
+                color: #9699ae;
+                font-family: 'Muller Regular', sans-serif;
+            }
+        }
+        .social {
+            display: flex;
+            align-items: center;
+            @media (max-width: 480px) {
+                margin-top: 15px;
+            }
+            a {
+                &:after {
+                    content: "";
+                    color: #d7d8d9;
+                    font-size: 18px;
+                    margin-left: 10px;
+                    font-family: 'icomoon';
+                    transition: all 0.35s linear;
+                }
+                &:hover {
+                    &:after {
+                        color: #415b97;
+                        transition: all 0.35s linear;
+                    }
+                } 
+            }
+            .facebook {
+                &:after {
+                    content: "\e904";
+                }
+            }
+            .google {
+                &:after {
+                    content: "\e905";
+                    font-size: 25px;
+                }
+            }
+            .behance {
+                &:after {
+                    content: "\e902";
+                }
+            }
+            .youtube {
+                &:after {
+                    content: "\e90d";
+                    font-size: 25px;
+                }
+            }
+            .tweet {
+                &:after {
+                    content: "\e90c";
+                }
+            }
+        }
+    }
+}

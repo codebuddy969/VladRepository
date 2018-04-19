@@ -1,0 +1,78 @@
+.post {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-image: url(../img/post-background.jpg);
+    @media (max-width: 768px) {
+        background-image: none;
+        background-color: #fe8a2b;
+    }
+    .container {
+        text-align: right;
+        min-height: 990px;
+        padding-top: 310px;
+        @media (max-width: 1400px) {
+            padding-top: 200px;
+            min-height: 700px;
+        }
+        @media (max-width: 992px) {
+            padding-top: 100px;
+            min-height: 500px;
+        }
+        @media (max-width: 768px) {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            min-height: auto;
+        }
+        .info-block {
+            max-width: 460px;
+            margin: 0 0 0 auto;
+            text-align: left;
+            @media (max-width: 992px) {
+                max-width: 380px;
+            }
+            @media (max-width: 768px) {
+                margin: 0;
+                max-width: 100%;
+                text-align: center;
+            }
+            h2 {
+                color: #fff;
+                font-size: 40px;
+                font-family: 'AvertaBold', sans-serif;
+                @media (max-width: 992px) {
+                    font-size: 30px;
+                }
+            }
+            p {
+                color: #fff;
+                font-size: 22px;
+                margin-top: 25px;
+                line-height: 1.9;
+                max-width: 80%;
+                font-family: 'AvertaLight', sans-serif;
+                span {
+                    font-family: 'AvertaBold', sans-serif;
+                }
+                @media (max-width: 992px) {
+                    font-size: 16px;
+                }
+                @media (max-width: 768px) {
+                    margin: 25px auto 0;
+                }
+                @media (max-width: 480px) {
+                    max-width: 100%;
+                }
+            }
+            .btn {
+                margin-top: 75px;
+                @media (max-width: 1400px) {
+                    margin-top: 30px;
+                }
+                @media (max-width: 768px) {
+                    margin: 30px auto 0;
+                }
+            }
+        }
+    }
+}

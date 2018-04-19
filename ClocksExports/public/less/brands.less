@@ -1,0 +1,28 @@
+.brands {
+    display: flex;
+    background-color: #f4f4f4;
+    .container {
+        display: flex;
+        align-items: center;
+        min-height: 260px;
+        justify-content: space-between;
+        @media (max-width: 1200px) {
+            max-width: 992px;
+            margin: 0 auto;
+        }
+        @media (max-width: 992px) {
+            max-width: 768px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .brand {
+            width: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @media (max-width: 992px) {
+                height: 100px;
+            }
+        }      
+    }
+}

@@ -1,0 +1,120 @@
+      @font-face {
+          font-family: 'Anton Regular';
+          src: url("../fonts/anton-regular.eot");
+          src: url("../fonts/anton-regular.woff2") format("woff2"), url("../fonts/anton-regular.woff") format("woff"), url("../fonts/anton-regular.ttf") format("truetype"), url("../fonts/anton-regular.svg#anton-regular") format("svg"), url("../fonts/ProximaNova/anton-regular.eot?#iefix") format("embedded-opentype");
+          font-weight: normal;
+          font-style: normal;
+      }
+
+      @font-face {
+          font-family: 'Lato Bold';
+          src: url("../fonts/lato-bold.eot");
+          src: url("../fonts/lato-bold.woff2") format("woff2"), url("../fonts/lato-bold.woff") format("woff"), url("../fonts/lato-bold.ttf") format("truetype"), url("../fonts/lato-bold.svg#lato-bold") format("svg"), url("../fonts/lato-bold?#iefix") format("embedded-opentype");
+          font-weight: normal;
+          font-style: normal;
+      }
+
+      @font-face {
+          font-family: 'Lato Regular';
+          src: url("../fonts/lato-regular.eot");
+          src: url("../fonts/lato-regular.woff2") format("woff2"), url("../fonts/lato-regular.woff") format("woff"), url("../fonts/lato-regular.ttf") format("truetype"), url("../fonts/lato-regular.svg#lato-regular") format("svg"), url("../fonts/lato-regular?#iefix") format("embedded-opentype");
+          font-weight: normal;
+          font-style: normal;
+      }
+
+      
+
+      body {
+          font-size: 16px;
+          color: #303030;
+          padding: 0;
+          margin: 0;
+          font-family: 'Lato Regular', sans-serif;
+          @media (max-width: 320px) {
+              min-width: 320px;
+          }
+      }
+
+      @primary_color: #f7be1f;
+      @border_left_decor: 1px solid rgba(0,
+      0,
+      0,
+      0.14);
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      {
+          padding: 0;
+          margin: 0;
+      }
+
+      .container {
+          max-width: 1170px;
+          margin: auto;
+          padding: 0 15px;
+      }
+
+      .main-title {
+          font-family: 'Anton Regular', sans-serif;
+          font-size: 110px;
+          text-align: left;
+          text-transform: uppercase;
+          border-left: @border_left_decor;
+          @media (max-width: 1200px) {
+              font-size: 90px;
+          }
+          @media (max-width: 992px) {
+              font-size: 80px;
+          }
+          @media (max-width: 767px) {
+              font-size: 33px;
+          }
+          @media (max-width: 480px) {
+              font-size: 30px;
+              text-align: center;
+          }
+      }
+
+      .btn-default {
+          background: #ffffff;
+          width: 275px;
+          height: 90px;
+          font-family: 'Anton Regular', sans-serif;
+          color: #020102;
+          font-size: 18px;
+          font-weight: bold;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          text-align: center;
+          line-height: 90px;
+          border: none;
+          display: block;
+          text-decoration: none;
+          margin: 30px 0;
+          @media (max-width: 992px) {
+              width: 200px;
+              height: 65px;
+              line-height: 65px;
+          }
+          &:hover {
+              background: @primary_color;
+          }
+      }
+
+      ul {
+          list-style-type: none;
+          padding: 0;
+          margin: 0;
+      }
+
+      a {
+          color: @primary_color;
+          transition: all ease 0.4s;
+      }
+
+      * {
+          -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+      }

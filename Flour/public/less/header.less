@@ -1,0 +1,250 @@
+header {
+    min-height: 1250px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../img/top-background.jpg);
+    @media (max-width: 1800px) {
+        background-position: right center;
+        padding-bottom: 60px;
+    }
+    @media (max-width: 1400px) {
+        min-height: 800px;
+        background-position: right center;
+        padding-bottom: 60px;
+    }
+    @media (max-width: 1200px) {
+        min-height: 550px;
+    }
+    @media (max-width: 768px) {
+        min-height: auto;
+        padding-bottom: 30px;
+        background-image: none;
+    }
+    .navigation {
+        top: 0;
+        right: -260px;
+        z-index: 1;
+        width: 260px;
+        height: 100vh;
+        padding-top: 150px;
+        position: fixed;
+        transition: all 0.35s linear;
+        background-color: rgba(51, 59, 77, 0.8);
+        nav {
+            width: 260px;
+            position: fixed;
+            overflow: auto;
+            ul {
+                li {
+                    &:hover {
+                        background-color: #ffffff;
+                        a {
+                            color: #e09c4c;
+                        }
+                    }
+                    a {
+                        color: #fff;
+                        font-size: 20px;
+                        display: block;
+                        width: 100%;
+                        height: auto;
+                        padding: 15px;
+                        text-align: center;
+                        font-family: 'Proxima-Regular', sans-serif;
+                    }
+                }
+            }
+        }
+    }
+    .menu-out {
+        right: 0;
+        z-index: 10;
+        transition: all 0.35s linear;
+    }
+    .container {
+        .logo-row {
+            display: flex;
+            padding-top: 65px;
+            align-items: center;
+            height: 110px;
+            transition: all 0.35s linear;
+            justify-content: space-between;
+            
+            width: 1560px;
+            top: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            z-index: 15;
+            padding-left: 15px;
+            padding-right: 15px;
+            position: fixed;
+            @media (max-width: 1560px) {
+                width: 100%;
+            }
+            @media (max-width: 1200px) {
+                padding-top: 30px;
+                min-height: auto;
+            }
+            .logo {
+                color: #fff;
+                width: 160px;
+                height: 35px;
+                font-size: 35px;
+                position: relative;
+                text-align: center;
+                display: block;
+                line-height: 1.0;
+                font-family: 'bakery', sans-serif;
+                background-size: 100%;
+                background-repeat: no-repeat;
+                background-image: url(../img/icons/rolling-pin.svg);
+            }
+            .burger {
+                z-index: 12;
+                cursor: pointer;
+                max-width: 37px;
+                transition: all 0.35s linear;
+                .line {
+                    width: 37px;
+                    height: 5px;
+                    margin-bottom: 2px;
+                    background-color: #333b4d;
+                    border-radius: 2px;
+                    transition: all 0.35s linear;
+                    &:last-child {
+                        width: 30px;
+                        margin: 0 0 2px auto;
+                    }
+                }
+            }
+            .burgerchange {
+                transition: all 0.35s linear;
+                .line {
+                    background-color: #fff;
+                    transition: all 0.35s linear;
+                }
+            }
+        }
+        .logo-row-fixed {
+            padding-top: 0;
+            transition: all 0.35s linear;
+        }
+        .header-row {
+            max-width: 1100px;
+            padding-top: 250px;
+            position: relative;
+            @media (max-width: 1800px) {
+                max-width: 950px;
+            }
+            @media (max-width: 1500px) {
+                max-width: 650px;
+                margin-left: 90px;
+            }
+            @media (max-width: 1200px) {
+                padding-top: 190px;
+                max-width: 400px;
+                margin-left: 12%;
+            }
+            @media (max-width: 992px) {
+                max-width: 41%;
+            }
+            @media (max-width: 768px) {
+                max-width: 100%;
+                margin-left: 0;
+                padding-top: 80px;
+            }
+            .social-links {
+                top: 70px;
+                left: -230px;
+                bottom: 0;
+                margin: auto;
+                position: absolute;
+                width: 500px;
+                height: 30px;
+                display: flex;
+                justify-content: space-between;
+                -webkit-transform: rotate(270deg);
+                -moz-transform: rotate(270deg);
+                -o-transform: rotate(270deg);
+                -ms-transform: rotate(270deg);
+                transform: rotate(270deg);
+                @media (max-width: 1500px) {
+                    width: 450px;
+                    left: -280px;
+                }
+                a {
+                    color: #333b4d;
+                    font-size: 15px;
+                    font-family: 'Proxima-Regular', sans-serif;
+                }
+                @media (max-width: 768px) {
+                    width: auto;
+                    max-width: 450px;
+                    position: static;
+                    -webkit-transform: none;
+                    -moz-transform: none;
+                    -o-transform: none;
+                    -ms-transform: none;
+                    transform: none;
+                }
+            }
+            h1 {
+                font-size: 165px;
+                max-width: 900px;
+                line-height: 1.0;
+                margin: 0 0 0 auto;
+                text-align: center;
+                font-family: 'bakery', sans-serif;
+                @media (max-width: 1400px) {
+                    font-size: 125px;
+                }
+                @media (max-width: 1200px) {
+                    font-size: 100px;
+                }
+                @media (max-width: 992px) {
+                    font-size: 65px;
+                    margin-top: 30px;
+                }
+            }
+            p {
+                color: #333b4d;
+                font-size: 20px;
+                max-width: 620px;
+                text-align: center;
+                margin: 30px 160px 0 auto;
+                line-height: 1.5;
+                @media (max-width: 1500px) {
+                    margin: 30px 0 0 auto;
+                }
+                @media (max-width: 992px) {
+                    font-size: 16px;
+                }
+                @media (max-width: 768px) {
+                    margin: 30px auto 0;
+                }
+            }
+            .btn {
+                width: 245px;
+                height: 55px;
+                display: flex;
+                color: #fff;
+                align-items: center;
+                justify-content: center;
+                margin: 35px 355px 0 auto;
+                background-color: #e09c4c;
+                border-radius: 28px;
+                border: 1px solid transparent;
+                font-family: 'Proxima-Regular', sans-serif;
+                @media (max-width: 1500px) {
+                    margin: 35px auto 0;
+                }
+                &:hover {
+                    color: #e09c4c;
+                    background-color: #fff;
+                    border: 1px solid #e09c4c;
+                }
+            }
+        }
+    }
+}

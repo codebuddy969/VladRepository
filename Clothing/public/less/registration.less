@@ -1,0 +1,64 @@
+.registration {
+    padding-top: 95px;
+    @media (max-width: 1200px) {
+        padding-top: 30px; 
+    }
+    h2 {
+        .title;
+    }
+    .row {
+        margin-top: 55px;
+        display: flex;
+        justify-content: space-between;
+        @media (max-width: 1200px) {
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        .column {
+            width: 264px;
+            padding: 75px 40px 40px;
+            background-color: rgba(247, 247, 247, 0.5);
+            h3 {
+                color: #181818;
+                font-size: 25px;
+                margin: 30px 0 10px;
+                font-family: 'Circular-Black', sans-serif;
+            }
+            p {
+                font-size: 16px;
+                color: #888;
+                line-height: 1.7;
+                @media (max-width: 768px) {
+                    font-size: 13px;
+                }
+                @media (max-width: 480px) {
+                    font-size: 16px;
+                }
+            }
+            @media (max-width: 1200px) {
+                padding: 30px;
+                width: 49%;
+                margin-bottom: 20px;
+            }
+            @media (max-width: 480px) {
+                width: 100%;
+            }
+        }
+    }
+    .register-button {
+        color: #191919;
+        font-size: 24px;
+        margin-top: 35px;
+        display: block;
+        font-family: 'Circular-Bold', sans-serif;
+        &:after {
+            margin-left: 15px;
+            display: inline-block;
+            vertical-align: middle;
+            content: url('../img/icons/arrow.svg');
+        }
+        @media (max-width: 400px) {
+            margin-top: 0;
+        }
+    }
+}

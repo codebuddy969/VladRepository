@@ -1,0 +1,119 @@
+#reviews {
+    background-color: #ffffff;
+    min-height: 850px;
+    padding-top: 125px;
+    @media (max-width: 1850px) {
+        background-size: 110%;
+    }
+    @media (max-width: 1200px) {
+        background-image: none;
+    }
+    @media (max-width: 767px) {
+        min-height: 545px;
+        padding-top: 30px;
+    }
+    .container {
+        position: relative;
+        z-index: 6;
+        .main-title {
+            z-index: 5;
+            position: relative;
+            text-align: left;
+            @media (max-width: 767px) {
+                margin-top: 50px;
+                text-align: left;
+            }
+        }
+        .wrap-slide {
+            width: 992px;
+            position: relative;
+            z-index: 5;
+            @media (max-width: 1200px) {
+                margin: 0 auto;
+            }
+            @media (max-width: 992px) {
+                width: 100%;
+            }
+            .item {
+                margin-top: 100px;
+                margin-bottom: 15px;
+                padding: 0 0 30px 0;
+                border-left: @border_left_decor;
+                @media (max-width: 1200px) {
+                    text-align: center;
+                }
+                @media (max-width: 767px) {
+                    margin-top: 30px;
+                }
+                .name-costumer {
+                    span {
+                        color: #000000;
+                        font-size: 18px;
+                        font-weight: 200;
+                        font-family: 'Lato Bold', sans-serif;
+                    }
+                    img {
+                        margin-left: 50px;
+                    }
+                }
+                .data-costumer {
+                    color: #8e8e8e;
+                    font-size: 14px;
+                    font-weight: 200;
+                }
+                p {
+                    margin-top: 30px;
+                    margin-bottom: 30px;
+                    font-size: 16px;
+                    line-height: 26px;
+                }
+            }
+            .custom-controls {
+                margin-bottom: 50px;
+                text-align: right;
+                @media (max-width: 1200px) {
+                    text-align: center;
+                }
+                button {
+                    padding: 0px;
+                    position: relative;
+                    background: transparent;
+                    outline: none;
+                    border: none;
+                    img {
+                        &.active {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            opacity: 0;
+                            transition-duration: 0.5s;
+                        }
+                    }
+                }
+                .prev {
+                    margin-right: 5px;
+                    transition-duration: 0.3s;
+                    img {}
+                    &:hover {
+                        img {
+                            &.active {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+                .next {
+                    border-radius: 90px;
+                    transition-duration: 0.3s;
+                    &:hover {
+                        img {
+                            &.active {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

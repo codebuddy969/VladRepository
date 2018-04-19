@@ -1,0 +1,149 @@
+.benefits { 
+	.container { 
+        >.title {
+            z-index: 1;
+            font-size: 165px;
+            padding-top: 140px;
+            text-align: center;
+            position: relative;
+            line-height: 1.0;
+            @media (max-width: 1200px) {
+                padding-top: 30px;
+                font-size: 100px;
+            }
+            @media (max-width: 768px) {
+                font-size: 75px;
+                margin-top: 30px;
+                margin-bottom: 20px;
+            }
+        }
+		.row {
+            z-index: 2;
+            display: flex;
+            margin-top: -85px;
+            position: relative;
+            justify-content: space-between;
+            @media (max-width: 1200px) {
+                margin-top: 0;
+            }
+            @media (max-width: 480px) {
+                flex-direction: column;
+            }
+			.column {
+                text-align: center;
+                @media (max-width: 768px) {
+                    padding-left: 15px;
+                    padding-right: 15px;
+                }
+                &.image {
+                    padding-left: 80px;
+                    @media (max-width: 1500px) {
+                        width: 600px;
+                        img {
+                            width: 100%;
+                        }
+                    }
+                    @media (max-width: 1200px) {
+                        padding-left: 0;
+                    }
+                    @media (max-width: 768px) {
+                        display: none;
+                    }
+                    
+                }
+				.info-block {
+                    max-width: 300px;
+                    position: relative;
+                    @media (max-width: 480px) {
+                        max-width: 100%;
+                    }
+                    .title {
+                        padding-top: 110px;
+                        font-size: 50px;
+                        @media (max-width: 1200px) {
+                            font-size: 40px;
+                            padding-top: 30px;
+                        }
+                        @media (max-width: 992px) {
+                            font-size: 38px;
+                        }
+                    }
+                    .subtitle {
+                        padding-top: 30px;
+                        line-height: 1.6;
+                        @media (max-width: 1200px) {
+                            padding-top: 0;
+                        }
+                        @media (max-width: 992px) {
+                            font-size: 14px;
+                        }
+                    }
+                    &.line-1 {
+                        &:after {
+                            right: -175px;
+                            bottom: 80px;
+                            position: absolute;
+                            -webkit-transform: rotate(163deg);
+                            -moz-transform: rotate(163deg);
+                            -o-transform: rotate(163deg);
+                            -ms-transform: rotate(163deg);
+                            transform: rotate(163deg);
+                            content: url('../img/icons/curve-line1.svg');
+                            @media (max-width: 1200px) {
+                                display: none;
+                            }
+                        }
+                    }
+                    &.line-2 {
+                        &:after {
+                            right: -140px;
+                            bottom: 125px;
+                            position: absolute;
+                            -webkit-transform: rotate(354deg);
+                            -moz-transform: rotate(354deg);
+                            -o-transform: rotate(354deg);
+                            -ms-transform: rotate(354deg);
+                            transform: rotate(354deg);
+                            content: url('../img/icons/curve-line1.svg');
+                            @media (max-width: 1200px) {
+                                display: none;
+                            }
+                        }
+                    }
+                    &.line-3 {
+                        &:before {
+                            left: -125px;
+                            bottom: 85px;
+                            position: absolute;
+                            -webkit-transform: rotate(148deg);
+                            -moz-transform: rotate(148deg);
+                            -o-transform: rotate(148deg);
+                            -ms-transform: rotate(148deg);
+                            transform: rotate(148deg);
+                            content: url('../img/icons/curve-line1.svg');
+                            @media (max-width: 1200px) {
+                                display: none;
+                            }
+                        }
+                    }
+                    &.line-4 {
+                        &:before {
+                            left: -125px;
+                            bottom: 85px;
+                            position: absolute;
+                            -webkit-transform: rotate(354deg);
+                            -moz-transform: rotate(354deg);
+                            -o-transform: rotate(354deg);
+                            -ms-transform: rotate(354deg);
+                            transform: rotate(354deg);
+                            content: url('../img/icons/curve-line1.svg');
+                            @media (max-width: 1200px) {
+                                display: none;
+                            }
+                        }
+                    }
+				}
+			}
+		}
+	}
+}

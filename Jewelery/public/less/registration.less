@@ -1,0 +1,148 @@
+.registration {
+    padding-top: 125px;
+    padding-bottom: 160px;
+    background-color: #25213a;
+    @media (max-width: 1400px) {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .title {
+        color: #fff;
+    }
+    .subtitle {
+        color: #a8a6b0;
+        max-width: 400px;
+        margin-top: 45px;
+        line-height: 1.5;
+        @media (max-width: 1200px) {
+            margin-top: 20px;
+        }
+    }
+    .container {
+        display: flex;
+        margin-top: 65px;
+        justify-content: space-between;
+        @media (max-width: 1400px) {
+            flex-wrap: wrap;
+            max-width: 720px;
+            margin-top: 25px;
+        }
+        @media (max-width: 768px) {
+            justify-content: center;
+        }
+        .column {
+            width: 340px;
+            height: 590px;
+            display: flex;
+            cursor: pointer;
+            border-radius: 5px;
+            justify-content: flex-end;
+            flex-direction: column;
+            background-size: cover;
+            @media (max-width: 1400px) {
+                margin-bottom: 15px;
+            }
+            @media (max-width: 360px) {
+                width: 280px;
+                height: 400px;
+            }
+            &.buyer {
+                background: linear-gradient(
+                    rgba(0, 0, 0, 0.45), 
+                    rgba(0, 0, 0, 0.45)
+                ),
+                url(../img/registartion-1.jpg) no-repeat;
+                &:hover {
+                    background: url(../img/registartion-1.jpg) no-repeat; 
+                }
+            }
+            &.seller {
+                background: linear-gradient(
+                    rgba(0, 0, 0, 0.45), 
+                    rgba(0, 0, 0, 0.45)
+                ),
+                url(../img/registartion-2.jpg) no-repeat;
+                &:hover {
+                    background: url(../img/registartion-2.jpg) no-repeat; 
+                }
+            }
+            &.manufacturer {
+                background: linear-gradient(
+                    rgba(0, 0, 0, 0.45), 
+                    rgba(0, 0, 0, 0.45)
+                ),
+                url(../img/registartion-3.jpg) no-repeat;
+                &:hover {
+                    background: url(../img/registartion-3.jpg) no-repeat; 
+                }
+            }
+            &.shipper {
+                background: linear-gradient(
+                    rgba(0, 0, 0, 0.45), 
+                    rgba(0, 0, 0, 0.45)
+                ),
+                url(../img/registartion-4.jpg) no-repeat;
+                &:hover {
+                    background: url(../img/registartion-4.jpg) no-repeat; 
+                }
+            }
+            .info-block {
+                color: #d3d5d5;
+                font-size: 18px;
+                padding: 30px;
+                line-height: 1.6;
+                text-align: center;
+                @media (max-width: 360px) {
+                    font-size: 16px;
+                }
+                .title {
+                    color: #fff;
+                    display: block;
+                    font-size: 45px;
+                    font-weight: 700;
+                    padding-bottom: 10px;
+                    font-family: 'Playfair Display', serif;
+                    @media (max-width: 360px) {
+                        font-size: 30px;
+                    }
+                }
+                .info {
+                    color: #fff;
+                    overflow: hidden;
+                    display: block;
+                    height: 0px;
+                    @media (max-width: 1400px) {
+                        height: auto;
+                    }
+                }
+            }
+            &:hover {
+                .info-block {
+                    transition: all 0.15s linear;
+                    background-color: #bfa274;
+                    .info {
+                        overflow: hidden;
+                        display: block;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+    .button {
+        font-size: 14px;
+        margin: 85px auto 0;
+        @media (max-width: 1200px) {
+            margin: 30px auto 0;
+        }
+        @media (max-width: 360px) {
+            max-width: 260px;
+        }
+        &:before {
+            margin-right: 15px;
+            content: "\e901";
+            font-size: 20px;
+            font-family: 'icomoon';
+        }
+    }
+}

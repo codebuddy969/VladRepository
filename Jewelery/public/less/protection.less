@@ -1,0 +1,93 @@
+.protection {
+    padding-top: 130px;
+    padding-bottom: 150px;
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-image: url(../img/protection-background.png);
+    @media (max-width: 1200px) {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        background-image: none;
+    }
+    .container {
+        display: flex;
+        >img {
+            @media (max-width: 992px) {
+                width: 320px;
+                height: 450px;
+            }
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
+        .row {
+            padding-top: 60px;
+            padding-left: 125px;
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 960px;
+            justify-content: space-between;
+            @media (max-width: 1400px) {
+                padding-top: 0;
+                padding-left: 30px;
+            }
+            @media (max-width: 768px) {
+                padding-left: 0;
+            }
+            @media (max-width: 576px) {
+                flex-direction: column;
+            }
+            >.title {
+                text-align: left;
+                line-height: 1.6;
+                max-width: 730px;
+                @media (max-width: 1400px) {
+                    line-height: 1.2;
+                }
+                @media (max-width: 992px) {
+                    font-size: 50px;
+                }
+                @media (max-width: 768px) {
+                    font-size: 35px;
+                    text-align: center;
+                }
+            }
+            .column {
+                @media (max-width: 768px) {
+                    width: 50%;
+                    text-align: center;
+                }
+                @media (max-width: 576px) {
+                    width: 100%;
+                }
+                .title {
+                    color: #c5ab82;
+                    font-size: 45px;
+                    text-align: left;
+                    @media (max-width: 992px) {
+                        font-size: 30px;
+                        margin-top: 15px;
+                    }
+                    @media (max-width: 768px) {
+                        text-align: center;
+                    }
+                }
+                p {
+                    color: #414049;
+                    font-size: 18px;
+                    line-height: 1.2;
+                    margin-top: 5px;
+                    @media (max-width: 992px) {
+                        font-size: 16px;
+                    }
+                    &:first-of-type {
+                        margin-top: 40px;
+                        @media (max-width: 1400px) {
+                            margin-top: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

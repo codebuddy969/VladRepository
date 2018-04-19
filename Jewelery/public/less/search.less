@@ -1,0 +1,241 @@
+.search {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    @media (max-width: 1200px) {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    p {
+        color: #96959a;
+        margin: 50px auto 0;
+        max-width: 400px;
+        font-size: 20px;
+        line-height: 1.4;
+        text-align: center;
+        @media (max-width: 1200px) {
+            margin: 20px auto 0;
+        }
+    }
+    .container {
+        margin-top: 45px;
+        max-width: 1170px;
+        @media (max-width: 1200px) {
+            margin-top: 20px;
+        }
+        .dropdowns-container {
+            display: flex;
+            justify-content: center;
+            @media (max-width: 768px) {
+                flex-direction: column;
+                align-items: center;
+            }
+            .dropdown {
+                width: 100%;
+                max-width: 292px;
+                position: relative;
+                margin: 0 15px;
+                @media (max-width: 768px) {
+                    max-width: 450px;
+                    margin-bottom: 15px;
+                }
+                input {
+                    width: 100%;
+                    height: 65px;
+                    opacity: 0.902;
+                    color: #cab28b;
+                    font-size: 14px;
+                    font-weight: 600;
+                    padding: 0 50px 0 20px;
+                    border: 2px solid rgb(191, 162, 116);
+                    &::-webkit-input-placeholder {
+                        color: #bfa274;
+                        letter-spacing: 2px;
+                        text-transform: uppercase;
+                    }
+                    &::-moz-placeholder {
+                        color: #bfa274;
+                        letter-spacing: 2px;
+                        text-transform: uppercase;
+                    }
+                    &:-ms-input-placeholder {
+                        color: #bfa274;
+                        letter-spacing: 2px;
+                        text-transform: uppercase;
+                    }
+                }
+                ul {
+                    top: 65px;
+                    width: 100%;
+                    display: none;
+                    position: absolute;
+                    li {
+                        cursor: pointer;
+                        color: #cab28b;
+                        padding: 10px 15px;
+                        background-color: #fff;
+                        border: 1px solid #cab28b;
+                        &:hover {
+                            color: #fff;
+                            background-color: #cab28b;
+                        }
+                    }
+                }
+                &:after {
+                    top: 22px;
+                    right: 30px;
+                    position: absolute;
+                    content: url('../img/icons/down-arrow.svg');
+                }
+            }
+            .show {
+                ul {
+                    z-index: 2;
+                    display: block;
+                }
+            }
+        }
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 75px;
+            justify-content: space-between;
+            @media (max-width: 1200px) {
+                margin: 30px auto 0;
+                max-width: 980px;
+            }
+            @media (max-width: 992px) {
+                max-width: 650px;
+            }
+            .item {
+                width: 100%;
+                display: block;
+                max-width: 360px;
+                min-height: 340px;
+                position: relative;
+                margin-bottom: 0;
+                background-color: #fff;
+                transition: all 0.15s linear;
+                @media (max-width: 1200px) {
+                    max-width: 300px;
+                }
+                @media (max-width: 768px) {
+                    max-width: 450px;
+                    min-height: 450px;
+                    margin: 0 auto;
+                }
+                .item-image {
+                    width: 100%;
+                    height: 275px;
+                    display: flex;
+                    position: relative;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: #f6f6f6;
+                    img {
+                        max-width: 100%;
+                    }
+                    .discount {
+                        top: 30px;
+                        left: 40px;
+                        width: 65px;
+                        height: 45px;
+                        color: #fff;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-weight: 600;
+                        position: absolute;
+                        border-radius: 20px;
+                        background-color: #312c55;
+                    }
+                }
+                .item-info {
+                    width: 100%;
+                    padding: 40px 50px;
+                    @media (max-width: 1200px) {
+                        text-align: center;
+                        padding: 40px 15px;
+                    }
+                    .name {
+                        color: #211f2c;
+                        font-size: 20px;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        font-family: 'Playfair Display', serif;
+                    }
+                    .price {
+                        color: #bfa274;
+                        font-weight: 600;
+                        font-size: 25px;
+                        margin-top: 20px;
+                        word-wrap: break-word;
+                        overflow-wrap: break-word;
+                        span {
+                            color: #bcbbbf;
+                            text-decoration: line-through;
+                        }
+                    }
+                    .more-button {
+                        color: #fff;
+                        width: 145px;
+                        height: 45px;
+                        display: none;
+                        overflow-y: auto;
+                        margin-top: 35px;
+                        font-weight: 600;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 22px;
+                        letter-spacing: 2px;
+                        text-transform: uppercase;
+                        background-color: #2e294f;
+                        box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.15);
+                        @media (max-width: 1200px) {
+                            display: flex;
+                            margin: 15px auto 0;
+                        }
+                        &:before {
+                            margin-right: 10px;
+                            content: url('../img/icons/grey-right-arrow.svg');
+                        }
+                    }
+                }
+                @media (min-width: 1200px) {
+                    &:hover {
+                        z-index: 1;
+                        min-height: 480px;
+                        margin-bottom: -80px;
+                        transition: all 0.15s linear;
+                        box-shadow: 0px 3px 50px 0px rgba(41, 37, 67, 0.15);
+                        .more-button {
+                            display: flex;
+                            position: absolute;
+                            @media (max-width: 1200px) {
+                                position: static;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .see-more-button {
+            opacity: 1;
+            color: #47426a;
+            font-size: 14px;
+            font-weight: 600;
+            border-color: #47426a;
+            margin: 95px auto 0;
+            @media (max-width: 1200px) {
+                margin: 10px auto 0;
+            }
+            &:before {
+                color: #474269;
+                content: "\e900";
+                margin-right: 15px;
+                font-size: 20px;
+                font-family: 'icomoon';
+            }
+        }
+    }
+}

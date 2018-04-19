@@ -1,0 +1,371 @@
+@media screen and (max-width:1300px) {
+    section {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .content_container {
+        margin: 160px 0 0 360px;
+    }
+    .form_row {
+        padding: 0 0 10px 0;
+    }
+    .help_block,
+    .auto_block .help_block {
+        right: 0;
+        top: 30px;
+        width: 100%;
+        position: relative;
+        margin-bottom: 20px;
+        padding: 15px 15px 0 15px;
+        border: 1px solid rgb(170, 180, 186);
+    }
+    .help_block p {
+        padding: 0;
+    }
+    .help_block_close,
+    .help_block hr {
+        display: block;
+    }
+    .help_block:before {
+        top: -14px;
+        left: auto;
+        right: 12px;
+        content: "";
+        transform: rotate(225deg);
+        -o-transform: rotate(225deg);
+        -ms-transform: rotate(225deg);
+        -moz-transform: rotate(225deg);
+        -webkit-transform: rotate(225deg);
+    }
+    .services_block .form_row_spec2 .help_block:before, 
+    .services_block .form_row_spec4 .help_block:before,
+    .insurance_block .form_row_spec .help_block:before,
+    .insurance_block .form_row_spec2 .help_block:before,
+    .insurance_block .form_row_spec3 .help_block:before,
+    .discounts_block .form_row_spec1 .help_block:before, 
+    .discounts_block .form_row_spec2 .help_block:before,
+    .discounts_block .form_row_spec4 .help_block:before,
+    .discounts_block .form_row_spec7 .help_block:before,
+    .banking_block .form_row_spec1 .help_block:before,
+    .auto_block .help_block:before {
+        top: -14px;
+    }
+    .row_label {
+        width: 190px;
+        padding: 0 10px 0 0;
+    }
+    .insured_block .row_label {
+        width: 300px;
+    }
+    .question_block,
+    .text_row .question_block,
+    .insurance_block .form_row_spec .question_block,
+    .insurance_block .form_row_spec2 .question_block,
+    .insurance_block .form_row_spec3 .question_block,
+    .discounts_block .form_row_spec1 .question_block, 
+    .discounts_block .form_row_spec2 .question_block,
+    .discounts_block .form_row_spec4 .question_block,
+    .discounts_block .form_row_spec7 .question_block,
+    .services_block .form_row_spec2 .question_block, 
+    .services_block .form_row_spec4 .question_block,
+    .banking_block .form_row_spec1 .question_block {
+        margin-right: 15px;
+    }
+    .price {
+        width: 86px;
+    }
+    
+}
+
+@media screen and (max-width:1024px) {
+    
+    section {
+        margin: 0 auto;
+        max-width: 1300px;
+        background-color: rgb(33, 42, 50);
+    }
+    .sidebar{
+        top: 30px;
+        z-index: 1;
+    }
+    .burger {
+        display: block;
+    }
+    .form_container {
+        overflow: hidden;
+    }
+    .content_container {
+        z-index: 2;
+        width: 100%;
+        margin: 0 auto;
+        display: block;
+        position: relative;
+        padding: 30px 10% 0 10%;
+        background-color: rgb(234, 238, 242);
+    }
+    .row_label {
+        width: 38%;
+    }
+    .insured_block .row_label {
+        width: 50%;
+    }
+    .services_block .form_row_spec2 .row_label,
+    .services_block .form_row_spec4 .row_label {
+        width: 73%;
+    }
+    .banking_block .form_row_spec4 .row_label {
+        width: 88%;
+    }
+    .form_block {
+        padding: 0;
+    }
+    .banking_block .form_row_spec4 .checkbox_option {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width:768px) {
+    
+    .datepicker {
+        z-index: 3 !important;
+    }
+    .form_container {
+        overflow: auto;
+    }
+    .burger {
+        display: none;
+    }
+    .content_container.move {
+        left: 0 !important;
+    }
+    .content_container {
+        padding: 140px 10% 0 10%;
+    }
+    .sidebar {
+        top: 0;
+        z-index: 6;
+        width: 100%;
+    }
+    .sidebar_text span {
+        display: block;
+        padding: 28px 0;
+    }
+    .sidebar ul {
+        display: flex;
+        justify-content: space-between;
+    }
+    .sidebar li {
+        -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+    .sidebar a {
+        width: 100%;
+        padding: 12px 0;
+    }
+    .sidebar a:hover .sidebar_text {
+        height:52px;
+    }
+    .sidebar_text {
+        top: 58px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        padding: 0;
+        position: absolute;
+        overflow:hidden;
+        white-space:nowrap;
+        display:inline-block;
+        height: 0px;
+        background-color: rgb(52, 152, 219);
+    }
+    .sidebar_text span {
+        padding: 16px 0 0 24px;
+        font-weight: 500;
+        font-size: 18px;
+        text-align: left;
+    }
+    .sidebar_icon {
+        margin: 0 10px;
+    }
+        
+    .content_container {
+        width: 100%;
+        padding: 160px 15px 0;
+    }
+    .row_label {
+        width: 39%;
+    }
+    .insured_block .row_label {
+        width: 53%;
+    }
+    .services_block .form_row_spec2 .row_label,
+    .services_block .form_row_spec4 .row_label {
+        width: 72%;
+    }
+    .banking_block .form_row_spec4 .row_label {
+        width: 82%;
+    }
+    .banking_block .form_row_spec4 .checkbox_option {
+        width: 80%;
+    }
+    .datepicker {
+        width: 430px !important;
+    }
+    
+}
+
+@media screen and (max-width:650px) {
+    .row_label {
+        width: 30%;
+    }
+    .insured_block .row_label {
+        width: 44%;
+    }
+    .services_block .form_row_spec2 .row_label,
+    .services_block .form_row_spec4 .row_label {
+        width: 71%;
+    }
+    .banking_block .form_row_spec4 .row_label {
+        width: 73%;
+    }
+    .services_block .form_row_spec3 .row_label {
+        width: 480px;
+    }
+}
+
+@media screen and (max-width:576px) {
+    
+    .form_question {
+        top: 0;
+        right: 15px;
+        margin: 0;
+        position: absolute;
+    }
+    .text_row .text_content {
+        width: 100%;
+    }
+    .address {
+        width: 151px;
+        padding: 0 0 0 16px;
+    }    
+    .row_label,
+    .insured_block .row_label,
+    .services_block .form_row_spec3 .row_label {
+        width: 90%;
+        display: block;
+        padding: 0 0 15px 0;
+    }
+    .insurance_block .radio_block {
+         margin: 0; 
+    }
+    .checkbox_option,
+    .services_block .form_row_spec3 .checkbox_option {
+        width: 53%;
+    }
+    .services_block .form_row_spec2 .row_label, 
+    .services_block .form_row_spec4 .row_label {
+        width: 56%;
+    }
+    .form_row > div {
+        vertical-align: top;
+    }
+    .price {
+        width: 70px;
+    }
+    .datepicker {
+        margin-top: 5px !important;
+        width: 270px !important;
+    }
+    .datepicker--cell {
+        height: 28px !important;
+    }
+    .datepicker--nav-title {
+        padding: 0 20px !important;
+        font-size: 16px !important;
+    }
+    .datepicker--nav {
+        min-height: 60px !important;
+        padding: 15px !important;
+    }
+}
+
+@media screen and (max-width:480px) {
+    
+    strong {
+        display: block;
+        margin: 0 0 5px 0;
+    }
+    .form_action {
+        position: relative;
+    }
+    .sidebar_icon {
+        margin: 0;
+    }
+    .content_container {
+        padding: 160px 15px 0 15px;
+    }
+    .question_block, .text_row .question_block, 
+    .insurance_block .form_row_spec .question_block, 
+    .insurance_block .form_row_spec2 .question_block, 
+    .insurance_block .form_row_spec3 .question_block, 
+    .discounts_block .form_row_spec1 .question_block, 
+    .discounts_block .form_row_spec2 .question_block, 
+    .discounts_block .form_row_spec4 .question_block, 
+    .discounts_block .form_row_spec7 .question_block, 
+    .services_block .form_row_spec2 .question_block, 
+    .services_block .form_row_spec4 .question_block, 
+    .banking_block .form_row_spec1 .question_block {
+        margin-right: 0px;
+    }
+    .input_block {
+        width: 85%;
+    }
+    input {
+        text-overflow: ellipsis;
+    }
+    .small_left, .small_right {
+        width: 85%;
+    }
+    .small_right {
+        margin-top: 24px;
+    }
+    .big_left {
+        width: 85%;
+    }
+    .text_row .extrasmall_right {
+        margin: 0 13px 22px 0;
+    }
+    .text_row .extrasmall_right,
+    .text_row .big_left {
+        width: 100%;
+    }
+    .extrasmall_right {
+        width: 85%;
+        margin: 24px 0 0 0;
+    }
+    .select_block {
+        width: 85%;
+    }
+    .radio_block {
+        width: 96px;
+    }
+    .form_wrapper .radio_block {
+        width: 100%;
+    }
+    .services_block .form_row_spec3 h5,
+    .services_block .form_row_spec3 .input_block {
+        margin: 24px 0 12px 0;
+    }
+    .banking_block .form_row_spec4 .checkbox_option {
+        width: 70%;
+    }
+    .dark_button {
+        width: 100%;
+    }
+    .banking_block .radio_block {
+        width: 98%;
+    }
+}

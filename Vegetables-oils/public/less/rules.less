@@ -1,0 +1,125 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: 'font';
+  src: url('../fonts/font.eot');
+  src: url('../fonts/font.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/font.woff2') format('woff2'),
+       url('../fonts/font.woff') format('woff'),
+       url('../fonts/font.ttf')  format('truetype'),
+       url('../fonts/font.svg#svgFontName') format('svg');
+}
+
+@font-face {
+  font-family: 'Proxima-Semibold';
+  src: url('../fonts/Proxima-Semibold/proximanovasemibold.eot');
+  src: url('../fonts/Proxima-Semibold/proximanovasemibold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Proxima-Semibold/proximanovasemibold.woff2') format('woff2'),
+       url('../fonts/Proxima-Semibold/proximanovasemibold.woff') format('woff'),
+       url('../fonts/Proxima-Semibold/proximanovasemibold.ttf')  format('truetype'),
+       url('../fonts/Proxima-Semibold/proximanovasemibold.svg#svgFontName') format('svg');
+}
+
+@font-face {
+  font-family: 'Proxima-Regular';
+  src: url('../fonts/Proxima-Regular/proximanovaregular.eot');
+  src: url('../fonts/Proxima-Regular/proximanovaregular.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Proxima-Regular/proximanovaregular.woff2') format('woff2'),
+       url('../fonts/Proxima-Regular/proximanovaregular.woff') format('woff'),
+       url('../fonts/Proxima-Regular/proximanovaregular.ttf')  format('truetype'),
+       url('../fonts/Proxima-Regular/proximanovaregular.svg#svgFontName') format('svg');
+}
+
+@font-face {
+  font-family: 'Proxima-Bold';
+  src: url('../fonts/Proxima-Bold/proximanovabold.eot');
+  src: url('../fonts/Proxima-Bold/proximanovabold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Proxima-Bold/proximanovabold.woff2') format('woff2'),
+       url('../fonts/Proxima-Bold/proximanovabold.woff') format('woff'),
+       url('../fonts/Proxima-Bold/proximanovabold.ttf')  format('truetype'),
+       url('../fonts/Proxima-Bold/proximanovabold.svg#svgFontName') format('svg');
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon/icomoon.eot?avaqn0');
+    src:  url('../fonts/icomoon/icomoon.eot?avaqn0#iefix') format('embedded-opentype'),
+          url('../fonts/icomoon/icomoon.ttf?avaqn0') format('truetype'),
+          url('../fonts/icomoon/icomoon.woff?avaqn0') format('woff'),
+          url('../fonts/icomoon/icomoon.svg?avaqn0#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700');
+
+html,body,div,ul,li,p,h1,h2,h3,h4,h5,h6,button,a,input {
+    margin: 0;
+    padding: 0;
+    color: #000;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    font-weight: 400;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Proxima-Regular', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+a,button,a:hover,button:hover {
+    transition: all 0.35s linear;
+}
+.container {
+    max-width: 1170px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    color: rgb(122, 161, 54);
+    font-family: 'Roboto Slab', sans-serif;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.subtitle {
+    margin: 0 auto;
+    font-size: 20px;
+    line-height: 1.4;
+    text-align: center;
+    color: rgba(89, 91, 104, 0.702);
+    font-family: 'Proxima-Semibold', sans-serif;
+}
+
+.button {
+    width: 296px;
+    height: 65px;
+    color: #020102;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-family: 'Proxima-Bold', sans-serif;
+    background-color: #fec42c;
+    border: 1px solid transparent;
+    box-shadow: 0px 1px 1px 0px rgba(35, 76, 141, 0.22);
+    &:hover {
+        color: #fec42c;
+        border: 1px solid #fec42c;
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+    @media (max-width: 768px) {
+        width: 260px;
+    }
+}

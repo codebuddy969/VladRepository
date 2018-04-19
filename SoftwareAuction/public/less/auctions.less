@@ -1,0 +1,19 @@
+.auctions {
+    padding: 120px 15px;
+    text-align: center;
+    @media (max-width: 1200px) {
+        padding: 30px 15px;
+    }
+    a {
+        color: #999cb1;
+        font-size: 15px;
+        line-height: 1.8;
+        @media (max-width: 768px) {
+            font-size: 12px;
+        }
+        &:after {
+            content: "|";
+            margin: 7px;
+        }
+    }
+}

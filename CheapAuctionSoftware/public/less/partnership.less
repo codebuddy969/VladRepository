@@ -1,0 +1,112 @@
+.partnership {
+    padding-top: 150px;
+    margin-top: 45px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-image: url(../img/grey-background.png);
+    @media (max-width: 1200px) {
+        padding-top: 60px;
+        margin-top: 0;
+    }
+    @media (max-width: 768px) {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        background-color: #f7fafc;
+        background-image: none;
+    }
+    .container {
+        position: relative;
+        @media (max-width: 1200px) {
+            max-width: 700px;
+        }
+        @media (max-width: 768px) {
+            max-width: 560px;
+        }
+        .slider {
+            margin-top: 65px;
+            .slide {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                @media (max-width: 480px) {
+                    justify-content: center;
+                }
+                img {
+                    max-width: 183px;
+                    max-height: 183px;
+                    border-radius: 15px;
+                    margin: 5px 0;
+                    @media (max-width: 768px) {
+                        margin: 5px;
+                        max-width: 110px;
+                        max-height: 110px;
+                    }
+                }
+            }
+        }
+        .prev, .next {
+            width: 60px;
+            height: 60px;
+            right: 0;
+            bottom: 15px;
+            border-radius: 50%;
+            border: 2px solid #fd892c;
+            position: absolute;
+            background-color: transparent;
+            transition: all 0.35s linear;
+            &:before {
+                content: "";
+                color: #fd892c;
+                font-size: 40px;
+                font-size: 10px;
+                font-family: 'icomoon';
+            }
+            &:hover {
+                opacity: 0.5;
+                transition: all 0.35s linear;
+            }
+            @media (max-width: 768px) {
+                right: 15px;
+                bottom: 5px;
+            }
+            @media (max-width: 480px) {
+                position: static;
+                margin-top: 15px;
+            }
+        }
+        .prev {
+            right: 85px;
+            &:before {
+                content: "\e900";
+            }
+            @media (max-width: 480px) {
+                margin-left: 60px;
+            }
+        }
+        .next {
+            &:before {
+                padding-top: 5px;
+                content: "\e90f";
+            }
+            @media (max-width: 480px) {
+                float: right;
+                margin-right: 60px;
+            }
+        }
+        .btn {
+            margin-top: 55px;
+            border: 2px solid #fd892c;
+            &:hover {
+                color: #fff;
+                background-color: #fd892c;
+            }
+            @media (max-width: 768px) {
+                margin-top: 10px;
+            }
+            @media (max-width: 480px) {
+                margin: 0 auto 15px;
+            }
+        }
+    }
+}

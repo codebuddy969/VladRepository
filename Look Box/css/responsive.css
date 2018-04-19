@@ -1,0 +1,696 @@
+
+
+@media only screen and (min-width: 1500px)
+{
+/**+++++++++++++++++++++++++++++++++++++++++++++++++ Header CSS */
+    .header_menu a
+    {
+        font-size: 20px;
+        font-weight: 300;
+    }
+}
+
+@media only screen and (max-width: 576px)
+{
+    .header_menu
+    {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 1500px)
+{
+    .carousel_box > img
+    {
+        padding-top: 200px;
+    }
+    .carousel_box > p
+    {
+        font-size: 24px;
+    }
+    .carousel_box > a
+    {
+        font-size: 24px;
+        border-radius: 40px;
+        margin: 0 20px 0 20px;
+        letter-spacing: 1.3px;
+    }
+}
+
+@media only screen and (max-width: 1200px)
+{
+/**+++++++++++++++++++++++++++++++++++++++++++++++++ Header CSS */
+    .carousel_box > img
+    {
+        padding-top: 120px;
+    }
+    .carousel_box > p
+    {
+        margin-bottom: 50px;
+    }
+/**+++++++++++++++++++++++++++++++++++++++++++++++++ Prices */
+    .prices_common div:nth-child(1),
+    .prices_common div:nth-child(2),
+    .prices_common div:nth-child(3)
+    {
+        text-align: center;
+    }
+    .prices_common div:nth-child(1)
+    {
+        display: block;
+    }
+    .prices_common > div
+    {
+        margin: 10px auto 20px auto;
+    }
+/**+++++++++++++++++++++++++++++++++++++++++++++++++ Popup */
+    .popup_second_container > div > span:nth-child(1)
+    {
+        font-size: 24px;
+        font-weight: 300;
+        line-height: 1.4;
+    }
+    .popup_second_container
+    {
+        text-align: center;
+        padding: 81px 40px 0;
+    }
+    .popup_second_container > div:nth-child(2)
+    {
+        margin-top: 30px;
+        float: none;
+    }
+/************************************************************************************************* STYLISTS CONTAINER */
+    .slider_container
+    {
+        position: relative;
+        margin: 0 auto;
+        white-space: nowrap;
+    }
+    .slider_box > div
+    {
+        padding-right: 0px;
+    }
+    .slider_box > div > a
+    {
+        margin-top: 30px;
+    }
+    .popup_additional
+    {
+        text-align: center;
+    }
+    .popup_additional > div
+    {
+        text-align: center;
+        margin-top: 20px;
+    }
+    .popup_additional > div > div:nth-child(1)
+    {
+        width: 180px;
+    }
+}
+
+@media only screen and (max-width: 576px)
+{
+    .popup_additional
+    {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media only screen and (max-width: 1200px)
+{
+    .popup_row1 > div:nth-child(2) > div:nth-child(1)
+    {
+        padding-right: 5px;
+    }
+}
+
+@media only screen and (max-width: 992px)
+{
+/**+++++++++++++++++++++++++++++++++++++++++++++++++ Header CSS */
+    .header ul
+    {
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .carousel_box > img
+    {
+        padding-top: 10vw;
+        width: 50vw;
+    }
+    .carousel_box > p
+    {
+        margin: 4vw 0 4vw 0;
+    }
+/**+++++++++++++++++++++++++++++++++++++++++++++++++ How does it work */
+    .steps_container > span
+    {
+        width: 49%;
+    }
+    .steps_box span
+    {
+        right: -40px;
+        width: 80px;
+        height: 80px;
+        font-size: 50px;
+    }
+/**+++++++++++++++++++++++++++++++++++++++++++++++++ Press about us */
+    .press ul
+    {
+        text-align: center;
+    }
+    
+    .press img:first-child {
+        height: 38px;
+    }
+    
+    .press img
+    {
+        margin: 0 10px;
+        width: auto;
+        height: auto;
+    }
+/**+++++++++++++++++++++++++++++++++++++++++++++++++ Customers Feedback Container */
+    .examples .slick-slide img
+    {
+        width: auto;
+    }
+    .lookie {
+        width: 300px !important;
+    }
+    .examples_block p
+    {
+        margin-top: 30px;
+    }
+/**+++++++++++++++++++++++++++++++++++++++++++++++++ Popup */
+    .popup_row1
+    {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 576px)
+{
+    .popup_row1
+    {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media only screen and (max-width: 992px)
+{
+/**+++++++++++++++++++++++++++++++++++++++++++++++++ Popup */
+    .popup_second_container > div > span:nth-child(1)
+    {
+        font-size: 24px;
+        font-weight: 300;
+        line-height: 1.4;
+    }
+    .popup_second_container
+    {
+        padding: 80px 20px 0;
+    }
+    .popup_second_container > div
+    {
+        display: block;
+    }
+    .popup_second_container > div > div
+    {
+        text-align: center;
+    }
+    .popup_second_container > div > span:nth-child(1),
+    .popup_second_container > div > span
+    {
+        text-align: center;
+    }
+/******************************************************************************* STYLISTS CONTAINER */
+    .slider_box > div > p
+    {
+        font-size: 13px;
+    }
+    .slider_container > .slick-prev, 
+    .slider_container > .slick-next
+    {
+        width: 50px;
+        height: 120px;
+    }
+    
+    .additions > div {
+        margin: 0 20px 90px 20px;
+    }
+}
+
+@media only screen and (max-width: 768px)
+{
+/**+++++++++++++++++++++++++++++++++++++++++++++++++ Header CSS */
+    .carousel_box > img
+    {
+        padding-top: 6vw;
+    }
+    .carousel_box > p
+    {
+        margin: 4vw 0 4vw 0;
+        font-size: 14px;
+    }
+    .carousel_box > a
+    {
+        font-size: 12px;
+        border-radius: 23px;
+        margin: 0 20px 0 20px;
+        letter-spacing: 1.3px;
+        padding: 7px 20px 7px 20px;
+    }
+/*+++++++++++++++++++++++++++++++++++++++++++++++++ Tile CSS */
+    .tile_box > p
+    {
+        width: 49%;
+        font-size: 16px;
+    }
+    .tile_box:nth-child(2)
+    {
+        text-align: right;
+    }
+    .tile_box:nth-child(1) > p,
+    .tile_box:nth-child(3) > p
+    {
+        padding-left: 5%;
+    }
+    .tile_box:nth-child(2) > p
+    {
+        padding-right: 5%;
+    }
+/**+++++++++++++++++++++++++++++++++++++++++++++++++ How does it work */
+    .steps_container > span
+    {
+        padding-left: 5%;
+    }
+    .steps_box span
+    {
+        right: -30px;
+        width: 60px;
+        height: 60px;
+        font-size: 40px;
+    }
+    .steps_container p
+    {
+        font-size: 16px;
+        padding-left: 5%;
+    }
+/**+++++++++++++++++++++++++++++++++++++++++++++++++ Prices */
+    .prices_common div:nth-child(1),
+    .prices_common div:nth-child(2),
+    .prices_common div:nth-child(3)
+    {
+        display: block;
+    }
+    
+    .prices > span:nth-of-type(1) {
+        padding-top: 30px;
+    }
+    
+    .prices_box div:nth-of-type(2) {
+        width: 225px;
+    }
+    
+    .additions > div span:nth-of-type(2) {
+        margin-top: 10px;
+        font-size: 20px;
+    }
+    
+    .additions > div span:nth-of-type(2) span {
+        font-size: 16px;
+    }
+    
+    .prices_common > div {
+        margin: 0 auto;
+    }
+    
+    .prices_common div > span {
+        padding: 0px 14px;
+    }
+    
+    .prices_common div:first-child {
+        margin-top: 20px;
+    }
+    .prices_common div:last-child {
+        margin-bottom: 20px;
+    }
+    
+    .prices_common div > span:before {
+        content: "- ";
+    }
+    
+    .additions {
+        white-space: nowrap;
+    }
+    
+    .additions > div {
+        width: 30%;
+        white-space: normal;
+        margin: 0 5px 60px 5px;
+        padding: 10px 10px 14px 10px;
+    }
+    
+    
+    
+/***************************************************************************** STYLISTS CONTAINER */
+    .slider_box
+    {
+        display: inline-flex !important;
+        flex-direction: row-reverse;
+        flex-wrap: wrap-reverse;
+        text-align: center;
+    }
+    .slider_box > img
+    {
+        border-radius: 50%;
+        list-style: none;
+        align-self: flex-start;
+        margin: 30px auto 30px auto;
+    }
+    .slider_box > div
+    {
+        width: 80%;
+        display: block;
+        list-style: none;
+        margin: 0 auto;
+    }
+    .slider_box > div > p
+    {
+        text-align: center;
+    }
+    .slider_box > div > a
+    {
+        margin-bottom: 30px;
+    }
+    .slider_container > .slick-prev, 
+    .slider_container > .slick-next
+    {
+        display: none !important;
+    }
+/**+++++++++++++++++++++++++++++++++++++++++++++++++ Press about us */
+    .press ul
+    {
+        padding: 0;
+        text-align: center;
+    }
+    .press ul li
+    {
+        margin: 50px 0 0 0;
+        height: auto;
+    }
+    
+    .press img:first-child {
+        height: 40px;
+    }
+
+/**+++++++++++++++++++++++++++++++++++++++++++++++++ Customers Feedback Container */
+    .examples_block
+    {
+        text-align: center !important;
+        width: 100%;
+        padding: 0 5% 50px 5%;
+    }
+    
+    .examples_block p
+    {
+        display: none;
+        font-size: 15px;
+        margin-top: 30px;
+    }
+    
+    .examples_block div {
+        display: none;
+    }
+    
+    .examples_block > span {
+        display: none;
+    }
+    
+    .examples .examples_block2 {
+        display: none;
+    }
+    
+    
+/**+++++++++++++++++++++++++++++++++++++++++++++++++ Footer */
+    .footer_container > div
+    {
+        display: block;
+        text-align: center !important;
+    }
+    .footer_container > div:nth-child(2) > img
+    {
+        display: block;
+        margin: 0 auto 30px auto;
+    }
+    .footer_container > div:nth-child(1) img
+    {
+        display: inline-block;
+        text-align: center;
+        margin: 0 10px 20px 10px;
+    }
+    .footer_container > div:nth-child(3)
+    {
+        margin-bottom: 0;
+    }
+}
+
+@media only screen and (max-width: 576px)
+{
+/**+++++++++++++++++++++++++++++++++++++++++++++++++ Header CSS */
+    .header
+    {
+        height: 280px;
+        background-position: center;
+    }
+    .header_menu ul
+    {
+        text-align: left;
+    }
+    .header_menu ul > li
+    {
+        padding: 5px 15px;
+    }
+    .carousel_box > img
+    {
+        padding-top: 40px;
+        width: 60vw;
+    }
+    .carousel_box > p
+    {
+        font-size: 12px;
+        margin: 4vw 0 4vw 0;
+    }
+    .carousel_box > a
+    {
+        font-size: 10px;
+        border-radius: 23px;
+        margin: 0 20px 0 20px;
+        letter-spacing: 1.3px;
+        padding: 4px 10px 4px 10px;
+    }
+    
+/*+++++++++++++++++++++++++++++++++++++++++++++++++ Prices CSS */
+    
+    .additions > div > img {
+        width: 70px;
+    }
+    
+    .additions > div span:nth-of-type(1) {
+        font-size: 9px;        
+    }
+    
+    .additions > div span:nth-of-type(2) {
+        font-size: 14px;
+    }
+    
+    .additions > div span:nth-of-type(2) span {
+        font-size: 12px;        
+    }
+    
+/*+++++++++++++++++++++++++++++++++++++++++++++++++ Tile CSS */
+    .tile_title_container
+    {
+        padding: 30px 0 30px 0;
+    }
+    .tile_title_container > h1
+    {
+        font-size: 22px;
+    }
+    .tile_title_container > h3
+    {
+        font-size: 14px;
+    }
+    .tile_box > img
+    {
+        width: 100%;
+        height: 55vw;
+        display: block;
+    }
+    .tile_box:nth-child(2)
+    {
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: wrap-reverse;
+    }
+    .tile_box p
+    {
+        width: 90%;
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+        padding: 20px 5% 20px 5%;
+    }
+    .black_box
+    {
+        padding: 30px 0 30px 0;
+        font-size: 22px;
+        line-height: 1.53;
+    }
+/**+++++++++++++++++++++++++++++++++++++++++++++++++ How does it work */
+    .steps_box
+    {
+        width: 100%;
+    }
+    .steps_container > span
+    {
+        width: 100%;
+        padding-left: 0;
+    }
+    .steps_box span
+    {
+        right: 30px;
+        width: 60px;
+        height: 60px;
+        font-size: 40px;
+    }
+    .steps_container p {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 16px;
+        padding: 0 5%;
+        font-size: 14px;
+    }
+    .slider_box > div > a
+    {
+        font-size: 12px;
+        padding: 10px 20px 10px 20px;
+    }
+/**+++++++++++++++++++++++++++++++++++++++++++++++++ Popups */
+    .popup_container
+    {
+        padding: 0 1% 0 1%;
+    }
+    .popup_row1 > div
+    {
+        width: 98%;
+        padding: 20px;
+    }
+    .popup_row1 > div:nth-child(2) > div:nth-child(1) > span:nth-child(1)
+    {
+        font-size: 32px;
+        line-height: 1.1;
+    }
+    .popup_additional > div
+    {
+        width: 94%;
+        padding: 10px 3%;
+        padding-right: 3%;
+        padding-left: 3%;
+        text-align: justify;
+    }
+    .popup_additional > div:after
+    {
+        width: 100%;
+        height: 0px;
+        visibility: hidden;
+        overflow: hidden;
+        content: '';
+        display: inline-block;
+    }
+    .popup_additional > div > div:nth-child(1)
+    {
+        width: auto;
+        padding-right: 0;
+    }
+    .popup_container h2
+    {
+        font-size: 26px;
+        padding: 10px 0 10px 0;
+    }
+    .popup_send
+    {
+        padding-top: 20px;
+        text-align: center;
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .popup_send > span,
+    .popup_send > span span
+    {
+        font-size: 30px;
+    }
+    .popup_row1 > div:nth-child(2)
+    {
+        text-align: justify;
+    }
+    .popup_row1 > div:nth-child(2):after
+    {
+        width: 100%;
+        height: 0px;
+        visibility: hidden;
+        overflow: hidden;
+        content: '';
+        display: inline-block;
+    }
+    .popup_second_container > div > span:nth-child(1)
+    {
+        font-size: 18px;
+    }
+    .popup_second_container > div:nth-child(2) > img
+    {
+        width: 200px;
+    }
+    .prices_box
+    {
+        margin: 0 0 20px 0;
+    }
+    
+    .press {
+        padding: 50px 0 20px 0;
+    }
+    
+    .press h2 {
+        font-size: 28px;
+    }
+    
+    .press ul li {
+        margin-top: 30px;
+    }
+    
+    .press img:first-child {
+        height: 18px;
+    }
+/**+++++++++++++++++++++++++++++++++++++++++++++++++ Customers Feedback Container */
+    .examples h2
+    {
+        display: block;
+        padding-right: 5%;
+        padding-left: 5%;
+        font-size: 30px;
+    }
+/**+++++++++++++++++++++++++++++++++++++++++++++++++ Footer */
+    .feedback a
+    {
+        font-size: 20px;
+    }
+    .footer_container
+    {
+        padding: 0;
+    }
+}
+

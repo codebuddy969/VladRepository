@@ -1,0 +1,157 @@
+footer {
+    padding-top: 90px;
+    background-color: #353535;
+    @media (max-width: 1200px) {
+        padding-top: 30px;
+    }
+    .container {
+        .row {
+            display: flex;
+            justify-content: space-between;
+            @media (max-width: 1200px) {
+                align-items: center;
+            }
+            @media (max-width: 768px) {
+                flex-direction: column;
+            }
+            h2 {
+                color: #fff;
+            }
+            .form-group {
+                display: flex;
+                margin-top: 15px;
+                @media (max-width: 1200px) {
+                    margin-top: 0;
+                }
+                @media (max-width: 768px) {
+                    flex-direction: column;
+                }
+                input {
+                    width: 630px;
+                    height: 70px;
+                    font-size: 18px;
+                    border-radius: 35px;
+                    padding-left: 40px;
+                    padding-right: 40px;
+                    @media (max-width: 1580px) {
+                        width: 500px;
+                    }
+                    @media (max-width: 1200px) {
+                        width: 400px;
+                        height: 50px;
+                    }
+                    @media (max-width: 992px) {
+                        width: 300px;
+                    }
+                    @media (max-width: 768px) {
+                        margin-top: 15px;
+                        margin-bottom: 15px;
+                    }
+                }
+                .btn {
+                    color: #584e0d;
+                    margin-left: 25px;
+                    @media (max-width: 1200px) {
+                        width: 190px;
+                        height: 50px;
+                    }
+                    @media (max-width: 992px) {
+                        margin-left: 10px;
+                    }
+                    @media (max-width: 768px) {
+                        width: 300px;
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+        .auctions-row {
+            margin-top: 50px;
+            line-height: 1.65;
+            @media (max-width: 1200px) {
+                margin-top: 30px;
+            }
+            @media (max-width: 480px) {
+                text-align: center;
+            }
+            a {
+                color: #bfbfbf;
+                font-size: 18px;
+                &:after {
+                    content: "|";
+                    margin: 0 7px;
+                }
+                @media (max-width: 768px) {
+                    font-size: 14px;
+                }
+            }
+        }
+        .copyright-row {
+            display: flex;
+            margin-top: 50px;
+            padding-top: 40px;
+            padding-bottom: 105px;
+            border-top: 1px solid #727272;
+            justify-content: space-between;
+            @media (max-width: 1200px) {
+                padding-bottom: 30px;
+                margin-top: 20px;
+                padding-top: 20px;
+            }
+            @media (max-width: 480px) {
+                flex-direction: column;
+                text-align: center;
+            }
+            .copyright {
+                font-size: 14px;
+                color: #cfcfcf;
+                @media (max-width: 480px) {
+                    margin-bottom: 15px;
+                }
+            }
+            .social {
+                a {
+                    &:after {
+                        content: "";
+                        color: #868686;
+                        font-size: 18px;
+                        margin-left: 10px;
+                        font-family: 'icomoon';
+                        transition: all 0.35s linear;
+                    }
+                    &:hover {
+                        &:after {
+                            color: #3cbae4;
+                            transition: all 0.35s linear;
+                        }
+                    } 
+                }
+                .facebook {
+                    &:after {
+                        content: "\e904";
+                    }
+                }
+                .google {
+                    &:after {
+                        content: "\e905";
+                    }
+                }
+                .behance {
+                    &:after {
+                        content: "\e903";
+                    }
+                }
+                .youtube {
+                    &:after {
+                        content: "\e908";
+                    }
+                }
+                .tweet {
+                    &:after {
+                        content: "\e907";
+                    }
+                }
+            }
+        }
+    }
+}

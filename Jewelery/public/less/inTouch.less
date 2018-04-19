@@ -1,0 +1,160 @@
+.inTouch {
+    padding-top: 90px;
+    padding-bottom: 90px;
+    background-color: #272535;
+    @media (max-width: 1200px) {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .container {
+        display: flex;
+        max-width: 1170px;
+        align-items: center;
+        justify-content: space-between;
+        @media (max-width: 992px) {
+            flex-direction: column;
+        }
+        .info-column {
+            .title {
+                color: #fff;
+                text-align: left;
+                @media (max-width: 768px) {
+                    text-align: center;
+                    font-size: 45px;
+                }
+            }
+            .subtitle {
+                color: #aeaeb1;
+                text-align: left;
+                max-width: 315px;
+                margin-top: 40px;
+                line-height: 1.5;
+                @media (max-width: 992px) {
+                    text-align: center;
+                    margin-top: 15px;
+                    margin-bottom: 15px;
+                }
+            }
+        }
+        .subscribe-column {
+            width: 100%;
+            max-width: 685px;
+            @media (max-width: 1200px) {
+                max-width: 540px;
+            }
+            @media (max-width: 992px) {
+                max-width: 600px;
+            }
+            form {
+                display: flex;
+                justify-content: space-between;
+                @media (max-width: 768px) {
+                    flex-direction: column;
+                    align-items: center;
+                }
+                input {
+                    color: #957f63;
+                    width: 100%;
+                    font-weight: 300;
+                    max-width: 360px;
+                    height: 65px;
+                    padding: 0 40px;
+                    font-size: 16px;
+                    border: 2px solid #b0966e;
+                    background-color: transparent;
+                    &::-webkit-input-placeholder {
+                        color: #9b8464;
+                    }
+                    &::-moz-placeholder {
+                        color: #9b8464;
+                    }
+                    &:-ms-input-placeholder {
+                        color: #9b8464;
+                    }
+                    @media (max-width: 1200px) {
+                        max-width: 240px;
+                        padding: 0 15px;
+                    }
+                    @media (max-width: 992px) {
+                        max-width: 292px;
+                    }
+                    @media (max-width: 768px) {
+                        max-width: 480px;
+                    }
+                }
+                .button {
+                    color: #f7f5f1;
+                    width: 100%;
+                    cursor: pointer;
+                    background-color: #b0966e;
+                    border: none;
+                    &:before {
+                        content: "\e90c";
+                        font-size: 22px;
+                        color: #fff;
+                        font-family: 'icomoon';
+                    }
+                    @media (max-width: 768px) {
+                        max-width: 480px;
+                        margin-top: 15px;
+                    }
+                }
+            }
+        }
+    }
+    hr {
+        display: block;
+        margin-top: 91px;
+        border: 2px solid #453e42;
+        @media (max-width: 1200px) {
+            margin-top: 30px;
+        }
+        @media (max-width: 992px) {
+            margin-top: 60px;
+        }
+    }
+    .logo {
+        width: 160px;
+        height: 65px;
+        color: #bfa274;
+        font-weight: 700;
+        display: flex;
+        font-size: 22px;
+        padding-top: 18px;
+        justify-content: center;
+        margin: -40px auto 0;
+        background-size: 65px;
+        background-color: #272535;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url('../img/icons/logo.svg');
+        font-family: 'Playfair Display', serif;
+    }
+    .auctions {
+        max-width: 1170px;
+        margin: 75px auto 0;
+        text-align: center;
+        @media (max-width: 1200px) {
+            margin: 30px auto 0;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        a {
+            color: #bdbdbf;
+            font-size: 18px;
+            line-height: 1.6;
+            &:after {
+                content: "|";
+                margin: 0 7px;
+            }
+            &:hover {
+                color: #82705b;
+                text-decoration: underline;
+            }
+            @media (max-width: 768px) {
+                font-size: 14px;
+                line-height: 1.8;
+            }
+        }
+    }
+}

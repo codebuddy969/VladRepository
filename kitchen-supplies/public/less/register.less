@@ -1,0 +1,82 @@
+#register {
+    background: #ffffff;
+    min-height: 800px;
+    padding-top: 230px;
+    text-align: center;
+    @media (max-width: 767px) {
+        padding-top: 90px;
+    }
+    .container {
+        .register-box {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            flex-wrap: wrap;
+            min-height: 380px;
+            margin-top: 100px;
+            @media (max-width: 480px) {
+                flex-direction: column;
+                margin-top: 30px;
+            }
+            .boxes {
+                margin: 0px;
+                padding: 60px 0 0;
+                flex-basis: 24.9%;
+                min-height: 420px;
+                text-align: left;
+                transition: all ease 0.4s;
+                border-left: @border_left_decor;
+                @media (max-width: 1030px) {
+                    flex-basis: 24.8%;
+                }
+                @media (max-width: 767px) {
+                    flex-basis: 49.7%;
+                    margin-bottom: 30px;
+                    min-height: 390px;
+                    padding: 30px 0 0;
+                }
+                @media (max-width: 480px) {
+                    flex-basis: 100%;
+                    margin-bottom: 30px;
+                    min-height: 390px;
+                    padding: 30px 0 0;
+                    text-align: center;
+                }
+                .btn-default {
+                    background: #76a246;
+                    color: #ffffff;
+                    display: none;
+                    width: 100%;
+                    margin: 60px auto 0;
+                    font-weight: normal;
+                    text-align: center;
+                    transition: all ease 0.4s;
+                    @media (max-width: 1200px) {
+                        display: block;
+                    }
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+                h4 {
+                    font-size: 24px;
+                    margin-bottom: 30px;
+                }
+                ol {
+                    margin-left: -20px;
+                    color: #B5ABAB;
+                }
+                img {
+                    padding-bottom: 45px;
+                }
+            }
+        }
+        .boxes:hover {
+            .btn-default {
+                display: block;
+                background: #76a246;
+            }
+        }
+    }
+}
+

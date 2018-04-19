@@ -1,0 +1,142 @@
+.protection {
+    padding-bottom: 125px;
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-image: url('../img/protection-background.jpg');
+    @media (max-width: 1700px) {
+        background-image: none;
+        padding-bottom: 0;
+    }
+    .container {
+        display: flex;
+        padding-top: 90px;
+        padding-right: 163px;
+        justify-content: space-between;
+        @media (max-width: 1700px) {
+            padding-top: 0px;
+            padding-right: 0px;
+            max-width: 100%;
+        }
+        @media (max-width: 992px) {
+            flex-direction: column;
+            padding: 0;
+        }
+        .column {
+            &.black-title {
+                padding-top: 165px;
+                @media (max-width: 1700px) {
+                    width: 100%;
+                    padding-top: 30px;
+                    max-width: 30%;
+                    padding-left: 5%;
+                }
+                @media (max-width: 992px) {
+                    max-width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    padding-left: 15px;
+                    padding-right: 15px;
+                    justify-content: space-between;
+                }
+                @media (max-width: 768px) {
+                    text-align: center;
+                }
+                @media (max-width: 480px) {
+                    flex-direction: column;
+                }
+                .title {
+                    margin-bottom: 100px;
+                    @media (max-width: 992px) {
+                        width: 100%;
+                        margin-bottom: 0;
+                    }
+                }
+                .row {
+                    margin-top: 80px;
+                    @media (max-width: 992px) {
+                        width: 48%;
+                        margin-top: 30px;
+                    }
+                    @media (max-width: 480px) {
+                        width: 100%;
+                    }
+                    .row-title {
+                        font-weight: 700;
+                        font-size: 24px;
+                        margin-bottom: 20px;
+                        font-family: 'Lato', sans-serif;
+                    }
+                    p {
+                        font-size: 16px;
+                        line-height: 1.5;
+                    }
+                }
+            }
+            &.white-title {
+                max-width: 480px;
+                position: relative;
+                @media (max-width: 1700px) {
+                    width: 100%;
+                    max-width: 60%;
+                    padding: 30px 5%;
+                    background-color: #31940a;
+                }
+                @media (max-width: 992px) {
+                    margin-top: 30px;
+                    padding-top: 30px;
+                    max-width: 100%;
+                    padding-left: 15px;
+                    padding-right: 15px;
+                }
+                @media (max-width: 768px) {
+                    text-align: center;
+                }
+                .title {
+                       color: #fff; 
+                }
+                .row {
+                    margin-top: 110px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    @media (max-width: 992px) {
+                        margin-top: 30px;
+                    }
+                    @media (max-width: 480px) {
+                        flex-direction: column;   
+                    }
+                    .column {
+                        width: 42%;
+                        margin-bottom: 95px;
+                        @media (max-width: 1200px) {
+                            margin-bottom: 30px;    
+                        }
+                        @media (max-width: 992px) {
+                            width: 48%;
+                        }
+                        @media (max-width: 480px) {
+                            width: 100%;
+                        }
+                        .column-title {
+                            color: #fff;
+                            font-size: 24px;
+                            font-weight: 700;
+                            margin: 25px 0;
+                        }
+                        p {
+                            color: #e0ecde;
+                            font-size: 16px;
+                            line-height: 1.4;
+                        }
+                    }
+                }
+                .button {
+                    background-color: #f63e10;
+                    @media (max-width: 768px) {
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+    }
+}

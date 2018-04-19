@@ -1,0 +1,264 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: 'bakery';
+  src: url('../fonts/bakery/bakery.eot');
+  src: url('../fonts/bakery/bakery.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/bakery/bakery.woff2') format('woff2'),
+       url('../fonts/bakery/bakery.woff') format('woff'),
+       url('../fonts/bakery/bakery.ttf')  format('truetype'),
+       url('../fonts/bakery/bakery.svg#svgFontName') format('svg');
+}
+
+@font-face {
+  font-family: 'Proxima-Thin';
+  src: url('../fonts/Proxima-Thin/proximanovathin.eot');
+  src: url('../fonts/Proxima-Thin/proximanovathin.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Proxima-Thin/proximanovathin.woff2') format('woff2'),
+       url('../fonts/Proxima-Thin/proximanovathin.woff') format('woff'),
+       url('../fonts/Proxima-Thin/proximanovathin.ttf')  format('truetype'),
+       url('../fonts/Proxima-Thin/proximanovathin.svg#svgFontName') format('svg');
+}
+
+@font-face {
+  font-family: 'Proxima-Regular';
+  src: url('../fonts/Proxima-Regular/proximanovaregular.eot');
+  src: url('../fonts/Proxima-Regular/proximanovaregular.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Proxima-Regular/proximanovaregular.woff2') format('woff2'),
+       url('../fonts/Proxima-Regular/proximanovaregular.woff') format('woff'),
+       url('../fonts/Proxima-Regular/proximanovaregular.ttf')  format('truetype'),
+       url('../fonts/Proxima-Regular/proximanovaregular.svg#svgFontName') format('svg');
+}
+
+@font-face {
+  font-family: 'Proxima-Bold';
+  src: url('../fonts/Proxima-Bold/proximanovabold.eot');
+  src: url('../fonts/Proxima-Bold/proximanovabold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Proxima-Bold/proximanovabold.woff2') format('woff2'),
+       url('../fonts/Proxima-Bold/proximanovabold.woff') format('woff'),
+       url('../fonts/Proxima-Bold/proximanovabold.ttf')  format('truetype'),
+       url('../fonts/Proxima-Bold/proximanovabold.svg#svgFontName') format('svg');
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon/icomoon.eot?avaqn0');
+    src:  url('../fonts/icomoon/icomoon.eot?avaqn0#iefix') format('embedded-opentype'),
+          url('../fonts/icomoon/icomoon.ttf?avaqn0') format('truetype'),
+          url('../fonts/icomoon/icomoon.woff?avaqn0') format('woff'),
+          url('../fonts/icomoon/icomoon.svg?avaqn0#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:700');
+
+body {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../img/body-background.jpg);
+}
+
+html,body,div,ul,li,p,h1,h2,h3,h4,h5,h6,button,a,input {
+    margin: 0;
+    padding: 0;
+    color: #000;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-weight: 400;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Proxima-Thin', sans-serif;
+}
+
+.container {
+    max-width: 1560px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+
+.title {
+    color: #333b4d;
+    font-size: 75px;
+    text-align: center;
+    font-family: 'bakery', sans-serif;
+}
+
+.subtitle {
+    font-size: 16px;
+    font-family: 'Proxima-Thin', sans-serif;
+}
+
+::-webkit-input-placeholder {
+    font-size: 24px;
+}
+
+::-moz-placeholder {
+    font-size: 24px;
+}
+
+:-ms-input-placeholder {
+    font-size: 24px;
+}
+
+.products-row {
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @media (max-width: 1200px) {
+        margin-top: 30px;
+    }
+    @media (max-width: 1020px) {
+        justify-content: flex-start;
+    }
+    @media (max-width: 768px) {
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .item {
+        margin-bottom: 60px;
+        display: block;
+        @media (max-width: 1500px) {
+            width: 315px;
+            .item-image {
+                img {
+                    width: 70%;                            
+                }
+            }
+        }
+        @media (max-width: 1310px) {
+            width: 280px;
+        }
+        @media (max-width: 1200px) {
+            width: 240px;
+            min-height: 380px;
+        }
+        @media (max-width: 1020px) {
+            width: 200px;
+            flex-basis: 50%;
+            margin-bottom: 30px;
+        }
+        @media (max-width: 768px) {
+            width: auto;
+            min-height: 440px;
+        }
+        .item-image {
+            width: 365px;
+            height: 355px;
+            display: flex;
+            position: relative;
+            align-items: center;
+            justify-content: center;
+            background-color: #eee;
+            @media (max-width: 1510px) {
+                width: 300px;
+                height: 290px;
+            }
+            @media (max-width: 1310px) {
+                width: 270px;
+                height: 255px;
+            }
+            @media (max-width: 1200px) {
+                width: 240px;
+                height: 215px;
+            }
+            @media (max-width: 1020px) {
+                width: 350px;
+                height: 340px;
+                margin: 0 auto;
+            }
+            @media (max-width: 400px) {
+                width: 270px;
+                height: 260px;
+            }
+            .discount {
+                top: 20px;
+                left: 20px;
+                width: 75px;
+                height: 75px;
+                display: flex;
+                color: #fff;
+                font-size: 22px;
+                position: absolute;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                background-color: #85b003;
+                font-family: 'Proxima-Bold', sans-serif;
+            }
+        }
+        .item-info {
+            padding: 35px;
+            display: block;
+            padding-bottom: 0;
+            @media (max-width: 1020px) {
+                padding: 15px;
+                padding-bottom: 0;
+                text-align: center;
+            }
+            .name {
+                color: #535253;
+                font-size: 18px;
+                white-space: nowrap;
+                overflow: hidden;
+                display: block;
+                text-overflow: ellipsis;
+                font-family: 'Proxima-Regular', sans-serif;
+                @media (min-width: 1500px) {
+                    max-width: 320px;
+                    margin: 0 auto;
+                }
+                @media (max-width: 992px) {
+                    max-width: 350px;
+                    margin: 0 auto;
+                }
+                @media (max-width: 400px) {
+                    max-width: 270px;
+                }
+            }
+            .price {
+                color: #000;
+                font-size: 24px;
+                margin: 10px 0 20px;
+                display: inline-block;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+                font-family: 'Proxima-Bold', sans-serif;
+                span {
+                    font-size: 16px;
+                    margin-left: 10px;
+                    text-decoration: line-through;
+                    font-family: 'Proxima-Regular', sans-serif;
+                }
+                @media (min-width: 1500px) {
+                    max-width: 320px;
+                    margin: 10px auto 20px;
+                }
+                @media (max-width: 992px) {
+                    max-width: 350px;
+                    margin: 10px auto 20px;
+                }
+                @media (max-width: 400px) {
+                    max-width: 270px;
+                }
+            }
+            .more-button {
+                color: #e09c4c;
+                font-size: 22px;
+                display: block;
+                text-transform: uppercase;
+                text-decoration: underline;
+                font-family: 'Roboto', sans-serif;
+                @media (max-width: 992px) {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}

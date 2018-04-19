@@ -1,0 +1,207 @@
+                @font-Roboto: 'Roboto',
+                sans-serif;
+                @font-Anton: 'Anton',
+                sans-serif;
+                @primary-color: #e4353a;
+                @default-color: #000000;
+                .benefits {
+                    background: #fff;
+                    min-height: 373px;
+                    @media (max-width: 767px) {
+                        br {
+                            display: none;
+                        }
+                        @media (max-width: 767px) {}
+                    }
+                    .container-lg.benefits-block {
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        @media (max-width: 767px) {
+                            justify-content: center;
+                        }
+                        @media (max-width: 480px) {
+                            flex-direction: column;
+                        }
+                        .user-protection,
+                        .buer-protection,
+                        .global-trade,
+                        .seller-protection,
+                        .safe-payment {
+                            position: relative;
+                            display: flex;
+                            align-items: flex-end;
+                            justify-content: start;
+                            width: 20%;
+                            height: 373px;
+                            overflow: hidden;
+                            @media (max-width: 767px) {
+                                width: 33.3333333333333%;
+                            }
+                            @media (max-width: 480px) {
+                                width: 100%;
+                                height: 400px;
+                            }
+                            .info {
+                                position: relative;
+                                padding: 15px 30px;
+                                z-index: 1;
+                                @media (max-width: 1200px) {
+                                    padding: 15px;
+                                }
+                                @media (max-width: 480px) {
+                                    padding: 30px;
+                                }
+                                h3 {
+                                    font-size: 20px;
+                                    font-family: @font-Roboto;
+                                    padding-bottom: 5px;
+                                }
+                                p {
+                                    font-size: 12px;
+                                    line-height: 18px;
+                                    font-family: @font-Roboto;
+                                    font-weight: 100;
+                                    width: 190px;
+                                    opacity: 0.9;
+                                    @media (max-width: 1200px) {
+                                        width: 100%;
+                                    }
+                                }
+                                @media (max-width: 480px) {
+                                    text-align: center;
+                                }
+                            }
+                            .label {
+                                font-size: 14px;
+                                letter-spacing: 1px;
+                                text-transform: uppercase;
+                                text-align: left;
+                                position: absolute;
+                                z-index: 3;
+                                color: #fff;
+                                top: 45px;
+                                left: 30px;
+                                @media (max-width: 480px) {
+                                    left: 0;
+                                    right: 0;
+                                    bottom: 0;
+                                    text-align: center;
+                                }
+                            }
+                        }
+                        .user-protection {
+                            background: url("../img/user-protection.png") no-repeat top center;
+                            .info {
+                                color: #fff;
+                            }
+                            .label {
+                                color: #fff;
+                                top: 45px;
+                                left: 30px;
+                                @media (max-width: 480px) {
+                                    left: 0;
+                                }
+                            }
+                        }
+                        .buer-protection,
+                        .seller-protection {
+                            background: #fff;
+                            display: block;
+                            img.benefits-img {
+                                position: relative;
+                                width: 100%;
+                            }
+                            .info {
+                                position: relative;
+                                bottom: 0;
+                                color: #000000;
+                                .default-btn {
+                                    margin-top: 30px;
+                                    color: @primary-color;
+                                    text-align: left;
+                                    font-size: 14px;
+                                    text-decoration: none;
+                                    &:after {
+                                        content: url("../img/arrow-right-red.png");
+                                        position: relative;
+                                        left: 15px;
+                                    }
+                                    &:hover {
+                                        color: @default-color;
+                                    }
+                                    @media (max-width: 767px) {
+                                        margin-top: 15px;
+                                    }
+                                    @media (max-width: 480px) {
+                                        width: auto;
+                                        text-align: center;
+                                    }
+                                }
+                                .label {
+                                    color: #717171;
+                                    padding-bottom: 20px;
+                                    position: relative;
+                                    top: 0;
+                                    left: 0;
+                                }
+                            }
+                            @media (max-width: 767px) {
+                                width: 50%;
+                            }
+                            @media (max-width: 480px) {
+                                width: 100%;
+                                height: 440px;
+                            }
+                        }
+                        .global-trade {
+                            align-items: flex-start;
+                            justify-content: center;
+                            background: url("../img/global-trade.png") no-repeat top center;
+                            .info {
+                                color: #fff;
+                                text-align: center;
+                            }
+                        }
+                        .safe-payment {
+                            align-items: flex-start;
+                            justify-content: center;
+                            background: url("../img/safe-payment.png") no-repeat top center;
+                            .info {
+                                color: #fff;
+                                text-align: left;
+                                @media (max-width: 480px) {
+                                    text-align: center;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                @media (max-width: 767px) {
+                    .user-protection {
+                        order: 1;
+                    }
+                    .global-trade {
+                        order: 2;
+                    }
+                    .safe-payment {
+                        order: 3;
+                    }
+                    .seller-protection {
+                        order: 4;
+                    }
+                    .buer-protection {
+                        order: 5;
+                    }
+                }
+
+                @media (max-width: 480px) {
+                    .user-protection,
+                    .buer-protection,
+                    .global-trade,
+                    .seller-protection,
+                    .safe-payment {
+                        background-size: cover !important;
+                    }
+                }

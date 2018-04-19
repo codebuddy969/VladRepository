@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'Carlito';
+    src: local('Carlito'), url('Carlito.woff2') format('woff2'), url('Carlito.woff') format('woff'), url('Carlito.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Carlito';
+    src: local('Carlito Italic'), local('Carlito-Italic'), url('Carlitoitalic.woff2') format('woff2'), url('Carlitoitalic.woff') format('woff'), url('Carlitoitalic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Carlito';
+    src: local('Carlito Bold'), local('Carlito-Bold'), url('Carlitobold.woff2') format('woff2'), url('Carlitobold.woff') format('woff'), url('Carlitobold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Carlito';
+    src: local('Carlito Bold Italic'), local('Carlito-BoldItalic'), url('Carlitobolditalic.woff2') format('woff2'), url('Carlitobolditalic.woff') format('woff'), url('Carlitobolditalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}

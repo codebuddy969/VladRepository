@@ -1,0 +1,77 @@
+.benefits {
+    padding-top: 135px;
+    @media (max-width: 1200px) {
+        padding-top: 30px;
+    }
+    @media (max-width: 992px) {
+        max-width: 700px;
+    }
+    @media (max-width: 768px) {
+        max-width: 560px;
+    }
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 70px;
+        justify-content: space-between;
+        @media (max-width: 1200px) {
+            margin-top: 30px;
+        }
+        .column {
+            width: 360px;
+            margin-bottom: 90px;
+            @media (max-width: 1200px) {
+                width: 310px;
+                margin-bottom: 30px;
+            }
+            @media (max-width: 768px) {
+                width: 250px;
+                width: 48%;
+            }
+            @media (max-width: 450px) {
+                width: 100%;
+                text-align: center;
+            }
+            .icon {
+                content: "";
+                color: #fd892c;
+                font-size: 40px;
+                font-family: 'icomoon';
+            }
+            .hammer:before {
+                content: "\e907";               
+            }
+            .megaphone:before {
+                content: "\e908";               
+            }
+            .mobile:before {
+                content: "\e909";               
+            }
+            .basket:before {
+                content: "\e901";               
+            }
+            .social:before {
+                content: "\e90b";               
+            }
+            .calendar:before {
+                content: "\e903";               
+            }
+            h3 {
+                color: #343434;
+                font-size: 18px;
+                margin-top: 15px;
+                font-family: 'AvertaBold', sans-serif;
+            }
+            p {
+                color: #888;
+                font-size: 14px;
+                margin-top: 10px;
+                max-width: 80%;
+                line-height: 1.4;
+                @media (max-width: 768px) {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}

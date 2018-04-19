@@ -1,0 +1,85 @@
+footer {
+    padding-top: 80px;
+    padding-bottom: 70px;
+    background-color: #211f2c;
+    @media (max-width: 1400px) {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .container {
+        max-width: 1170px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @media (max-width: 992px) {
+            flex-direction: column;
+        }
+        .copyright {
+            font-size: 16px;
+            color: #908f96;
+            line-height: 1.6;
+            @media (max-width: 992px) {
+                text-align: center;
+            }
+            span {
+                display: block;
+            }
+            a {
+                color: #776651;
+                text-decoration: underline;
+            }
+        }
+        .social {
+            @media (max-width: 992px) {
+                margin-top: 30px;
+            }
+            a {
+                display: inline-block;
+                &:after {
+                    content: "";
+                    color: #908f96;
+                    font-size: 34px;
+                    margin-left: 11px;
+                    font-family: 'icomoon';
+                    transition: all 0.35s linear;
+                }
+                &:hover {
+                    &:after {
+                        color: #bfa274;
+                        transition: all 0.35s linear;
+                    }
+                } 
+            }
+            .facebook {
+                &:after {
+                    content: "\e90d";
+                }
+            }
+            .twitter {
+                &:after {
+                    content: "\e911";
+                }
+            }
+            .google {
+                &:after {
+                    content: "\e90e";
+                }
+            }
+            .pintrest {
+                &:after {
+                    content: "\e910";
+                }
+            }
+            .linkedin {
+                &:after {
+                    content: "\e90f";
+                }
+            }
+            .youtube {
+                &:after {
+                    content: "\e912";
+                }
+            }
+        }
+    }
+}

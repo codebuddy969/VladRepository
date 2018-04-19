@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>About page</title>
+<meta charset="UTF-8">
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" type="text/css" href="public/css/main.css">
+
+</head>
+<body>
+
+<header class="header-apply">
+    <div class="header-apply__navigation">
+        <nav class="container">
+            <ul>
+                <li>
+                    <a class="header-apply__link header-apply__link-active" href="./index.html">Home</a>
+                    <div class="link-underline"></div>
+                </li>
+                <li>
+                    <a class="header-apply__link header-apply__link-active" href="./about.html">About</a>
+                    <div class="link-underline"></div>
+                </li>
+                <li>
+                    <a class="header-apply__link header-apply__link-active" href="./apply.html">Apply</a>
+                    <div class="link-underline"></div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<script>
+    function Validation(event) {
+        event.preventDefault();
+    }
+</script>
+
+<form class="main-apply" method="" action="" onsubmit="Validation(event)">
+    <div class="main-apply__info-block">
+        <h1><span>Brand</span> <span>makeover</span></h1>
+        <img src="./public/img/icons/header-logo.svg" alt="logo">
+        <p>Your business just got better</p>
+    </div>
+    
+    <div class="main-apply__title">tell us about your business</div>
+    
+    <div class="input-group">
+        <div class="input-group__label"><span>1</span> Your name</div>
+        <input class="input-group__input" type="text" data-validation-engine="validate[required]">
+    </div>
+    
+    <div class="input-group">
+        <div class="input-group__label"><span>2</span> does your business have a store front</div>
+        <div class="button-group">
+            <button type="button" class="button-group__button">Yes</button>
+            <button type="button" class="button-group__button">No</button>
+            <input type="checkbox" data-validation-engine="validate[required]" class="button-group__checkbox">
+            <input type="checkbox" data-validation-engine="validate[required]" class="button-group__checkbox">
+        </div>
+    </div>
+    
+    <div class="input-group">
+        <div class="input-group__label"><span>3</span> address of business</div>
+        <input class="input-group__input" type="text" data-validation-engine="validate[required]" placeholder="Address Line One">
+        <input class="input-group__input" type="text" data-validation-engine="validate[required]" placeholder="Address Line Two">
+        <div class="input-group__half-container">
+            <div class="input-group__half">
+                <input class="input-group__half-input" type="text" data-validation-engine="validate[required]" placeholder="City">
+            </div>
+            <div class="input-group__half">
+                <input class="input-group__half-input" type="text" data-validation-engine="validate[required]" placeholder="State">
+            </div>
+            
+        </div>
+        <input class="input-group__input" type="text" data-validation-engine="validate[required]" placeholder="Zip">
+    </div>
+    
+    <div class="input-group">
+        <div class="input-group__label"><span>4</span> upload pictures of your space you would film at/ storefront</div>
+        <textarea class="input-group__textarea" data-validation-engine="validate[required]"></textarea>
+    </div>
+    
+    <div class="main-apply__title">tell us about your business</div>
+    
+    <div class="input-group">
+        <div class="input-group__label"><span>1</span> Company name</div>
+        <input class="input-group__input" type="text" data-validation-engine="validate[required]">
+    </div>
+    
+    <div class="input-group">
+        <div class="input-group__label"><span>2</span> share 5 adjectives about your business</div>
+        <textarea class="input-group__textarea" data-validation-engine="validate[required]"></textarea>
+    </div>
+    
+    <div class="input-group">
+        <div class="input-group__label"><span>3</span> what is your business about?</div>
+        <textarea class="input-group__textarea" data-validation-engine="validate[required]"></textarea>
+    </div>
+    
+    <div class="input-group">
+        <div class="input-group__label"><span>4</span> is there a unique story behind your business name/ logo?</div>
+        <textarea class="input-group__textarea" data-validation-engine="validate[required]"></textarea>
+    </div>
+    
+    <div class="input-group">
+        <div class="input-group__label"><span>5</span> what is wrong with your existing brand?</div>
+        <textarea class="input-group__textarea" data-validation-engine="validate[required]"></textarea>
+    </div>
+    
+    <div class="input-group">
+        <div class="input-group__label"><span>6</span> what sets you apart from competitors?</div>
+        <textarea class="input-group__textarea" data-validation-engine="validate[required]"></textarea>
+    </div>
+    
+    <div class="input-group">
+        <div class="input-group__label"><span>7</span> why do your clients trust you? how do you solve their problems?</div>
+        <textarea class="input-group__textarea" data-validation-engine="validate[required]"></textarea>
+    </div>
+    
+    <div class="input-group">
+        <div class="input-group__label"><span>8</span> are there colors or patterns ou are drawn to/ or feel represent your business?</div>
+        <textarea class="input-group__textarea" data-validation-engine="validate[required]"></textarea>
+    </div>
+    
+    <div class="button-group">
+        <button type="submit" class="button-group__submit-btn">Submit application</button>
+    </div>
+    
+</form>
+
+<footer class="footer">
+    <div class="footer-links">
+        <a href="#"><img src="./public/img/icons/footer-facebook.svg" alt=""></a>
+        <a href="#"><img src="./public/img/icons/footer-instagram.svg" alt=""></a>
+        <a href="#"><img src="./public/img/icons/footer-tweet.svg" alt=""></a>
+    </div>
+</footer>
+
+<script rel="stylesheet" src="public/js/main.js"></script>
+
+<script>
+    
+    let button = document.querySelectorAll('.button-group__button');
+    let checkbox = document.querySelectorAll('.button-group__checkbox');
+    
+    var att = document.createAttribute("checked");
+    
+    for(let i = 0; i < button.length && i < checkbox.length; i++) {
+                
+        button[i].addEventListener("click", function(){
+            
+            for(let j = 0; j < button.length && j < checkbox.length; j++) {
+                button[j].classList.remove('active');
+                checkbox[j].checked = false;
+                checkbox[j].removeAttribute("checked");
+            }
+            
+            button[i].classList.add('active');
+            checkbox[i].checked = true;
+            checkbox[i].setAttributeNode(att);
+            
+        });
+    }
+    
+</script>
+   
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="public/js/jquery.validationEngine.js"></script>
+<script src="public/js/jquery.validationEngine-en.js"></script>
+<link rel="stylesheet" type="text/css" href="public/css/validationEngine.jquery.css">
+
+<script>
+    $(document).ready(function(){
+        $(".main-apply").validationEngine({promptPosition : "inline"});
+    });
+</script>
+</body>
+</html>

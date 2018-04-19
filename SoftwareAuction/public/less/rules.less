@@ -1,0 +1,147 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: 'Muller Bold';
+  src: url('../fonts/MullerBold/mullerbold.eot');
+  src: url('../fonts/MullerBold/mullerbold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/MullerBold/mullerbold.woff2') format('woff2'),
+       url('../fonts/MullerBold/mullerbold.woff') format('woff'),
+       url('../fonts/MullerBold/mullerbold.ttf')  format('truetype'),
+       url('../fonts/MullerBold/mullerbold.svg#svgFontName') format('svg');
+}
+
+@font-face {
+  font-family: 'Muller ExtraBold';
+  src: url('../fonts/MullerExtraBold/mullerextrabold.eot');
+  src: url('../fonts/MullerExtraBold/mullerextrabold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/MullerExtraBold/mullerextrabold.woff2') format('woff2'),
+       url('../fonts/MullerExtraBold/mullerextrabold.woff') format('woff'),
+       url('../fonts/MullerExtraBold/mullerextrabold.ttf')  format('truetype'),
+       url('../fonts/MullerExtraBold/mullerextrabold.svg#svgFontName') format('svg');
+}
+
+@font-face {
+    font-family: 'Muller ExtraBold Italic';
+    src: url('../fonts/MullerExtraBoldItalic/mullerextrabolditalic.eot');
+    src: url('../fonts/MullerExtraBoldItalic/mullerextrabolditalic.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/MullerExtraBoldItalic/mullerextrabolditalic.woff2') format('woff2'),
+         url('../fonts/MullerExtraBoldItalic/mullerextrabolditalic.woff') format('woff'),
+         url('../fonts/MullerExtraBoldItalic/mullerextrabolditalic.ttf')  format('truetype'),
+         url('../fonts/MullerExtraBoldItalic/mullerextrabolditalic.svg#svgFontName') format('svg');
+}
+
+@font-face {
+    font-family: 'Muller Light';
+    src: url('../fonts/MullerLight/mullerlight.eot');
+    src: url('../fonts/MullerLight/mullerlight.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/MullerLight/mullerlight.woff2') format('woff2'),
+         url('../fonts/MullerLight/mullerlight.woff') format('woff'),
+         url('../fonts/MullerLight/mullerlight.ttf')  format('truetype'),
+         url('../fonts/MullerLight/mullerlight.svg#svgFontName') format('svg');
+}
+
+@font-face {
+    font-family: 'Muller Regular';
+    src: url('../fonts/MullerRegular/mullerregular.eot');
+    src: url('../fonts/MullerRegular/mullerregular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/MullerRegular/mullerregular.woff2') format('woff2'),
+         url('../fonts/MullerRegular/mullerregular.woff') format('woff'),
+         url('../fonts/MullerRegular/mullerregular.ttf')  format('truetype'),
+         url('../fonts/MullerRegular/mullerregular.svg#svgFontName') format('svg');
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon/icomoon.eot?avaqn0');
+    src:  url('../fonts/icomoon/icomoon.eot?avaqn0#iefix') format('embedded-opentype'),
+          url('../fonts/icomoon/icomoon.ttf?avaqn0') format('truetype'),
+          url('../fonts/icomoon/icomoon.woff?avaqn0') format('woff'),
+          url('../fonts/icomoon/icomoon.svg?avaqn0#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html,body,div,ul,li,p,h1,h2,h3,h4,h5,h6,button,a,input {
+    margin: 0;
+    padding: 0;
+    color: #000;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    font-weight: 400;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Muller Regular', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+a,a:hover, {
+    transition: all 0.35s linear;
+}
+.container {
+    max-width: 1170px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+::-webkit-input-placeholder {
+  color: #fff;
+}
+::-moz-placeholder {
+  color: #fff;
+}
+:-ms-input-placeholder {
+  color: #fff;
+}
+.btn {
+    background-color: #5cc142;
+    display: flex;
+    color: #fff;
+    box-shadow: 0px 7px 90px 0px rgba(92, 193, 66, 0.45);
+    width: 235px;
+    height: 79px;
+    outline: none;
+    cursor: pointer;
+    font-size: 15px;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    font-family: 'Muller Bold', sans-serif;
+    &:hover {
+        color: #5cc142; 
+        border: 1px solid #5cc142;
+        background-color: #fff;
+    }
+}
+.title {
+    color: #343a64;
+    font-size: 30px;
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Muller ExtraBold', sans-serif;
+    &:after {
+        content: "";
+        width: 53px;
+        height: 3px;
+        display: block;
+        margin: 25px auto 0;
+        background-color: #5ec244;
+    }
+}
+//.bck {
+//    position: absolute;
+//    top: 0;
+//    left: 0;
+//    z-index: 0;
+//    width: 1920px;
+//    height: 5930px;
+//    background-size: cover;
+//    background-repeat: no-repeat;
+//    background-image: url(/image.jpg);
+//}

@@ -1,0 +1,107 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?xviq0p');
+  src:  url('fonts/icomoon.eot?xviq0p#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?xviq0p') format('truetype'),
+    url('fonts/icomoon.woff?xviq0p') format('woff'),
+    url('fonts/icomoon.svg?xviq0p#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-left-arrow-1:before {
+  content: "\e900";
+}
+.icon-remove-button:before {
+  content: "\e901";
+}
+.icon-check:before {
+  content: "\e902";
+}
+.icon-checked:before {
+  content: "\e903";
+}
+.icon-social:before {
+  content: "\e904";
+}
+.icon-smartphone-call:before {
+  content: "\e905";
+}
+.icon-left-arrow:before {
+  content: "\e906";
+}
+.icon-calendar:before {
+  content: "\e907";
+}
+.icon-credit-card:before {
+  content: "\e908";
+}
+.icon-wallet:before {
+  content: "\e909";
+}
+.icon-coins:before {
+  content: "\e90a";
+}
+.icon-drawing:before {
+  content: "\e90b";
+}
+.icon-engineer:before {
+  content: "\e90c";
+}
+.icon-phone-call:before {
+  content: "\e90d";
+}
+.icon-diploma:before {
+  content: "\e90e";
+}
+.icon-mechanic:before {
+  content: "\e90f";
+}
+.icon-loader:before {
+  content: "\e910";
+}
+.icon-shield:before {
+  content: "\e911";
+}
+.icon-wrench:before {
+  content: "\e912";
+}
+.icon-sad:before {
+  content: "\e913";
+}
+.icon-snowflake:before {
+  content: "\e914";
+}
+.icon-balance:before {
+  content: "\e915";
+}
+.icon-tipper:before {
+  content: "\e916";
+}
+.icon-toilet:before {
+  content: "\e917";
+}
+.icon-nose:before {
+  content: "\e918";
+}
+.icon-triangle1:before {
+  content: "\e919";
+}
+.icon-triangle2:before {
+  content: "\e91a";
+}

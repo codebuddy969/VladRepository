@@ -1,0 +1,151 @@
+.reviews {
+    padding-top: 160px;
+    padding-bottom: 140px;
+    background-color: #f4f6f8;
+    @media (max-width: 1200px) {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .container {
+        display: flex;
+        @media (max-width: 1200px) {
+            flex-direction: column;
+        }
+        .column-left {
+            width: 40%;
+            @media (max-width: 1200px) {
+                width: 100%;
+            }
+        }
+        .column-right {
+            width: 55%;
+            position: relative;
+            @media (max-width: 1200px) {
+                width: 95%;
+            }
+            @media (max-width: 768px) {
+                width: 100%;
+            }
+            .sliderTest {
+                .slide {
+                    padding: 80px 75px;
+                    box-sizing: border-box;
+                    background-color: #fff;
+                    height: 545px;
+                    box-shadow: 0px 0px 55.86px 1.14px rgba(53, 53, 53, 0.14);
+                    @media (max-width: 1580px) {
+                        padding: 30px;
+                        height: auto;
+                    }
+                    @media (max-width: 1580px) {
+                        padding-left: 15px;
+                        padding-right: 15px;
+                    }
+                    .icon {
+                        width: 60px;
+                        height: 50px;
+                        &:after {
+                            content: "\e906";
+                            color: #3cbae4;
+                            font-size: 50px;
+                            font-family: 'icomoon';
+                            transition: all 0.35s linear;
+                        }
+                    }
+                    p {
+                        color: #353535;
+                        font-size: 20px;
+                        margin-top: 22px;
+                        line-height: 1.8;
+                        font-family: 'carlito-Regular', sans-serif;
+                        @media (max-width: 1200px) {
+                            font-size: 16px;
+                        }
+                    }
+                    h3 {
+                        color: #000;
+                        font-size: 22px;
+                        margin-top: 40px;
+                        font-family: 'carlito-Bold', sans-serif;
+                        @media (max-width: 768px) {
+                            margin-top: 20px;
+                        }
+                        span {
+                            color: #969696;
+                            font-size: 16px;
+                            display: block;
+                            margin-top: 5px;
+                            font-family: 'carlito-Regular', sans-serif;
+                        }
+                    }
+                }
+            }
+            .tns-outer {
+                @media (max-width: 768px) {
+                    margin-bottom: 50px;
+                }
+                .tns-controls {
+                    top: 0;
+                    right: -70px;
+                    bottom: 0;
+                    z-index: 2;
+                    height: 120px;
+                    margin: auto;
+                    position: absolute;
+                    @media (max-width: 1580px) {
+                        right: -55px;
+                    }
+                    @media (max-width: 1200px) {
+                        right: -50px;
+                    }
+                    @media (max-width: 992px) {
+                        right: -45px;
+                    }
+                    @media (max-width: 768px) {
+                        top: auto;
+                        height: auto;
+                        display: flex;
+                        right: 0;
+                    }
+                    .prev, .next {
+                        width: 37px;
+                        height: 37px;
+                        color: #fff;
+                        font-size: 0;
+                        display: block;
+                        border-radius: 50%;
+                        background-color: transparent;
+                        &:after {
+                            content: "";
+                            color: #9fa0a1;
+                            font-size: 34px;
+                            font-family: 'icomoon';
+                            transition: all 0.35s linear;
+                        }
+                        &:hover {
+                            &:after {
+                                color: #44bde5;
+                                transition: all 0.35s linear;
+                            }
+                        }
+                    }
+                    .prev {
+                        &:after {
+                            content: "\e902";
+                        }
+                    }
+                    .next {
+                        margin-top: 15px;
+                        &:after {
+                            content: "\e900";
+                        }
+                        @media (max-width: 768px) {
+                            margin-top: 0;
+                            margin-left: 10px;
+                        }
+                    }
+                }                    
+            }
+        }
+    }
+}

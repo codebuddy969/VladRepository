@@ -1,0 +1,122 @@
+    @primary-color: #e4353a;
+    @default-color: #000000;
+    .register {
+        background-color: #ffffff;
+        padding: 30px 0 30px;
+        @media (max-width: 767px) {
+            padding: 0px 0 30px;
+        }
+        .main-title {
+            padding-bottom: 100px;
+            @media (max-width: 767px) {
+                padding: 0px 0 30px;
+            }
+        }
+        .default-btn.reg {
+            width: 190px;
+            height: 50px;
+            line-height: 50px;
+            background-color: @primary-color;
+            border-radius: 0;
+            color: #fff;
+            font-size: 14px;
+            border: 1px solid @primary-color;
+            transition-duration: 0.1s;
+            text-decoration: none;
+            &:hover {
+                background-color: lighten(@primary-color, 5%);
+                color: #FFF;
+                border: 1px solid #FFF;
+            }
+            &:after {
+                left: 15px;
+                top: 2px;
+            }
+            @media (max-width: 480px) {
+                height: 50px;
+                line-height: 50px;
+            }
+        }
+        .register-blocks {
+            display: flex;
+            flex-direction: row;
+            margin: -15px;
+            @media (max-width: 992px) {
+                flex-direction: column;
+            }
+            .column-1 {
+                flex: 1;
+                @media (max-width: 480px) {
+                    text-align: center;
+                }
+                .text {
+                    max-width: 280px;
+                }
+                .byer-box {
+                    background: url("../img/register-byer.png") no-repeat top center / cover;
+                    padding: 55px;
+                    min-height: 614px;
+                    @media (max-width: 992px) {}
+                }
+            }
+            .column-2 {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                @media (max-width: 480px) {
+                    text-align: center;
+                }
+                .text {
+                    max-width: 280px;
+                    color: #fff;
+                }
+                .dable-column {
+                    display: flex;
+                    flex-direction: row;
+                    @media (max-width: 550px) {
+                        flex-direction: column;
+                    }
+                    .seller-box {
+                        flex: 1;
+                        background: url("../img/register-seller.png") no-repeat 0 0 / cover;
+                        padding: 20px;
+                        height: 307px;
+                    }
+                    .shipper-box {
+                        flex: 1;
+                        background: url("../img/register-shipper.png") no-repeat 0 0 / cover;
+                        padding: 20px;
+                        height: 307px;
+                    }
+                }
+                .manufacturer-box {
+                    background: url("../img/register-manufacturer.png") no-repeat 0 0 / cover;
+                    padding: 20px;
+                    height: 277px;
+                }
+            }
+        }
+    }
+
+    .byer-box,
+    .seller-box,
+    .shipper-box,
+    .manufacturer-box {
+        &.box {
+            margin: 15px;
+            @media (max-width: 550px) {
+                margin: 7px 15px;
+            }
+            h4 {
+                font-size: 30px;
+                font-weight: 900;
+                padding-bottom: 10px;
+            }
+            p {
+                font-size: 24px;
+                @media (max-width: 1200px) {
+                    font-size: 18px;
+                }
+            }
+        }
+    }

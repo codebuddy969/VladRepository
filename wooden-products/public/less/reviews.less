@@ -1,0 +1,39 @@
+#reviews {
+    padding: 125px 0 70px;
+    @media (max-width: 767px) {
+        padding: 60px 0 50px;
+    }
+    .reviews-block {
+        display: flex;
+        flex-direction: row;
+        @media (max-width: 767px) {
+            flex-direction: column;
+        }
+        .item {
+            text-align: center;
+            padding: 20px;
+            img {
+                display: block;
+                margin: auto;
+            }
+            blockquote {
+                padding: 20px 0;
+                @media (max-width: 480px) {
+                    padding: 20px 0;
+                    margin: 0;
+                }
+            }
+            .name {
+                font-size: 24px;
+                font-family: 'ProximaNovaExtraBold', sans-serif;
+                text-transform: uppercase;
+            }
+            .date {
+                padding: 10px 0 0 0;
+                font-size: 18px;
+                color: rgb(110, 110, 110);
+                font-weight: 900;
+            }
+        }
+    }
+}

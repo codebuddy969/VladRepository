@@ -1,0 +1,207 @@
+header {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../img/top-background.jpg);
+    @media (max-width: 768px) {
+        padding-top: 0;
+    }
+    .navigation {
+        position: fixed;
+        width: 100%;
+        padding: 40px 0 10px;
+        transition: all 0.35s linear;
+        @media (max-width: 768px) {
+            top: 0;
+            width: 100%;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            position: fixed;
+            background-color: rgba(234, 193, 57, 0.8);
+        }
+        nav {
+            display: flex;
+            max-width: 1170px;
+            margin: 0 auto;
+            padding: 0 15px;
+            position: relative;
+            align-items: center;
+            justify-content: space-between;
+            @media (max-width: 768px) {
+                padding: 0;
+                align-items: flex-start;
+            }
+            .burger {
+                display: none;
+                @media (max-width: 768px) {
+                    top: 6px;
+                    right: 15px;
+                    width: 40px;
+                    height: 35px;
+                    display: block;
+                    cursor: pointer;
+                    position: absolute;
+                    padding: 7px 10px;
+                    border-radius: 3px;
+                    background-color: #55565a;
+                }
+            }
+            .bar1, .bar2, .bar3 {
+                width: 20px;
+                height: 1px;
+                background-color: #fff;
+                margin: 5px 0;
+                transition: 0.4s;
+            }
+            .change .bar1 {
+                -webkit-transform: rotate(-45deg) translate(-4px, 4px);
+                transform: rotate(-45deg) translate(-4px, 4px);
+            }
+            .change .bar2 {opacity: 0;}
+            .change .bar3 {
+                -webkit-transform: rotate(45deg) translate(-4px, -5px);
+                transform: rotate(45deg) translate(-4px, -5px);
+            }
+            .logo {
+                width: 35%;
+                display: flex;
+                align-items: center;
+                a {
+                    color: #fff;
+                    display: flex;
+                    font-size: 15px;
+                    line-height: 1.5;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    text-transform: uppercase;
+                    span {
+                        font-size: 13px;
+                        text-transform: none;
+                    }
+                }
+                &:before {
+                    width: 50px;
+                    height: 50px;
+                    margin-right: 20px;
+                    content: url('../img/logo.png');
+                }
+                @media (max-width: 768px) {
+                    width: auto;
+                    margin-left: 15px;
+                }
+            }
+            ul {
+                width: 65%;
+                display: flex;
+                justify-content: flex-end;
+                li {
+                    margin-left: 7%;
+                    @media (max-width: 768px) {
+                        margin-left: 0;
+                        padding: 5px 85px;
+                    }
+                    a {
+                        color: #fff;
+                        &:hover {
+                            color: #ffc400;
+                        }
+                        @media (max-width: 768px) {
+                            &:hover {
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+                @media (max-width: 768px) {
+                    width: 100%;
+                    height: 0;
+                    overflow:hidden;
+                    flex-direction: column;
+                }
+            }
+            .menu {
+                height: auto;
+                overflow:hidden;
+                padding: 15px 0;
+            }
+            @media (max-width: 768px) {
+                flex-direction: column;
+            }
+        }       
+    }
+    .fixed {
+        top: 0;
+        width: 100%;
+        z-index: 999;
+        position: fixed;
+        max-width: 100%;
+        padding: 10px 0 10px;
+        box-sizing: border-box;
+        background-color: rgba(234, 193, 57, 0.8);
+        @media (max-width: 992px) {
+            padding: 0 4%;
+        }
+        @media (max-width: 768px) {
+            padding: 15px 0;
+        }
+        nav {
+            @media (max-width: 768px) {
+                align-items: flex-start;
+            }
+            ul {
+                li {
+                    a {
+                        &:hover {
+                            color: #505050;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .container {
+        padding-top: 175px;
+        padding-bottom: 155px;
+        @media (max-width: 1200px) {
+            padding-top: 120px;
+            padding-bottom: 30px;
+        }
+        @media (max-width: 768px) {
+            padding-top: 140px;
+        }
+        h1 {
+            color: #fff;
+            font-size: 60px;
+            font-weight: 700;
+            line-height: 1.3;
+            text-transform: uppercase;
+            span {
+                color: #ffc400;
+                display: block;
+            }
+            @media (max-width: 768px) {
+                font-size: 30px;
+            }
+        }
+        p {
+            color: #fff;
+            font-size: 18px;
+            max-width: 550px;
+            font-weight: 300;
+            margin-top: 35px;
+            line-height: 1.7;
+            @media (max-width: 1200px) {
+                margin-top: 10px;
+            }
+            @media (max-width: 768px) {
+                font-size: 16px;
+            }
+        }
+        button {
+            .generic-button;
+            @media (max-width: 1200px) {
+                margin-top: 30px;
+            }
+        }
+    }
+}

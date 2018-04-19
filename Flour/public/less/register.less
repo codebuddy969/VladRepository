@@ -1,0 +1,136 @@
+.register {
+    padding-top: 170px;
+    @media (max-width: 1200px) {
+        padding-top: 30px;
+    }
+    .container {
+        min-height: 980px;
+        background-position: -50% center;
+        background-repeat: no-repeat;
+        background-image: url('../img/register-background.png');
+        @media (max-width: 1600px) {
+            background-position: center;
+        }
+        @media (max-width: 1400px) {
+            background-size: 110%;
+        }
+        @media (max-width: 1200px) {
+            min-height: 740px;
+        }
+        @media (max-width: 992px) {
+            min-height: 630px;
+        }
+        @media (max-width: 768px) {
+            min-height: auto;
+            padding-bottom: 30px;
+            background-image: none;
+        }
+        >.title {
+            font-size: 165px;
+            line-height: 1.0;
+            @media (max-width: 1200px) {
+                font-size: 100px;
+            }
+            @media (max-width: 768px) {
+                font-size: 75px;
+            }
+        }
+        .row {
+            display: flex;
+            max-width: 1020px;
+            margin: 180px auto 0;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            @media (max-width: 1600px) {
+                padding-right: 70px;
+                margin: 200px auto 0;
+                max-width: 900px;
+            }
+            @media (max-width: 1200px) {
+                padding-right: 70px;
+                margin: 160px auto 0;
+                max-width: 770px;
+            }
+            @media (max-width: 992px) {
+                max-width: 80%;
+                margin: 110px auto 0;
+            }
+            @media (max-width: 768px) {
+                margin: 30px auto 0;
+                padding-right: 0;
+            }
+            .column {
+                max-width: 190px;
+                @media (max-width: 768px) {
+                    width: 50%;
+                    max-width: 100%;
+                    text-align: center;
+                }
+                @media (max-width: 576px) {
+                    width: 100%;
+                }
+                .title {
+                    font-size: 50px;
+                    text-align: left;
+                    @media (max-width: 1200px) {
+                        font-size: 40px;
+                    }
+                    @media (max-width: 992px) {
+                        font-size: 35px;
+                    }
+                    @media (max-width: 768px) {
+                        font-size: 50px;
+                        text-align: center;
+                    }
+                }   
+                .subtitle {
+                    margin-top: 15px;
+                    line-height: 1.6;
+                    @media (max-width: 1200px) {
+                        p {
+                            font-size: 14px;
+                        }
+                    }
+                    @media (max-width: 922px) {
+                        margin-top: 5px;
+                        p {
+                            font-size: 12px;
+                        }
+                    }
+                    @media (max-width: 768px) {
+                        p {
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+        .btn {
+            width: 245px;
+            height: 55px;
+            display: flex;
+            color: #fff;
+            align-items: center;
+            justify-content: center;
+            margin: 50px auto 0;
+            background-color: #e09c4c;
+            border-radius: 28px;
+            border: 1px solid transparent;
+            font-family: 'Proxima-Regular', sans-serif;
+            &:hover {
+                color: #e09c4c;
+                background-color: #fff;
+                border: 1px solid #e09c4c;
+            }
+            @media (max-width: 1200px) {
+                margin: 30px auto 0;
+            }
+            @media (max-width: 992px) {
+                margin: 15px auto 0;
+            }
+            @media (max-width: 768px) {
+                margin: 30px auto 0;
+            }
+        }
+    }
+}

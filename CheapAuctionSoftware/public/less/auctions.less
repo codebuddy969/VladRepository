@@ -1,0 +1,20 @@
+.auctions {
+    padding: 130px 15px;
+    text-align: center;
+    @media (max-width: 1200px) {
+        padding: 30px 15px;
+    }
+    a {
+        color: #999cb1;
+        font-size: 16px;
+        line-height: 1.8;
+        font-family: 'AvertaLight', sans-serif;
+        @media (max-width: 768px) {
+            font-size: 12px;
+        }
+        &:after {
+            content: "|";
+            margin: 7px;
+        }
+    }
+}

@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css?family=Anton|Roboto:400,700');
+@font-Roboto: 'Roboto',
+sans-serif;
+@font-Anton: 'Anton',
+sans-serif;
+@primary-color: #e4353a;
+@default-color: #000000;
+body {
+    display: flex;
+    background: #fdead1;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    flex-direction: column;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+div,
+form,
+input,
+textarea,
+img,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+section {
+    box-sizing: border-box;
+}
+
+.main-wrapper {
+    width: 1440px;
+    margin: 0 auto;
+    @media (max-width: 1440px) {
+        width: 100%;
+    }
+}
+
+.container {
+    margin: auto;
+    width: 1320px;
+    @media (max-width: 1440px) {
+        width: 100%;
+        padding: 0 15px;
+    }
+}
+
+.container-lg {
+    margin: auto;
+    width: 1440px;
+    position: relative;
+    @media (max-width: 1440px) {
+        width: 100%;
+    }
+}
+
+a {
+    transition: ease-in 0.3s;
+    text-decoration: none;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+button {
+    transition: ease-in 0.3s;
+    cursor: pointer;
+    &:focus {
+        outline: none;
+    }
+}
+
+input,
+textarea {
+    box-sizing: border-box;
+    transition: ease-in 0.3s;
+    border-radius: 0;
+    &:focus {
+        outline: none;
+    }
+}
+
+textarea {
+    overflow: hidden;
+}
+
+.main-title {
+    font-size: 74px;
+    font-family: @font-Anton;
+    @media (max-width: 767px) {
+        font-size: 44px;
+        text-align: center;
+    }
+    @media (max-width: 480px) {
+        font-size: 33px;
+    }
+}
+
+@btn-background: transparent;
+@btn-color: #ffffff;
+@btn-font-size: 22px;
+@btn-width: 244px;
+@btn-height: 30px;
+@btn-margin-top: 45px;
+@btn-font-family: 'Roboto',
+sans-serif;
+.default-btn {
+    background-color: @btn-background;
+    color: @btn-color;
+    width: @btn-width;
+    height: @btn-height;
+    display: block;
+    line-height: @btn-font-size;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-size: @btn-font-size;
+    font-family: @btn-font-family;
+    font-weight: 700;
+    margin-top: @btn-margin-top;
+    transition-duration: 0.2s;
+    outline: none;
+    &:hover {
+        color: ;
+        background-color: ;
+    }
+    @media (max-width: 480px) {
+        height: 50px;
+        line-height: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 22px;
+    }
+    &:after {
+        content: url("../img/arrow-right.png");
+        position: relative;
+        left: 15px;
+    }
+}

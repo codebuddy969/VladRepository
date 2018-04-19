@@ -1,0 +1,521 @@
+@import "mixins";
+
+.header-home {
+    background-size: cover;
+    padding-top: 330px;
+    padding-bottom: 265px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('../img/home/header-background.jpg');
+    &__navigation {
+        top: 0;
+        z-index: 5;
+        width: 100%;
+        position: fixed;
+        padding-top: 105px;
+        -webkit-overflow-scrolling: touch;
+        transition: all .35s linear;
+        nav {
+            position: relative;
+        }
+        ul {
+            display: flex;
+        }
+        li {
+            margin-right: 20px;
+            position: relative;
+            &:first-child {
+                a{
+                    padding-left: 15px;
+                    padding-right: 0;
+                }
+            }
+            &:nth-child(2) {
+                margin-left: 15px;
+            }
+            &:hover {
+                &:first-child {
+                    a {
+                        padding-left: 15px;
+                    }
+                    .link-underline {
+                        width: 100%;
+                        animation: leftmove 3s;
+                        transition: all 0.35s linear;
+                        @keyframes leftmove {
+                            from {right: 0px;}
+                            to {left: 0px;}
+                        }
+                    }
+                }
+                .link-underline {
+                    width: 100%;
+                    animation: rightmove 3s;
+                    transition: all 0.35s linear;
+                    @keyframes rightmove {
+                        from {left: 0px;}
+                        to {right: 0px;}
+                    }
+                }
+            }
+            a {
+                padding-right: 15px;
+            }
+        }
+        .link-underline {
+            height: 5px;
+            width: 0;
+            bottom: -10px;
+            position: absolute;
+            border-radius: 2px;
+            background-color: @pink-color;
+        }
+        &.fixed {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            transition: all .35s linear;
+            background-color: rgba(255,255,255,0.8);
+        }
+    }
+    &__link {
+        font-size: 24px;
+        color: @black-color;
+        text-transform: uppercase;
+        font-family: 'Futura-m-cond', sans-serif;
+    }
+    &__link-active {
+
+    }
+    &__logo {
+        top: -19px;
+        left: 0;
+        right: 0;
+        width: 150px;
+        margin: auto;
+        font-size: 65px;
+        position: absolute;
+        font-family: 'Futura-m-cond', sans-serif;
+    }
+    &__info-block {
+        margin: 0;
+        padding: 75px 15px 85px;
+        background-color: rgba(255, 255, 255, 0.85);
+        h1 {
+            margin: 0 auto;
+            max-width: 560px;
+            text-align: center;
+            span {
+                &:first-child {
+                    font-size: 148px;
+                    margin: 0 auto;
+                    display: block;
+                    letter-spacing: 50px;
+                    text-transform: uppercase;
+                    font-family: 'Futura-m-cond', sans-serif;
+                }
+                &:last-child {
+                    display: block;
+                    font-size: 74px;
+                    display: block;
+                    color: @pink-color;
+                    letter-spacing: 20px;
+                    text-transform: uppercase;
+                    font-family: 'Futura-m-italic';
+                }
+            }
+        }
+        img {
+            display: none;
+            margin: 0 auto;
+        }
+        p {
+            font-size: 24px;
+            margin-top: 30px;
+            font-weight: 300;
+            text-align: center;
+            letter-spacing: 9px;
+        }
+        .btn-transparent {
+            margin: 95px auto 0;
+        }
+    }
+}
+
+.youtube {
+    .video-container {
+        height: 812px;
+    }
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        justify-content: space-between;
+    }
+    .column {
+        display: flex;
+        position: relative;
+        .small-video {
+            margin: 0 auto;
+        }
+    }
+    h2 {
+        font-size: 48px;
+        padding: 50px 0;
+        color: @pink-color;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: 'Futura-medium', sans-serif;
+    }
+    img {
+        position: relative;
+        z-index: 0;
+    }
+    .gradient {
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        display: block;
+        font-size: 14px;
+        position: absolute;
+        color: @white-color;
+        display: flex;
+        line-height: 1.2;
+        box-sizing: border-box;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding-left: 15px;
+        padding-bottom: 15px;
+        background: rgba(255,255,255,0);
+        background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(97,97,97,0) 62%, rgba(0,0,0,1) 100%);
+        background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,0)), color-stop(62%, rgba(97,97,97,0)), color-stop(100%, rgba(0,0,0,1)));
+        background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(97,97,97,0) 62%, rgba(0,0,0,1) 100%);
+        background: -o-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(97,97,97,0) 62%, rgba(0,0,0,1) 100%);
+        background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(97,97,97,0) 62%, rgba(0,0,0,1) 100%);
+        background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(97,97,97,0) 62%, rgba(0,0,0,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000', GradientType=0 );
+        span {
+            display: block;
+            font-size: 18px;
+            font-weight: 700;
+            padding-left: 5px;
+            color: @white-color;
+        }
+    }
+}
+
+.rebrand {
+    padding: 115px 0 290px;
+    background:
+            linear-gradient(
+                rgba(0,0,0,0.0), 
+                rgba(0,0,0,0.0)
+            ),
+            url('../img/home/rebranding-background-1400.jpg');
+    background-size: cover;
+    
+    h2 {
+        display: block;
+        font-size: 36px;
+        line-height: 1.2;
+        max-width: 510px;
+        text-align: right;
+        margin: 0 0 0 auto;
+        color: @white-color;
+        letter-spacing: 3px;
+        padding-bottom: 85px;
+        font-family: 'Futura-medium', sans-serif;
+    }
+    p {
+        font-size: 18px;
+        max-width: 450px;
+        line-height: 1.2;
+        text-align: right;
+        margin: 0 0 0 auto;
+        color: @white-color;
+        padding-bottom: 25px;
+        span {
+            color: @pink-color;
+        }
+    }
+    .btn-transparent {
+        margin: 65px 0 0 auto;
+        color: @white-color;
+        border: 1px solid @white-color;
+    }
+}
+
+.aboutUs {
+    padding: 0 15px;
+    min-height: 900px;
+    background-size: 100%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-image: url('../img/home/about-section-background.jpg');
+    h2 {
+        font-size: 36px;
+        text-align: center;
+        color: @black-color;
+        letter-spacing: 8px;
+        margin-bottom: 80px;
+        font-family: 'Futura-medium', sans-serif;
+    }
+    p {
+        margin: 0 auto;
+        display: block;
+        max-width: 570px;
+        text-align: center;
+    }
+    .btn-transparent {
+        margin: 65px auto 0;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .header-home {
+        padding-bottom: 30px;
+        &__info-block {
+            margin: 70px 0;
+        }
+    }
+    .rebrand {
+        padding: 70px 0px;
+        h2 {
+            padding-bottom: 30px;
+        }
+        .btn-transparent {
+            margin: 30px 0 0 auto;
+        }
+    }
+    .aboutUs {
+        min-height: 740px;
+    }
+    .youtube {
+        .video-container {
+            height: 700px;
+        }
+        .row {
+            max-width: 560px;
+        }
+        .column {
+            margin-bottom: 15px;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+
+    .rebrand {
+        padding: 30px 0px;
+        background-position: bottom;
+        background:
+            linear-gradient(
+                rgba(0,0,0,0.6), 
+                rgba(0,0,0,0.6)
+            ),
+            url('../img/home/rebranding-background-768.jpg') bottom left;
+        background-size: cover;
+    }
+
+    .aboutUs {
+        min-height: 640px;
+    }
+
+    .youtube {
+        .video-container {
+            height: 600px;
+        }
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .header-home {
+        padding-top: 100px;
+        &__navigation {
+            padding-top: 30px;
+            nav {
+                display: flex;
+                align-items: center;
+                position: relative;
+            }
+            li {
+                margin-right: 15px;
+            }
+            &.fixed {
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+        }
+        &__logo {
+            margin: 0 0 0 auto;
+            position: static;
+        }
+        &__info-block {
+            margin-top: 20px;
+            padding-bottom: 70px;
+            h1 {
+                span {
+                    &:first-child {
+                        font-size: 80px;
+                        padding-left: 30px;
+                    }
+                    &:last-child {
+                        font-size: 45px;
+                    }
+                }
+            }
+            p {
+                font-size: 20px;
+            }
+            .btn-transparent {
+                margin: 30px auto 0;
+            }
+        }
+    }
+
+    .rebrand {
+        p {
+            max-width: 400px;
+        }
+    }
+
+    .aboutUs {
+        min-height: 580px;
+        h2 {
+            margin-bottom: 60px;
+        }
+        .btn-transparent {
+            margin: 30px auto 0;
+        }
+    }
+
+    .youtube {
+        .video-container {
+            height: 500px;
+        }
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .youtube {
+        .row {
+            max-width: 300px;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+
+    .header-home {
+        &__info-block {
+            margin-top: 20px;
+            padding-bottom: 70px;
+            h1 {
+                span {
+                    &:first-child {
+                        font-size: 50px;
+                        padding-left: 20px;
+                        letter-spacing: 30px;
+                    }
+                    &:last-child {
+                        font-size: 35px;
+                        letter-spacing: 10px;
+                    }
+                }
+            }
+            p {
+                font-size: 20px;
+            }
+            .btn-transparent {
+                margin: 30px auto 0;
+            }
+        }
+    }
+
+    .rebrand {
+        background:
+            linear-gradient(
+                rgba(0,0,0,0.4), 
+                rgba(0,0,0,0.4)
+            ),
+            url('../img/home/rebranding-background-768.jpg') bottom left;
+        background-size: cover;
+        h2, p {
+            max-width: 100%;
+            text-align: center;
+        }
+        .btn-transparent {
+            margin: 30px auto 0;
+        }
+    }
+
+    .aboutUs {
+        min-height: 480px;
+    }
+
+    .youtube {
+        .video-container {
+            height: 300px;
+        }
+        .row {
+            justify-content: center;
+        }
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+
+    .header-home-480 {
+        &__navigation {
+            a {
+                font-size: 7px;
+            }
+        }
+        &__logo {
+            display: none;
+        }
+        &__info-block {
+            margin: 20px 0 0;
+            padding: 15px 15px;
+            h1 {
+                display: none;
+            }
+            img {
+                display: block;
+            }
+            p {
+                font-size: 8px;
+                margin-top: 10px;
+                letter-spacing: 0;
+            }
+            .btn-transparent {
+                width: 112px;
+                height: 28px;
+                font-size: 8px;
+            }
+        }
+    }
+
+    .rebrand-480 {
+        padding: 50px 0px 100px;
+        .container {
+            max-width: 250px;
+        }
+        h2 {
+            font-size: 12px;
+        }
+        p {
+            font-size: 8px;
+            padding-bottom: 10px;
+        }
+        .btn-transparent {
+            width: 112px;
+            height: 28px;
+            font-size: 8px;
+        }
+    }
+
+}

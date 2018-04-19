@@ -1,0 +1,94 @@
+.protection {
+    padding-top: 110px;
+    @media (max-width: 1200px) {
+        padding-top: 30px;
+    }
+    @media (max-width: 992px) {
+    }
+    h2 {
+        .title;
+    }
+    .row {
+        display: flex;
+        margin-top: 55px;
+        justify-content: space-between;
+        @media (max-width: 1200px) {
+            margin-top: 10px;    
+        }
+        @media (max-width: 768px) {
+            flex-direction: column;   
+        }
+        .column {
+            width: 48%;
+            background-position: right center;
+            background-repeat: no-repeat;
+            @media (max-width: 992px) {
+                background-position: 195px center;
+            }
+            @media (max-width: 768px) {
+                width: 100%;
+                margin-bottom: 15px;
+                background-position: right center;  
+            }
+            @media (max-width: 480px) {
+                background-position: 160px center;  
+            }
+            &:first-child {
+                background-image: url(../img/man-in-white-shirt.png);
+            }
+            &:last-child {
+                background-image: url(../img/man-in-suit.png);
+            }
+            h3 {
+                font-size: 25px;
+                margin: 35px 0 15px;
+                font-family: 'Circular-Bold', sans-serif;
+                @media (max-width: 992px) {
+                    margin: 15px 0;
+                }
+            }
+            p {
+                color: #8d8d8d;
+                font-size: 16px;
+                line-height: 1.7;
+            }
+            .learn-button {
+                color: #191919;
+                font-size: 18px;
+                margin-top: 40px;
+                display: block;
+                font-family: 'Circular-Bold', sans-serif;
+                &:after {
+                    content: '';
+                    width: 20px;
+                    height: 20px;
+                    margin-left: 5px;
+                    display: inline-block;
+                    vertical-align: middle;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: 15px;
+                    background-image: url('../img/icons/arrow.svg');
+                }
+            }
+        }
+    }
+    .auction {
+        margin-top: 125px;
+        line-height: 1.8;
+        @media (max-width: 1200px) {
+            margin-top: 40px;    
+        }
+        a {
+            color: #8d8d8d;
+            font-size: 16px;
+            &:after {
+                margin: 0 7px;
+                content: "|";
+            }
+            &:hover {
+                color: #191919;
+            }
+        }
+    }
+}

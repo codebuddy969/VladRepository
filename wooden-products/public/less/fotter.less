@@ -1,0 +1,38 @@
+footer.main-wrapper {
+    background: @primary_color;
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 120px;
+        @media (max-width: 767px) {
+            flex-direction: column;
+            padding: 30px 15px;
+            text-align: center;
+        }
+        .copyright {
+            color: #ffffff;
+            a {
+                color: #ffffff;
+                &:hover {
+                    color: #343434;
+                }
+            }
+        }
+        .social {
+            .social-list {
+                display: flex;
+                li {
+                    padding-right: 15px;
+                    a {
+                        color: #ffffff;
+                        font-size: 18px;
+                        &:hover {
+                            color: #343434;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

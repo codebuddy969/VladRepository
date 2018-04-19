@@ -1,0 +1,159 @@
+.newsletters {
+    margin-top: 45px;
+    min-height: 710px;
+    position: relative;
+    background-color: #f7fafc;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-image: url(../img/orange-background.png);
+    @media (max-width: 1700px) {
+        background-position: -100px center;
+    }
+    @media (max-width: 1600px) {
+        background-position: -150px center;
+    }
+    @media (max-width: 1400px) {
+        background-position: -250px center;
+    }
+    @media (max-width: 1200px) {
+        background-position: -350px center;
+        min-height: 460px;
+        margin-top: 0px;
+    }
+    @media (max-width: 1100px) {
+        background-position: -450px center;
+    }
+    @media (max-width: 992px) {
+        background-image: none;
+        text-align: center;
+    }
+    .container {
+        display: flex;
+        z-index: 1;
+        padding-top: 185px;
+        position: relative;
+        justify-content: space-between;
+        @media (max-width: 1200px) {
+            padding-top: 50px;
+        }
+        @media (max-width: 992px) {
+            flex-direction: column;
+            padding-left: 0;
+            padding-right: 0;
+            padding-top: 30px;
+        }
+        .column {
+            width: 457px;
+            @media (max-width: 992px) {
+                width: 100%;
+                padding: 15px;
+            }
+        }
+        .column.left {
+            @media (max-width: 992px) {
+                background-color: #fe8a2b;
+            }
+            h2 {
+                color: #fff5f0;
+                font-size: 40px;
+                font-family: 'AvertaBold', sans-serif;
+                @media (max-width: 768px) {
+                    font-size: 30px;
+                    text-align: center;
+                }
+            }
+            p {
+                color: #fff5f0;
+                font-size: 18px;
+                margin-top: 30px;
+                line-height: 2.2;
+                font-family: 'AvertaLight', sans-serif;
+                @media (max-width: 992px) {
+                    margin-top: 0;
+                }
+                span {
+                    font-family: 'AvertaBold', sans-serif;
+                }
+            }
+            h3 {
+                color: #fff5f0;
+                font-size: 18px;
+                margin-top: 40px;
+                display: inline-block;
+                vertical-align: middle;
+                @media (max-width: 992px) {
+                    margin-top: 10px;
+                }
+                &:before {
+                    content: "\e90c";
+                    color: #fff5f0;
+                    font-size: 32px;
+                    display: inline-block;
+                    vertical-align: middle;
+                    font-family: 'icomoon';
+                    margin-right: 20px;
+                }
+            }
+            .btn {
+                width: 230px;
+                margin-top: 35px;
+                @media (max-width: 992px) {
+                    margin: 20px auto 0;
+                }
+            }
+        }
+        .column.right {
+            p {
+                color: #9d9fa1;
+                font-size: 18px;
+                margin-top: 35px;
+                font-family: 'AvertaLight', sans-serif;
+                @media (max-width: 992px) {
+                    margin-top: 0px;
+                }
+            }
+            form {
+                margin-top: 30px;
+                @media (max-width: 992px) {
+                    margin-top: 20px;
+                }
+                input {
+                    width: 100%;
+                    height: 95px;
+                    border-radius: 48px;
+                    padding: 0 65px;
+                    font-size: 18px;
+                    background-color: #f7fafc;
+                    border: 2px solid #f9cda9;
+                    font-family: 'AvertaLightItalic';
+                    @media (max-width: 992px) {
+                        max-width: 480px;
+                        height: 70px;
+                        padding: 0 40px;
+                    }
+                }
+                .btn {
+                    width: 230px;
+                    color: #fff;
+                    margin-top: 35px;
+                    background-color: #fe8a2b;
+                    @media (max-width: 992px) {
+                        margin: 20px auto 0;
+                    }
+                    &:hover {
+                        background-color: #343434;
+                    }
+                }
+            }
+        }
+    }
+    .phone {
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+        position: absolute;
+        @media (max-width: 1200px) {
+            display: none;
+        }
+    }
+}

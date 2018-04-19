@@ -1,0 +1,139 @@
+.newsletter {
+    padding-top: 100px;
+    padding-bottom: 75px;
+    @media (max-width: 1200px) {
+        padding-top: 30px;
+        padding-bottom: 30px;   
+    }
+    .newsletter-group {
+        display: flex;
+        justify-content: space-between;
+        @media (max-width: 768px) {
+            flex-direction: column; 
+        }
+        .column {
+            width: 48%;
+            @media (max-width: 768px) {
+                width: 100%; 
+                margin-bottom: 20px;
+            }
+            h2 {
+                .title;
+            }
+            .input-wrap {
+                width: 100%;
+                position: relative;
+                margin-top: 55px;
+                @media (max-width: 1200px) {
+                    margin-top: 30px;   
+                }
+                @media (max-width: 768px) {
+                    max-width: 360px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+                input {
+                    width: 100%;
+                    height: 100px;
+                    padding: 0 80px 0 40px;
+                    font-size: 16px;
+                    font-style: italic;
+                    font-size: 16px;
+                    background-color: #f7f7f7;
+                    @media (max-width: 1200px) {
+                        height: 60px;  
+                    }
+                }
+                &:after {
+                    top: 40px;
+                    right: 40px;
+                    margin: auto;
+                    content: url(../img/icons/arrow.svg);
+                    position: absolute;
+                    @media (max-width: 1200px) {
+                        top: 20px;  
+                    }
+                }
+            }
+            .social-wrapper {
+                display: flex;
+                justify-content: space-between;
+                .social-link {
+                    width: 90px;
+                    height: 100px;
+                    margin-top: 55px;
+                    display: flex;
+                    font-size: 22px;
+                    color: #c6c6c6;
+                    justify-content: center;
+                    align-items: center;
+                    font-family: 'icomoon';
+                    background-color: #f7f7f7;
+                    transition: all 0.35s linear;
+                    &:hover {
+                        color: #181818;
+                        transition: all 0.35s linear;
+                    }
+                    @media (max-width: 1200px) {
+                        width: 50px;
+                        height: 60px;
+                        margin-top: 30px;   
+                    }
+                }
+                .facebook:after {
+                    content: "\e900";
+                }
+                .tweet:after {
+                    content: "\e901";
+                }
+                .linkedin:after {
+                    content: "\e902";
+                }
+                .pintrest:after {
+                    content: "\e903";
+                }
+                .google:after {
+                    content: "\e904";
+                }
+                .youtube:after {
+                    content: "\e905";
+                }
+            }
+        }        
+    }
+    .row {
+        display: flex;
+        margin-top: 65px;
+        justify-content: space-between;
+        @media (max-width: 1200px) {
+            margin-top: 30px;   
+        }
+        @media (max-width: 768px) {
+            flex-direction: column;
+            text-align: center;
+        }
+        .copyright {
+            color: #8d8d8d;
+            font-size: 14px;
+            line-height: 1.8;
+            a {
+                color: #8d8d8d;
+                display: block;
+                text-decoration: underline;
+            }
+        }
+        .powered {
+            color: #8d8d8d;
+            line-height: 2.0;
+            text-align: right;
+            @media (max-width: 768px) {
+                text-align: center;
+            }
+            a {
+                color: #666666;
+                display: block;
+                font-family: 'Circular-Bold', sans-serif;
+            }
+        }
+    }
+}

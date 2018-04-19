@@ -1,0 +1,2176 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script><![endif]-->
+	<title></title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+<!---------------------------------------------------------------------------------------- Header -->
+
+	<header>
+	    <nav></nav>
+	</header>
+	
+<!---------------------------------------------------------------------------------------- Main Page -->
+	
+	<section>
+    
+	    <div class="form_container">
+	           
+            <!---- Sidebar ------>
+           
+            <div class="burger">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+        
+	        <div class="sidebar">
+	            <ul>
+	                <li>
+	                    <a href=".content_1">
+	                        <span class="sidebar_icon"><img src="img/icons/sidebar-icon-1.svg"></span>
+	                        <span class="sidebar_text"><span>Antragsdaten</span></span>
+	                    </a>
+	                </li>
+	                <li>
+	                    <a href=".content_2">
+	                        <span class="sidebar_icon"><img src="img/icons/sidebar-icon-2.svg"></span>
+	                        <span class="sidebar_text"><span>Versicherungsnehmer</span></span>
+	                    </a>
+	                </li>
+	                <li>
+	                    <a href=".content_3">
+	                        <span class="sidebar_icon"><img src="img/icons/sidebar-icon-3.svg"></span>
+	                        <span class="sidebar_text"><span>Angaben zum Fahrzeug</span></span>
+	                    </a>
+	                </li>
+	                <li>
+	                    <a href=".content_4">
+	                        <span class="sidebar_icon"><img src="img/icons/sidebar-icon-4.svg"></span>
+	                        <span class="sidebar_text"><span>Vorversicherung & Schäden</span></span>
+	                    </a>
+	                </li>
+	                <li>
+	                    <a href=".content_5">
+	                        <span class="sidebar_icon"><img src="img/icons/sidebar-icon-5.svg"></span>
+	                        <span class="sidebar_text"><span>Rabatte</span></span>
+	                    </a>
+	                </li>
+	                <li>
+	                    <a href=".content_6">
+	                        <span class="sidebar_icon"><img src="img/icons/sidebar-icon-6.svg"></span>
+	                        <span class="sidebar_text"><span>Optionale Leistungen</span></span>
+	                    </a>
+	                </li>
+	                <li>
+	                    <a href=".content_7">
+	                        <span class="sidebar_icon"><img src="img/icons/sidebar-icon-7.svg"></span>
+	                        <span class="sidebar_text"><span>Bankverbindung</span></span>
+	                    </a>
+	                </li>
+	            </ul>
+	        </div>
+	        
+	        <!------ Form ------>
+	        
+	        <div class="content_container">
+                <div class="content content_1">
+                    <h2 class="form_title">Antragsdaten</h2>
+                    <div class="form_block">
+
+                        <!--------- Email Row --------->
+                        
+                        <div class="form_action">
+                            <div class="form_row">
+                               <div class="row_label">Email</div>
+                               <div class="input_block">
+                                   <input class="form_input" value="vorname.nachname@gmx.net">
+                               </div>
+                               <div class="question_block"><span class="form_question">?</span></div>
+                               <div class="help_block">
+                                   <p><strong>Was sollte ich beachten?</strong> Nutzen Sie eine E-Mail-Adresse, die Sie regelmäßig abrufen und überprüfen Sie Ihre Eingabe auf Tippfehler.</p>
+                                   <hr>
+                                   <div class="help_block_close"></div>
+                               </div>                         
+                            </div>
+                        </div>
+
+                        <!-------------- Anrede, Titel -------------->
+                        
+                        <div class="form_action">
+                            <div class="form_row">
+                                <div class="row_label">Anrede, Titel</div>
+
+                                <div class="small_left">
+                                    <div class="input_block_100">
+                                        <input class="form_input" value="Herr">
+                                        <div class="select_arrow"></div>
+                                        <ul class="input_results_norm">
+                                            <li class="click_block" data-show-elem="h/firma">Herr</li>
+                                            <li class="click_block" data-show-elem="h/firma">Frau</li>
+                                            <li class="click_block" data-show-elem="s/firma">Firma</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="small_right">
+                                    <div class="input_block_100">
+                                        <input class="form_input">
+                                        <div class="select_arrow"></div>
+                                        <ul class="sort_data">
+                                            <li>kein Titel</li>
+                                            <li>Dr.</li>
+                                            <li>Prof.</li>
+                                            <li>Prof. Dr.</li>
+                                        </ul>
+                                        <div class="data_result">
+                                            <ul class="input_results"></ul>
+                                            <span class="numb">0</span>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                        
+                        <!------------- Firmenname ------------->
+                        
+                        <div class="form_action" style="display: none;" data-element="firma">
+                            <div class="form_row">
+                               <div class="row_label">Firmenname</div>
+                               <div class="input_block">
+                                   <input class="form_input">
+                               </div>
+                               <div class="question_block"><span class="form_question">?</span></div>
+                               <div class="help_block">
+                                   <p><strong>No content</strong>------------------------------------------------------</p>
+                                   <hr>
+                                   <div class="help_block_close"></div>
+                               </div>                         
+                            </div>
+                        </div>
+
+                        <!-------------- Vorname, Name -------------->
+                        
+                        <div class="form_action">
+                            <div class="form_row">
+                                <div class="row_label">Vorname, Name</div>
+
+                                <div class="small_left">
+                                    <input class="form_input">
+                                </div>
+
+                                <div class="small_right">
+                                    <input class="form_input">
+                                </div>
+
+                                <div class="question_block"><span class="form_question">?</span></div>
+                                <div class="help_block">
+                                   <p><strong>Was muss ich beachten?</strong>Tragen Sie bitte in das erste Feld den Vor- und in das zweite Feld den Nachnamen ein. Verwenden Sie sicherheitshalber die im Ausweis vermerkte Schreibweise.</p>
+                                   <p><strong>Kontoinhaber eine Firma?</strong>Ist der Kontoinhaber eine Firma, müssen trotzdem immer beide Felder (Vor- und Nachname) ausgefüllt sein.</p>
+                                   <hr>
+                                   <div class="help_block_close"></div>
+                               </div>  
+                            </div>
+                        </div>
+
+                        <!-------------- PLZ, Wohnort -------------->
+                        
+                        <div class="form_action">
+                            <div class="form_row text_row">
+                                <div class="row_label">PLZ, Wohnort</div>
+                                <div class="text_content">
+                                    <div class="address"><span>81245 München</span></div>
+                                    <div class="change">
+                                        <span>ändern</span>
+                                    </div>
+                                                                        
+                                    <div class="input_block">
+                                       
+                                        <div class="extrasmall_right">
+                                            <input class="form_input" value="81245">
+                                        </div>
+                                        
+                                        <div class="big_left">
+                                            <input class="form_input" value="München">
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="question_block"><span class="form_question">?</span></div>
+                                <div class="help_block">
+                                   <p><strong>Was muss ich beachten?</strong>Sie können die Straße aus den Adressvorschlägen wählen oder diese selbst eintragen. Verwenden Sie für die Hausnummer das rechte Feld.</p>
+                                   <hr>
+                                   <div class="help_block_close"></div>
+                               </div>  
+                            </div>
+                        </div>
+
+                        <!----------- Straße, Hausnummer ----------->
+                        
+                        <div class="form_action">
+                            <div class="form_row">
+                                <div class="row_label">Straße, Hausnummer</div>
+
+                                <div class="big_left">
+                                    <input class="form_input">
+                                </div>
+
+                                <div class="extrasmall_right">
+                                    <input class="form_input">
+                                </div>
+
+                                <div class="question_block"><span class="form_question">?</span></div>
+                                <div class="help_block">
+                                   <p><strong>Was muss ich beachten?</strong>Sie können die Straße aus den Adressvorschlägen wählen oder diese selbst eintragen. Verwenden Sie für die Hausnummer das rechte Feld.</p>
+                                   <hr>
+                                   <div class="help_block_close"></div>
+                               </div>  
+                            </div>
+                        </div>
+
+                        <!------------- Telefonnummer ------------->
+                        
+                        <div class="form_action">
+                            <div class="form_row">
+                               <div class="row_label">Telefonnummer</div>
+                               <div class="input_block">
+                                   <input class="form_input">
+                               </div>
+                               <div class="question_block"><span class="form_question">?</span></div>
+                               <div class="help_block">
+                                   <p><strong>No content</strong>------------------------------------------------------</p>
+                                   <hr>
+                                   <div class="help_block_close"></div>
+                               </div>                         
+                            </div>
+                        </div>
+                    </div>
+	            </div>
+	            
+                <div class="content content_2">
+                    <h2 class="form_title">Versicherungsnehmer</h2>
+                    <div class="form_block insured_block">
+
+                        <!---------------- Geburtsdatum --------------->
+                        
+                        <div class="form_action">
+                            <div class="form_row">
+                               <div class="row_label">Geburtsdatum</div>
+                               <div class="input_block">
+                                   <input class="form_input form_date datepick" data-language='de'>
+                               </div>
+                               <div class="question_block"><span class="form_question">?</span></div>
+                               <div class="help_block">
+                                   <p><strong>Warum fragen wir das?</strong>Das Alter ist wichtig für den Beitrag: Jüngere Fahrer haben ein erhöhtes Unfallrisiko und verursachen so höhere Beiträge.</p>
+                                   <hr>
+                                   <div class="help_block_close"></div>
+                               </div>                         
+                            </div>
+                        </div>
+                        
+                        <!--------- Führerschein erworben am --------->
+                        
+                        <div class="form_action">
+                            <div class="form_row">
+                               <div class="row_label">Führerschein erworben am</div>
+                               <div class="input_block">
+                                   <input class="form_input form_date datepick" data-language='de'>
+                               </div>
+                               <div class="question_block"><span class="form_question">?</span></div>
+                               <div class="help_block">
+                                   <p><strong>Welches Datum gebe ich an?</strong>Relevant ist der Tag, an dem der Fahrer seinen europäischen Führerschein erstmalig erworben hat (Erteilungsdatum). Wurde Ihr Führerschein neu ausgestellt oder umgeschrieben, kann in Ihrem Führerschein ein abweichendes Ausstellungsdatum stehen.</p>
+                                   <p><strong>Genaues Datum nicht bekannt?</strong>Versuchen Sie, die Angaben so genau wie möglich zu machen. Wichtig ist vor allem das Jahr des Führerscheinerwerbs.</p>
+                                   <hr>
+                                   <div class="help_block_close"></div>
+                               </div>                         
+                            </div>
+                        </div>
+                        
+                        <!--------- Land des Führerscheinerwerbs --------->
+                        
+                        <div class="form_action">
+                            <div class="form_row">
+                               <div class="row_label">Land des Führerscheinerwerbs</div>
+                               
+                                <div class="input_block input_212px">
+                                    <input class="form_input">
+                                    <div class="select_arrow"></div>
+                                    <ul class="sort_data">
+                                        <li>Afghanistan</li>
+                                        <li>Albanien</li>
+                                        <li>Algerien</li>
+                                        <li>Andorra</li>
+                                        <li>Angola</li>
+                                        <li>Antigua und Barbuda</li>
+                                        <li>Argentinien</li>
+                                        <li>Armenien</li>
+                                        <li>Australien</li>
+                                        <li>Österreich</li>
+                                        <li>Aserbaidschan</li>
+                                        <li>Bahamas</li>
+                                        <li>Bahrain</li>
+                                        <li>Bangladesch</li>
+                                        <li>Barbados</li>
+                                        <li>Weißrussland</li>
+                                        <li>Belgien</li>
+                                        <li>Belize</li>
+                                        <li>Benin</li>
+                                        <li>Bhutan</li>
+                                        <li>Bolivien</li>
+                                        <li>Bosnien und Herzegowina</li>
+                                        <li>Botswana</li>
+                                        <li>Brasilien</li>
+                                        <li>Brunei Darussalam</li>
+                                        <li>Bulgarien</li>
+                                        <li>Burkina Faso</li>
+                                        <li>Burundi</li>
+                                        <li>Cabo Verde</li>
+                                        <li>Kambodscha</li>
+                                        <li>Kamerun</li>
+                                        <li>Kanada</li>
+                                        <li>Zentralafrikanische Republik</li>
+                                        <li>Tschad</li>
+                                        <li>Chile</li>
+                                        <li>China</li>
+                                        <li>Kolumbien</li>
+                                        <li>Komoren</li>
+                                        <li>Kongo</li>
+                                        <li>Costa Rica</li>
+                                        <li>Côte d'Ivoire</li>
+                                        <li>Kroatien</li>
+                                        <li>Kuba</li>
+                                        <li>Zypern</li>
+                                        <li>Tschechien</li>
+                                        <li>Demokratische Volksrepublik Korea (Nordkorea)</li>
+                                        <li>Demokratische Republik Kong</li>
+                                        <li>Dänemark</li>
+                                        <li>Dschibuti</li>
+                                        <li>Dominica</li>
+                                        <li>Dominikanische Republik</li>
+                                        <li>Ecuador</li>
+                                        <li>Ägypten</li>
+                                        <li>El Salvador</li>
+                                        <li>Äquatorialguinea</li>
+                                        <li>Eritrea</li>
+                                        <li>Estland</li>
+                                        <li>Äthiopien</li>
+                                        <li>Fidschi</li>
+                                        <li>Finnland</li>
+                                        <li>Frankreich</li>
+                                        <li>Gabun</li>
+                                        <li>Gambia</li>
+                                        <li>Georgia</li>
+                                        <li>Deutschland</li>
+                                        <li>Ghana</li>
+                                        <li>Griechenland</li>
+                                        <li>Grenada</li>
+                                        <li>Guatemala</li>
+                                        <li>Guinea</li>
+                                        <li>Guinea-Bissau</li>
+                                        <li>Guyana</li>
+                                        <li>Haiti</li>
+                                        <li>Honduras</li>
+                                        <li>Ungarn</li>
+                                        <li>Island</li>
+                                        <li>Indien</li>
+                                        <li>Indonesien</li>
+                                        <li>Ich rannte</li>
+                                        <li>Irak</li>
+                                        <li>Irland</li>
+                                        <li>Israel</li>
+                                        <li>Italien</li>
+                                        <li>Jamaika</li>
+                                        <li>Japan</li>
+                                        <li>Jordanien</li>
+                                        <li>Kasachstan</li>
+                                        <li>Kenia</li>
+                                        <li>Kiribati</li>
+                                        <li>Kuwait</li>
+                                        <li>Kirgisistan</li>
+                                        <li>Laos Demokratische Volksrepublik (Laos)</li>
+                                        <li>Lettland</li>
+                                        <li>Libanon</li>
+                                        <li>Lesotho</li>
+                                        <li>Liberia</li>
+                                        <li>Libyen</li>
+                                        <li>Liechtenstein</li>
+                                        <li>Litauen</li>
+                                        <li>Luxemburg</li>
+                                        <li>Mazedonien</li>
+                                        <li>Madagaskar</li>
+                                        <li>Malawi</li>
+                                        <li>Malaysia</li>
+                                        <li>Malediven</li>
+                                        <li>Mali</li>
+                                        <li>Malta</li>
+                                        <li>Marshallinseln</li>
+                                        <li>Mauretanien</li>
+                                        <li>Mauritius</li>
+                                        <li>Mexiko</li>
+                                        <li>Mikronesien (Föderierte Staaten von)</li>
+                                        <li>Monaco</li>
+                                        <li>Mongolei</li>
+                                        <li>Montenegro</li>
+                                        <li>Marokko</li>
+                                        <li>Mosambik</li>
+                                        <li>Myanmar</li>
+                                        <li>Namibia</li>
+                                        <li>Nauru</li>
+                                        <li>Nepal</li>
+                                        <li>Niederlande</li>
+                                        <li>Neuseeland</li>
+                                        <li>Nicaragua</li>
+                                        <li>Niger</li>
+                                        <li>Nigeria</li>
+                                        <li>Norwegen</li>
+                                        <li>Oman</li>
+                                        <li>Pakistan</li>
+                                        <li>Palau</li>
+                                        <li>Panama</li>
+                                        <li>Papua Neu-Guinea</li>
+                                        <li>Paraguay</li>
+                                        <li>Peru</li>
+                                        <li>Philippinen</li>
+                                        <li>Polen</li>
+                                        <li>Portugal</li>
+                                        <li>Katar</li>
+                                        <li>Republik Korea (Südkorea)</li>
+                                        <li>Republik Moldawien</li>
+                                        <li>Rumänien</li>
+                                        <li>Russische Föderation</li>
+                                        <li>Ruanda</li>
+                                        <li>St. Kitts und Nevis</li>
+                                        <li>St. Lucia</li>
+                                        <li>St. Vincent und die Grenadinen</li>
+                                        <li>Samoa</li>
+                                        <li>San Marino</li>
+                                        <li>Sao Tomé und Príncipe</li>
+                                        <li>Saudi Arabien</li>
+                                        <li>Senegal</li>
+                                        <li>Serbien</li>
+                                        <li>Seychellen</li>
+                                        <li>Sierra Leone</li>
+                                        <li>Singapur</li>
+                                        <li>Slowakei</li>
+                                        <li>Slowenien</li>
+                                        <li>Salomon-Inseln</li>
+                                        <li>Somalia</li>
+                                        <li>Südafrika</li>
+                                        <li>Südsudan</li>
+                                        <li>Spanien</li>
+                                        <li>Sri Lanka</li>
+                                        <li>Sudan</li>
+                                        <li>Suriname</li>
+                                        <li>Swasiland</li>
+                                        <li>Schweden</li>
+                                        <li>Schweiz</li>
+                                        <li>Syrische Arabische Republik</li>
+                                        <li>Tadschikistan</li>
+                                        <li>Thailand</li>
+                                        <li>Timor-Leste</li>
+                                        <li>Gehen</li>
+                                        <li>Tonga</li>
+                                        <li>Trinidad und Tobago</li>
+                                        <li>Tunesien</li>
+                                        <li>Truthahn</li>
+                                        <li>Turkmenistan</li>
+                                        <li>Tuvalu</li>
+                                        <li>Uganda</li>
+                                        <li>Ukraine</li>
+                                        <li>Vereinigte Arabische Emirate</li>
+                                        <li>Vereinigtes Königreich Großbritannien und Nordirland</li>
+                                        <li>Vereinigte Republik Tansania</li>
+                                        <li>vereinigte Staaten von Amerika</li>
+                                        <li>Uruguay</li>
+                                        <li>Usbekistan</li>
+                                        <li>Usa</li>
+                                        <li>Vanuatu</li>
+                                        <li>Venezuela</li>
+                                        <li>Vietnam</li>
+                                        <li>Jemen</li>
+                                        <li>Sambia</li>
+                                        <li>Simbabwe</li>
+                                    </ul>
+                                    <div class="data_result">
+                                        <ul class="input_results"></ul>
+                                        <span class="numb">0</span>
+                                    </div>
+                                </div>
+
+                               <div class="question_block"><span class="form_question">?</span></div>
+                               <div class="help_block">
+                                   <p><strong>Führerschein außerhalb Deutschlands gemacht?</strong>Sollten Sie Ihren Führerschein im Ausland erworben haben, mittlerweile aber auch einen deutschen Führerschein besitzen, wählen Sie bitte "Deutschland".</p>
+                                   <hr>
+                                   <div class="help_block_close"></div>
+                               </div>                         
+                            </div>
+                        </div>
+                        
+                        <!--------- Familienstand --------->
+                        
+                        <div class="form_action">
+                            <div class="form_row text_row">
+                                <div class="row_label">Familienstand</div>
+                                <div class="text_content text_content_small">
+                                    <div class="status"><span>Verheiratet</span></div>
+                                    <div class="change"><span>ändern</span></div>
+                                    
+                                    <div class="input_block">
+                                        <input class="form_input" value="Familienstand">
+                                        <div class="select_arrow"></div>
+                                        <ul class="sort_data">
+                                            <li>ledig</li>
+                                            <li>verheiratet</li>
+                                            <li>geschieden</li>
+                                            <li>verwitwet</li>
+                                            <li>eheähnliche Lebensgemeinschaft</li>
+                                        </ul>
+                                        <div class="data_result">
+                                            <ul class="input_results"></ul>
+                                            <span class="numb">0</span>
+                                        </div>
+                                    </div> 
+
+                                </div>
+                                <div class="question_block"><span class="form_question">?</span></div>
+                                <div class="help_block">
+                                    <p><strong>Warum fragen wir das?</strong>Verheiratete und in eheähnlicher Gemeinschaft Lebende sind laut Unfallstatistik die umsichtigeren Fahrer. Versicherer berücksichtigen dies mit niedrigeren Beiträgen.</p><br>
+                                    <p>Wenn Sie in einer eingetragenen Partnerschaft leben, wählen Sie bitte "eheähnliche Lebensgemeinschaft".</p>
+                                    <hr>
+                                    <div class="help_block_close"></div>
+                                </div>                         
+                            </div>
+                        </div>
+
+                        <!--------- Beruflicher Status --------->
+                        
+                        <div class="form_action">
+                            <div class="form_row text_row">
+                                <div class="row_label">Beruflicher Status</div>
+                                <div class="text_content text_content_small">
+                                    <div class="status"><span>Angestellter</span></div>
+                                    <div class="change"><span>ändern</span></div>
+                                    
+                                    <div class="input_block">
+                                        <input class="form_input" value="Beruflicher Status">
+                                        <div class="select_arrow"></div>
+                                        <ul class="sort_data">
+                                            <li>Angestellte(r)</li>
+                                            <li>Arbeiter/in</li>
+                                            <li>Angestellte(r) öffentlicher Dienst</li>
+                                            <li>Arbeiter/in öffentlicher Dienst</li>
+                                            <li>Beamter(in)</li>
+                                            <li>Beamter(in)/Richter(in) auf Lebenszeit</li>
+                                            <li>Selbstständige(r)</li>
+                                            <li>Freiberufler/in</li>
+                                            <li>Landwirt/in</li>
+                                            <li>Berufssoldat/in</li>
+                                            <li>Zeitsoldat/in</li>
+                                            <li>Hausfrau/-mann</li>
+                                            <li>Schüler/in</li>
+                                            <li>Student/in</li>
+                                            <li>Auszubildende(r)</li>
+                                            <li>Bundesfreiwilligendienst</li>
+                                            <li>Rentner/in</li>
+                                            <li>Pensionär/in (ehem. Beamte)</li>
+                                            <li>z.Z. ohne Berufstätigkeit</li>
+                                        </ul>
+                                        <div class="data_result">
+                                            <ul class="input_results"></ul>
+                                            <span class="numb">0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="question_block"><span class="form_question">?</span></div>
+                                <div class="help_block">
+                                    <p><strong>Warum fragen wir das?</strong>Die meisten Versicherer gewähren Rabatte für bestimmte Berufsgruppen, am häufigsten für Beamte und den öffentlichen Dienst.</p>
+                                    <hr>
+                                    <div class="help_block_close"></div>
+                                </div>                         
+                            </div>
+                        </div>
+                        
+                        <!--------- Regelmäßiger Zugriff --------->
+                        
+                        <div class="form_action">
+                            <div class="form_row text_row">
+                                <div class="row_label">Regelmäßiger Zugriff auf weiteren PKW</div>
+                                <div class="radio_block">
+                                    <div class="radio_circle"><span></span></div>
+                                    <div class="radio_option"><span>Ja</span></div>
+                                </div>
+                                <div class="radio_block">
+                                    <div class="radio_circle"><span></span></div>
+                                    <div class="radio_option"><span>Nein</span></div>
+                                </div>
+                                <div class="question_block"><span class="form_question">?</span></div>
+                                <div class="help_block">
+                                    <p><strong>Spar-Tipp</strong>Falls der Fahrer regelmäßig einen weiteren Pkw nutzt, gewähren einige Versicherer Rabatte aufgrund der größeren Fahrpraxis.</p>
+                                    <hr>
+                                    <div class="help_block_close"></div>
+                                </div>                         
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="content content_3">
+                    <h2 class="form_title">Angaben zu Ihrem neuen Fahrzeug</h2>
+                    <div class="form_block auto_block">
+
+                        <!------------- Fahrzeug-Ident-Nr ------------>
+                        
+                        <div class="form_action">
+                            <div class="form_row">
+                               <div class="row_label">Fahrzeug-Ident-Nr.</div>
+                               <div class="input_block">
+                                   <input class="form_input">
+                               </div>
+                               <div class="question_block"><span class="form_question">?</span></div>
+                               <div class="help_block">
+                                   <p><strong>Hier sehen Sie Ihre FIN</strong>Auf der Vorderseite des Fahrzeugscheins</p><br>
+                                   <img src="img/fin_nummer.jpg">
+                                   <hr>
+                                   <div class="help_block_close"></div>
+                               </div>                         
+                            </div>
+
+                            <!--------- Aktueller Kilometerstand --------->
+
+                            <div class="form_row">
+                               <div class="row_label">Aktueller Kilometerstand</div>
+                               
+                               <div class="input_block input_152px">
+                                    <input class="form_input" value="50,000">
+                                    <ul class="sort_data">
+                                        <li>10,000</li>
+                                        <li>20,000</li>
+                                        <li>30,000</li>
+                                        <li>40,000</li>
+                                        <li>50,000</li>
+                                        <li>60,000</li>
+                                        <li>70,000</li>
+                                        <li>80,000</li>
+                                        <li>90,000</li>
+                                    </ul>
+                                    <div class="data_result">
+                                        <ul class="input_results"></ul>
+                                        <span class="numb">0</span>
+                                    </div>
+                                </div>
+                                                     
+                            </div>
+
+                            <!-------------- Deckungssumme -------------->
+
+
+                            <div class="form_row">
+                                <div class="row_label">Deckungssumme</div>
+                                
+                                <div class="input_block">
+                                    <input class="form_input">
+                                    <div class="select_arrow"></div>
+                                    <ul class="sort_data">
+                                        <li>option</li>
+                                        <li>option</li>
+                                        <li>option</li>
+                                        <li>option</li>
+                                    </ul>
+                                    <div class="data_result">
+                                        <ul class="input_results"></ul>
+                                        <span class="numb">0</span>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="content content_4">
+                    <h2 class="form_title">Vorversicherung & Schäden</h2>
+                    <div class="form_block insurance_block">
+
+                        <!--------- Vorversicherung / Schadenfreiheitsrabatt vorhanden --------->
+                        
+                        <div class="form_action">
+                            <div class="form_row">
+                                <div class="row_label">Vorversicherung / Schadenfreiheitsrabatt vorhanden</div>
+                                <div class="radio_block click_block" data-show-elem="s/all">
+                                    <div class="radio_circle"><span></span></div>
+                                    <div class="radio_option"><span>Ja</span></div>
+                                </div>
+                                <div class="radio_block click_block" data-show-elem="h/all">
+                                    <div class="radio_circle"><span></span></div>
+                                    <div class="radio_option"><span>Nein</span></div>
+                                </div>
+                                <div class="question_block"><span class="form_question">?</span></div>
+                                <div class="help_block">
+                                    <p><strong>Habe ich eine Vorversicherung?</strong>Sie können hier "ja" angeben, wenn Sie aktuell einen Pkw auf Ihren Namen versichert haben und diesen durch ein neues Fahrzeug ersetzen wollen. Sie können dann die <a href="#">Schadenfreiheitsklasse</a> (SF-Klasse) Ihrer jetzigen Versicherung übernehmen. Die Übernahme ist auch möglich, wenn der alte Vertrag aktuell stillgelegt ist (maximal 7 Jahre).</p>
+                                    <p><strong>Übernahme der Vorversicherung von Dritten?</strong>Wenn Sie keine eigene Vorversicherung haben, aber den Schadenfreiheitsrabatt von einem Dritten (z.B. Eltern) übernehmen möchten, wählen Sie bitte "ja". Da nicht alle Versicherer eine Rabattübernahme akzeptieren, prüfen Sie bitte die Tarifdetails des gewünschten Versicherers im Vergleichsergebnis.</p>
+                                    <hr>
+                                    <div class="help_block_close"></div>
+                                </div>                        
+                            </div>
+                        </div>
+                        
+                        <!--------- Vorversicherung bei --------->
+                        
+                        <div class="form_action" style="display: none;" data-element="all">
+                            <div class="form_row">
+                                <div class="row_label">Vorversicherung bei</div>
+
+                                <div class="input_block">
+                                    <input class="form_input">
+                                    <div class="select_arrow"></div>
+                                    <ul class="sort_data">
+                                        <li>AachenMünchener</li>
+                                        <li>ADAC Autoversicherung AG</li>
+                                        <li>Adcuri</li>
+                                        <li>Adler</li>
+                                        <li>AdmiralDirekt.de</li>
+                                        <li>Aeguron</li>
+                                        <li>AIG Europe</li>
+                                        <li>AIOI Insurance Company</li>
+                                        <li>Allianz</li>
+                                        <li>Allianz 24</li>
+                                        <li>AllSecur</li>
+                                        <li>Alte Leipziger</li>
+                                        <li>ARAG</li>
+                                        <li>Asstel</li>
+                                        <li>A und O Autoversicherung Oldenburg</li>
+                                        <li>AurumProtect</li>
+                                        <li>Auto Direkt</li>
+                                        <li>Avetas</li>
+                                        <li>AXA</li>
+                                        <li>AXA easy Versicherung AG</li>
+                                        <li>Baden-Badener</li>
+                                        <li>Badische Allgemeine</li>
+                                        <li>Badischer Gemeinde-Versicherungs-Verband</li>
+                                        <li>Barmenia</li>
+                                        <li>BarmeniaDirekt</li>
+                                        <li>Basler</li>
+                                        <li>BavariaDirekt</li>
+                                        <li>Bayerischer Versicherungsverband</li>
+                                        <li>Bayer. Vers. Bank</li>
+                                        <li>BBV Bayersiche Beamten Versicherung</li>
+                                        <li>Berlin-Kölnische</li>
+                                        <li>BGV | Badische Versicherungen</li>
+                                        <li>BGV-Versicherung AG</li>
+                                        <li>VRK Bruderhilfe | HUK-Coburg-Gruppe</li>
+                                        <li>Chartis Europa</li>
+                                        <li>Concordia</li>
+                                        <li>Condor</li>
+                                        <li>Confidon</li>
+                                        <li>Continentale</li>
+                                        <li>Cordial Versicherung AG</li>
+                                        <li>CosmosDirekt</li>
+                                        <li>DA Direkt</li>
+                                        <li>D.A.S. Versicherung</li>
+                                        <li>DBV</li>
+                                        <li>Debeka</li>
+                                        <li>Delfin Direkt</li>
+                                        <li>Deutsche Beamten - Versicherung</li>
+                                        <li>deutsche internet versicherung</li>
+                                        <li>Deutscher Herold</li>
+                                        <li>Deutscher Ring</li>
+                                        <li>Deut. Vers. AG</li>
+                                        <li>DEVK Allgemeine</li>
+                                        <li>DEVK Eisenbahn a.G.</li>
+                                        <li>die Alternative</li>
+                                        <li>die Bayerische</li>
+                                        <li>Direct Line</li>
+                                        <li>DVG Deutsche Versicherungs-Ges. Bremen</li>
+                                        <li>ERGO Direkt Versicherung AG</li>
+                                        <li>ERGO Versicherung AG</li>
+                                        <li>Europa</li>
+                                        <li>EUROPA-go</li>
+                                        <li>Fahrlehrerversicherung</li>
+                                        <li>Feuersozietät Berlin</li>
+                                        <li>Fiat Versicherungsdienst</li>
+                                        <li>Ford Versicherungsdienst</li>
+                                        <li>Frankfurter</li>
+                                        <li>FRI:DAY</li>
+                                        <li>Garanta</li>
+                                        <li>Gegenseitigkeit Versicherung Oldenburg</li>
+                                        <li>General ACC. Fire</li>
+                                        <li>General Accident (UAP)</li>
+                                        <li>Generali</li>
+                                        <li>GHV Darmstadt</li>
+                                        <li>Gothaer</li>
+                                        <li>Groupama</li>
+                                        <li>GVV</li>
+                                        <li>Haftpfl.Gemeinschaft</li>
+                                        <li>Hamburg-Mannheimer</li>
+                                        <li>Hannoversche Direkt</li>
+                                        <li>HanseMerkur</li>
+                                        <li>HDI24</li>
+                                        <li>HDI</li>
+                                        <li>HDI-Gerling</li>
+                                        <li>Helvetia</li>
+                                        <li>HUK24</li>
+                                        <li>HUK-Coburg Allgemeine</li>
+                                        <li>HUK-Coburg öffentlicher Dienst</li>
+                                        <li>INEAS</li>
+                                        <li>Itzehoer</li>
+                                        <li>Janitos</li>
+                                        <li>Karlsruher</li>
+                                        <li>Karlsruher Beamten</li>
+                                        <li>KarstadtQuelle</li>
+                                        <li>Kraft</li>
+                                        <li>KRAVAG-Allgem. Vers.</li>
+                                        <li>KRAVAG-LOGISTIC</li>
+                                        <li>KRAVAG-SACH</li>
+                                        <li>LadyCarOnline</li>
+                                        <li>Lippische Landes-Brandvers. Anstalt</li>
+                                        <li>Lloyd Deutschland</li>
+                                        <li>LSH</li>
+                                        <li>LVM</li>
+                                        <li>MACIF</li>
+                                        <li>Mannheimer</li>
+                                        <li>MAZDA Autoversicherung (Beamte)</li>
+                                        <li>MAZDA Autoversicherung</li>
+                                        <li>Mecklenburgische</li>
+                                        <li>Mercedes-Benz Bank</li>
+                                        <li>MLP</li>
+                                        <li>Münchener Verein</li>
+                                        <li>Nationale Suisse</li>
+                                        <li>Neckura Allgemeine</li>
+                                        <li>Neckura Vers.</li>
+                                        <li>nexible</li>
+                                        <li>Nordstern</li>
+                                        <li>NOVA Allgemeine Versicherung AG</li>
+                                        <li>Nürnberger Allgemeine</li>
+                                        <li>Nürnberger Beamten</li>
+                                        <li>Öffentliche Braunschweig</li>
+                                        <li>Öffentl. Versicherungen Bremen</li>
+                                        <li>Öffentl. Sachsen - Anhalt</li>
+                                        <li>Oeff. Hessen-Nassau-Thüringen</li>
+                                        <li>Öff. Oldenburg</li>
+                                        <li>ÖVA Mannheim</li>
+                                        <li>Opel Versicherungsdienst (GMAC)</li>
+                                        <li>Optima</li>
+                                        <li>OVAG - Ostdeutsche Versicherung AG</li>
+                                        <li>Patria</li>
+                                        <li>Prokundo</li>
+                                        <li>Provinzial Düsseldorf</li>
+                                        <li>Provinzial Nord</li>
+                                        <li>PVAG Polizeiversicherungs-AG</li>
+                                        <li>Renault Nissan Versicherungs-Service</li>
+                                        <li>Rheinland Versicherungen</li>
+                                        <li>Rhion Versicherungen</li>
+                                        <li>R+V</li>
+                                        <li>R+V24</li>
+                                        <li>Saarland</li>
+                                        <li>SAVAG</li>
+                                        <li>Securitas Versicherungen</li>
+                                        <li>Sicherdirekt</li>
+                                        <li>Signal Iduna</li>
+                                        <li>SOVAG</li>
+                                        <li>Sparkassen DirektVersicherung</li>
+                                        <li>Sparkassen-Vers. Sachsen</li>
+                                        <li>Sun Alliance und London</li>
+                                        <li>Sun Direct</li>
+                                        <li>SV Leben</li>
+                                        <li>SV Sparkassen Versicherung Baden-Württemberg</li>
+                                        <li>TELCON</li>
+                                        <li>Telcon-Lady</li>
+                                        <li>TELLIT DZ</li>
+                                        <li>Thuringa</li>
+                                        <li>Toyota Versicherungsdienst</li>
+                                        <li>TRANS (DBV Winterthur)</li>
+                                        <li>Uelzener Allg.</li>
+                                        <li>United Services</li>
+                                        <li>Universa</li>
+                                        <li>Vereinte</li>
+                                        <li>Vereinte Spezial Versicherung AG</li>
+                                        <li>Vers. Kammer Bayern</li>
+                                        <li>Vers. Verb.f. Gemeinde</li>
+                                        <li>Verti Versicherung AG</li>
+                                        <li>VGH Versicherungen</li>
+                                        <li>VHV</li>
+                                        <li>Victoria</li>
+                                        <li>VÖDAG</li>
+                                        <li>VOLKSFÜRSORGE</li>
+                                        <li>Volkswagen Autoversicherung AG</li>
+                                        <li>Volkswohl-Bund</li>
+                                        <li>VOLVO Versicherung</li>
+                                        <li>VVD24(Volkswagen Versicherungsdienst)</li>
+                                        <li>VVD (Volkswagen Versicherungsdienst)</li>
+                                        <li>Westfälische Provinzial</li>
+                                        <li>WGV</li>
+                                        <li>WGV Allgemeine - Württ. Gemeinde-Vers</li>
+                                        <li>WGV Himmelblau</li>
+                                        <li>WGV - Württ. Gemeinde-Vers</li>
+                                        <li>WÜBA</li>
+                                        <li>Württembergische</li>
+                                        <li>WWK</li>
+                                        <li>Zenith</li>
+                                        <li>Zurich</li>
+                                    </ul>
+                                    <div class="data_result">
+                                        <ul class="input_results"></ul>
+                                        <span class="numb">0</span>
+                                    </div>
+                                </div>
+
+                                <div class="question_block"><span class="form_question">?</span></div>
+                                <div class="help_block">
+                                    <p><strong>Was ist meine Vorversicherung?</strong> Geben Sie die Versicherung an, bei der Sie aktuell versichert sind. Sollten Sie derzeit keinen aktiven Vertrag haben, geben Sie die Versicherung an, bei der Sie zuletzt versichert waren.</p>
+                                    <hr>
+                                    <div class="help_block_close"></div>
+                                </div>                        
+                            </div>
+                        </div>
+                        
+                        <!--------- Seit wann bei diesem Versicherer --------->
+                        
+                        <div class="form_action" style="display: none;" data-element="all">
+                            <div class="form_row">
+                                <div class="row_label row_label_top">Seit wann bei diesem Versicherer</div>
+                                <div class="form_wrapper">
+                                    <div class="radio_block">
+                                        <div class="radio_circle"><span></span></div>
+                                        <div class="radio_option"><span>bis zu 1 Jahr</span></div>
+                                    </div>
+                                    <div class="radio_block">
+                                        <div class="radio_circle"><span></span></div>
+                                        <div class="radio_option"><span>länger als 1 Jahr</span></div>
+                                    </div>
+                                    <div class="radio_block">
+                                        <div class="radio_circle"><span></span></div>
+                                        <div class="radio_option"><span>länger als 3 Jahr</span></div>
+                                    </div>
+                                    <div class="radio_block">
+                                        <div class="radio_circle"><span></span></div>
+                                        <div class="radio_option"><span>länger als 5 Jahr</span></div>
+                                    </div>
+                                </div>
+                                <div class="question_block"><span class="form_question">?</span></div>
+                                <div class="help_block">
+                                    <p><strong>Warum fragen wir das?</strong>Langjährige Treue zum bisherigen Versicherer belohnen einige Versicherer mit Rabatten – in der Hoffnung, dass Sie auch bei ihnen lange Kunde bleiben.</p>
+                                    <hr>
+                                    <div class="help_block_close"></div>
+                                </div>                        
+                            </div>
+                        </div>
+                        
+                        <!--------- Vom Versicherer regulierte Schäden in den letzten 3 Jahren --------->
+                        
+                        <div class="form_action">
+                            <div class="form_row form_row_spec">
+                                <div class="row_label">Vom Versicherer regulierte Schäden in den letzten 3 Jahren</div>
+                                <div class="radio_block click_block" data-show-elem="s/sub">
+                                    <div class="radio_circle"><span></span></div>
+                                    <div class="radio_option"><span>Ja</span></div>
+                                </div>
+                                <div class="radio_block click_block" data-show-elem="h/sub">
+                                    <div class="radio_circle"><span></span></div>
+                                    <div class="radio_option"><span>Nein</span></div>
+                                </div>
+                                <div class="question_block"><span class="form_question">?</span></div>
+                                <div class="help_block">
+                                    <p><strong>Welche Schäden muss ich angeben?</strong>Geben Sie nur Schäden an, die von Ihrem Versicherer erstattet wurden oder noch in Bearbeitung sind. Schäden, die Sie selbst getragen haben, müssen nicht angegeben werden.</p>
+                                    <p><strong>Warum fragen wir das?</strong>Versicherer interessieren sich für Schäden in den vergangenen drei Jahren, um das künftige Schadeneintrittsrisiko besser einschätzen zu können.</p>
+                                    <hr>
+                                    <div class="help_block_close"></div>
+                                </div>                        
+                            </div>
+                        </div>
+                        
+                        <!-------------- Schaden 1 -------------->
+                        
+                        <div class="form_box">
+                           
+                            <div class="form_action" style="display: none;" data-element="sub">
+                                <div class="form_row form_row_spec2">
+                                    <div class="row_label">Schaden 
+                                        <code>1</code>
+                                        <span class="remove">löschen</span>
+                                    </div>
+                                    
+                                    <div class="small_left">
+                                       
+                                        <div class="input_block_100">
+                                            <input class="form_input" value="Monat">
+                                            <div class="select_arrow"></div>
+                                            <ul class="sort_data">
+                                                <li>Januar</li>
+                                                <li>Februar</li>
+                                                <li>März</li>
+                                                <li>April</li>
+                                                <li>Mai</li>
+                                                <li>Juni</li>
+                                                <li>Juli</li>
+                                                <li>August</li>
+                                                <li>September</li>
+                                                <li>Oktober</li>
+                                                <li>November</li>
+                                                <li>Dezember</li>
+                                            </ul>
+                                            <div class="data_result">
+                                                <ul class="input_results"></ul>
+                                                <span class="numb">0</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="small_right">
+                                       
+                                        <div class="input_block_100">
+                                            <input class="form_input" value="Jahr">
+                                            <div class="select_arrow"></div>
+                                            <ul class="sort_data">
+                                                <li>2014</li>
+                                                <li>2015</li>
+                                                <li>2016</li>
+                                                <li>2017</li>
+                                            </ul>
+                                            <div class="data_result">
+                                                <ul class="input_results"></ul>
+                                                <span class="numb">0</span>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+
+                                    <div class="question_block"><span class="form_question">?</span></div>
+                                    <div class="help_block">
+                                        <p><strong>Welche Schäden muss ich angeben?</strong>Geben Sie nur Schäden an, die von Ihrem Versicherer erstattet wurden oder noch in Bearbeitung sind. Schäden, die Sie selbst getragen haben, müssen nicht angegeben werden.</p>
+                                        <p><strong>Was sind Haftpflicht-Schäden?</strong>Schäden, die Sie mit dem Auto bei Anderen verursacht haben.</p>
+                                        <p><strong>Was sind Teilkasko-Schäden?</strong>Schäden am eigenen Auto, z.B. durch Diebstahl, Glasbruch, Hagel, Wild und Feuer.</p>
+                                        <p><strong>Was sind Vollkasko-Schäden?</strong>Schäden am eigenen Auto bei selbstverschuldeten Unfällen und Vandalismus.</p>
+                                        <hr>
+                                        <div class="help_block_close"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-------------- Checkboxes -------------->
+
+                            <div class="form_action" style="display: none;" data-element="sub">
+                                <div class="form_row form_row_spec3">
+                                    <div class="row_label"></div>
+                                    <div class="checkbox_block">
+                                        <div class="checkbox_quad"><span></span></div>
+                                        <div class="checkbox_option"><span>Haftpflicht</span></div>
+                                    </div>                                
+                                </div>
+
+                                <div class="form_row form_row_spec3">
+                                    <div class="row_label"></div>
+                                    <div class="checkbox_block">
+                                        <div class="checkbox_quad"><span></span></div>
+                                        <div class="checkbox_option"><span>Teilkasko</span></div>
+                                    </div>                                
+                                </div>
+
+                                <div class="form_row form_row_spec3">
+                                    <div class="row_label"></div>
+                                    <div class="checkbox_block">
+                                        <div class="checkbox_quad"><span></span></div>
+                                        <div class="checkbox_option"><span>Vollkasko</span></div>
+                                    </div>                                
+                                </div>
+                            </div>
+                            <div class="form_row form_row_spec4 form_action_insert" style="display: none;" data-element="sub">
+                                <div class="row_label"></div>
+                                <div class="link"><span>Weiteren Schaden hinzufügen</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="content content_5">
+                    <h2 class="form_title">Rabatte</h2>
+                    <div class="form_block discounts_block">
+
+                        <!--------- Abschließbar --------->
+                        
+                        <div class="form_action">
+                            <div class="form_row form_row_spec1">
+                                <div class="row_label">Abschließbar</div>
+                                <div class="radio_block">
+                                    <div class="radio_circle"><span></span></div>
+                                    <div class="radio_option"><span>Ja</span></div>
+                                </div>
+                                <div class="radio_block">
+                                    <div class="radio_circle"><span></span></div>
+                                    <div class="radio_option"><span>Nein</span></div>
+                                </div>
+                                <div class="question_block"><span class="form_question">?</span></div>
+                                <div class="help_block">
+                                    <p><strong>No content</strong>---------------------------------------------------------------------------------------------------</p>
+                                    <hr>
+                                    <div class="help_block_close"></div>
+                                </div>                        
+                            </div>
+                        </div>
+                        
+                        <!------------- Beruf ------------>
+                        
+                        <div class="form_action">
+                            <div class="form_row">
+                                <div class="row_label">Beruf</div>
+    
+                                <div class="input_block">
+                                    <input class="form_input" value="--- Bitte wählen ---">
+                                    <div class="select_arrow"></div>
+                                    <ul class="sort_data">
+                                        <li>Sonstige</li>
+                                        <li>Apotheker/in</li>
+                                        <li>Architekt/in</li>
+                                        <li>Arzt/Ärztin</li>
+                                        <li>Arzt/Ärztin im Praktikum</li>
+                                        <li>Assistenzarzt/-ärztin</li>
+                                        <li>Autoverkäufer/in</li>
+                                        <li>Baggerfahrer/in</li>
+                                        <li>Bankangestellte(r)</li>
+                                        <li>Bankkaufmann/-frau</li>
+                                        <li>Baufinanzierungsberater/in</li>
+                                        <li>Bauingenieur/in</li>
+                                        <li>Berufskraftfahrer/in</li>
+                                        <li>Betriebswirt/in (beratend)</li>
+                                        <li>Betriebswirt/in (nicht beratend)</li>
+                                        <li>Bildberichterstatter/in</li>
+                                        <li>Biologe/in</li>
+                                        <li>Blechschlosser/in</li>
+                                        <li>Bodenleger/in</li>
+                                        <li>Buchhalter/in</li>
+                                        <li>Buchprüfer/in (vereidigt)</li>
+                                        <li>Bürogehilfe/-gehilfin</li>
+                                        <li>Chemiker/in</li>
+                                        <li>Chemotechniker/in</li>
+                                        <li>Dekorateur/in</li>
+                                        <li>Diplom-Ingenieur/in</li>
+                                        <li>Diplom-Kaufmann/-frau</li>
+                                        <li>Diplomökonom/in</li>
+                                        <li>Dolmetscher/in</li>
+                                        <li>Dreher/in</li>
+                                        <li>Einrichter/in</li>
+                                        <li>Einzelhandelskaufmann/-frau</li>
+                                        <li>Einzelhändler/in</li>
+                                        <li>Elektriker/in</li>
+                                        <li>Elektroanlageninstallateur/in</li>
+                                        <li>Elektroingenieur/in</li>
+                                        <li>Elektroinstallateur/in</li>
+                                        <li>Elektromonteur</li>
+                                        <li>Elektrotechniker/in</li>
+                                        <li>Exportkaufmann/-frau</li>
+                                        <li>Facharzt/-ärztin (niedergelassen)</li>
+                                        <li>Facharzt/-ärztin (Angestellter)</li>
+                                        <li>Fahrlehrer/in</li>
+                                        <li>Färber/in</li>
+                                        <li>Feinwerktechniker/in</li>
+                                        <li>Fernmeldetechniker/in</li>
+                                        <li>Fernsehtechniker/in</li>
+                                        <li>Finanzberater/in</li>
+                                        <li>Finanzbuchhalter/in</li>
+                                        <li>Finanzdienstleistungsmakler/in</li>
+                                        <li>Finanzkaufmann/-frau</li>
+                                        <li>Finanzökonom/in</li>
+                                        <li>Flugingenieur/in</li>
+                                        <li>Former/in</li>
+                                        <li>Fräser/in</li>
+                                        <li>Fußbodenleger/in</li>
+                                        <li>Galvaniseur/in</li>
+                                        <li>Geologe/in</li>
+                                        <li>Gerber/in</li>
+                                        <li>Gießer/in</li>
+                                        <li>Großhandelkaufmann/-frau</li>
+                                        <li>Großhändler/in</li>
+                                        <li>Händler/in</li>
+                                        <li>Handelschemiker/in</li>
+                                        <li>Handelsvertreter/in</li>
+                                        <li>Hotelkaufmann/-frau</li>
+                                        <li>Immobilienmakler/in</li>
+                                        <li>Importkaufmann/-frau</li>
+                                        <li>Industriekaufmann/-frau</li>
+                                        <li>Informatiker/in</li>
+                                        <li>Ingenieur (andere als hier genannte)</li>
+                                        <li>Ingenieurökonom/in</li>
+                                        <li>Journalist/in</li>
+                                        <li>Jurist/in</li>
+                                        <li>Justitiar/in</li>
+                                        <li>Kassierer/in</li>
+                                        <li>Kesselwärter/in</li>
+                                        <li>Klempner/in</li>
+                                        <li>Kommunalbedienstete(r)</li>
+                                        <li>Konstrukteur/in</li>
+                                        <li>Kranfahrer/in</li>
+                                        <li>Kürschner/in</li>
+                                        <li>Lehrer/in</li>
+                                        <li>Makler/in von Finanzdienstleistungen</li>
+                                        <li>Maler/in</li>
+                                        <li>Maschinenbauer/in</li>
+                                        <li>Maschinenschlosser/in</li>
+                                        <li>Maschinentechniker/in</li>
+                                        <li>Mathematiker/in</li>
+                                        <li>Meteorologe/in</li>
+                                        <li>Meßtechniker/in</li>
+                                        <li>Mineraloge/in</li>
+                                        <li>Modist/in</li>
+                                        <li>Nachrichtentechniker/in</li>
+                                        <li>Näher/in</li>
+                                        <li>Notar/in</li>
+                                        <li>Notariatsgehilfe/-gehilfin</li>
+                                        <li>Ökonom/in</li>
+                                        <li>Patentanwalt/in</li>
+                                        <li>Physiker/in</li>
+                                        <li>Polier</li>
+                                        <li>Polsterer/in</li>
+                                        <li>Projektingenieur/in</li>
+                                        <li>Raumausstatter/in</li>
+                                        <li>Rechtsanwalt/-anwältin</li>
+                                        <li>Rechtsanwalts- und Notargehilfe/-gehilfin</li>
+                                        <li>Rechtsanwaltsgehilfe/-gehilfin</li>
+                                        <li>Registrator/in</li>
+                                        <li>Sachverständige(r)</li>
+                                        <li>Sanitär-Heizung-Klima</li>
+                                        <li>Sattler/in</li>
+                                        <li>Schiffsingenieur/in</li>
+                                        <li>Schleifer/in</li>
+                                        <li>Schlosser/in</li>
+                                        <li>Schmied/in</li>
+                                        <li>Schneider/in</li>
+                                        <li>Schreibkraft</li>
+                                        <li>Schuhmacher/in</li>
+                                        <li>Schweißer/in</li>
+                                        <li>Seiler/in</li>
+                                        <li>Sekretär/in</li>
+                                        <li>Speditionskaufmann/-frau</li>
+                                        <li>Spengler/in</li>
+                                        <li>Statiker/in</li>
+                                        <li>Steuerberater/in</li>
+                                        <li>Steuerbevollmächtigter/e</li>
+                                        <li>Steuerfachgehilfe/-gehilfin</li>
+                                        <li>Steuergehilfe/-gehilfin</li>
+                                        <li>Tapezierer/in</li>
+                                        <li>Techniker/in</li>
+                                        <li>Technische(r) Angestellte(r)</li>
+                                        <li>Technische(r) Zeichner(r)</li>
+                                        <li>Telefonist/in</li>
+                                        <li>Textilfacharbeiter/in</li>
+                                        <li>Übersetzer/in</li>
+                                        <li>Unternehmensberater/in (Mgl. BDU)</li>
+                                        <li>Verfahrenstechniker/in</li>
+                                        <li>Verkäufer/in</li>
+                                        <li>Verkaufsleiter/in</li>
+                                        <li>Verkaufsstellenleiter/in</li>
+                                        <li>Verlagskaufmann/-frau</li>
+                                        <li>Versicherungsangestellte(r)</li>
+                                        <li>Versicherungsmakler(in)/Vermittler(in)</li>
+                                        <li>Verzinker/in</li>
+                                        <li>Veterinär/in</li>
+                                        <li>Volkswirt/in (beratend)</li>
+                                        <li>Volkswirt/in (nicht beratend)</li>
+                                        <li>Vulkaniseur/in</li>
+                                        <li>Walzwerker/in</li>
+                                        <li>Weber/in</li>
+                                        <li>Werkstofftechniker/in</li>
+                                        <li>Werkzeugmacher/in</li>
+                                        <li>Werkzeugmechaniker/in</li>
+                                        <li>Wirtschaftsprüfer/in</li>
+                                        <li>Zahnarzt/-ärztin</li>
+                                        <li>Zahnarzthelfer/in</li>
+                                        <li>Zerspaner/in</li>
+                                        <li>Zoologe/Zoologin</li>
+                                        <li>Zuschneider/in</li>
+                                    </ul>
+                                    <div class="data_result">
+                                        <ul class="input_results"></ul>
+                                        <span class="numb">0</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="question_block"><span class="form_question">?</span></div>
+                                <div class="help_block">
+                                    <p><strong>Warum fragen wir das?</strong>Einige Versicherer gewähren Nachlässe für bestimmte Berufe. Ist Ihre momentan ausgeübte Tätigkeit hier nicht aufgeführt, wählen Sie "Sonstige".</p>
+                                    <hr>
+                                    <div class="help_block_close"></div>
+                                </div>                        
+                            </div>
+                        </div>
+                        
+                        <!----------- Branche ----------->
+                        
+                        <div class="form_action">
+                            <div class="form_row">
+                                <div class="row_label">Branche</div>
+                                
+                                <div class="input_block">
+                                    <input class="form_input" value="--- Bitte wählen ---">
+                                    <div class="select_arrow"></div>
+                                    <ul class="sort_data">
+                                        <li>Sonstige</li>
+                                        <li>Agrar- und Landwirtschaft</li>
+                                        <li>angeschl. Unternehmen von Kreditinstituten</li>
+                                        <li>Architekturbüro</li>
+                                        <li>Arztpraxis</li>
+                                        <li>Automobilbranche</li>
+                                        <li>Banken</li>
+                                        <li>Baufinanzierungsberatung</li>
+                                        <li>Bauhauptgewerbe</li>
+                                        <li>Baunebengewerbe</li>
+                                        <li>Bausparkassen (nicht öff. rechtlich)</li>
+                                        <li>Bausparkassen (öff. rechtlich)</li>
+                                        <li>Bergbau</li>
+                                        <li>Botschaften und Konsulate</li>
+                                        <li>Bundesministerium für Verkehr, Bau u. Wohnen</li>
+                                        <li>Bundeswehr</li>
+                                        <li>Chemische Industrie</li>
+                                        <li>Einzelhandel</li>
+                                        <li>Eisenbahnunternehmen</li>
+                                        <li>Elektroinstallationsbetrieb</li>
+                                        <li>Energieversorgung (öff. Hand)</li>
+                                        <li>Entsorgungsbetriebe</li>
+                                        <li>Fahrschulen</li>
+                                        <li>Finanzberatung</li>
+                                        <li>Firmen im Mehrheitsbesitz einer Eisenbahngesellschaft</li>
+                                        <li>gemeinnützige Einrichtungen</li>
+                                        <li>Immobilienmakler</li>
+                                        <li>Ingenieurbüro (andere)</li>
+                                        <li>Ingenieurbüro mit amtl. best. Ing.</li>
+                                        <li>Investmentgesellschaften</li>
+                                        <li>IT-Branche</li>
+                                        <li>Gartenbau</li>
+                                        <li>Handel und Dienstleistung</li>
+                                        <li>Handwerk</li>
+                                        <li>Kommunaler Dienst</li>
+                                        <li>Kranken- und Ersatzkassen</li>
+                                        <li>Krankenhäuser (privat)/Kur-/Rehakliniken</li>
+                                        <li>Kreditinstitute</li>
+                                        <li>Land- und Forstwirtschaft</li>
+                                        <li>Linienverkehrsunternehmen, mind. 50% in öffentl. Hand</li>
+                                        <li>Makler von Finanzdienstleistungen</li>
+                                        <li>Malerbetrieb</li>
+                                        <li>Medien</li>
+                                        <li>mildtätige und kirchliche Einrichtungen</li>
+                                        <li>Mitglied/Orga-Bereich von TRANSNET, GDBA, GDL</li>
+                                        <li>Notariat / Rechtsanwaltskanzlei</li>
+                                        <li>Öff. Finanzdienstleistungsunternehmen</li>
+                                        <li>Öffentlicher Personenverkehr</li>
+                                        <li>Pharmazeutische Branche</li>
+                                        <li>Prüf-Organisationen (TÜV, DEKRA, GTÜ, KÜS)</li>
+                                        <li>Rechtsanwaltskanzlei</li>
+                                        <li>Reha-, Vorsorgeeinr., Kurkliniken (privat)</li>
+                                        <li>Sachverständigenbüro</li>
+                                        <li>Schule (öffentlich)</li>
+                                        <li>Schule (privat)</li>
+                                        <li>Sparkassen</li>
+                                        <li>Stadt-, Gemeinde-, Kreisverwaltungen</li>
+                                        <li>Steuer- und Wirtschaftsberatung</li>
+                                        <li>SHK (Sanitär-Heizung-Klima) - Betrieb</li>
+                                        <li>Transport, Logistik und Verkehr</li>
+                                        <li>Telekommunikation</li>
+                                        <li>Unternehmensberatung (Mgl. BDU)</li>
+                                        <li>Verbraucherschutzorganisationen</li>
+                                        <li>Verkehrsbetriebe (öff. Linienverkehr)</li>
+                                        <li>Versicherungsagentur (hauptberufliche)</li>
+                                        <li>Versicherungsges. (nicht öff. rechtl.)</li>
+                                        <li>Versicherungsges. (öff. rechtliche)</li>
+                                        <li>Versicherungsmakler/-vermittler</li>
+                                        <li>Vertriebsorganisation v. Kreditinst., Bausparkassen</li>
+                                        <li>Veterinärwesen</li>
+                                        <li>Wasserversorgung</li>
+                                        <li>Wirtschaftsprüfer</li>
+                                        <li>Wohnungsbau (unter 50% öffentl. Hand)</li>
+                                        <li>Wohnungsbau (öffentl. Hand)</li>
+                                        <li>andere - Gesundheitswesen</li>
+                                        <li>andere - Kredit- und Versicherungsgewerbe</li>
+                                        <li>andere - Sozialwesen</li>
+                                        <li>andere - verarbeitendes Gewerbe</li>
+                                        <li>andere - Verkehr-/Nachrichtenübermittl.</li>
+                                    </ul>
+                                    <div class="data_result">
+                                        <ul class="input_results"></ul>
+                                        <span class="numb">0</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="question_block"><span class="form_question">?</span></div>
+                                <div class="help_block">
+                                    <p><strong>Warum fragen wir das?</strong>Einige Versicherer gewähren Sonderrabatte für bestimmte Branchen. Ist Ihre Branche, in der Sie momentan tätig sind, hier nicht aufgeführt, wählen Sie "Sonstige".</p>
+                                    <hr>
+                                    <div class="help_block_close"></div>
+                                </div>                        
+                            </div>
+                        </div>
+                        
+                        <!--------- Kinder unter 17 Jahren im Haushalt --------->
+                        
+                        <div class="form_action">
+                            <div class="form_row form_row_spec2">
+                                <div class="row_label">Kinder unter 17 Jahren im Haushalt</div>
+                                <div class="radio_block click_block" data-show-elem="s/kinder">
+                                    <div class="radio_circle"><span></span></div>
+                                    <div class="radio_option"><span>Ja</span></div>
+                                </div>
+                                <div class="radio_block click_block" data-show-elem="h/kinder">
+                                    <div class="radio_circle"><span></span></div>
+                                    <div class="radio_option"><span>Nein</span></div>
+                                </div>
+                                <div class="question_block"><span class="form_question">?</span></div>
+                                <div class="help_block">
+                                    <p><strong>Warum fragen wir das?</strong>Eltern sind laut Unfallstatistik die vorsichtigeren Autofahrer. Viele Versicherer gewähren hierfür Rabatte.</p>
+                                    <hr>
+                                    <div class="help_block_close"></div>
+                                </div>                        
+                            </div>
+                        </div>
+                        
+                        <!--------- Anzahl Kinder (Hidden) -------->
+                        
+                        <div class="form_action2" style="display: none;" data-element="kinder">
+                            <div class="form_row">
+                                <div class="row_label">Anzahl Kinder</div>
+                                
+                                <div class="input_block">
+                                    <input class="form_input" value="--- Bitte wählen ---">
+                                    <div class="select_arrow"></div>
+                                    <ul class="input_results_norm">
+                                        <li data-kinderval="1">1</li>
+                                        <li data-kinderval="2">2</li>
+                                        <li data-kinderval="3">3</li>
+                                        <li data-kinderval="4">4</li>
+                                        <li data-kinderval="5">5</li>
+                                        <li data-kinderval="6">6</li>
+                                        <li data-kinderval="7">7</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="question_block"><span class="form_question">?</span></div>
+                                <div class="help_block">
+                                    <p><strong>Warum fragen wir das?</strong>Einzelne Versicherer machen die Höhe des Rabatts von der Anzahl der Kinder abhängig.</p>
+                                    <hr>
+                                    <div class="help_block_close"></div>
+                                </div>                        
+                            </div>
+                            
+                            <div class="form_row form_child">
+                              
+                               <div class="row_label">Geburtsdatum des <code class="child_value">1</code>. Kindes</div>
+                               <div class="input_block">
+                                   <input class="form_input form_date datepick" data-language='de'>
+                               </div>
+                               <div class="question_block"><span class="form_question">?</span></div>
+                               <div class="help_block">
+                                   <p><strong>Warum fragen wir das?</strong>Das Alter ist wichtig für den Beitrag: Jüngere Fahrer haben ein erhöhtes Unfallrisiko und verursachen so höhere Beiträge.</p>
+                                   <hr>
+                                   <div class="help_block_close"></div>
+                               </div>                         
+                       
+                            </div>
+                            
+                        </div>
+                        
+                        <!--------- Selbstgenutztes Wohneigentum --------->
+                        
+                        <div class="form_action">
+                            <div class="form_row form_row_spec2">
+                                <div class="row_label">Selbstgenutztes Wohneigentum</div>
+                                <div class="radio_block click_block" data-show-elem="s/art">
+                                    <div class="radio_circle"><span></span></div>
+                                    <div class="radio_option"><span>Ja</span></div>
+                                </div>
+                                <div class="radio_block click_block" data-show-elem="h/art">
+                                    <div class="radio_circle"><span></span></div>
+                                    <div class="radio_option"><span>Nein</span></div>
+                                </div>
+                                <div class="question_block"><span class="form_question">?</span></div>
+                                <div class="help_block">
+                                    <p><strong>Warum fragen wir das?</strong>Besitzer von Wohneigentum sind laut Statistik die sichereren Autofahrer. Manche Versicherer berücksichtigen dies bei der Beitragskalkulation.</p>
+                                    <p><strong>Zählt vermietetes Wohneigentum?</strong>Nein, für entsprechende Rabatte müssen Sie Ihr Wohneigentum selbst bewohnen.</p>
+                                    <hr>
+                                    <div class="help_block_close"></div>
+                                </div>                        
+                            </div>
+                        </div>
+                        
+                        <!--------- Art des Wohneigentums (Hidden) -------->
+                        
+                        <div class="form_action" style="display: none;" data-element="art">
+                            <div class="form_row">
+                                <div class="row_label">Art des Wohneigentums</div>
+                                
+                                <div class="input_block">
+                                    <input class="form_input" value="--- Bitte wählen ---">
+                                    <div class="select_arrow"></div>
+                                    <ul class="sort_data">
+                                        <li>Eigentumswohnung</li>
+                                        <li>Einfamilienhaus</li>
+                                        <li>Zweifamilienhaus</li>
+                                        <li>Doppelhaus</li>
+                                        <li>Reihenhaus</li>
+                                        <li>Mehrfamilienhaus</li>
+                                    </ul>
+                                    <div class="data_result">
+                                        <ul class="input_results"></ul>
+                                        <span class="numb">0</span>
+                                    </div>
+                                </div>
+
+                                <div class="question_block"><span class="form_question">?</span></div>
+                                <div class="help_block">
+                                    <p><strong>Warum fragen wir das?</strong>Einige Versicherer gewähren Nachlässe nur für bestimmte Immobilien, andere geben je nach Art unterschiedliche Rabatte.</p>
+                                    <hr>
+                                    <div class="help_block_close"></div>
+                                </div>                        
+                            </div>
+                        </div>
+                        
+                        <!--------- Jahreskarte für den öffentlichen Nahverkehr --------->
+                        
+                        <div class="form_action">
+                            <div class="form_row form_row_spec3">
+                                <div class="row_label">Jahreskarte für den öffentlichen Nahverkehr</div>
+                                <div class="radio_block">
+                                    <div class="radio_circle"><span></span></div>
+                                    <div class="radio_option"><span>Ja</span></div>
+                                </div>
+                                <div class="radio_block">
+                                    <div class="radio_circle"><span></span></div>
+                                    <div class="radio_option"><span>Nein</span></div>
+                                </div>
+                                <div class="question_block"><span class="form_question">?</span></div>
+                                <div class="help_block">
+                                    <p><strong>Warum fragen wir das?</strong>Besitzer einer Jahreskarte für öffentliche Verkehrsmittel fahren in der Regel seltener im Berufsverkehr Auto und haben so ein niedrigeres Unfallrisiko. Versicherer gewähren deshalb teilweise Rabatte.</p>
+                                    <p><strong>Zählen auch mehrere Monatskarten?</strong>Leider nein, für Versicherer ist erst die Investition in eine Jahreskarte ein Zeichen für die dauerhafte Nutzung des öffentlichen Nahverkehrs.</p>
+                                    <hr>
+                                    <div class="help_block_close"></div>
+                                </div>                       
+                            </div>
+                        </div>
+                        
+                        <!--------- BahnCard-Besitzer --------->
+                        
+                        <div class="form_action">
+                            <div class="form_row form_row_spec4">
+                                <div class="row_label">BahnCard-Besitzer</div>
+                                <div class="radio_block click_block" data-show-elem="s/bahncard">
+                                    <div class="radio_circle"><span></span></div>
+                                    <div class="radio_option"><span>Ja</span></div>
+                                </div>
+                                <div class="radio_block click_block" data-show-elem="h/bahncard">
+                                    <div class="radio_circle"><span></span></div>
+                                    <div class="radio_option"><span>Nein</span></div>
+                                </div>
+                                <div class="question_block"><span class="form_question">?</span></div>
+                                <div class="help_block">
+                                    <p><strong>Warum fragen wir das?</strong>Einige Versicherer gewähren für BahnCard-Besitzer einen Rabatt.</p>
+                                    <hr>
+                                    <div class="help_block_close"></div>
+                                </div>                       
+                            </div>
+                        </div>
+                        
+                        <!--------- Art der BahnCard (Hidden) -------->
+                        
+                        <div class="form_action" style="display: none;" data-element="bahncard">
+                            <div class="form_row">
+                                <div class="row_label">Art der BahnCard</div>
+                                
+                                <div class="input_block">
+                                    <input class="form_input" value="--- Bitte wählen ---">
+                                    <div class="select_arrow"></div>
+                                    <ul class="sort_data">
+                                        <li>BahnCard 25</li>
+                                        <li>BahnCard 25 inkl. bahn.comfort</li>
+                                        <li>BahnCard 50</li>
+                                        <li>BahnCard 50 inkl. bahn.comfort</li>
+                                        <li>BahnCard 100 inkl. bahn.comfort</li>
+                                    </ul>
+                                    <div class="data_result">
+                                        <ul class="input_results"></ul>
+                                        <span class="numb">0</span>
+                                    </div>
+                                </div>
+                                                                
+                                <div class="question_block"><span class="form_question">?</span></div>
+                                <div class="help_block">
+                                    <p><strong>Warum fragen wir das?</strong>Die Höhe des Rabatts für BahnCard-Besitzer ist von der Art der BahnCard abhängig. Für die "Probe BahnCard" gibt es keinen Nachlass.</p>
+                                    <hr>
+                                    <div class="help_block_close"></div>
+                                </div>                        
+                            </div>
+                        </div>
+                        
+                        <!--------- Automobilclub-Mitglied --------->
+                        
+                        <div class="form_action">
+                            <div class="form_row form_row_spec4">
+                                <div class="row_label">Automobilclub-Mitglied</div>
+                                <div class="radio_block click_block" data-show-elem="s/autoclub">
+                                    <div class="radio_circle"><span></span></div>
+                                    <div class="radio_option"><span>Ja</span></div>
+                                </div>
+                                <div class="radio_block click_block" data-show-elem="h/autoclub">
+                                    <div class="radio_circle"><span></span></div>
+                                    <div class="radio_option"><span>Nein</span></div>
+                                </div>
+                                <div class="question_block"><span class="form_question">?</span></div>
+                                <div class="help_block">
+                                    <p><strong>Warum fragen wir das?</strong>Einige Versicherer gewähren Nachlässe für Mitglieder von Automobilclubs. Darüber hinaus gibt es Spezialtarife, die nur für Mitglieder bestimmter Clubs (z.B. ADAC) angeboten werden.</p>
+                                    <hr>
+                                    <div class="help_block_close"></div>
+                                </div>                       
+                            </div>
+                        </div>
+                        
+                        <!--------- Welcher Automobilclub (Hidden) -------->
+                        
+                        <div class="form_action" style="display: none;" data-element="autoclub">
+                            <div class="form_row form_row_spec5">
+                                <div class="row_label">Welcher Automobilclub</div>
+                                
+                                <div class="input_block">
+                                    <input class="form_input">
+                                    <div class="select_arrow"></div>
+                                    <ul class="sort_data">
+                                        <li>ADAC</li>
+                                        <li>AvD</li>
+                                        <li>ACE</li>
+                                        <li>ACV</li>
+                                        <li>SONSTIGE</li>
+                                        <li>VCD</li>
+                                        <li>ARCD</li>
+                                    </ul>
+                                    <div class="data_result">
+                                        <ul class="input_results"></ul>
+                                        <span class="numb">0</span>
+                                    </div>
+                                </div>
+
+                                <div class="question_block"><span class="form_question">?</span></div>
+                                <div class="help_block">
+                                    <p><strong>Warum fragen wir das?</strong>Einige Versicherer gewähren Nachlässe nur für bestimmte Automobilclubs, andere geben je nach Club unterschiedliche Rabatte.</p>
+                                    <p><strong>Automobilclub nicht dabei?</strong>Hier sind nur die Clubs aufgeführt, für deren Mitglieder Versicherer Nachlässe gewähren. Ist Ihr Club nicht aufgeführt, wählen Sie bitte "sonstiger".</p>
+                                    <hr>
+                                    <div class="help_block_close"></div>
+                                </div>                        
+                            </div>
+                        </div>
+                        
+                        <!--------- Mitgliedschaft seit (Hidden) -------->
+                        
+                        <div class="form_action" style="display: none;" data-element="autoclub">
+                            <div class="form_row form_row_spec6">
+                                <div class="row_label">Mitgliedschaft seit</div>
+                                
+                                <div class="input_block">
+                                    <input class="form_input">
+                                    <div class="select_arrow"></div>
+                                    <ul class="sort_data">
+                                        <li>2017</li>
+                                        <li>2016</li>
+                                        <li>2015</li>
+                                        <li>2014</li>
+                                        <li>2013</li>
+                                        <li>2012</li>
+                                        <li>2011</li>
+                                        <li>2010</li>
+                                        <li>2009</li>
+                                        <li>2008</li>
+                                        <li>2007</li>
+                                        <li>2006</li>
+                                        <li>2005</li>
+                                        <li>2004</li>
+                                        <li>2003</li>
+                                        <li>2002</li>
+                                        <li>2001</li>
+                                        <li>2000</li>
+                                        <li>1999</li>
+                                        <li>1998</li>
+                                        <li>1997</li>
+                                        <li>1996</li>
+                                        <li>1995</li>
+                                        <li>1994</li>
+                                        <li>1993</li>
+                                        <li>1992</li>
+                                        <li>1991</li>
+                                        <li>1990</li>
+                                        <li>1989</li>
+                                        <li>1988</li>
+                                        <li>1987</li>
+                                        <li>1986</li>
+                                        <li>1985</li>
+                                        <li>1984</li>
+                                        <li>1983</li>
+                                        <li>1982</li>
+                                        <li>1981</li>
+                                        <li>1980</li>
+                                        <li>vor 1980</li>
+                                    </ul>
+                                    <div class="data_result">
+                                        <ul class="input_results"></ul>
+                                        <span class="numb">0</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="question_block"><span class="form_question">?</span></div>
+                                <div class="help_block">
+                                    <p><strong>Warum fragen wir das?</strong>Einzelne Versicherer staffeln ihre Nachlässe abhängig von der Dauer Ihrer Mitgliedschaft.</p>
+                                    <p><strong>Mitgliedschaft unterbrochen oder Club gewechselt?</strong>Geben Sie hier bitte nur Ihre aktuelle Mitgliedschaft an.</p>
+                                    <hr>
+                                    <div class="help_block_close"></div>
+                                </div>                        
+                            </div>
+                        </div>
+                        <!--------- Motorrad-Besitzer --------->
+                        
+                        <div class="form_action">
+                            <div class="form_row form_row_spec7">
+                                <div class="row_label">Motorrad-Besitzer</div>
+                                <div class="radio_block">
+                                    <div class="radio_circle"><span></span></div>
+                                    <div class="radio_option"><span>Ja</span></div>
+                                </div>
+                                <div class="radio_block">
+                                    <div class="radio_circle"><span></span></div>
+                                    <div class="radio_option"><span>Nein</span></div>
+                                </div>
+                                <div class="question_block"><span class="form_question">?</span></div>
+                                <div class="help_block">
+                                    <p><strong>Warum fragen wir das?</strong> Einzelne Versicherer gewähren spezielle Rabatte für Motorradfahrer (auch von Leichtkrafträdern ab 51ccm oder Quads) – besonders in Kombination mit der Autoversicherung.</p>
+                                    <hr>
+                                    <div class="help_block_close"></div>
+                                </div>                       
+                            </div>
+                        </div>
+                        
+                        <!--------- Fahrassistenz-Paket Plus --------->
+                        
+                        <div class="form_action">
+                            <div class="form_row form_row_spec7">
+                                <div class="row_label">Fahrassistenz-Paket Plus</div>
+                                <div class="radio_block">
+                                    <div class="radio_circle"><span></span></div>
+                                    <div class="radio_option"><span>Ja</span></div>
+                                </div>
+                                <div class="radio_block">
+                                    <div class="radio_circle"><span></span></div>
+                                    <div class="radio_option"><span>Nein</span></div>
+                                </div>
+                                <div class="question_block"><span class="form_question">?</span></div>
+                                <div class="help_block">
+                                    <p><strong>Warum fragen wir das?</strong>Die Mercedes-Benz Bank gewährt einen Nachlass für Modelle mit dem Fahrassistenz-Paket Plus.</p>
+                                    <hr>
+                                    <div class="help_block_close"></div>
+                                </div>                       
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="content content_6">
+                    <h2 class="form_title">Optionale Leistungen</h2>
+                    <div class="form_block services_block">
+
+                        <!----------- EVB per SMS ---------->
+                        
+                        <div class="form_action">
+                            <div class="form_row form_row_spec1">
+                                <div class="row_label"><strong>eVB per SMS</strong> (kostenlos) zur Zulassung Ihres Fahrzeugs</div>
+                                <div class="input_block">
+                                   <input class="form_input" value="Ihre Mobilnummer">
+                                </div>
+                                <div class="question_block"><span class="form_question">?</span></div>
+                                <div class="help_block">
+                                    <p><strong>No content</strong>----------------------------------------------------------------------------------------------------</p>
+                                    <hr>
+                                    <div class="help_block_close"></div>
+                                </div>                        
+                            </div>
+                        </div>
+                        
+                        <!----------- Kurzzeit-eVB ---------->
+                        
+                        <div class="form_action">
+                            <div class="form_row form_row_spec2">
+                                <div class="row_label">
+                                    <div class="checkbox_block">
+                                        <div class="checkbox_quad"><span></span></div>
+                                        <div class="checkbox_option">
+                                            <span><strong>Kurzzeit-eVB</strong> zur Überführung zu Ihrem Wohnort</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="price">
+                                    <span>+ 38,99 € einmalig</span>
+                                </div>
+                                <div class="question_block"><span class="form_question">?</span></div>
+                                <div class="help_block">
+                                    <p><strong>No content</strong>----------------------------------------------------------------------------------------------------</p>
+                                    <hr>
+                                    <div class="help_block_close"></div>
+                                </div>                        
+                            </div>
+                        </div>
+                        
+                        <!--------- Kfz-Versicherung  -------->
+                        
+                        <div class="form_action">
+                            <div class="form_row form_row_spec3">
+                                <div class="row_label">
+                                    <div class="checkbox_block">
+                                        <div class="checkbox_quad"><span></span></div>
+                                        <div class="checkbox_option">
+                                            <span><strong>Kfz-Versicherung immer dabei</strong> (kostenlos)<br> Wir senden Ihnen einen Link per SMS zu, damit Sie geschützt in der App Ihre Kfz-Versicherung verwalten können.</span>
+                                        </div>
+                                    </div>
+                                    <h5>Wir senden Ihnen die SMS auf folgende Nummer</h5>
+                                    <div class="input_block">
+                                        <input class="form_input" value="Ihre Mobilnummer">
+                                    </div>
+                                </div>
+                                <div class="question_block"><span class="form_question">?</span></div>
+                                <div class="help_block">
+                                    <p><strong>No content</strong>----------------------------------------------------------------------------------------------------</p>
+                                    <hr>
+                                    <div class="help_block_close"></div>
+                                </div>                        
+                            </div>
+                        </div>
+                        
+                        <!----------- Verkehrs-Rechtsschutz ---------->
+                        
+                        <div class="form_action">
+                            <div class="form_row form_row_spec4">
+                                <div class="row_label">
+                                    <div class="checkbox_block">
+                                        <div class="checkbox_quad"><span></span></div>
+                                        <div class="checkbox_option">
+                                            <span>Verkehrs-Rechtsschutz<br>Zurich Versicherung</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="price">
+                                    <span>+ 79,20 € jährlich</span>
+                                </div>
+                                <div class="question_block"><span class="form_question">?</span></div>
+                                <div class="help_block">
+                                    <p><strong>No content</strong>----------------------------------------------------------------------------------------------------</p>
+                                    <hr>
+                                    <div class="help_block_close"></div>
+                                </div>                        
+                            </div>
+                        </div>
+                    </div>   
+                </div>
+                
+                <div class="content content_7">
+                    <h2 class="form_title">Ihre Bankverbindung zum Lastschriftverfahren</h2>
+                    <div class="form_block banking_block">
+
+                        <!--------- Bankverbindung --------->
+                        
+                        <div class="form_action">
+                            <div class="form_row form_row_spec1">
+                                <div class="row_label">Bankverbindung</div>
+                                <div class="radio_block click_block" data-show-elem="s/iban,h/konton">
+                                    <div class="radio_circle"><span></span></div>
+                                    <div class="radio_option"><span>IBAN</span></div>
+                                </div>
+                                <div class="question_block"><span class="form_question">?</span></div>
+                                <div class="help_block">
+                                    <p><strong>Warum fragen wir das?</strong>Sie können die Bankverbindung wie gewohnt mit Kontonummer und Bankleitzahl angeben. Alternativ können Sie Ihre Bankdaten auch bereits mit der neuen IBAN angeben.</p>
+                                    <hr>
+                                    <div class="help_block_close"></div>
+                                </div>                       
+                            </div>
+
+                            <div class="form_row form_row_spec2">
+                                <div class="row_label"></div>
+                                <div class="radio_block click_block" data-show-elem="h/iban,s/konton">
+                                    <div class="radio_circle"><span></span></div>
+                                    <div class="radio_option"><span>Kontonummer und Bankleitzahl</span></div>
+                                </div>                     
+                            </div>
+                        </div>
+                        
+                        <!------------- IBAN (20-stellig) ( Hidden )------------>
+                        
+                        <div data-replace_block="iban">
+                            <div class="form_action" data-element="iban">
+                                <div class="form_row form_row_spec3">
+                                    <div class="row_label">IBAN (20-stellig)</div>
+                                    <div class="input_block">
+                                        <input class="form_input">
+                                    </div>
+                                    <div class="question_block"><span class="form_question">?</span></div>
+                                    <div class="help_block">
+                                        <p><strong>Was muss ich beachten?</strong>Geben Sie die IBAN des Kontos an, von dem der Versicherungsbeitrag abgebucht werden soll. Geben Sie die 20 Ziffern nach dem Länderkürzel DE an. Es sind nur Zahlen erlaubt, keine Buchstaben. Das vorangestellte Länderkürzel DE muss nicht angegeben werden, da nur deutsche Konten erlaubt sind. Achten Sie auf Zahlendreher und Tippfehler!</p>
+                                        <hr>
+                                        <div class="help_block_close"></div>
+                                    </div>                         
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!------------- Kontonummer ( Hidden )------------>
+                        
+                        <div data-replace_block="konton">
+                            <div class="form_action" style="display: none;" data-element="konton">
+                                <div class="form_row form_row_spec3">
+                                    <div class="row_label">Kontonummer</div>
+                                    <div class="input_block">
+                                        <input class="form_input">
+                                    </div>
+                                    <div class="question_block"><span class="form_question">?</span></div>
+                                    <div class="help_block">
+                                        <p><strong>Warum Lastschriftverfahren?</strong>Ihr neuer Versicherer bietet nur das Lastschriftverfahren als Zahlweise an. Eine Zahlung per Rechnung ist nicht möglich.</p>
+                                        <p><strong>Was muss ich beachten?</strong>Geben Sie die Kontonummer des Kontos an, von dem der Versicherungsbeitrag abgebucht werden soll. Achten Sie auf Zahlendreher und Tippfehler!</p>
+                                        <hr>
+                                        <div class="help_block_close"></div>
+                                    </div>                         
+                                </div>
+                            </div>
+
+                            <!------------- Bankleitzahl ( Hidden )------------>
+
+                            <div class="form_action" style="display: none;" data-element="konton">
+                                <div class="form_row form_row_spec3">
+                                    <div class="row_label">Bankleitzahl</div>
+                                    <div class="input_block">
+                                        <input class="form_input">
+                                    </div>
+                                    <div class="question_block"><span class="form_question">?</span></div>
+                                    <div class="help_block">
+                                        <p><strong>Was muss ich beachten?</strong>Geben Sie die Bankleitzahl des Kontos an, von dem der Versicherungsbeitrag abgebucht werden soll. Achten Sie auf Zahlendreher und Tippfehler!</p>
+                                        <hr>
+                                        <div class="help_block_close"></div>
+                                    </div>                         
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!---------- Kontoinhaber ---------->
+                        
+                        <div class="form_action">
+                            <div class="form_row form_row_spec1">
+                                <div class="row_label">Kontoinhaber</div>
+                                <div class="radio_block click_block" data-show-elem="h/sonstiger">
+                                    <div class="radio_circle radio_active"><span></span></div>
+                                    <div class="radio_option">
+                                        <span><strong>Christian Beck</strong> (Versicherungsnehmer)</span>
+                                    </div>
+                                </div>
+                                <div class="question_block"><span class="form_question">?</span></div>
+                                <div class="help_block">
+                                    <p><strong>Warum fragen wir das?</strong>Für das Lastschriftverfahren werden Name und Anschrift des Kontoinhabers benötigt. Handelt es sich dabei nicht um den Versicherungsnehmer, müssen Sie die Daten des Kontoinhabers angeben.</p>
+                                    <hr>
+                                    <div class="help_block_close"></div>
+                                </div>                       
+                            </div>
+
+                            <div class="form_row form_row_spec2">
+                                <div class="row_label"></div>
+                                <div class="radio_block click_block" data-show-elem="s/sonstiger">
+                                    <div class="radio_circle"><span></span></div>
+                                    <div class="radio_option"><span>Sonstiger</span></div>
+                                </div>                     
+                            </div>
+                        </div>
+                        
+                        <!-------------- Anrede, Titel -------------->
+                        
+                        <div class="form_action" style="display: none;" data-element="sonstiger">
+                            <div class="form_row">
+                                <div class="row_label">Anrede, Titel</div>
+
+                                <div class="small_left">
+                                    <div class="input_block_100">
+                                        <input class="form_input" value="Herr">
+                                        <div class="select_arrow"></div>
+                                        <ul class="input_results_norm">
+                                            <li class="click_block" data-show-elem="h/firma2">Herr</li>
+                                            <li class="click_block" data-show-elem="h/firma2">Frau</li>
+                                            <li class="click_block" data-show-elem="s/firma2">Firma</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="small_right">
+                                    <div class="input_block_100">
+                                        <input class="form_input">
+                                        <div class="select_arrow"></div>
+                                        <ul class="sort_data">
+                                            <li>kein Titel</li>
+                                            <li>Dr.</li>
+                                            <li>Prof.</li>
+                                            <li>Prof. Dr.</li>
+                                        </ul>
+                                        <div class="data_result">
+                                            <ul class="input_results"></ul>
+                                            <span class="numb">0</span>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                        
+                        <!------------- Firmenname ------------->
+                        
+                        <div class="form_action" style="display: none;" data-element="firma2">
+                            <div class="form_row">
+                               <div class="row_label">Firmenname</div>
+                               <div class="input_block">
+                                   <input class="form_input">
+                               </div>
+                               <div class="question_block"><span class="form_question">?</span></div>
+                               <div class="help_block">
+                                   <p><strong>No content</strong>------------------------------------------------------</p>
+                                   <hr>
+                                   <div class="help_block_close"></div>
+                               </div>                         
+                            </div>
+                        </div>
+
+                        <!-------------- Vorname, Name -------------->
+                        
+                        <div class="form_action" style="display: none;" data-element="sonstiger">
+                            <div class="form_row">
+                                <div class="row_label">Vorname, Name</div>
+
+                                <div class="small_left">
+                                    <input class="form_input">
+                                </div>
+
+                                <div class="small_right">
+                                    <input class="form_input">
+                                </div>
+
+                                <div class="question_block"><span class="form_question">?</span></div>
+                                <div class="help_block">
+                                   <p><strong>Was muss ich beachten?</strong>Tragen Sie bitte in das erste Feld den Vor- und in das zweite Feld den Nachnamen ein. Verwenden Sie sicherheitshalber die im Ausweis vermerkte Schreibweise.</p>
+                                   <p><strong>Kontoinhaber eine Firma?</strong>Ist der Kontoinhaber eine Firma, müssen trotzdem immer beide Felder (Vor- und Nachname) ausgefüllt sein.</p>
+                                   <hr>
+                                   <div class="help_block_close"></div>
+                               </div>  
+                            </div>
+                        </div>
+
+                        <!-------------- PLZ, Wohnort -------------->
+                        
+                        <div class="form_action" style="display: none;" data-element="sonstiger">
+                            <div class="form_row text_row">
+                                <div class="row_label">PLZ, Wohnort</div>
+                                <div class="text_content">
+                                    <div class="address"><span>81245 München</span></div>
+                                    <div class="change">
+                                        <span>ändern</span>
+                                    </div>
+                                                                        
+                                    <div class="input_block">
+                                       
+                                        <div class="extrasmall_right">
+                                            <input class="form_input" value="81245">
+                                        </div>
+                                        
+                                        <div class="big_left">
+                                            <input class="form_input" value="München">
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="question_block"><span class="form_question">?</span></div>
+                                <div class="help_block">
+                                   <p><strong>Was muss ich beachten?</strong>Sie können die Straße aus den Adressvorschlägen wählen oder diese selbst eintragen. Verwenden Sie für die Hausnummer das rechte Feld.</p>
+                                   <hr>
+                                   <div class="help_block_close"></div>
+                               </div>  
+                            </div>
+                        </div>
+
+                        <!----------- Straße, Hausnummer ----------->
+                        
+                        <div class="form_action" style="display: none;" data-element="sonstiger">
+                            <div class="form_row">
+                                <div class="row_label">Straße, Hausnummer</div>
+
+                                <div class="big_left">
+                                    <input class="form_input">
+                                </div>
+
+                                <div class="extrasmall_right">
+                                    <input class="form_input">
+                                </div>
+
+                                <div class="question_block"><span class="form_question">?</span></div>
+                                <div class="help_block">
+                                   <p><strong>Was muss ich beachten?</strong>Sie können die Straße aus den Adressvorschlägen wählen oder diese selbst eintragen. Verwenden Sie für die Hausnummer das rechte Feld.</p>
+                                   <hr>
+                                   <div class="help_block_close"></div>
+                               </div>  
+                            </div>
+                        </div>
+                        
+                        <!---------------------------------->
+                        
+                        <div class="form_action">
+                            <div class="form_row form_row_spec4">
+                                <div class="row_label">
+                                    <div class="checkbox_block">
+                                        <div class="checkbox_quad"><span></span></div>
+                                        <div class="checkbox_option">
+                                            <span>Ich erteile das SEPA-Lastschriftmandat für die Kfz-Versicherung der Zurich DirektVersicherung zum Einzug der fälligen Beiträge vom angegebenen Konto.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="question_block"><span class="form_question">?</span></div>
+                                <div class="help_block">
+                                    <p><strong>Was mache ich mit der Kurzzeit-eVB?</strong> Mit der eVB können Sie an der Zulassungsstelle ein Kurzzeit-Kennzeichen anmelden. Die Kurzzeit-eVB gilt als Beleg für eine gültige Kfz-Haftpflichtversicherung.</p>
+                                    <hr>
+                                    <div class="help_block_close"></div>
+                                </div>                        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content content_button">
+                    <div class="form_block">
+                        <p>Mit Klick auf "Weiter" stimme ich zu, dass meine Antragsdaten (Name, Vorname, Geburtsdatum und Anschrift) von der Zurich DirektVersicherung und Covercheck System für die Einholung von Informationen zu meinem bisherigen Zahlungsverhalten bei der infoscore Consumer Data GmbH, Rheinstraße 99 in 76532 Baden-Baden genutzt werden.</p>
+                        <a class="dark_button" href="#"><span>Weiter</span> und zur<br>Antrags-Übersichtsseite</a>
+                    </div>
+                    <p>Mit Klick auf "weiter" stimme ich den Nutzungsbedingungen sowie den Datenschutzhinweisen der CovercheckSystem GmbH zu. Ferner stimme ich der Zusendung der gesetzlichen Erstinformation für Versicherungsmakler gemäß § 11 VersVermV per E-Mail zu.</p>                    
+                </div>  
+                
+                <span class="hello"></span>            
+                              
+                                                      
+	        </div>
+	    </div>
+	</section>
+
+<!---------------------------------------------------------------------------------------- Footer -->
+   
+    <footer></footer>
+    
+<!---------------------------------------------------------------------------------------- Scripts & Styles -->
+
+
+    <!--  Jquery CDN  -->         
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+    
+    <!--  Responsive CSS  -->  
+    <link href="css/responsive.css" rel="stylesheet">
+        
+    <!--  PickMeUp Calendar  -->
+    <script src="js/datepicker.js" type="text/javascript"></script>
+    <script src="js/datepicker.de.js" type="text/javascript"></script>
+    <link href="css/datepicker.css" rel="stylesheet">
+       
+    <!--  Custom Scripting  -->         
+    <script src="js/script.js" type="text/javascript"></script>
+        
+    
+</body>
+</html>

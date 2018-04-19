@@ -1,0 +1,82 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?8dhfus');
+  src:  url('fonts/icomoon.eot?8dhfus#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?8dhfus') format('truetype'),
+    url('fonts/icomoon.woff?8dhfus') format('woff'),
+    url('fonts/icomoon.svg?8dhfus#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-auction:before {
+  content: "\e900";
+  color: #474d73;
+}
+.icon-basket:before {
+  content: "\e901";
+  color: #474d73;
+}
+.icon-behance:before {
+  content: "\e902";
+  color: #dadbdd;
+}
+.icon-calendar:before {
+  content: "\e903";
+  color: #474d73;
+}
+.icon-facebook:before {
+  content: "\e904";
+  color: #dadbdd;
+}
+.icon-google:before {
+  content: "\e905";
+  color: #dadbdd;
+}
+.icon-logo:before {
+  content: "\e906";
+  color: #5cc142;
+}
+.icon-megaphone:before {
+  content: "\e907";
+  color: #343b64;
+}
+.icon-monitor:before {
+  content: "\e908";
+  color: #474d73;
+}
+.icon-play-button:before {
+  content: "\e909";
+  color: #5cc142;
+}
+.icon-quotes:before {
+  content: "\e90a";
+  color: #5cc142;
+}
+.icon-social:before {
+  content: "\e90b";
+  color: #474d73;
+}
+.icon-tweet:before {
+  content: "\e90c";
+  color: #dadbdd;
+}
+.icon-youtube:before {
+  content: "\e90d";
+  color: #dadbdd;
+}

@@ -1,0 +1,297 @@
+@import "mixins";
+
+.header-apply {
+    padding-top: 150px;
+    &__navigation {
+        top: 0;
+        z-index: 5;
+        width: 100%;
+        position: fixed;
+        padding-top: 105px;
+        -webkit-overflow-scrolling: touch;
+        transition: all .35s linear;
+        nav {
+            position: relative;
+        }
+        ul {
+            display: flex;
+        }
+        li {
+            margin-right: 20px;
+            position: relative;
+            &:first-child {
+                a{
+                    padding-left: 15px;
+                    padding-right: 0;
+                }
+            }
+            &:nth-child(2) {
+                margin-left: 15px;
+            }
+            &:hover {
+                &:first-child {
+                    a {
+                        padding-left: 15px;
+                    }
+                    .link-underline {
+                        width: 100%;
+                        animation: leftmove 3s;
+                        transition: all 0.35s linear;
+                        @keyframes leftmove {
+                            from {right: 0px;}
+                            to {left: 0px;}
+                        }
+                    }
+                }
+                .link-underline {
+                    width: 100%;
+                    animation: rightmove 3s;
+                    transition: all 0.35s linear;
+                    @keyframes rightmove {
+                        from {left: 0px;}
+                        to {right: 0px;}
+                    }
+                }
+            }
+            a {
+                padding-right: 15px;
+            }
+        }
+        .link-underline {
+            height: 5px;
+            width: 0;
+            bottom: -10px;
+            position: absolute;
+            border-radius: 2px;
+            background-color: @pink-color;
+        }
+        &.fixed {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            transition: all .35s linear;
+            background-color: rgba(232 , 61, 150,0.4);
+            .header-apply__link {
+                color: @white-color;
+            }
+        }
+    }
+    &__link {
+        font-size: 24px;
+        color: @black-color;
+        text-transform: uppercase;
+        font-family: 'Futura-m-cond', sans-serif;
+    }
+}
+
+.main-apply {
+    margin: 0 auto;
+    max-width: 695px;
+    &__info-block {
+        margin: 0;
+        padding: 250px 15px 0;
+        background-color: rgba(255, 255, 255, 0.85);
+        h1 {
+            margin: 0 auto;
+            max-width: 560px;
+            text-align: center;
+            span {
+                &:first-child {
+                    font-size: 148px;
+                    margin: 0 auto;
+                    display: block;
+                    letter-spacing: 50px;
+                    text-transform: uppercase;
+                    font-family: 'Futura-m-cond', sans-serif;
+                }
+                &:last-child {
+                    display: block;
+                    font-size: 74px;
+                    display: block;
+                    color: @pink-color;
+                    letter-spacing: 20px;
+                    text-transform: uppercase;
+                    font-family: 'Futura-m-italic';
+                }
+            }
+        }
+        img {
+            display: none;
+            margin: 0 auto;
+        }
+        p {
+            font-size: 24px;
+            margin-top: 30px;
+            font-weight: 300;
+            text-align: center;
+            letter-spacing: 6px;
+        }
+    }
+    &__title {
+        width: 100%;
+        display: block;
+        font-size: 48px;
+        padding: 25px 15px;
+        text-align: center;
+        border-radius: 10px;
+        margin: 120px auto 15px;
+        color: @white-color;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        background-color: @pink-color;
+        font-family: 'Futura-m-cond', sans-serif;
+    }
+}
+
+.input-group {
+    margin-top: 40px;
+    position: relative;
+    &__label {
+        font-size: 24px;
+        color: @pink-color;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        span {
+            color: @black-color;
+        }
+    }
+    &__input {
+        width: 100%;
+        height: 50px;
+        padding: 0 25px;
+        font-size: 18px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        background-color: @input-color;
+    }
+    &__half-container {
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        justify-content: space-between;
+    }
+    &__half {
+        width: 49%;
+    }
+    &__half-input {
+        width: 100%;
+        height: 50px;
+        padding: 0 25px;
+        font-size: 18px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        background-color: @input-color;
+    }
+    &__textarea {
+        width: 100%;
+        border: none;
+        height: 225px;
+        padding: 25px;
+        outline: none;
+        resize: none;
+        font-size: 18px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+        background-color: @input-color;
+    }
+}
+
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &__button, &__submit-btn {
+        width: 49%;
+        height: 50px;
+        cursor: pointer;
+        font-size: 24px;
+        font-weight: 300;
+        border-radius: 10px;
+        text-transform: uppercase;
+        border: 1px solid @pink-color;
+        background-color: @white-color;
+        transition: all 0.35s linear;
+        &:hover {
+            color: @white-color;
+            transition: all 0.35s linear;
+            background-color: @pink-color;
+        }
+        &.active {
+            color: @white-color;
+            transition: all 0.35s linear;
+            background-color: @pink-color;
+        }
+    }
+    &__submit-btn {
+        width: 100%;
+        margin-top: 165px;
+        margin-bottom: 250px;
+    }
+    &__checkbox {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    
+    .main-apply__info-block {
+        padding: 100px 15px 0;
+    }
+    
+    .main-apply {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .main-apply__info-block h1 span:first-child {
+        font-size: 100px;
+        letter-spacing: 19px;
+    }
+    .main-apply__info-block h1 span:last-child {
+        font-size: 30px;
+        letter-spacing: 20px;
+    }
+    .button-group__submit-btn {
+        margin-top: 50px;
+        margin-bottom: 60px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    
+    .input-group {
+        &__label {
+            font-size: 18px;
+        }
+    }
+    
+    .button-group {
+        &__button {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    }
+    .input-group {
+        &__half-input {
+            width: 100%;
+        }
+    }
+    
+    .main-apply {
+        &__title {
+            margin: 50px auto 15px;
+        }
+    }
+    
+    .main-apply__info-block h1 span:first-child {
+        letter-spacing: 6px;
+    }
+    
+    .main-apply__info-block h1 span:last-child {
+        letter-spacing: 13px;
+    }
+    
+    .main-apply__title {
+        font-size: 24px;
+    }
+}
