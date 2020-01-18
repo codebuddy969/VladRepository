@@ -1,0 +1,96 @@
+<div class="sv-header">
+    <div class="sv-animation" *ngIf="show_animation" [style.backgroundImage]="'url(/assets/img/services/animation.svg)'"></div>
+    <div class="sv-header__info">
+        <h1 class="sv-header__title">#whoweare</h1>
+        <div class="sv-header__subtitle">your brand. your story. this is how we do it.</div>
+    </div>
+</div>
+
+<div class="sv-options">
+    <div class="sv-options__row1">
+        <div class="sv-options__container" *ngFor="let service of services_list.row1">
+            <div class="sv-options__link">
+                <div class="sv-hexagon" (click)="callInfo(service.id)"
+                     [style.backgroundImage]="'url(/assets/img/services/' + service.image + ')'">
+                    <span class="sv-options__title">{{service?.title}}</span>
+                    <span class="sv-hexagon__top"></span>
+                    <span class="sv-hexagon__bottom"></span>
+                </div>
+                <div class="sv-info {{service?.id}}" [ngStyle]="service?.infoStyles" id="{{service?.id}}" #info_modal>
+                    <div class="sv-info__container">
+                        <div class="sv-info__cross" (click)="closeInfo()">
+                            <div class="sv-info__cross-container"></div>
+                        </div>
+                        <div class="sv-info__title">{{service?.title}}</div>
+                        <div class="sv-info__description" [innerHTML]="service?.description"></div>
+                        <a class="sv-info__link" routerLink="/services/{{service?.link}}">Read more</a>
+                    </div>
+                    <span class="sv-info__top"></span>
+                    <span class="sv-info__bottom"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sv-options__row2">
+        <div class="sv-options__container" *ngFor="let service of services_list.row2">
+            <div class="sv-options__link">
+                <div class="sv-hexagon" (click)="callInfo(service.id)"
+                     [style.backgroundImage]="'url(/assets/img/services/' + service.image + ')'">
+                    <span class="sv-options__title">{{service?.title}}</span>
+                    <span class="sv-hexagon__top"></span>
+                    <span class="sv-hexagon__bottom"></span>
+                </div>
+                <div class="sv-info {{service?.id}}" [ngStyle]="service?.infoStyles" id="{{service?.id}}" #info_modal>
+                    <div class="sv-info__container">
+                        <div class="sv-info__cross" (click)="closeInfo()">
+                            <div class="sv-info__cross-container"></div>
+                        </div>
+                        <div class="sv-info__title">{{service?.title}}</div>
+                        <div class="sv-info__description" [innerHTML]="service?.description"></div>
+                        <a class="sv-info__link" routerLink="/services/{{service?.link}}">Read more</a>
+                    </div>
+                    <span class="sv-info__top"></span>
+                    <span class="sv-info__bottom"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sv-options__row3">
+        <div class="sv-options__container" *ngFor="let service of services_list.row3">
+            <div class="sv-options__link">
+                <div class="sv-hexagon" (click)="callInfo(service.id)"
+                     [style.backgroundImage]="'url(/assets/img/services/' + service.image + ')'">
+                    <span class="sv-options__title">{{service?.title}}</span>
+                    <span class="sv-hexagon__top"></span>
+                    <span class="sv-hexagon__bottom"></span>
+                </div>
+                <div class="sv-info {{service?.id}}" [ngStyle]="service?.infoStyles" id="{{service?.id}}" #info_modal>
+                    <div class="sv-info__container">
+                        <div class="sv-info__cross" (click)="closeInfo()">
+                            <div class="sv-info__cross-container"></div>
+                        </div>
+                        <div class="sv-info__title">{{service?.title}}</div>
+                        <div class="sv-info__description" [innerHTML]="service?.description"></div>
+                        <a class="sv-info__link" routerLink="/services/{{service?.link}}">Read more</a>
+                    </div>
+                    <span class="sv-info__top"></span>
+                    <span class="sv-info__bottom"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="sv-options__more" routerLink="/services/much-more">and much more</a>
+</div>
+
+<div class="sv-footer">
+    <div class="sv-options__video" *ngIf="show_video">
+        <button class="sv-options__play" *ngIf="show_play" (click)="playVideo()"></button>
+        <video class="sv-options__video-block" [muted]="true" [autoplay]="true" [loop]="true" #videoplayer>
+            <source src="assets/video/who-we-are.mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="sv-options__description">We use our unique background to concoct advertising campaigns that transform how our clients interact with their customers. Our team of creatives design experiences and develop content aimed to enhance our client’s brand awareness and consumer engagement.<br><br>We go above and beyond to devise a brand experience that meets our clients’ needs.</div>
+</div>
+
+<app-quote-section></app-quote-section>

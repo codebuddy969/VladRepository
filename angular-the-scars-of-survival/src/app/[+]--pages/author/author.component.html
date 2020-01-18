@@ -1,0 +1,58 @@
+<div class="author__background"></div>
+<div class="author__container">
+    <div class="author__image-block">
+        <div class="author__image" [class.author__image--fixed]="scroll_state">
+            <img src="assets/images/author.png" alt="Ally-trust">
+        </div>
+    </div>
+    <div class="author__info">
+        <div class="author__about-container">
+            <div class="author__small-image">
+                <img src="assets/images/author-small.png" alt="Ally-trust">
+            </div>
+            <div class="author__about-info">
+                <div class="author__about">About The Author</div>
+                <div class="author__title">Ally trust</div>    
+            </div>
+        </div>
+        <div class="author__text">
+            <p>Born to an Eastern European military family, Ally Trust is an entrepreneur and business professional. While she has never officially published any works before, Ally has carried a great many tales in her heart and is delighted to finally place them on the page here today, her stories coming from her own life experiences as much as from those of the people she’s known and loved.</p>
+            <q>I hope that my books allow readers to look up from the stories on the page and see the stories taking place around them just as clearly.</q>
+            <p>Ally Trust is always ready and willing to speak on the subject of human trafficking. If interested in having her collaborate on a project or make an appearance at an event, please reach out to her here.</p>
+        </div>
+        <div class="contacts">
+            <div class="at-small-title">Contact with me</div>
+            <ul class="contacts__container">
+                <li class="contacts__list-item">
+                    <button class="contacts__link" (click)="checkModal($event,'email')">Send email</button>
+                </li>
+                <li class="contacts__list-item">
+                    <button class="contacts__link" (click)="checkModal($event,'call')">Call me</button>
+                </li>
+                <li class="contacts__list-item">
+                    <button class="contacts__link" (click)="checkModal($event,'subscribe')">Subscribe</button>
+                </li>
+                <li class="contacts__list-item">
+                    <a class="contacts__link" href="https://www.facebook.com/AuthorAllyTrust" target="_blank">
+                        <i class="at-icon">&#xe801;</i>
+                        Facebook
+                    </a>
+                </li>
+                <li class="contacts__list-item">
+                    <a class="contacts__link" href="https://twitter.com/AllyTrust_" target="_blank">
+                        <i class="at-icon">&#xe804;</i>
+                        Twitter
+                    </a>
+                </li>
+                <li class="contacts__list-item">
+                    <a class="contacts__link" href="https://www.goodreads.com/user/show/76016085-ally-trust" target="_blank">
+                        <i class="at-icon">&#xe80a;</i>
+                        Goodreads
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<app-contact-modal [action_value]='action' [modal_type]='modal_type' (returnEvent)=checkModal($event)></app-contact-modal>

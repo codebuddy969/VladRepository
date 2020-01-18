@@ -1,0 +1,188 @@
+@import '../../../../Mixins.scss';
+
+$path : "../../../..";
+
+.dashboard {
+    display: block;
+    @include keyframes(opacity) {
+        0% { opacity: 0; }
+        90% { opacity: 1; }
+    }
+    @include animation('opacity 1s linear');
+    .row {
+        @include flex;
+        margin-bottom: 50px;
+        @include align-items(center);
+        @include justify-content(space-between);
+        .small-tab {
+            width: 335px;
+            height: 115px;
+            @include flex;
+            border-radius: 7px;
+            padding: 0 25px 0 20px;
+            @include align-items(center);
+            @include justify-content(space-between);
+            box-shadow: 0px 3px 8.91px 0.09px rgba(197, 132, 230, 0.73);
+            background: #d69ad6;
+            background: -moz-linear-gradient(left, #d69ad6 0%, #c487e5 100%);
+            background: -webkit-linear-gradient(left, #d69ad6 0%,#c487e5 100%);
+            background: linear-gradient(to right, #d69ad6 0%,#c487e5 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d69ad6', endColorstr='#c487e5',GradientType=1 );
+            &__block {
+                .title {
+                    font-size: 18px;
+                    margin-bottom: 20px;
+                    color: $white-text-color;
+                }
+                .count {
+                    font-size: 40px;
+                    font-weight: 900;
+                    color: $white-text-color;
+                }
+            }
+            &:last-child {
+                background: #6a83d0;
+                border: 1px solid $white-border-color;
+                box-shadow: 0px 3px 8.91px 0.09px rgba(106, 131, 208, 0.73);
+                background: -moz-linear-gradient(left, #8a8fc5 0%, #6a83d0 100%);
+                background: -webkit-linear-gradient(left, #8a8fc5 0%,#6a83d0 100%);
+                background: linear-gradient(to right, #8a8fc5 0%,#6a83d0 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8a8fc5', endColorstr='#6a83d0',GradientType=1 );
+            }
+        }
+        .double-tab {
+            width: 725px;
+            height: 380px;
+            @include flex;
+            border-radius: 7px;
+            padding: 25px 0 25px 20px;
+            @include align-items(center);
+            @include justify-content(space-between);
+            background-color: $blue-background-color;
+            box-shadow: 0px 3px 20.79px 0.21px rgba(131, 153, 212, 0.31);
+            &__info {
+                min-height: 340px;
+                @include flex;
+                @include flex-direction(column);
+                @include justify-content(space-between);
+            }
+            &__countries {
+                max-height: 200px;
+                overflow-y: auto;
+                overflow-x: hidden;
+                padding-left: 20px;
+                .country {
+                    font-size: 14px;
+                    font-weight: 700;
+                    margin-bottom: 10px;
+                    color: $violet-text-color; 
+                }
+                span {
+                    font-weight: 900;
+                    color: $pink-text-color;
+                }
+            }
+            &__visitors {
+                font-size: 14px;
+                font-weight: 700;
+                text-transform: uppercase;
+                color: $violet-text-color;
+                span {
+                    font-size: 40px;
+                    font-weight: 900;
+                    color: $pink-text-color;
+                }
+            }
+        }
+        .medium-tab {
+            width: 334px;
+            height: 380px;
+            padding: 20px;
+            border-radius: 7px;
+            background-color: $blue-background-color;
+            box-shadow: 0px 3px 20.79px 0.21px rgba(131, 153, 212, 0.31);
+            &__container {
+                overflow-y: auto;
+                max-height: 260px;
+                margin: 5px 0 25px;
+                overflow-x: hidden;
+                padding: 25px 0 20px;
+                .row {
+                    @include flex;
+                    padding-left: 20px;
+                    margin-bottom: 25px;
+                    @include flex-direction(column);
+                    @include align-items(flex-start);
+                    border-left: 5px solid $pink-border-color;
+                    .title {
+                        font-size: 18px;
+                        cursor: pointer;
+                        font-weight: 700;
+                        color: $pink-text-color;
+                    }
+                    .date {
+                        margin: 5px 0;
+                        font-size: 8px;
+                        color: rgb(204, 130, 228);
+                        color: $violet-text-color;
+                    }
+                    .text {
+                        font-size: 10px;
+                        font-weight: 700;
+                        color: $grey-text-color;
+                    }
+                }
+            }
+            &__activity {
+                max-height: 340px;
+                .row {
+                    @include flex;
+                    cursor: pointer;
+                    padding-left: 0;
+                    @include flex-direction(row);
+                    @include align-items(center);
+                    @include justify-content(flex-start);
+                    border-left: 0 solid $transparent-color;
+                    border-right: 5px solid $transparent-color;
+                    &:hover {
+                        transition: all 0.35s linear;
+                        border-right: 5px solid $pink-text-color;
+                        .title {
+                            color: $pink-text-color;
+                        }
+                    }
+                    .photo {
+                        width: 67px;
+                        height: 67px;
+                        @include flex;
+                        margin-right: 20px;
+                        border-radius: 50%;
+                        @include align-items(center);
+                        @include justify-content(center);
+                        background-color: $white-background-color;
+                        box-shadow: 0px 2px 21px 0px rgba(0, 0, 0, 0.14);
+                        img {
+                            width: 64px;
+                            height: 64px;
+                        }
+                    }
+                    .title {
+                        color: $blue-text-color;
+                    }
+                }
+            }
+        }
+        .full-tab {
+            width: 100%;
+            height: 290px;
+            @include flex;
+            overflow: hidden;
+            border-radius: 7px;
+            padding: 20px 15px 10px;
+            @include justify-content(center);
+            background-color: $blue-background-color;
+            box-shadow: 0px 3px 20.79px 0.21px rgba(131, 153, 212, 0.31);
+        }
+    }
+}
+

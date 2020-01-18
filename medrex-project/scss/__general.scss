@@ -1,0 +1,235 @@
+$dark-color: #23282d;
+$base-color: #56c1b2;
+$border-color: #d6e7e4;
+$highlight-color: #706f6f;
+$background-color: #d8f4f0;
+$white-color: #fff;
+
+$heading-font: 'Questrial', 'Arial', sans-serif;
+$titles-font: 'Arimo', 'Arial', sans-serif;
+$text-font: 'Pontano Sans', 'Arial', sans-serif;
+
+$break-xs: 575px;
+$break-sm: 767px;
+$break-md: 991px;
+$break-lg: 1199px;
+
+@mixin font-size($size, $base: 16) {
+    font-size: #{$size}px;
+    font-size: ($size / $base) * 1rem;
+    @if ($size < 20) {
+        line-height: #{$size + ($size * 0.50)}px;
+    }
+    @if ($size > 20) {
+        line-height: #{$size + ($size * 0.30)}px;
+    }
+    @if ($size > 60) {
+        line-height: #{$size + ($size * 0.10)}px;
+    }
+    @if ($size > 80) {
+        line-height: #{$size + ($size * 0.05)}px;
+    }
+}
+
+@mixin spaces {
+    $spaceamounts: (0, 5, 10, 15, 20, 30, 40, 50, 60, 80, 90, 100, 250);
+    $sides: (top, bottom, left, right);
+    $types: (margin, padding); 
+
+    @each $i in $spaceamounts {
+        @each $side in $sides {
+            @each $type in $types {
+                .#{str-slice($type, 0, 1)}#{str-slice($side, 0, 1)}-#{$i} { #{$type}-#{$side}: #{$i}px !important; }   
+    }
+}
+}
+
+@media screen and (max-width: $break-lg) {
+    @each $i in $spaceamounts {
+        @each $side in $sides {
+            @each $type in $types {
+                @if ($i >= 20){
+                    .#{str-slice($type, 0, 1)}#{str-slice($side, 0, 1)}-#{$i} { 
+                        #{$type}-#{$side}: #{$i/2}px !important; 
+            }    
+        }
+    }
+}    
+}
+}
+
+}
+
+@mixin text-overflow($max-width) {
+    max-width: $max-width;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@mixin max-media( $point ) {
+    @if $point==$break-xs {
+        @media ( max-width: $break-xs ) {
+            @content;
+        }
+    }
+    @if $point==$break-sm {
+        @media ( max-width: $break-sm ) {
+            @content;
+        }
+    }
+    @if $point==$break-md {
+        @media ( max-width: $break-md ) {
+            @content;
+        }
+    }
+    @if $point==$break-lg {
+        @media ( max-width: $break-lg ) {
+            @content;
+        }
+    }
+}
+
+@mixin min-media( $point ) {
+    @if $point==$break-xs {
+        @media ( min-width: $break-xs ) {
+            @content;
+        }
+    }
+    @if $point==$break-sm {
+        @media ( min-width: $break-sm ) {
+            @content;
+        }
+    }
+    @if $point==$break-md {
+        @media ( min-width: $break-md ) {
+            @content;
+        }
+    }
+    @if $point==$break-lg {
+        @media ( min-width: $break-lg ) {
+            @content;
+        }
+    }
+}
+
+@mixin max-width {
+    $amount: (570);
+
+    @each $i in $amount {
+        .mw-#{$amount} {
+            max-width: #{$amount}px;
+        }
+    }
+}
+
+@mixin object-fit($fit: fill, $position: null){
+    -o-object-fit: $fit;
+    object-fit: $fit;
+    @if $position {
+        -o-object-position: $position;
+        object-position: $position;
+        font-family: 'object-fit: #{$fit}; object-position: #{$position}';
+    } @else {
+        font-family: 'object-fit: #{$fit}';
+    }
+}
+
+@mixin fontFamily($title, $file, $weight: normal, $style: normal) {
+    @font-face {
+        font-family: "#{$title}";
+        src: url('../fonts/#{$file}.eot');
+        src: url('../fonts/#{$file}.eot?#iefix') format('embedded-opentype'),
+             url('../fonts/#{$file}.woff') format('woff'),
+             url('../fonts/#{$file}.ttf') format('truetype'),
+             url('../fonts/#{$file}.svg?#webfont') format('svg');
+        font-weight: $weight;
+        font-style: $style;
+    }
+}
+
+
+@charset "utf-8";
+
+@include fontFamily("fontello", fontello);
+@include fontFamily("Arimo", arimo-regular);
+@include fontFamily("Pontano Sans", pontanosans-regular);
+@include fontFamily("Questrial", questrial-regular);
+
+
+html,
+body,
+div,
+ul,
+li,
+p,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+button,
+input,
+textarea {
+    color: $dark-color;
+    @include font-size(16);
+    font-family: $text-font;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    list-style: none;
+    font-weight: 400;
+    box-sizing: border-box;
+}
+
+@include spaces;
+@include max-width;
+
+a,
+a:hover, 
+a:visited, 
+a:link, 
+a:active {
+    text-decoration: none;
+    transition: all 0.15s linear;
+}
+
+a:hover {
+    color: inherit;
+}
+
+button,
+button:focus {
+    outline: none;
+    cursor: pointer;
+
+}
+
+.container {
+    max-width: 1170px;
+}
+
+.slick-slide {
+    @include min-media( $break-sm ) {
+        .mt-t1-gallery {
+            &__arrow {
+                display: none;
+            }
+        }
+    }
+}
+
+.iziModal {
+    .iziModal-header {
+        background-color: $base-color !important;
+    }
+    .iziModal-header-title {
+        font-family: $titles-font;
+        text-transform: uppercase;
+    }
+}

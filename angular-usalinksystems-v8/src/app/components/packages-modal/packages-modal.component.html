@@ -1,0 +1,56 @@
+<div class="pck-modal">
+    <div class="pck-modal__window" #modal>
+        <div class="pck-modal__cross" (click)="closeModal($event)">
+            <div class="pck-modal__line1"></div>
+            <div class="pck-modal__line2"></div>
+        </div>
+        <div class="pck-modal__container">
+            <div class="pck-modal__headline"><span>Select</span> <span>a-la-carte options</span></div>
+            <div class="pck-modal__body">
+                <div class="pck-modal__column">
+                    <div class="pck-modal__row" *ngFor="let row of packages.columnLeft">
+                        <button class="pck-modal__checkbox"
+                                #checkbox
+                                (click)="clickOnCheckbox($event.target)"
+                                [attr.data-title]="row?.title"
+                                [attr.data-price]="row?.number"
+                                [attr.data-option]="row?.option"
+                                [attr.data-info]="row?.info">
+                            <span></span>
+                        </button>
+                        <div class="pck-modal__info">
+                            <div class="pck-modal__title">{{row?.title}}</div>
+                            <div class="pck-modal__price" *ngIf="row.price">{{row?.price}}</div>
+                            <div class="pck-modal__message" *ngIf="row.message">{{row?.message}}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pck-modal__column">
+                    <div class="pck-modal__row" *ngFor="let row of packages.columnRight">
+                        <button class="pck-modal__checkbox"
+                                #checkbox
+                                (click)="clickOnCheckbox($event.target)"
+                                [attr.data-title]="row?.title"
+                                [attr.data-price]="row?.number"
+                                [attr.data-option]="row?.option"
+                                [attr.data-info]="row?.info">
+                            <span></span>
+                        </button>
+                        <div class="pck-modal__info">
+                            <div class="pck-modal__title">{{row?.title}}</div>
+                            <div class="pck-modal__price" *ngIf="row.price">{{row?.price}}</div>
+                            <div class="pck-modal__message" *ngIf="row.message">{{row?.message}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pck-modal__footer">
+                <div class="pck-modal__total">Total Cost: ${{packagePrice}}</div>
+                <div class="pck-modal__options">
+                    <button class="pck-modal__negative" (click)="abortOptions()">No, Thank you</button>
+                    <button class="pck-modal__positive" (click)="confirmPackage()">Add to package</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

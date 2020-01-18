@@ -1,0 +1,213 @@
+<div class="header">
+    <h1 class="header__quotation">Join Our Team</h1>
+</div>
+
+<div class="join-container">
+    <div class="preface">
+        <div class="preface__image">
+            <img src="/assets/img/join_us/Ally.jpg" alt="Ally image">
+        </div>
+        <div class="preface__info">
+            <div class="preface__title">Welcome to usa link system</div>
+            <div class="preface__text">
+                <p>People make our company great. We seek individuals who want to innovate through creativity, learn through change, and gain results by pushing the limits of design and development. Individuals that will help us provide our clients with consumer-driven marketing strategies that boost their online visibility, image, and profits.</p><br>
+                <p>Looking for a lasting career? Join now!</p>
+            </div>
+            <div class="preface__author">-Ally Spinu | CEO</div>
+        </div>
+    </div>
+
+    <div class="slider">
+        <img src="/assets/img/join_us/images/{{imgNum}}.jpg" alt="img">
+    </div>
+
+    <div class="form">
+        <h2 class="form__title">Join our clique</h2>
+
+        <form class="form__container" #formReference (submit)="submitForm($event)" [formGroup]="form" novalidate enctype="multipart/form-data">
+
+            <div class="form__row">
+                <custom-select [inputOptionDual]="false"
+                               [inputID]="'form-input-department'"
+                               [inputFormControl]="form.controls.department"
+                               [inputLabel]="'Select department'"
+                               [inputOptions]="selectOptions"
+                               [inputName]="'department'">
+                </custom-select>
+            </div>
+
+            <div class="form__column">
+                <fieldset class="form__input-block">
+                    <label class="form__label" for="form-input-first_name"><span class="form__star">* </span>First Name</label>
+                    <input type="hidden" name="type" [value]="'join_our_team'">
+                    <input  name="first_name"
+                            id="form-input-first_name"
+                            type="text"
+                            class="form__input"
+                            placeholder="your first name"
+                            [formControl]="form.controls.first_name">
+                    <div class="form__errors">
+                        <div *ngIf="form.controls.first_name.dirty && !form.controls.first_name.valid">
+                            <small *ngIf="form.controls.first_name.errors.required">This field is required</small>
+                            <small *ngIf="form.controls.first_name.errors.minlength">Minimal length of this field is: {{form.controls.first_name.errors.minlength.requiredLength}}</small>
+                            <small *ngIf="form.controls.first_name.errors.maxlength">Maximal length of this field is: {{form.controls.first_name.errors.maxlength.requiredLength}}</small>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset class="form__input-block">
+                    <label class="form__label" for="form-input-last_name"><span class="form__star">* </span>Last Name</label>
+                    <input  name="last_name"
+                            id="form-input-last_name"
+                            type="text"
+                            class="form__input"
+                            placeholder="your last name"
+                            [formControl]="form.controls.last_name">
+                    <div class="form__errors">
+                        <div *ngIf="form.controls.last_name.dirty && !form.controls.last_name.valid">
+                            <small *ngIf="form.controls.last_name.errors.required">This field is required</small>
+                            <small *ngIf="form.controls.last_name.errors.minlength">Minimal length of this field is: {{form.controls.last_name.errors.minlength.requiredLength}}</small>
+                            <small *ngIf="form.controls.last_name.errors.maxlength">Maximal length of this field is: {{form.controls.last_name.errors.maxlength.requiredLength}}</small>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset class="form__input-block">
+                    <label class="form__label" for="form-input-phone"><span class="form__star">* </span>Phone number</label>
+                    <input  name="phone"
+                            id="form-input-phone"
+                            type="text"
+                            class="form__input"
+                            placeholder="(xxx) xxx-xxxx"
+                            [textMask]="phoneMask"
+                            [formControl]="form.controls.phone">
+                    <div class="form__errors">
+                        <div *ngIf="form.controls.phone.dirty && !form.controls.phone.valid">
+                            <small *ngIf="form.controls.phone.errors.required">This field is required</small>
+                            <small *ngIf="form.controls.phone.errors.invalidPhone">Incorrect phone number format</small>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset class="form__input-block">
+                    <label class="form__label" for="form-input-email"><span class="form__star">* </span>Email</label>
+                    <input  name="email"
+                            id="form-input-email"
+                            type="text"
+                            class="form__input"
+                            placeholder="email address"
+                            [formControl]="form.controls.email">
+                    <div class="form__errors">
+                        <div *ngIf="form.controls.email.dirty && !form.controls.email.valid">
+                            <small *ngIf="form.controls.email.errors.required">This field is required</small>
+                            <small *ngIf="form.controls.email.errors.invalidEmail">Incorrect email address</small>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset class="form__input-block">
+                    <label class="form__label" for="form-input-address"><span class="form__star">* </span>Address</label>
+                    <input  name="address"
+                            id="form-input-address"
+                            type="text"
+                            class="form__input"
+                            placeholder="your address"
+                            [formControl]="form.controls.address">
+                    <div class="form__errors">
+                        <div *ngIf="form.controls.address.dirty && !form.controls.address.valid">
+                            <small *ngIf="form.controls.address.errors.required">This field is required</small>
+                            <small *ngIf="form.controls.address.errors.minlength">Minimal length of this field is: {{form.controls.address.errors.minlength.requiredLength}}</small>
+                            <small *ngIf="form.controls.address.errors.maxlength">Maximal length of this field is: {{form.controls.address.errors.maxlength.requiredLength}}</small>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset class="form__input-file">
+                    <div class="form__label">Cover letter</div>
+                    <input  name="letter"
+                            #inputLetter
+                            id="form-input-letter"
+                            type="file"
+                            placeholder="your name"
+                            [formControl]="form.controls.letter"
+                            (change)="updateLetterFileName()">
+                    <div class="form__input form__input--file">
+                        <span class="form__file-name" [innerText]="letterFileName">file name</span>
+                        <label class="form__browse-btn label-button" for="form-input-letter">Browse</label>
+                    </div>
+                    <div class="form__errors">
+                        <div *ngIf="form.controls.letter.dirty && !form.controls.letter.valid">
+                            <small *ngIf="form.controls.letter.errors.required">This field is required</small>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+
+            <div class="form__column form__column--textarea">
+                <fieldset class="form__textarea-block">
+                    <label class="form__label" for="form-textarea-whyus"><span class="form__star">* </span>Why us?</label>
+                    <textarea name="whyUs"
+                              id="form-textarea-whyus"
+                              type="text"
+                              maxlength="501"
+                              class="form__textarea"
+                              placeholder="tell us why you’d like to work with us."
+                              [formControl]="form.controls.whyUs"
+                              (keyup)="updateTextareaHeight($event)">
+                    </textarea>
+                    <div class="form__errors">
+                        <div *ngIf="form.controls.whyUs.valid && form.controls.whyUs.dirty && characterCount">
+                            <small>Maximal length of this field is: 500</small>
+                        </div>
+                        <div *ngIf="form.controls.whyUs.dirty && !form.controls.whyUs.valid">
+                            <small *ngIf="form.controls.whyUs.errors.required">This field is required</small>
+                            <small *ngIf="form.controls.whyUs.errors.minlength">Minimal length of this field is: {{form.controls.whyUs.errors.minlength.requiredLength}}</small>
+                            <small *ngIf="form.controls.whyUs.errors.maxlength">Maximal length of this field is: {{form.controls.whyUs.errors.maxlength.requiredLength}}</small>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset class="form__textarea-block">
+                    <label class="form__label" for="form-textarea-whyyou"><span class="form__star">* </span>Why you?</label>
+                    <textarea name="whyYou"
+                              id="form-textarea-whyyou"
+                              type="text"
+                              maxlength="501"
+                              class="form__textarea"
+                              placeholder="tell us why you’d fit in well our team."
+                              [formControl]="form.controls.whyYou"
+                              (keyup)="updateTextareaHeight($event)">
+                    </textarea>
+                    <div class="form__errors">
+                        <div *ngIf="form.controls.whyYou.valid && form.controls.whyYou.dirty && characterCount">
+                            <small>Maximal length of this field is: 500</small>
+                        </div>
+                        <div *ngIf="form.controls.whyYou.dirty && !form.controls.whyYou.valid">
+                            <small *ngIf="form.controls.whyYou.errors.required">This field is required</small>
+                            <small *ngIf="form.controls.whyYou.errors.minlength">Minimal length of this field is: {{form.controls.whyYou.errors.minlength.requiredLength}}</small>
+                            <small *ngIf="form.controls.whyYou.errors.maxlength">Maximal length of this field is: {{form.controls.whyYou.errors.maxlength.requiredLength}}</small>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset class="form__input-file">
+                    <div class="form__label">Resume</div>
+                    <input name="resume"
+                           #inputResume
+                           id="form-input-resume"
+                           type="file"
+                           [formControl]="form.controls.resume"
+                           (change)="updateResumeFileName()">
+                    <div class="form__input form__input--file">
+                        <span class="form__file-name" [innerText]="resumeFileName">file name</span>
+                        <label class="form__browse-btn label-button" for="form-input-resume">Browse</label>
+                    </div>
+                    <div class="form__errors">
+                        <div *ngIf="form.controls.resume.dirty && !form.controls.resume.valid">
+                            <small *ngIf="form.controls.resume.errors.required">This field is required</small>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+
+            <button class="form__submit" type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
+<app-quote-section></app-quote-section>
+
+<app-alert-modal [message]='popup_message()' [action_value]='action' (returnEvent)=checkModal($event)></app-alert-modal>

@@ -1,0 +1,42 @@
+<div class="blog">
+    <div class="blog__background" [style.width.px]="background_width"></div>
+    <div class="blog__container">
+        <div *ngFor="let content of page_content; index as i;">
+            <div class="post">
+                <div class="post__cover" (click)="onPostClick(i,content.title)">
+                    <div class="post__label">{{content.label}}</div>
+                    <img src={{content.image}} alt="Ally-trust">
+                </div>
+                <div class="post__data">
+                    <div class="post__date">{{content.date}}</div>
+                    <div class="post__separator">|</div>
+                    <div class="post__comments">Comments ({{content.comments}})</div>
+                </div>
+                <div class="post__title" (click)="onPostClick(i,content.title)">{{content.title}}</div>
+                <div class="post__text">{{content.text}}</div>
+                <div class="post__btn-group">
+
+                    <button class="post__btn-more" (click)="onPostClick(i,content.title)">Read More</button>
+
+                    <div class="post__block-share" #this_post (click)="checkSocials(this_post)">
+                        <div class="post__social-title">
+                            <i class="at-icon">&#xe809;</i><span>Share</span>
+                        </div>
+                        <a class="post__btn-social post__btn-facebook" href="#">
+                            <i class="at-icon">&#xe801;</i>
+                        </a>
+                        <a class="post__btn-social post__btn-twitter" href="#">
+                            <i class="at-icon">&#xe804;</i>
+                        </a>
+                        <a class="post__btn-social post__btn-goodread" href="#">
+                            <i class="at-icon">&#xe80a;</i>
+                        </a>
+                        <a class="post__btn-social post__btn-mail" href="#">
+                            <i class="at-icon">&#xe802;</i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

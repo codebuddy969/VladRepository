@@ -1,0 +1,330 @@
+@import '../../../../Mixins.scss';
+
+$path : "../../../..";
+
+.users {
+    @include flex;
+    @include keyframes(opacity) {
+        0% { opacity: 0; }
+        90% { opacity: 1; }
+    }
+    @include animation('opacity 1s linear');
+    @include align-items(flex-start);
+    @include justify-content(space-between);
+    &__content {
+        width: 100%;
+        max-width: 1120px;
+        >.row {
+            @include flex;
+            margin-bottom: 50px;
+            @include justify-content(space-between);
+            .small-tab {
+                width: 335px;
+                height: 115px;
+                @include flex;
+                border-radius: 7px;
+                padding: 0 25px 0 20px;
+                @include align-items(center);
+                @include justify-content(space-between);
+                box-shadow: 0px 3px 8.91px 0.09px rgba(197, 132, 230, 0.73);
+                background: #d69ad6;
+                background: -moz-linear-gradient(left, #d69ad6 0%, #c487e5 100%);
+                background: -webkit-linear-gradient(left, #d69ad6 0%,#c487e5 100%);
+                background: linear-gradient(to right, #d69ad6 0%,#c487e5 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d69ad6', endColorstr='#c487e5',GradientType=1 );
+                &__block {
+                    .title {
+                        font-size: 18px;
+                        margin-bottom: 20px;
+                        color: $white-text-color;
+                    }
+                    .count {
+                        font-size: 40px;
+                        font-weight: 900;
+                        color: $white-text-color;
+                    }
+                }
+                &:last-child {
+                    background: #6a83d0;
+                    border: 1px solid $white-border-color;
+                    box-shadow: 0px 3px 8.91px 0.09px rgba(164, 139, 221, 0.73);
+                    background: #b98ae3;
+                    background: -moz-linear-gradient(left, #b98ae3 0%, #7f8dd4 100%);
+                    background: -webkit-linear-gradient(left, #b98ae3 0%,#7f8dd4 100%);
+                    background: linear-gradient(to right, #b98ae3 0%,#7f8dd4 100%);
+                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b98ae3', endColorstr='#7f8dd4',GradientType=1 );
+                }
+            }
+            .list-tab {
+                width: 100%;
+                min-height: 436px;
+                padding: 30px 40px;
+                border-radius: 7px;
+                background-color: $blue-background-color;
+                box-shadow: 0px 3px 20.79px 0.21px rgba(131, 153, 212, 0.31);
+                .head-row {
+                    @include flex;
+                    padding: 0 0 12px 2%;
+                    border-bottom: 1px solid #c4a2de;
+                    span {
+                        cursor: pointer;
+                        font-size: 16px;
+                        font-weight: 900;
+                        text-transform: uppercase;
+                        color: $pink-text-color-dark;
+                    }
+                    .name {
+                        width: 16%;
+                    }
+                    .login {
+                        width: 18%;
+                    }
+                    .email {
+                        width: 18%;
+                    }
+                    .registration {
+                        width: 18%;
+                    }
+                    .status {
+                        width: 20%;
+                    }
+                    .options {
+                        width: 8%;
+                    }
+                }
+                .search-row {
+                    width: 100%;
+                    padding-top: 15px;
+                    input {
+                        width: 100%;
+                        height: 40px;
+                        font-size: 12px;
+                        padding: 0 15px;
+                        border-radius: 7px;
+                        text-align: center;
+                        color: $pink-text-color;
+                        border: 1px solid rgba(196, 135, 230, 0.16);
+                        background-color: $white-background-color;
+                        &::-webkit-input-placeholder {
+                            font-style: italic;
+                            color: $pink-text-color;
+                        }
+                        &::-moz-placeholder {
+                            font-style: italic;
+                            color: $pink-text-color;
+                        }
+                        &:-ms-input-placeholder {
+                            font-style: italic;
+                            color: $pink-text-color;
+                        }
+                    }
+                }
+                .display-row {
+                    padding-top: 23px;
+                    .row {
+                        @include flex;
+                        padding: 0 0 15px 2%;
+                        div {
+                            font-size: 14px;
+                            color: $pink-text-color;
+                        }
+                        .name {
+                            width: 16%;
+                        }
+                        .login {
+                            width: 18%;
+                        }
+                        .email {
+                            width: 18%;
+                        }
+                        .registration {
+                            width: 18%;
+                        }
+                        .status {
+                            width: 20%;
+                            font-style: italic;
+                            text-transform: uppercase;
+                            color: $pink-text-color-dark;
+                            &.banned {
+                                color: $red-text-color;
+                            }
+                        }
+                        .options {
+                            width: 8%;
+                            @include flex;
+                            @include justify-content(space-between);
+                            div {
+                                width: 22px;
+                                height: 22px;
+                                @include flex;
+                                cursor: pointer;
+                                border-radius: 4px;
+                                @include align-items(center);
+                                @include justify-content(center);
+                                background-color: rgb(255, 255, 255);
+                                box-shadow: 0px 0px 6px 0px rgba(203, 168, 223, 0.32);
+                            }
+                            &__info:after {
+                                content: url(#{$path}/assets/images/icons/info.svg);
+                            }
+                            &__edit:after {
+                                content: url(#{$path}/assets/images/icons/pencil.svg);
+                            }
+                            &__trash:after {
+                                content: url(#{$path}/assets/images/icons/trash.svg);
+                            }
+                        }
+                    }
+                }
+                .pagination-row {
+                    @include flex;
+                    padding-top: 20px;
+                    @include justify-content(space-between);
+                    .pagination-block {
+                        width: 100%;
+                        @include flex;
+                        max-width: 205px;
+                        @include align-items(flex-end);
+                        @include justify-content(space-between);
+                        .pagination-btn {
+                            width: 36px;
+                            height: 36px;
+                            @include flex;
+                            cursor: pointer;
+                            font-size: 18px;
+                            font-weight: 700;
+                            border-radius: 4px;
+                            color: $white-text-color;
+                            @include align-items(center);
+                            @include justify-content(center);
+                            background-color: $pink-background-color;
+                            box-shadow: 0px 0px 8.55px 0.45px rgba(211, 146, 219, 0.51);
+                            &-points {
+                                font-size: 30px;
+                                padding-left: 4px;
+                                text-align: center;
+                                letter-spacing: 6px;
+                                color: $pink-text-color;
+                            }
+                        }
+                    }
+                    .newUser-button {
+                        width: 149px;
+                        height: 37px;
+                        @include flex;
+                        cursor: pointer;
+                        font-weight: 700;
+                        border-radius: 4px;
+                        color: $white-text-color;
+                        text-transform: uppercase;
+                        @include align-items(center);
+                        @include justify-content(center);
+                        background-color: $pink-background-color;
+                        box-shadow: 0px 0px 8.55px 0.45px rgba(211, 146, 219, 0.51);
+                    }
+                }
+            }
+            .graphic-tab {
+                width: 100%;
+                min-height: 243px;
+                border-radius: 7px;
+                background-color: $blue-background-color;
+                box-shadow: 0px 3px 20.79px 0.21px rgba(131, 153, 212, 0.31);
+            }
+        }     
+    }
+    &__sidebar {
+        width: 100%;
+        max-width: 335px;
+        padding-top: 15px;
+        border-radius: 7px;
+        text-align: center;
+        background-color: $blue-background-color;
+        box-shadow: 0px 3px 20.79px 0.21px rgba(131, 153, 212, 0.31);
+        .photo {
+            width: 168px;
+            height: 168px;
+            padding: 15px;
+            margin: 0 auto;
+            border-radius: 50%;
+            box-shadow: 0px 0px 5px 0px rgba(196, 135, 230, 0.18);
+            img {
+                width: 100%;
+            }
+        }
+        .name {
+            font-size: 24px;
+            margin-top: 25px;
+            color: $violet-text-color;
+            text-transform: uppercase;
+            span {
+                font-weight: 700;
+            }
+        }
+        .job {
+            font-size: 12px;
+            font-weight: 900;
+            margin-top: 15px;
+            color: $pink-text-color-light;
+            text-transform: uppercase;
+        }
+        .area {
+            font-size: 16px;
+            margin-top: 5px;
+            color: $pink-text-color-light;
+            text-transform: uppercase;
+        }
+        .short-line {
+            width: 55px;
+            height: 1px;
+            margin: 20px auto 25px;
+            background-color: lighten($pink-text-color, 15%);
+        }
+        .title {
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            color: $violet-text-color;
+        }
+        .info {
+            font-size: 16px;
+            margin-bottom: 25px;
+            letter-spacing: -0.2px;
+            color: $pink-text-color-light;
+        }
+        .long-line {
+            height: 1px;
+            width: 140px;
+            margin: 30px auto 20px;
+            background-color: lighten($pink-text-color, 15%);
+        }
+        textarea {
+            width: 240px;
+            height: 229px;
+            padding: 15px;
+            border-radius: 4px;
+            color: $pink-text-color-light;
+            background-color: $white-text-color;
+            box-shadow: inset 0px 2px 5.82px 0.18px rgba(214, 152, 215, 0.28);
+        }
+        .message-button {
+            width: 149px;
+            height: 37px;
+            @include flex;
+            cursor: pointer;
+            font-weight: 700;
+            border-radius: 4px;
+            margin: 20px auto 25px;
+            color: $white-text-color;
+            text-transform: uppercase;
+            @include align-items(center);
+            @include justify-content(center);
+            background-color: $pink-background-color;
+            box-shadow: 0px 0px 8.55px 0.45px rgba(211, 146, 219, 0.51);
+        }
+    }
+}
+
+
+

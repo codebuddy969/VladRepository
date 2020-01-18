@@ -1,0 +1,92 @@
+<nb-card>
+    <nb-card-header>Exchange Tokens</nb-card-header>
+
+    <nb-card-body>
+        <form class="exchange-tokens">
+            <div class="exchange-tokens__row-sell">
+                <nb-card-header class="exchange-tokens__headline">Sell tokens</nb-card-header>
+                <div class="row">
+                    <div class="col-md-4">
+                        <nb-card-header class="exchange-tokens__label">select tokens to sell</nb-card-header>
+                        <nb-select class="exchange-tokens__select" selected="ELRA">
+                            <nb-option value="ELRA">ELRA</nb-option>
+                            <nb-option value="HLTN">HLTN</nb-option>
+                        </nb-select>
+                    </div>
+                    <div class="col-md-4">
+                        <nb-card-header class="exchange-tokens__label">select tokens to buy</nb-card-header>
+                        <nb-select class="exchange-tokens__select" selected="HLTN">
+                            <nb-option value="ELRA">ELRA</nb-option>
+                            <nb-option value="HLTN">HLTN</nb-option>
+                        </nb-select>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="exchange-tokens__button">
+                            <button nbButton status="info">Sell Tokens</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="exchange-tokens__row-buy">
+                <nb-card-header class="exchange-tokens__headline">Buy tokens</nb-card-header>
+                <div class="row">
+                    <div class="col-md-4">
+                        <nb-card-header class="exchange-tokens__label">select tokens to buy</nb-card-header>
+                        <nb-select class="exchange-tokens__select" selected="ELRA">
+                            <nb-option value="ELRA">ELRA</nb-option>
+                            <nb-option value="HLTN">HLTN</nb-option>
+                        </nb-select>
+                    </div>
+                    <div class="col-md-4">
+                        <nb-card-header class="exchange-tokens__label">select tokens to sell</nb-card-header>
+                        <nb-select class="exchange-tokens__select" selected="HLTN">
+                            <nb-option value="ELRA">ELRA</nb-option>
+                            <nb-option value="HLTN">HLTN</nb-option>
+                        </nb-select>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="exchange-tokens__button">
+                            <button nbButton status="info">Buy Tokens</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="exchange-tokens__row-wallet-address">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="exchange-tokens__field">
+                            <nb-card-header class="exchange-tokens__label">Your wallet address</nb-card-header>
+                            <input type="text" status="danger" nbInput fullWidth>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="exchange-tokens__field exchange-tokens__balance">
+                            <nb-card-header class="exchange-tokens__label">Balance</nb-card-header>
+                            <input type="text" status="danger" nbInput fullWidth>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="exchange-tokens__row-exchange-address">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="exchange-tokens__field">
+                            <nb-card-header class="exchange-tokens__label">Exchange wallet address</nb-card-header>
+                            <input type="text" status="success" nbInput fullWidth>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="exchange-tokens__field exchange-tokens__balance">
+                            <nb-card-header class="exchange-tokens__label">Balance</nb-card-header>
+                            <input type="text" status="success" nbInput fullWidth>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+    </nb-card-body>
+</nb-card>

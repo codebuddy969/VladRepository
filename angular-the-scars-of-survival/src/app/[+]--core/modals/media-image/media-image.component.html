@@ -1,0 +1,17 @@
+<div class="modal" [class.active]="action_value" (click)="closeModal($event)">
+    <div class="modal__window">
+        <div class="modal__cross" (click)="closeModal($event)">
+            <div class="modal__cross-line"></div>
+            <div class="modal__cross-line"></div>
+        </div>
+        <div class="modal__left" (click)="switch_image('prev')">
+            <i class="at-icon">&#xe805;</i>
+        </div>
+        <div class="modal__right" (click)="switch_image('next')">
+            <i class="at-icon">&#xe805;</i>
+        </div>
+        <div class="modal__image" (touchstart)="swipe($event, 'start')" (touchend)="swipe($event, 'end')">
+            <img src="assets/images/media/large/image-{{image_count}}.jpg" alt="The-scars-of-survival">
+        </div>
+    </div>
+</div>

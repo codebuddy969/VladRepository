@@ -1,0 +1,143 @@
+:host {
+    display: block;
+    font-size: initial;
+}
+
+fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+input {
+    opacity: 0;
+    // width: 0;
+    // height: 0;
+    // visibility: hidden;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+label {
+    position: relative;
+    z-index: 2;
+    background-color: #fff;
+    display: block;
+    cursor: pointer;
+    border-bottom: 2px solid #000;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #000;
+    cursor: pointer;
+    padding-bottom: 10px;
+    i {
+        margin-left: 5px;
+    }
+    span:before {
+        content: "* ";
+        color: red;
+    }
+}
+
+input {
+    &.ng-dirty.ng-invalid + label {
+        border-color: #df2e21;
+    }
+    &.ng-dirty.ng-valid + label {
+        border-color: #3aa050;
+    }
+}
+
+.errors {
+    margin-top: 5px;
+    height: 14px;
+    small {
+        display: none;
+        &:first-child {
+            display: block;
+        }
+        color: red;
+        font-size: 13px;
+    }
+}
+
+.custom-select-options {
+    background-color: transparent;
+    position: absolute;
+    height: 0;
+    left: 0;
+    right: 0;
+    top: 35px;
+    z-index: 1;
+    opacity: 0;
+    overflow: hidden;
+    transform: translateY(50%);
+    transition: transform 0.8s ease, opacity 0.8s ease;
+    &.expanded {
+        opacity: 1;
+        height: 570px;
+        transform: translateY(0);
+        background-color: rgba(165, 165, 165, 0.9);
+    }
+}
+
+ul {
+    display: inline-block;
+    position: absolute;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @media screen and (max-width: 1440px) {
+        top: 30%;
+    }
+    &.dual-column {
+        font-size: 0;
+        width: 400px;
+        @media screen and (max-width: 640px) {
+            width: 100%;
+        }
+        li {
+            font-size: 22px;
+            width: 50%;
+            display: inline-block;
+            border-bottom: none;
+            @media screen and (max-width: 1440px) {
+                font-size: 16px;
+            }
+            @media screen and (max-width: 787px) {
+                font-size: 13px;
+            }
+        }
+    }
+    li {
+        width: 200px;
+        padding: 15px 0;
+        font-size: 18px;
+        cursor: pointer;
+        font-family: 'Roboto', Roboto, sans-serif;
+        &:hover {
+            background-color: rgba(0, 0, 0, .1);
+        }
+    }
+}
+
+.custom-select-backdrop {
+    top: 0;
+    left: 0;
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 0;
+    &.visible {
+        display: block;
+    }
+}

@@ -1,0 +1,93 @@
+.answer {
+  width 45%
+  position relative
+  @media (max-width: 767px) {
+    width 85%
+  }
+}
+
+.questionBlock {
+  height 70px
+  display flex
+  justify-content space-between
+  align-items center
+  cursor pointer
+  &:hover,
+  &:active,
+  &:focus {
+    .questionArrow {
+      color #d13f8c
+    }
+  }
+  @media (max-height: 850px) {
+    height 55px
+  }
+  @media (max-width: 767px) {
+    justify-content center
+    height auto
+    padding 10px 0
+    line-height 30px
+  }
+}
+
+@keyframes textFadeIn {
+  0% {
+    opacity 0
+  }
+  100% {
+    opacity 1
+  }
+}
+
+.questionText {
+  color #222222
+  font-size 16px
+  font-weight 500
+}
+
+.questionArrow {
+  font-size 30px
+  svg {
+    transition all 0.3s
+    transform rotateZ(90deg)
+  }
+}
+
+.questionArrowActive {
+  color #d13f8c
+  svg {
+    transform rotateZ(-90deg)
+  }
+}
+
+.answerText {
+  z-index 2
+  background-color #fafafa
+  color rgba(34, 34, 34, 0.7)
+  font-size 14px
+  line-height 24px
+  padding-top 10px
+  padding-left 25px
+  padding-bottom 5px
+  position absolute
+  animation textFadeIn 0.1s ease-out forwards
+  &::after {
+    content ''
+    position absolute
+    left 0
+    top 0
+    height 100%
+    width 5px
+    background: linear-gradient(to bottom, #d33f8d, #0850c3);
+  }
+  @media (max-width: 767px) {
+    position relative
+  }
+}
+
+.answerDropup {
+  bottom 65px
+  @media (max-width: 767px) {
+    bottom 0
+  }
+}

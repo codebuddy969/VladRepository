@@ -1,0 +1,96 @@
+<div class="swiper-slider">
+    <div class="swiper-container">
+        <div class="swiper-wrapper" [class.active]="slideStatus">
+            <div class="swiper-slide" data-background="red"></div>
+            <div class="swiper-slide" data-background="blue"></div>
+        </div>
+    </div>
+    <div class="action">
+        <h1 class="action__headline">WE ARE ULS</h1>
+        <p class="action__subline">We are a crew of creative problem solvers</p>
+        <ul class="action__list">
+            <li class="action__list-item">
+                <a routerLink="/who-we-are" class="action__link">
+                    <svg viewBox="0 0 150 150">
+                        <defs>
+                            <mask id="mask1">
+                                <circle cx="75" cy="75" r="73" />
+                                <text x="50%" y="50%" dy="0.4em" text-anchor="middle">#WhoWeAre</text>
+                            </mask>
+                        </defs>
+                        <circle mask="url(#mask1)" cx="75" cy="75" r="75" />
+                    </svg>
+                </a>
+            </li>
+            <li class="action__list-item">
+                <a routerLink="/our-work" class="action__link">
+                    <svg viewBox="0 0 150 150">
+                        <defs>
+                            <mask id="mask2">
+                                <circle cx="75" cy="75" r="73" />
+                                <text x="50%" y="50%" dy="0.4em" text-anchor="middle">#OurWork</text>
+                            </mask>
+                        </defs>
+                        <circle mask="url(#mask2)" cx="75" cy="75" r="75" />
+                    </svg>
+                </a>
+            </li>
+            <li class="action__list-item">
+                <a routerLink="/lets-talk" class="action__link">
+                    <svg viewBox="0 0 150 150">
+                        <defs>
+                            <mask id="mask5">
+                                <circle cx="75" cy="75" r="73" />
+                                <text x="50%" y="50%" dy="0.4em" text-anchor="middle">#LetsTalk</text>
+                            </mask>
+                        </defs>
+                        <circle mask="url(#mask5)" cx="75" cy="75" r="75" />
+                    </svg>
+                </a>
+            </li>
+            <li class="action__list-item">
+                <a routerLink="/whats-new" class="action__link">
+                    <svg viewBox="0 0 150 150">
+                        <defs>
+                            <mask id="mask6">
+                                <circle cx="75" cy="75" r="73" />
+                                <text x="50%" y="50%" dy="0.4em" text-anchor="middle">#WhatsNew</text>
+                            </mask>
+                        </defs>
+                        <circle mask="url(#mask6)" cx="75" cy="75" r="75" />
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div id="particles-js" class="particles"></div>
+</div>
+
+
+<div class="approach">
+    <h2 class="approach__headline">Our approach</h2>
+    <div class="approach__container">
+        <div class="approach__column">From concept to completion, you are involved in every step. We pride ourselves on learning from our clients and understanding their business needs and goals. Desktop is no longer the status quo. We’ve gone mobile. Responsive website design lets your brand be at the forefront of your industry and makes your content easily accessible to today’s multi-device users. Creating digital marketing strategies is developing a plan based on your industry’s marketing analytics. Our strategists will devise a custom plan with multi-channel outlets to achieve the best results. Utilizing advertising campaigns will spread the word about your brand, creating buzz around your campaign for your targeted audience.</div>
+        <div class="approach__column">
+            <p class="approach__paragraph">We develop a unified approach to create a brand experience that's always on point. By diving into our clients' mindset, we get to understand their needs and goals. We combine design and technology to provide responsive website design so our clients can be at the forefront of their industry.</p>
+            <p class="approach__paragraph">Our digital marketing strategies are based on our clients' industry’s marketing analytics. Utilizing multi-channel advertising campaigns to achieve the best results, we devise a custom plan that generates buzz around our clients' brand and campaigns.</p>
+        </div>
+    </div>
+</div>
+<div class="theEnd">
+    <app-subscribe-section headline="Newsletter"></app-subscribe-section>
+</div>
+
+<div id="banner" class="banner">
+    <div class="banner__title">Brand</div>
+    <div class="banner__subtitle">Makeover</div>
+    <div class="banner__info">If you’ve been wanting to rebrand your business. Your time is now.</div>
+    <picture>
+        <img class="banner__image" src="/assets/img/home_banner/{{images.banner.name}}" alt="brand-makeover-banner">
+    </picture>
+    <a class="banner__link" href="http://brandmakeover.tv/apply" target="_blank">Sign me up.</a>
+</div>
+
+<app-unsubscribe-modal *ngIf="showUnsubscribe" (returnEvent)=closeUnsubscribe()></app-unsubscribe-modal>
+
+<app-alert-modal [message]='messageData' [action_value]='showAlert' (returnEvent)=closeModal()></app-alert-modal>

@@ -1,0 +1,205 @@
+@import '../../../../Mixins.scss';
+
+$path : "../../../..";
+
+.tasks {
+    @include flex;
+    @include flex-wrap(wrap);
+    @include justify-content(space-between);
+    @include keyframes(opacity) {
+        0% { opacity: 0; }
+        90% { opacity: 1; }
+    }
+    @include animation('opacity 1s linear');
+    .tabtype-1 {
+        width: 100%;
+        height: 410px;
+        max-width: 726px;
+        border-radius: 7px;
+        margin-bottom: 50px;
+        padding: 35px 35px 20px;
+        background-color: $blue-background-color;
+        box-shadow: 0px 3px 20.79px 0.21px rgba(131, 153, 212, 0.31);
+        .head-row {
+            @include flex;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #c4a2de;
+            span {
+                cursor: pointer;
+                font-size: 16px;
+                font-weight: 900;
+                text-align: center;
+                text-transform: uppercase;
+                color: $pink-text-color-dark;
+            }
+            .number {
+                width: 22%;
+            }
+            .customer {
+                width: 24%;
+            }
+            .status {
+                width: 29%;
+            }
+            .date {
+                width: 25%;
+            }
+        }
+        .display-row {
+            .row {
+                @include flex;
+                padding: 0 0 15px;
+                div {
+                    font-size: 16px;
+                    text-align: center;
+                    color: $pink-text-color;
+                }
+                .number {
+                    width: 22%;
+                }
+                .customer {
+                    width: 24%;
+                }
+                .status {
+                    width: 29%;
+                    font-weight: 300;
+                    &.refund {
+                        font-weight: 700;
+                        color: $red-text-color;
+                    }
+                }
+                .date {
+                    width: 25%;
+                }
+                .stock {
+                    width: 29%;
+                    font-weight: 700;
+                }
+                .request {
+                    width: 25%;
+                    font-weight: 700;
+                }
+            }
+        }
+        .pagination-row {
+            @include flex;
+            padding-top: 10px;
+            @include justify-content(space-between);
+            .pagination-block {
+                width: 100%;
+                @include flex;
+                max-width: 205px;
+                @include align-items(flex-end);
+                @include justify-content(space-between);
+                .pagination-btn {
+                    width: 36px;
+                    height: 36px;
+                    @include flex;
+                    cursor: pointer;
+                    font-size: 18px;
+                    font-weight: 700;
+                    border-radius: 4px;
+                    color: $white-text-color;
+                    @include align-items(center);
+                    @include justify-content(center);
+                    background-color: $pink-background-color;
+                    box-shadow: 0px 0px 8.55px 0.45px rgba(211, 146, 219, 0.51);
+                    &-points {
+                        font-size: 30px;
+                        padding-left: 4px;
+                        text-align: center;
+                        letter-spacing: 6px;
+                        color: $pink-text-color;
+                    }
+                }
+            }
+            .newUser-button {
+                width: 149px;
+                height: 37px;
+                @include flex;
+                cursor: pointer;
+                font-weight: 700;
+                border-radius: 4px;
+                color: $white-text-color;
+                text-transform: uppercase;
+                @include align-items(center);
+                @include justify-content(center);
+                background-color: $pink-background-color;
+                box-shadow: 0px 0px 8.55px 0.45px rgba(211, 146, 219, 0.51);
+            }
+        }
+    }
+    .tabtype-2 {
+        width: 100%;
+        height: 395px;
+        max-width: 521px;
+        overflow: hidden;
+        border-radius: 7px;
+        position: relative;
+        background-color: $blue-background-color;
+        box-shadow: 0px 3px 20.79px 0.21px rgba(131, 153, 212, 0.31);
+        .H2 {
+            top: 35px;
+            left: 30px;
+            z-index: 2;
+            font-size: 24px;
+            position: absolute;
+            color: $pink-text-color-dark;
+        }
+        #Customers-Chart {
+            position: relative;
+        }
+    }
+    .tabtype-3 {
+        width: 100%;
+        height: 395px;
+        max-width: 360px;
+        border-radius: 7px;
+        padding: 35px 35px 25px;
+        background-color: $blue-background-color;
+        box-shadow: 0px 3px 20.79px 0.21px rgba(131, 153, 212, 0.31);
+        .H2 {
+            font-size: 24px;
+            margin-bottom: 25px;
+            color: $pink-text-color-dark;
+            span {
+                display: block;
+                font-size: 10px;
+            }
+        }
+        .row {
+            @include flex;
+            padding-left: 20px;
+            margin-bottom: 25px;
+            @include flex-direction(column);
+            @include align-items(flex-start);
+            border-left: 5px solid $pink-border-color;
+            .title {
+                font-size: 18px;
+                cursor: pointer;
+                font-weight: 700;
+                color: $pink-text-color;
+            }
+            .date {
+                margin: 5px 0;
+                font-size: 8px;
+                color: rgb(204, 130, 228);
+                color: $violet-text-color;
+            }
+            .text {
+                font-size: 10px;
+                font-weight: 700;
+                color: $grey-text-color;
+            }
+        }
+        .button-group {
+            @include flex;
+            @include justify-content(space-between);
+            .button {
+                width: 30%;
+                margin-top: 5px;
+            }
+        }
+    }
+}

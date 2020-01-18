@@ -1,0 +1,46 @@
+<div class="page">
+    <div class="page__top-image">
+        <img src="/assets/img/who_we_are/usa/gradient.png" alt="about-usalinksystem">
+    </div>
+    <div class="page__container">
+        <h1 class="country">Los angeles, usa</h1>
+        <div class="about">
+            <div class="about__block-1">
+                <div class="about__title">a little bit about us</div>
+                <div class="about__text">We’re a wholesome bunch of talented individuals based in Glendale, CA who love to blend creativity, fun, and hard work while helping businesses promote their brand and identity. Our copywriters and designers work collaboratively to create effective campaigns our clients will love.</div>
+            </div>
+            <div class="about__block-2">
+                <div class="quad"></div>
+                <div class="quad2"></div>
+                <img src="/assets/img/who_we_are/usa/about-1.jpg" alt="about-usalinksystem">
+            </div>
+            <div class="about__block-3">
+                <div class="quad"></div>
+                <img src="/assets/img/who_we_are/usa/about-2.jpg" alt="about-usalinksystem">
+            </div>
+            <div class="about__block-4">
+                <img src="/assets/img/who_we_are/usa/about-3.jpg" alt="about-usalinksystem">
+            </div>
+        </div>
+        <ul class="member__container" #member>
+            <li class="member" *ngFor="let member of members; let i = index">
+                <div class="member__image">
+                    <img src="{{member?.file}}" alt={{member?.name}}>
+                </div>
+                <div class="member__info">
+                    <div class="member__name">{{member?.name}}</div>
+                    <div class="member__position">{{member?.position}}</div>
+                    <hr>
+                    <div class="member__text">{{member?.description}}</div>
+                </div>
+            </li>
+            <a routerLink="/join-us" class="member">
+                <span class="member__image"></span>
+                <span class="member__last">This Could be you!</span>
+            </a>
+        </ul>
+    </div>
+    <img class="page__bottom-image" src="/assets/img/who_we_are/usa/city-view.png" alt="city-view">
+</div>
+
+<app-quote-section></app-quote-section>

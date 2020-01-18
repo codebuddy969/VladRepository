@@ -1,0 +1,157 @@
+<div class="header">
+    <h1 class="header__quotation">the best way to predict the future is to create it.
+        <span class="header__author">— Abraham Lincoln</span>
+    </h1>
+</div>
+
+<div class="contacts">
+    <span class="contacts__phone">Call: <a href="tel:18009086782">1(800)908-6782</a></span>
+    <span class="contacts__text">Text: (747) 249-5235</span>
+</div>
+
+<div class="form">
+
+    <div class="form__image">
+        <div class="form__top-text">I'll make sure your message gets to the right person!</div>
+        <img class="form__image-dog" src="assets/img/platon.png" alt="platon-dog-image">
+        <a routerLink="/platon-profile" class="form__bottom-text">Meet ULS's dog, Platon.</a>
+    </div>
+
+    <form (submit)="submitForm($event)" novalidate [formGroup]="form" class="form__container">
+
+        <div class="input-group">
+            <label for="form-input-first"><span class="form__star">* </span>First name</label>
+            <input name="first_name"
+                   id="form-input-first"
+                   [formControl]="form.controls.first_name"
+                   type="text"
+                   placeholder="your first name">
+            <div class="form__errors">
+                <div *ngIf="form.controls.first_name.dirty && !form.controls.first_name.valid">
+                    <small *ngIf="form.controls.first_name.errors.required">This field is required</small>
+                    <small *ngIf="form.controls.first_name.errors.minlength">Minimal length of this field
+                        is: {{form.controls.first_name.errors.minlength.requiredLength}}</small>
+                    <small *ngIf="form.controls.first_name.errors.maxlength">Maximal length of this field
+                        is: {{form.controls.first_name.errors.maxlength.requiredLength}}</small>
+                </div>
+            </div>
+        </div>
+        <div class="input-group">
+            <label for="form-input-first"><span class="form__star">* </span>Last name</label>
+            <input name="last_name"
+                   id="form-input-last"
+                   [formControl]="form.controls.last_name"
+                   type="text"
+                   placeholder="your last name">
+            <div class="form__errors">
+                <div *ngIf="form.controls.last_name.dirty && !form.controls.last_name.valid">
+                    <small *ngIf="form.controls.last_name.errors.required">This field is required</small>
+                    <small *ngIf="form.controls.last_name.errors.minlength">Minimal length of this field
+                        is: {{form.controls.last_name.errors.minlength.requiredLength}}</small>
+                    <small *ngIf="form.controls.last_name.errors.maxlength">Maximal length of this field
+                        is: {{form.controls.last_name.errors.maxlength.requiredLength}}</small>
+                </div>
+            </div>
+        </div>
+        <div class="input-group">
+            <label for="form-input-email"><span class="form__star">* </span>Email</label>
+            <input name="email"
+                   id="form-input-email"
+                   [formControl]="form.controls.email"
+                   type="text"
+                   placeholder="your email">
+            <div class="form__errors">
+                <div *ngIf="form.controls.email.dirty && !form.controls.email.valid">
+                    <small *ngIf="form.controls.email.errors.required">This field is required</small>
+                    <small *ngIf="form.controls.email.errors.invalidEmail">Incorrect email address</small>
+                </div>
+            </div>
+        </div>
+        <div class="input-group">
+            <label for="form-input-phone"><span class="form__star">* </span>Phone</label>
+            <input name="phone"
+                   id="form-input-phone"
+                   [textMask]="phoneMask"
+                   [formControl]="form.controls.phone"
+                   type="text"
+                   placeholder="your phone">
+            <div class="form__errors">
+                <div *ngIf="form.controls.phone.dirty && !form.controls.phone.valid">
+                    <small *ngIf="form.controls.phone.errors.required">This field is required</small>
+                    <small *ngIf="form.controls.phone.errors.invalidPhone">Incorrect phone number format</small>
+                </div>
+            </div>
+        </div>
+        <div class="input-group">
+            <label for="form-input-url"><span class="form__star">* </span>Company URL</label>
+            <input name="url"
+                   id="form-input-url"
+                   [formControl]="form.controls.url"
+                   type="text"
+                   placeholder="company url">
+            <div class="form__errors">
+                <div *ngIf="form.controls.url.dirty && !form.controls.url.valid">
+                    <small *ngIf="form.controls.url.errors.required">This field is required</small>
+                    <small *ngIf="form.controls.url.errors.invalidUrl">Incorrect URL format</small>
+                </div>
+            </div>
+        </div>
+        <div class="input-group input-group__textarea">
+            <label for="form-input-message"><span class="form__star">* </span>Your Message</label>
+            <textarea name="message"
+                      id="form-input-message"
+                      [formControl]="form.controls.message"
+                      placeholder="message"
+                      minlength="2"
+                      maxlength="501"
+                      (keyup)="updateTextareaHeight($event)"></textarea>
+            <div class="form__errors">
+                <div *ngIf="form.controls.message.dirty && !form.controls.message.valid">
+                    <small *ngIf="form.controls.message.errors.required">This field is required</small>
+                    <small *ngIf="form.controls.message.errors.minlength">Minimal length of this field
+                        is: {{form.controls.message.errors.minlength.requiredLength}}</small>
+                    <small *ngIf="form.controls.message.errors.maxlength">Maximal length of this field
+                        is: {{form.controls.message.errors.maxlength.requiredLength}}</small>
+                </div>
+            </div>
+        </div>
+        <button type="submit" [class.active]="form.valid">Submit</button>
+    </form>
+</div>
+
+<div class="join">
+    <a class="join__button" routerLink="/join-us">Join our team</a>
+</div>
+
+<div class="countries">
+    <div class="countries__container">
+        <div class="countries__block countries__usa">
+            <div class="countries__content">
+                <a routerLink="/los-angeles-usa" class="countries__link"><span>USA</span></a>
+                <img class="banner__image" src="/assets/img/profile_usa/profile_BM.jpg" alt="ULS">
+            </div>
+        </div>
+        <div class="countries__block countries__moldova">
+            <div class="countries__content">
+                <a href="http://moldova.usalinksystem.com" target="_blank" class="countries__link"><span>Moldova</span></a>
+                <img src="/assets/img/profile_moldova/profile_BM.jpg" alt="ULS">
+            </div>
+        </div>
+        <div class="countries__block countries__india">
+            <div class="countries__content">
+                <a routerLink="india" class="countries__link"><span>India</span></a>
+                <img src="/assets/img/profile_india/profile_BM.jpg" alt="ULS">
+            </div>
+        </div>
+        <div class="countries__block countries__philippines">
+            <div class="countries__content">
+                <a routerLink="philippines" class="countries__link"><span>Philippines</span></a>
+                <img src="/assets/img/profile_philippines/profile_BM.jpg" alt="ULS">
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-quote-section></app-quote-section>
+
+<app-alert-modal [message]='popup_message()' [action_value]='action' (returnEvent)=checkModal($event)></app-alert-modal>

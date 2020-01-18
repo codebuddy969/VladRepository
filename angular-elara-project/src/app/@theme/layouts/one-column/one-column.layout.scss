@@ -1,0 +1,25 @@
+@import '../../styles/themes';
+@import '~bootstrap/scss/mixins/breakpoints';
+@import '~@nebular/theme/styles/global/breakpoints';
+
+@include nb-install-component() {
+    .menu-sidebar ::ng-deep .scrollable {
+        padding-top: nb-theme(layout-padding-top);
+    }
+}
+
+.my-icon {
+    background: url('/assets/images/nick.png');
+}
+
+.menu-logo {
+    max-height: 150px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+        width: 100%;
+        object-fit: cover;
+    }
+}

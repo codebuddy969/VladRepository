@@ -1,0 +1,115 @@
+<div class="modal" [class.active]="action_value" (click)="closeModal($event)">
+    <div class="modal__window">
+
+        <div class="modal__headline">Contact with me</div>
+
+        <div class="modal__cross" (click)="closeModal($event)">
+            <div class="modal__cross-line"></div>
+            <div class="modal__cross-line"></div>
+        </div>
+
+        <div *ngIf="modal_type === 'select'">
+            <div class="contacts">
+                <ul class="contacts__container">
+                    <li class="contacts__list-item">
+                        <button class="contacts__link" (click)="checkModal('email')">Send email</button>
+                    </li>
+                    <li class="contacts__list-item">
+                        <button class="contacts__link" (click)="checkModal('call')">Call me</button>
+                    </li>
+                    <li class="contacts__list-item">
+                        <button class="contacts__link" (click)="checkModal('subscribe')">Subscribe</button>
+                    </li>
+                    <li class="contacts__list-item">
+                        <a class="contacts__link" href="https://www.facebook.com/AuthorAllyTrust" target="_blank">
+                            <i class="at-icon">&#xe801;</i>
+                            Facebook
+                        </a>
+                    </li>
+                    <li class="contacts__list-item">
+                        <a class="contacts__link" href="https://twitter.com/AllyTrust_" target="_blank">
+                            <i class="at-icon">&#xe804;</i>
+                            Twitter
+                        </a>
+                    </li>
+                    <li class="contacts__list-item">
+                        <a class="contacts__link" href="https://www.goodreads.com/user/show/76016085-ally-trust" target="_blank">
+                            <i class="at-icon">&#xe80a;</i>
+                            Goodreads
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <form *ngIf="modal_type === 'email'" class="form">
+            <div class="form__input-group">
+                <input type="text" placeholder="First Name">
+            </div>
+            <div class="form__input-group">
+                <input type="text" placeholder="Last Name">
+            </div>
+            <div class="form__input-row">
+                <input type="email" placeholder="Email Address">
+            </div>
+            <div class="form__textarea-row">
+                <textarea placeholder="Your message here"></textarea>
+            </div>
+            <div class="form__btn-group">
+                <button class="form__btn-submit" type="submit">Send email</button>
+                <button 
+                    class="form__btn-back" 
+                    type="button" 
+                    *ngIf="select_modal" 
+                    (click)="checkModal('select')">
+                    Back
+                </button>
+            </div>
+        </form>
+
+        <form *ngIf="modal_type === 'call'" class="form">
+            <div class="form__input-group">
+                <input type="text" placeholder="First Name">
+            </div>
+            <div class="form__input-group">
+                <input type="text" placeholder="Last Name">
+            </div>
+            <div class="form__input-row">
+                <input type="text" placeholder="+1 (202) 555 0143" mask="+0 (000) 000 0000">
+            </div>
+            <div class="form__btn-group">
+                <button class="form__btn-submit" type="submit">Submit</button>
+                <button 
+                    class="form__btn-back" 
+                    type="button" 
+                    *ngIf="select_modal" 
+                    (click)="checkModal('select')">
+                    Back
+                </button>
+            </div>
+        </form>
+
+        <form *ngIf="modal_type === 'subscribe'" class="form">
+            <div class="form__input-group">
+                <input type="text" placeholder="First Name">
+            </div>
+            <div class="form__input-group">
+                <input type="text" placeholder="Last Name">
+            </div>
+            <div class="form__input-row">
+                <input type="email" placeholder="Email Address">
+            </div>
+            <div class="form__btn-group">
+                <button class="form__btn-submit" type="submit">Submit</button>
+                <button 
+                    class="form__btn-back" 
+                    type="button" 
+                    *ngIf="select_modal" 
+                    (click)="checkModal('select')">
+                    Back
+                </button>
+            </div>
+        </form>
+
+    </div>
+</div>

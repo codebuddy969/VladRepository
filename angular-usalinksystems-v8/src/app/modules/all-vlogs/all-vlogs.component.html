@@ -1,0 +1,43 @@
+<div class="header">
+    <h1 class="header__quotation">To a great mind, nothing is little.
+        <span class="header__author">— Sherlock Holmes</span>
+    </h1>
+</div>
+
+<div class="vlog">
+    <div class="vlog__options">
+        <button class="vlog__return" routerLink="/whats-new"><i></i> <span>Back</span></button>
+        <h2 class="vlog__headline">Uls tv</h2>
+    </div>
+    <div class="vlog__row" #container>
+        <div class="vlog__preloader" *ngIf="vlogPreloader"></div>
+        <div class="vlog__column" *ngFor="let vlog of vlogList; let i = index">
+            <div class="vlog__link active" itemprop="url">
+                <div class="vlog__image" (click)="playVideo(vlog.title, vlog.link)">
+                    <div class="vlog__play">
+                        <img src="/assets/img/video_icon.svg" alt="video-icon">
+                    </div>
+                    <img src="{{vlog?.image}}" alt="{{vlog?.title}}">
+                </div>
+                <div class="vlog__title" (click)="playVideo(vlog.title, vlog.link)">{{vlog?.title}}</div>
+                <div class="vlog__date">{{vlog?.published_date | date}}</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ul class="pagination" *ngIf="showPagination">
+    <li class="pagination__link"
+        *ngFor="let page of totalPages;"
+        [class.active]="page.number === currentPage"
+        (click)="switchContent(page.link, page.number)">
+        {{page.number}}
+    </li>
+</ul>
+
+<app-quote-section></app-quote-section>
+
+<app-youtube-modal [title]='vlog_modal_title'
+                   [link]='vlog_modal_link'
+                   *ngIf="vlog_modal_status"
+                   (returnEvent)=youtubeModalStatus()></app-youtube-modal>

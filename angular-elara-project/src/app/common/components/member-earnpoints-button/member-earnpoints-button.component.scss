@@ -1,0 +1,13 @@
+::ng-deep .mep-purchase {
+    display: flex;
+    justify-content: center;
+    button {
+        border: none;
+        outline: none;
+        background-color: transparent;
+    }
+    nb-icon {
+        color: #8f9bb3;
+        font-size: 26px;
+    }
+}

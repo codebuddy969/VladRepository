@@ -1,0 +1,480 @@
+.header {
+    height: 600px;
+    overflow: hidden;
+    background:
+        linear-gradient(
+                rgba(0, 0, 0, 0.45),
+                rgba(0, 0, 0, 0.45)
+        ),
+        url('/assets/img/lets_talk_header/lets_talk_header_BL.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__quotation {
+        width: 100%;
+        padding: 40px;
+        margin: 0 15px;
+        font-size: 38px;
+        line-height: 47px;
+        max-width: 530px;
+        color: #ffffff;
+        font-weight: normal;
+        text-transform: uppercase;
+        border: 5px solid #ffffff;
+        font-family: 'Fjalla One', serif;
+    }
+    &__author {
+        font-size: 21px;
+        margin-top: 10px;
+        display: block;
+        text-transform: none;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    @media screen and (max-width: 991px) {
+        background:
+            linear-gradient(
+                    rgba(0, 0, 0, 0.45),
+                    rgba(0, 0, 0, 0.45)
+            ),
+            url('/assets/img/lets_talk_header/lets_talk_header_BM.jpg');
+    }
+    @media screen and (max-width: 575px) {
+        height: 400px;
+        background:
+            linear-gradient(
+                    rgba(0, 0, 0, 0.45),
+                    rgba(0, 0, 0, 0.45)
+            ),
+            url('/assets/img/lets_talk_header/lets_talk_header_BS.jpg');
+        &__quotation {
+            padding: 15px;
+            font-size: 28px;
+        }
+        &__author {
+            font-size: 16px;
+        }
+    }
+}
+
+.form {
+    width: 100%;
+    margin: 0 auto;
+    padding: 80px 15px;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    &__image {
+        width: 100%;
+        max-width: 600px;
+        text-align: right;
+        position: relative;
+    }
+    &__container {
+        width: 100%;
+        max-width: 500px;
+    }
+    &__top-text {
+        top: 90px;
+        left: 0;
+        width: 100%;
+        font-size: 36px;
+        line-height: 42px;
+        max-width: 300px;
+        text-align: left;
+        position: absolute;
+        text-transform: uppercase;
+        font-family: 'Fjalla One', serif;
+    }
+    &__bottom-text {
+        left: 0;
+        bottom: 0;
+        font-size: 20px;
+        color: #1f4b62;
+        line-height: 26px;
+        text-align: left;
+        padding-bottom: 2px;
+        border-bottom: 1px solid #1f4b62;
+        position: absolute;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: 'Fjalla One', serif;
+    }
+    &__container {
+        width: 100%;
+        max-width: 400px;
+    }
+    &__errors {
+        color: red;
+        font-size: 13px;
+        position: absolute;
+        small {
+            display: block;
+        }
+    }
+    &__star {
+        color: red;
+    }
+    button[type="submit"] {
+        width: 220px;
+        height: 65px;
+        color: #fff;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 65px;
+        text-align: center;
+        margin-top: 35px;
+        background-color: #000;
+        text-transform: uppercase;
+        border: 2px solid #000;
+        transition: all .35s linear;
+        &:hover {
+            color: #000;
+            background-color: #fff;
+            transition: all .35s linear;
+        }
+    }
+
+    @media screen and (max-width: 1050px) {
+        &__image {
+            width: 80%;
+            text-align: left;
+        }
+        &__image-dog {
+            width: 100%;
+        }
+        &__top-text {
+            font-size: 26px;
+            line-height: 30px;
+            margin: 0 auto 30px;
+            position: static;
+            text-align: center;
+            max-width: calc(100% - 30px);
+        }
+        &__bottom-text {
+            margin-top: 30px;
+            position: static;
+            display: inline-block;
+        }
+    }
+    @media screen and (max-width: 575px) {
+        padding: 40px 15px;
+        flex-direction: column;
+        &__container {
+            max-width: 100%;
+            margin-top: 50px;
+        }
+        &__image {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        &__image-dog {
+            width: 250px;
+            margin: 0 auto;
+        }
+        button[type="submit"] {
+            margin: 35px auto 0;
+            display: inherit;
+        }
+    }
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 45px;
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+    label {
+        text-align: left;
+        font-size: 15px;
+        font-weight: 500;
+        display: inline-block;
+        text-transform: uppercase;
+        color: #000;
+    }
+    input {
+        width: 100%;
+        color: #000;
+        border: none;
+        outline: none;
+        height: 40px;
+        font-size: 16px;
+        margin-bottom: 10px;
+        font-family: 'Roboto', sans-serif;
+        border-bottom: 2px solid #000;
+        transition: padding 0.35s ease;
+        &:focus {
+            outline: none;
+            padding-left: 10px;
+            padding-right: 10px;
+            transition: padding 0.35s ease;
+            &::-webkit-input-placeholder { color:transparent; transition: all 0.35s linear; }
+            &::-webkit-input-placeholder { color:transparent; transition: all 0.35s linear; }
+            &:-moz-placeholder { color:transparent; transition: all 0.35s linear; }
+            &::-moz-placeholder { color:transparent; transition: all 0.35s linear; }
+            &:-ms-input-placeholder { color:transparent; transition: all 0.35s linear; }
+        }
+        @supports (-moz-appearance:none) {
+            &::-webkit-input-placeholder { color: #707070; }
+            &::-moz-placeholder { color: #707070; }
+            &:-ms-input-placeholder { color: #707070; }
+        }
+    }
+    textarea {
+        width: 100%;
+        height: 36px;
+        color: #000;
+        border: none;
+        resize: none;
+        outline: none;
+        overflow: hidden;
+        font-size: 16px;
+        padding-top: 10px;
+        transition: padding 0.35s ease;
+        font-family: 'Roboto', sans-serif;
+        &::-webkit-input-placeholder { color: #cacbcc; }
+        &::-moz-placeholder { color: #cacbcc; }
+        &:-ms-input-placeholder { color: #cacbcc; }
+        &:focus {
+            outline: none;
+            padding-left: 10px;
+            padding-right: 10px;
+            transition: padding 0.35s ease;
+            &::-webkit-input-placeholder { color:transparent; transition: all 0.35s linear; }
+            &::-webkit-input-placeholder { color:transparent; transition: all 0.35s linear; }
+            &:-moz-placeholder { color:transparent; transition: all 0.35s linear; }
+            &::-moz-placeholder { color:transparent; transition: all 0.35s linear; }
+            &:-ms-input-placeholder { color:transparent; transition: all 0.35s linear; }
+        }
+        @supports (-moz-appearance:none) {
+            &::-webkit-input-placeholder { color: #707070; }
+            &::-moz-placeholder { color: #707070; }
+            &:-ms-input-placeholder { color: #707070; }
+        }
+    }
+    &__textarea {
+        border-bottom: 2px solid #000;
+        .form__errors {
+            padding-top: 10px;
+        }
+    }
+}
+
+.join {
+    height: 560px;
+    overflow: hidden;
+    background:
+        linear-gradient(
+                rgba(0, 0, 0, 0.45),
+                rgba(0, 0, 0, 0.45)
+        ),
+        url("/assets/img/lets_talk_join/lets_talk_join_BL.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__button {
+        width: 100%;
+        height: 170px;
+        font-size: 38px;
+        color: #ffffff;
+        max-width: 490px;
+        margin: 0 15px;
+        border: 5px solid #ffffff;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        justify-content: center;
+        text-transform: uppercase;
+        background-color: transparent;
+        font-family: 'Fjalla One', serif;
+    }
+
+    @media screen and (max-width: 991px) {
+        background:
+            linear-gradient(
+                    rgba(0, 0, 0, 0.45),
+                    rgba(0, 0, 0, 0.45)
+            ),
+            url('/assets/img/lets_talk_join/lets_talk_join_BM.jpg');
+    }
+    @media screen and (max-width: 575px) {
+        height: 300px;
+        background:
+            linear-gradient(
+                    rgba(0, 0, 0, 0.45),
+                    rgba(0, 0, 0, 0.45)
+            ),
+            url('/assets/img/lets_talk_join/lets_talk_join_BS.jpg');
+        &__button {
+            max-width: 300px;
+            height: 100px;
+        }
+    }
+}
+
+.contacts {
+    width: 100%;
+    padding: 5px 15px;
+    margin: 50px auto 0;
+    max-width: 530px;
+    text-align: center;
+    font-family: 'Fjalla One', serif;
+    &__phone {
+        font-size: 21px;
+        a {
+            font-size: inherit;
+            color: #1f4b62;
+            font-weight: inherit;
+            font-family: inherit;
+        }
+    }
+    &__text {
+        font-size: 21px;
+        margin-top: 5px;
+        margin-left: 25px;
+    }
+
+    @media (max-width: 575px) {
+        &__text {
+            display: block;
+            margin-left: 0;
+            margin-top: 5px;
+        }
+    }
+}
+
+.countries {
+    width: 100%;
+    &__title {
+        margin: 0 auto 50px;
+        text-align: center;
+        font: 38px 'Fjalla One', sans-serif;
+        text-transform: uppercase;
+        color: #54575a;
+    }
+    &__container {
+        width: 100%;
+        height: 14vw;
+        overflow: hidden;
+        display: flex;
+    }
+    &__block {
+        width: 25%;
+        z-index: 1;
+        overflow: hidden;
+        position: relative;
+        transform: skew(-46deg);
+        img {
+            width: 160%;
+            margin-left: -50%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 0;
+            transition: all 0.35s linear;
+        }
+        &:hover {
+            img {
+                transform: scale(1.1);
+                transition: all 0.35s linear;
+            }
+        }
+    }
+    &__content {
+        width: 100%;
+        height: 100%;
+        transform: skew(46deg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__link {
+        z-index: 1;
+        width: 200%;
+        height: 100%;
+        color: #fff;
+        display: flex;
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+        font: 2.0vw 'Fjalla One', sans-serif;
+        text-decoration: none;
+    }
+    &__usa {
+        overflow: initial;
+        img {
+            margin-left: 0;
+        }
+    }
+    &__moldova {
+        img {
+            margin-left: -30%;
+        }
+    }
+    &__india {
+        img {
+            margin-left: -30%;
+        }
+    }
+    &__philippines {
+        z-index: 0;
+        overflow: initial;
+        position: relative;
+        img {
+            margin-left: -50%;
+        }
+    }
+
+    @media screen and (max-width: 991px) {
+        display: none;
+        &__container {
+            flex-wrap: wrap;
+            height: auto;
+            padding-bottom: 0;
+
+        }
+        &__block {
+            width: 50%;
+            height: 40vw;
+            transform: skew(0);
+            &:hover {
+                img {
+                    transform: none;
+                    transition: all 0.35s linear;
+                }
+            }
+        }
+        &__content {
+            transform: skew(0);
+        }
+        &__link {
+            position: static;
+            font: 6vw 'Fjalla One', sans-serif;
+        }
+    }
+    @media screen and (max-width: 767px) {
+        &__title {
+            font-size: 7vw;
+        }
+    }
+    @media screen and (max-width: 575px) {
+        display: block;
+        &__block {
+            width: 100%;
+        }
+        &__link {
+            font: 8vw 'Fjalla One', sans-serif;
+        }
+    }
+}

@@ -1,0 +1,125 @@
+.section {
+  height 100vh
+  background-image url('./background.png')
+  background-size cover
+  background-position center
+  display flex
+  align-items center
+  justify-content center
+  flex-direction column
+  position relative
+}
+
+.title {
+  font-family: 'Anton', sans-serif;
+  font-size 100px
+  color #ffffff
+  margin 0
+  text-transform uppercase
+  position relative
+  letter-spacing 3px
+  &::after {
+    content ""
+    position absolute
+    z-index 0
+    left -7.5%
+    top 0
+    width 115%
+    height 100%
+    background-color #081c45
+    transform skew(-12deg)
+    @media (max-width: 767px) {
+      width 113%
+    }
+  }
+  @media(max-width:1450px) {
+    font-size 70px
+  }
+  @media(max-width:1200px) {
+    margin 0 10%
+    text-align center
+    font-size 55px
+  }
+  @media (max-width: 480px) {
+    font-size 42px
+  }
+}
+.titleText {
+  position relative
+  z-index 1
+}
+
+
+.subtitle {
+  margin 0 0 0 585px
+  font-family 'Damion', cursive
+  color #ffffff
+  font-size 64px 
+  position relative
+  &::after {
+    content ""
+    width 115%
+    height 100%
+    background-color #e83693
+    position absolute
+    left -7.5%
+    top 0
+    transform skew(12deg)
+  }
+  @media(max-width:1450px) {
+    font-size 40px
+    margin 0
+  }
+  @media (max-width: 480px) {
+    font-size 35px
+  }
+}
+
+.subtitleText {
+  position relative
+  z-index 1
+}
+
+.seeMore {
+  position absolute
+  margin auto
+  left 0 
+  right 0
+  bottom 0
+  display flex
+  justify-content center
+  align-items center
+  flex-direction column
+}
+
+.seeMoreText {
+  color #ffffff
+  font-size 16px
+}
+
+@keyframes example {
+    from {box-shadow: 0px 0px 0px 0px #e83693;}
+    to {box-shadow: 0px 0px 20px 5px #e83693;}
+}
+
+.arrow {
+  position relative
+  border-radius 50%
+  background-color #ffffff
+  color #222
+  width 53px
+  height 53px
+  display flex
+  justify-content center
+  align-items center
+  cursor pointer
+  font-size 34px
+  margin 20px 0 95px
+  z-index 1
+  box-shadow: 0px 0px 0px 0px #e83693;
+  animation: example 1s infinite;
+  animation-direction: alternate-reverse;
+  @media(max-height:700px) {
+    margin 20px 0 20px
+  }
+}

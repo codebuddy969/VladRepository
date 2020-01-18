@@ -1,0 +1,102 @@
+<div class="hero" [ngStyle]="{'background-image': 'url(' + main_image + ')'}">
+    <div class="tint"></div>
+    <div class="quote">
+        <h1 class="name" itemprop="headline" [innerText]="blog?.title"></h1>
+    </div>
+    <meta itemprop="url" [content]="blog?.image">
+</div>
+
+<div class="details">
+
+    <div class="details__options">
+        <button class="details__return" routerLink="/whats-new/blog"><i></i> <span>Back</span></button>
+    </div>
+
+    <div class="blog-body" [innerHTML]="htmlTransform(blog.body)"></div>
+
+    <div class="content-container">
+        <div *ngIf="prevBlog !== null" class="back-arrow">
+            <a [routerLink]="getBlogLink(prevBlog)" class="back-arrow__link">prev</a>
+        </div>
+
+        <div class="blog-social" #socialsRef>
+            <button shareButton="facebook">
+                <i class="icon-facebook-solid" aria-hidden="true"></i>
+            </button>
+            <button shareButton="twitter">
+                <i class="icon-twitter-solid" aria-hidden="true"></i>
+            </button>
+            <button shareButton="pinterest" image="https://usalinksystem.com/assets/img/meta_images/400x400.png">
+                <i class="icon-pintrest-solid" aria-hidden="true"></i>
+            </button>
+            <button shareButton="tumblr">
+                <i class="icon-tumblr-solid" aria-hidden="true"></i>
+            </button>
+        </div>
+
+        <div *ngIf="nextBlog !== null" class="next-arrow">
+            <a [routerLink]="getBlogLink(nextBlog)" class="next-arrow__link">next</a>
+        </div>
+    </div>
+
+    <div class="micro-data">
+        <meta itemprop="mainEntityOfPage" [content]=""/>
+        <meta itemprop="datePublished" [content]="blog.published_date">
+        <meta itemprop="dateModified" [content]="blog.modified_date">
+        <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{blog.author}}</span></span>
+        <div itemprop="publisher" itemscope="" itemtype="https://schema.org/Organization">
+            <div itemprop="logo" itemscope="" itemtype="https://schema.org/ImageObject">
+                <img src="{{location_origin}}/assets/img/logo-white-small.png">
+                <meta itemprop="url" content="{{location_origin}}/assets/img/logo-white-small.png">
+                <meta itemprop="width" content="520">
+                <meta itemprop="height" content="409">
+            </div>
+            <meta itemprop="name" content="ULS">
+        </div>
+    </div>
+
+    <div class="comments-container">
+
+        <h2 class="comments-container__title">Leave us a comment</h2>
+
+    </div>
+
+    <fb-comments #fbComments width="100%"></fb-comments>
+
+    <app-preloader *ngIf="preloader_status"></app-preloader>
+
+    <div class="comments-section" *ngIf="comments.length">
+        <h2 class="comments-section__title">Comments</h2>
+
+        <div *ngFor="let comment of comments" class="comments-section__block">
+            <div class="comments-section__author">{{comment['name']}} <span class="comments-section__date">{{comment['add_date']}}</span></div>
+            <p class="comments-section__text">{{comment['comment']}}</p>
+        </div>
+
+        <button *ngIf="showLoadCommentsButton" (click)="loadComments()" class="comments-section__button">more</button>
+    </div>
+
+    <div class="comments-list" *ngIf="otherBlogPosts.length && show">
+        <h2 class="comments-section__title">Next story from your reading list</h2>
+
+        <div class="comments-list__container">
+            <a *ngFor="let otherBlogPost of otherBlogPosts" [routerLink]="getBlogLink(otherBlogPost)" class="comments-list__block">
+                <div class="comments-list__title">{{cutString(otherBlogPost.title, 60)}}</div>
+                <div class="comments-list__date">
+                    {{otherBlogPost.published_date}}
+                </div>
+                <img [src]="otherBlogPost.image" [alt]="otherBlogPost.title">
+            </a>
+        </div>
+    </div>
+</div>
+
+<app-enjoy-reading></app-enjoy-reading>
+
+<app-vlog-section></app-vlog-section>
+
+<app-most-popular></app-most-popular>
+
+<app-subscribe-section headline="Blog"></app-subscribe-section>
+
+<app-subscribe-modal *ngIf="showSubscribe" (returnEvent)=closeSubscribe()></app-subscribe-modal>

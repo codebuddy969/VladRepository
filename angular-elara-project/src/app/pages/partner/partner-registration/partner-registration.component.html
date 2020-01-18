@@ -1,0 +1,52 @@
+<h1 id="title" class="title">Partner registration</h1>
+
+<br>
+
+<div>
+    <p>Provide the company name and ID to register on the network</p>
+</div>
+<form [formGroup]="partnerRegistration" (ngSubmit)="register()">
+    <div class="form-control-group">
+        <label class="label" for="input-partnerID"><b>Partner ID </b>
+            <span>(identification on the network)</span>
+        </label>
+        <input id="input-partnerID"
+               placeholder="Enter Partner ID"
+               formControlName="accountPartnerId" class="form-control">
+        <div *ngIf="submitted && partnerRegistration.controls.accountPartnerId.errors || partnerRegistration.controls.accountPartnerId.touched"
+             class="caption status-danger">
+            <div *ngIf="partnerRegistration.controls.accountPartnerId.errors?.required">Partner ID is required</div>
+        </div>
+    </div>
+    <div class="form-control-group">
+        <label class="label" for="input-AccessCardID"><b>Access Card ID </b>
+            <span>(access id for your account)</span>
+        </label>
+        <input id="input-AccessCardID"
+               placeholder="Enter Partner ID"
+               formControlName="accessId" class="form-control">
+        <div *ngIf="submitted && partnerRegistration.controls.accessId.errors || partnerRegistration.controls.accessId.touched"
+             class="caption status-danger">
+            <div *ngIf="partnerRegistration.controls.accessId.errors?.required">Access Card Id is required</div>
+        </div>
+    </div>
+    <div class="form-control-group">
+        <label class="label" for="input-CompanyName"><b>Company Name</b></label>
+        <input id="input-CompanyName"
+               formControlName="companyName"
+               placeholder="Enter Company Name"
+               class="form-control">
+        <div *ngIf="submitted && partnerRegistration.controls.companyName.errors || partnerRegistration.controls.companyName.touched"
+             class="caption status-danger">
+            <div *ngIf="partnerRegistration.controls.companyName.errors?.required">Company Name is required</div>
+        </div>
+    </div>
+    <hr>
+    <button class="btn form-control" [ngClass]="partnerRegistration.invalid ? 'button-cursor' : 'button-valid'"
+            [disabled]="submitted || partnerRegistration.invalid">Registration
+    </button>
+</form>
+
+<div>
+    <label>Already have an account? </label> <a [routerLink]="['/auth/partner-login']"> Log in</a>
+</div>

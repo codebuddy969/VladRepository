@@ -1,0 +1,309 @@
+.pck-modal {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    position: fixed;
+    padding-left: 15px;
+    padding-right: 15px;
+    animation-name: fade-in;
+    animation-duration: 0.35s;
+    background-color: rgba(0, 0, 0, 0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__window {
+        width: 100%;
+        max-width: 790px;
+        position: relative;
+        background-color: #ffffff;
+        border: 1px solid #707070;
+
+        &::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+
+        &::-webkit-scrollbar-button {
+            width: 0px;
+            height: 0px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: #e1e1e1;
+            border: 0px none #ffffff;
+            border-radius: 50px;
+        }
+
+        &::-webkit-scrollbar-thumb:hover {
+            background: #ffffff;
+        }
+
+        &::-webkit-scrollbar-thumb:active {
+            background: #000000;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: #666666;
+            border: 0px none #ffffff;
+            border-radius: 50px;
+        }
+
+        &::-webkit-scrollbar-track:hover {
+            background: #666666;
+        }
+
+        &::-webkit-scrollbar-track:active {
+            background: #333333;
+        }
+
+        &::-webkit-scrollbar-corner {
+            background: transparent;
+        }
+    }
+    &__container {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    &__headline {
+        font-size: 38px;
+        line-height: 47px;
+        padding: 30px 0;
+        text-align: center;
+        text-transform: uppercase;
+        border-bottom: 1px solid #707070;
+        font-family: 'Fjalla One', serif;
+        pointer-events: none;
+    }
+    &__column {
+        width: 50%;
+
+        &:last-of-type {
+            padding-left: 30px;
+        }
+    }
+    &__body {
+        padding-top: 30px;
+        display: flex;
+    }
+    &__row {
+        display: flex;
+        padding-bottom: 35px;
+    }
+    &__checkbox {
+        width: 100%;
+        max-width: 38px;
+        height: 38px;
+        cursor: pointer;
+        position: relative;
+        margin-right: 20px;
+        border: 2px solid #000000;
+        background-color: transparent;
+
+        &.active {
+            padding: 1px;
+
+            span {
+                width: 100%;
+                height: 100%;
+                display: block;
+                pointer-events: none;
+                background-color: #000000;
+            }
+        }
+    }
+    &__title {
+        font-size: 20px;
+        line-height: 20px;
+        font-weight: bold;
+        letter-spacing: -0.9px;
+        text-transform: uppercase;
+    }
+    &__price {
+        color: #54575A;
+        font-size: 20px;
+        line-height: 18px;
+        margin-top: 9px;
+    }
+    &__message {
+        font-size: 16px;
+        line-height: 19px;
+        color: #54575A;
+        margin-top: 10px;
+    }
+    &__info {
+        width: calc(100% - 58px);
+    }
+    &__footer {
+        padding-top: 28px;
+        padding-bottom: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-top: 1px solid #707070;
+    }
+    &__total {
+        width: 50%;
+        font-size: 38px;
+        line-height: 47px;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        font-family: 'Fjalla One', serif;
+    }
+    &__options {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    &__negative {
+        cursor: pointer;
+        background-color: transparent;
+    }
+    &__positive {
+        width: 100%;
+        height: 60px;
+        font-size: 16px;
+        line-height: 19px;
+        font-weight: bold;
+        color: #FFFFFF;
+        cursor: pointer;
+        max-width: 220px;
+        margin-left: 25px;
+        letter-spacing: -1.0px;
+        text-transform: uppercase;
+        background-color: #000000;
+    }
+    &__cross {
+        top: 40px;
+        right: 35px;
+        width: 21px;
+        height: 21px;
+        cursor: pointer;
+        transform: rotate(45deg);
+        position: absolute;
+    }
+    &__line1 {
+        width: 3px;
+        height: 100%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        position: absolute;
+        pointer-events: none;
+        background-color: #000000;
+    }
+    &__line2 {
+        width: 100%;
+        height: 3px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        position: absolute;
+        pointer-events: none;
+        background-color: #000000;
+    }
+
+    @keyframes fade-in {
+        from {
+            opacity: 0
+        }
+        to {
+            opacity: 1
+        }
+    }
+
+    @media screen and (max-width: 991px) {
+        &__window {
+            top: 0;
+            height: 100%;
+            overflow-y: scroll;
+            max-width: 320px;
+            max-height: 850px;
+        }
+        &__headline {
+            font-size: 22px;
+            line-height: 27px;
+            padding: 27px 0 29px;
+
+            span {
+                display: block;
+            }
+        }
+        &__container {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        &__body {
+            flex-direction: column;
+        }
+        &__checkbox {
+            &.active {
+                span {
+                    width: 19px;
+                    height: 19px;
+                }
+            }
+        }
+        &__column {
+            width: 100%;
+
+            &:last-of-type {
+                padding-left: 0;
+            }
+        }
+        &__checkbox {
+            max-width: 25px;
+            height: 25px;
+            margin-right: 10px;
+        }
+        &__title {
+            font-size: 16px;
+            line-height: 19px;
+        }
+        &__info {
+            width: calc(100% - 35px);
+        }
+        &__price {
+            font-size: 16px;
+            line-height: 19px;
+            margin-top: 5px;
+        }
+        &__row {
+            padding-bottom: 20px;
+        }
+        &__message {
+            font-size: 13px;
+            line-height: 15px;
+            margin-top: 5px;
+        }
+        &__footer {
+            flex-direction: column;
+        }
+        &__total {
+            width: 100%;
+            font-size: 22px;
+            line-height: 27px;
+            text-align: center;
+        }
+        &__options {
+            width: 100%;
+            justify-content: center;
+            flex-direction: column-reverse;
+        }
+        &__negative {
+            order: 1;
+            margin-top: 12px;
+        }
+        &__positive {
+            order: 2;
+            margin-left: 0;
+            margin-top: 30px;
+        }
+        &__cross {
+            top: 10px;
+            right: 5px;
+        }
+    }
+}

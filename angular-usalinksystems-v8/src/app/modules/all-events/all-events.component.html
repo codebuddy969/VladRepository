@@ -1,0 +1,36 @@
+<div class="header">
+    <h1 class="header__quotation">To a great mind, nothing is little.
+        <span class="header__author">— Sherlock Holmes</span>
+    </h1>
+</div>
+
+<div class="events">
+    <div class="events__options">
+        <button class="events__return" routerLink="/whats-new"><i></i> <span>Back</span></button>
+        <h2 class="events__headline">Company Events</h2>
+    </div>
+    <div class="events__row">
+        <div class="events__column" *ngFor="let event of eventsList; let i = index">
+            <div class="events__link"
+                 *ngIf="i < maxEvent"
+                 [class.active]="i < maxEvent"
+                 (click)="getGalleryImages(event.gallery_images)"
+                 itemprop="url">
+                <span class="events__image">
+                    <img src={{event.image}} alt="Usa-link-system-blog">
+                </span>
+                <span class="events__title">{{event.title}}</span>
+                <span class="events__date">{{event.output_date}}</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="gallery-wrap" *ngIf="showGallery">
+    <ngx-gallery [options]="galleryOptions" [images]="galleryImages"></ngx-gallery>
+    <div class="close">
+        <img src="/assets/img/close.png" alt="Close" (click)="closePopup()">
+    </div>
+</div>
+
+<app-quote-section></app-quote-section>

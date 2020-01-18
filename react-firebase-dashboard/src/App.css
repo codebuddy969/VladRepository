@@ -1,0 +1,122 @@
+/*--------------------- Variables ---------------------*/
+/*--------------------- Mixins ---------------------*/
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900");
+/*         font-family: 'Lato', sans-serif;            */
+html, body, div, ul, li, p, h1, h2, h3, h4, h5, h6, button, a, input, textarea {
+  margin: 0;
+  padding: 0;
+  color: #000;
+  border: none;
+  resize: none;
+  outline: none;
+  font-size: 14px;
+  font-weight: 400;
+  list-style: none;
+  line-height: 1.0;
+  text-decoration: none;
+  box-sizing: border-box;
+  background-color: transparent;
+  font-family: 'Lato', sans-serif; }
+
+.App {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+a, a:hover {
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  transition: all 0.35s linear; }
+
+.container {
+  max-width: 1535px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto; }
+
+.H2 {
+  font-size: 18px;
+  color: #8d9ed1; }
+  .H2 strong {
+    font-weight: 900; }
+
+.button {
+  width: 100%;
+  height: 30px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  font-size: 10px;
+  margin-top: 15px;
+  font-weight: 700;
+  border-radius: 4px;
+  color: #fff;
+  text-transform: uppercase;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  justify-content: center;
+  background-color: #cc82e4;
+  box-shadow: 0px 0px 8.55px 0.45px rgba(211, 146, 219, 0.51); }
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px; }
+
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px; }
+
+::-webkit-scrollbar-thumb {
+  background: #cc82e4;
+  border: 0px none #af6dc4;
+  border-radius: 50px; }
+
+::-webkit-scrollbar-thumb:hover {
+  background: #af6dc4; }
+
+::-webkit-scrollbar-thumb:active {
+  background: #cc82e4; }
+
+::-webkit-scrollbar-track {
+  background: #d2d1d9;
+  border: 0px none #af6dc4;
+  border-radius: 50px; }
+
+::-webkit-scrollbar-track:hover {
+  background: #d2d1d9; }
+
+::-webkit-scrollbar-track:active {
+  background: #d2d1d9; }
+
+::-webkit-scrollbar-corner {
+  background: transparent; }
+
+.video-background {
+  top: 0;
+  z-index: 0;
+  width: 100%;
+  overflow: hidden;
+  position: fixed; }
+  .video-background__wrapper.blurred {
+    -ms-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    filter: blur(25px) brightness(1.5);
+    -webkit-filter: blur(25px) brightness(1.5);
+    -moz-filter: blur(15px) brightness(1.5);
+    -ms-filter: blur(15px) brightness(1.5);
+    -o-filter: blur(15px) brightness(1.5);
+    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='15'); }

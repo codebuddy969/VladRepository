@@ -1,0 +1,262 @@
+@import '../../../../styles';
+
+.modal {
+    $root: &;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 7;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(35, 42, 58, 0.7);
+    &__window {
+        width: 100%;
+        padding: 40px;
+        max-width: 830px;
+        border-radius: 5px;
+        position: relative;
+        transform: scale(0);
+        margin-left: 15px;
+        margin-right: 25px;
+        background-color: #ffffff;
+    }
+    &__headline {
+        font-size: 28px;
+        line-height: 30px;
+        text-transform: uppercase;
+    }
+    &__cross {
+        top: 40px;
+        right: 40px;
+        width: 10px;
+        height: 10px;
+        cursor: pointer;
+        position: absolute;
+    }
+    &__cross-line {
+        top: 50%;
+        width: 10px;
+        height: 1px;
+        position: absolute;
+        pointer-events: none;
+        background-color: #131313;
+        &:first-of-type {
+            transform: rotate(45deg);
+        }
+        &:last-of-type {
+            transform: rotate(-45deg);
+        }
+    }
+    &.active {
+        display: flex;
+        #{$root}__window {
+            animation: scaleIn 0.8s;
+            animation-fill-mode: forwards;
+            @keyframes scaleIn {
+                0% {
+                    transform: scale(0.5);
+                }
+                100% {
+                    transform: scale(1.0);
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: $break-xs) {
+        &__window {
+            padding: 15px;
+        }
+        &__cross {
+            top: 22px;
+            right: 22px;
+        }
+        &__headline {
+            font-size: 20px;
+            line-height: 24px;
+        }
+    }
+
+}
+
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 35px;
+    justify-content: space-between;
+    &__input-group {
+        width: 49%;
+        input {
+            width: 100%;
+            height: 60px;
+            border-radius: 2px;
+            padding-left: 30px;
+            padding-right: 30px;
+            transition: $fast-transition;
+            border: 1px solid #eeeeee;
+            color: $font-color-light-t1;
+            &:focus {
+                padding-left: 45px;
+                transition: $fast-transition;
+            }
+        }
+    }
+    &__input-row {
+        width: 100%;
+        margin-top: 10px;
+        input {
+            width: 100%;
+            height: 60px;
+            border-radius: 2px;
+            padding-left: 30px;
+            padding-right: 30px;
+            transition: $fast-transition;
+            border: 1px solid #eeeeee;
+            color: $font-color-light-t1;
+            &:focus {
+                padding-left: 45px;
+                transition: $fast-transition;
+            }
+        }
+    } 
+    &__textarea-row {
+        width: 100%;
+        margin-top: 10px;
+        textarea {
+            width: 100%;
+            height: 60px;
+            resize: none;
+            height: 120px;
+            border-radius: 2px;
+            padding: 20px 30px;
+            transition: $fast-transition;
+            border: 1px solid #eeeeee;
+            color: $font-color-light-t1;
+            &:focus {
+                padding-left: 45px;
+                transition: $fast-transition;
+            }
+        }
+    }
+    &__btn-group {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__btn-submit {
+        @extend .at-btn-colored;
+        width: 165px;
+        height: 60px;
+        margin-top: 15px;
+        line-height: 30px;
+    }
+    &__btn-back {
+        @extend .at-btn-default;
+        width: 165px;
+        height: 60px;
+        margin-top: 15px;
+        line-height: 30px;
+    }
+
+    @media screen and (max-width: $break-xs) {
+        &__input-group {
+            width: 100%;
+            margin-top: 10px;
+        }
+        &__btn-group {
+            flex-direction: column;
+        }
+        &__btn-submit {
+            width: 100%;
+        }
+        &__btn-back {
+            width: 100%;
+        }
+    }
+}
+
+.contacts {
+    $root: &;
+    margin-top: 30px;
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 30px;
+    }
+    &__link {
+        width: 165px;
+        height: 60px;
+        display: block;
+        cursor: pointer;
+        border-radius: 30px;
+        padding-left: 5px;
+        padding-right: 5px;
+        margin-bottom: 20px;
+        color: $primary-color;
+        background-color: #ffffff;
+        transition: $fast-transition;
+        border: 1px solid $primary-color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .at-icon {
+            font-size: 16px;
+            margin-right: 10px;
+        }
+        &:hover {
+            color: $font-color;
+            transition: $fast-transition;
+            background-color: $primary-color;
+            box-shadow: 0px 3px 76px 0px rgba(255, 192, 89, 0.35);
+        }
+    }
+    &__list-item {
+        width: 32%;
+    }
+    &__list-item:nth-last-child(-n+3) {
+        #{$root}__link {
+            color: $border-color;
+            border: 1px solid $border-color;
+            &:hover {
+                color: $font-color;
+                transition: $fast-transition;
+                background-color: $primary-color;
+                border-color: $primary-color;
+                box-shadow: 0px 3px 76px 0px rgba(255, 192, 89, 0.35);
+            }
+        }
+    }
+
+    @media screen and (max-width: $break-lg) {
+        &__link {
+            width: 100%;
+        }
+    }
+    @media screen and (max-width: $break-md) {
+        &__list-item {
+            width: 49%;
+        }
+    }
+    @media screen and (max-width: $break-sm) {
+        &__list-item {
+            width: 32%;
+        }
+    }
+    @media screen and (max-width: $break-xs) {
+        &__list-item {
+            width: 49%;
+        }
+    }
+    @media screen and (max-width: 400px) {
+        &__list-item {
+            width: 100%;
+        }
+    }
+}

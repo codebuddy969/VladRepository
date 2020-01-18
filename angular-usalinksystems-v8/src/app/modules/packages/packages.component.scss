@@ -1,0 +1,592 @@
+@import "~swiper/dist/css/swiper.css";
+
+$primary-color: #1f4b62;
+$additional-color: #c90202;
+
+@function set-vw($min,$target,$screen: 1920) {
+    $vw-context: ($screen*.01) * 1;
+    $vw-converted: ($min/$vw-context);
+    @return calc(#{$min + px} + #{($target/$vw-context - $vw-converted + vw)});
+}
+
+.pck-header {
+    height: 600px;
+    padding: 190px 15px 0;
+    position: relative;
+    background-image: url('/assets/img/packages/header-background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    &__info {
+        width: 100%;
+        z-index: 1;
+        position: relative;
+        margin: 0 auto;
+        max-width: 530px;
+    }
+    &__title {
+        color: #ffffff;
+        font-size: 38px;
+        line-height: 47px;
+        border: 5px solid #ffffff;
+        padding: 37px 35px 83px;
+        text-transform: uppercase;
+        font-family: 'Fjalla One', serif;
+    }
+    &__subtitle {
+        color: #ffffff;
+        font-size: 16px;
+        line-height: 19px;
+        margin-top: 23px;
+        text-align: center;
+    }
+    &:before {
+        content: '';
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        position: absolute;
+        background: linear-gradient(270deg, rgba(201, 2, 2, 0.85), rgba(57, 84, 106, 0.85));
+        background-size: 400% 400%;
+    }
+
+    @media screen and (min-width: 767px) {
+        &:before {
+            content: '';
+            background: linear-gradient(270deg, rgba(201, 2, 2, 0.85), rgba(57, 84, 106, 0.85));
+            animation: SmoothGradient 60s ease infinite;
+            @keyframes SmoothGradient {
+                0%{background-position:0% 50%}
+                50%{background-position:100% 51%}
+                100%{background-position:0% 50%}
+            }
+        }
+    }
+    @media screen and (max-width: 991px) {
+        &__title {
+            padding: 30px 15px;
+        }
+    }
+    @media screen and (max-width: 320px) {
+        height: 400px;
+        padding-top: 130px;
+        &__title {
+            font-size: 28px;
+            line-height: 35px;
+            padding: 12px 15px 48px;
+        }
+    }
+}
+
+.pck-promotions {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1250px;
+    padding: 60px 15px 0;
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-image: url('/assets/img/packages/particles.png');
+    &__headline {
+        font-size: 38px;
+        line-height: 47px;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: 'Fjalla One', serif;
+    }
+    &__subline {
+        font-size: 16px;
+        line-height: 19.5px;
+        text-align: center;
+        letter-spacing: 0.1px;
+        padding-top: 54px;
+    }
+    &__container {
+        margin: 0 auto;
+        max-width: 1120px;
+        padding-top: 50px;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    @media screen and (min-width: 1199px) {
+        &__headline {
+            margin: 0 auto;
+            max-width: 834px;
+        }
+        &__subline {
+            margin: 0 auto;
+            max-width: 645px;
+        }
+    }
+    @media screen and (max-width: 1024px) {
+        padding: 60px 7.5px 0;
+        background-image: none;
+        &__container {
+            max-width: 996px;
+        }
+        &__headline {
+            margin: 0 auto;
+            max-width: 850px;
+        }
+    }
+    @media screen and (max-width: 991px) {
+        padding-left: 7px;
+        padding-right: 7px;
+        &__container {
+            max-width: 320px;
+        }
+    }
+}
+
+.pck-card {
+    $root: &;
+    width: 33.3%;
+    height: auto !important;
+    &__headline {
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #aeaeae;
+        background-color: $primary-color;
+        h3 {
+            color: #ffffff;
+            font-size: 38px;
+            line-height: 47px;
+            text-transform: uppercase;
+            font-family: 'Fjalla One', serif;
+        }
+    }
+    &__prices {
+        div {
+            font-size: 38px;
+            line-height: 47px;
+            text-transform: uppercase;
+            font-family: 'Fjalla One', serif;
+        }
+    }
+    &__body {
+        padding: 15px 19px 24px;
+        border: 1px solid #aeaeae;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__prices {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__services {
+        height: 299px;
+        padding-top: 17px;
+    }
+    &__services-item {
+        font-size: 16px;
+        line-height: 19.2px;
+    }
+    &__details {
+        padding-top: 33px;
+    }
+    &__details-item {
+        color: #54575a;
+        font-size: 15px;
+        line-height: 19.2px;
+        letter-spacing: -0.15px;
+    }
+    &__action-row {
+        padding-top: 35px;
+    }
+    &__button {
+        font-size: 16px;
+        color: #ffffff;
+        margin: 0 auto;
+        display: block;
+        cursor: pointer;
+        font-weight: bold;
+        padding: 19px 35px;
+        letter-spacing: -0.8px;
+        text-transform: uppercase;
+        background-color: $primary-color;
+        &:hover {
+            background: linear-gradient(270deg, $additional-color, $primary-color);
+            background-size: 400% 400%;
+            animation: SmoothGradient 6s ease infinite;
+            @keyframes SmoothGradient {
+                0%{background-position:0% 50%}
+                50%{background-position:100% 51%}
+                100%{background-position:0% 50%}
+            }
+        }
+    }
+    &__additional {
+        color: #54575a;
+        font-size: 16px;
+        line-height: 20px;
+        overflow: hidden;
+        padding: 27px 20px 43px;
+        letter-spacing: -0.36px;
+        border: 1px solid #aeaeae;
+        border-top: none;
+        span {
+            display: block;
+        }
+    }
+    &--regular {
+        width: 100%;
+    }
+    &--special {
+        width: 100%;
+        #{$root}__headline {
+            height: 80px;
+            background-color: $additional-color;
+        }
+        #{$root}__button {
+            background-color: $additional-color;
+            &:hover {
+                background: linear-gradient(270deg, $primary-color, $additional-color);
+                background-size: 400% 400%;
+                animation: SmoothGradient 6s ease infinite;
+                @keyframes SmoothGradient {
+                    0%{background-position:0% 50%}
+                    50%{background-position:100% 51%}
+                    100%{background-position:0% 50%}
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 1199px) {
+        &__services {
+            height: 345px;
+        }
+    }
+    @media screen and (max-width: 1024px) {
+        &__button {
+            padding: 19px 21px;
+        }
+        &__additional {
+            padding: 27px 20px 23px;
+        }
+        &__services {
+            height: auto;
+        }
+    }
+    @media screen and (max-width: 1399px) {
+        &__body {
+            justify-content: flex-start;
+        }
+        &__prices {
+            font-size: 35px;
+        }
+    }
+    @media screen and (max-width: 575px) {
+        width: 100% !important;
+        height: auto !important;
+        display: none !important;
+        &--special {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        &:nth-child(1){
+            display: block !important;
+        }
+        &:nth-child(2){
+            display: block !important;
+        }
+        &:nth-child(3){
+            display: block !important;
+        }
+    }
+}
+
+.pck-contact {
+    margin-top: 70px;
+    position: relative;
+    background-image: url('/assets/img/packages/contact-background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    &__container {
+        max-width: 444px;
+        margin: 0 auto;
+        display: flex;
+        padding-top: 53px;
+        padding-bottom: 53px;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__headline {
+        color: #ffffff;
+        font-size: 22px;
+        line-height: 27px;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: 'Fjalla One', serif;
+    }
+    &__subline {
+        color: #ffffff;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+        margin-top: 15px;
+    }
+    &__link {
+        color: #ffffff;
+        text-transform: uppercase;
+        width: 220px;
+        height: 65px;
+        display: flex;
+        font-size: 16px;
+        line-height: 19px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-top: 15px;
+        align-items: center;
+        justify-content: center;
+        letter-spacing: -0.6px;
+        background-color: transparent;
+        border: 1px solid #ffffff;
+    }
+    &__avatar {
+        width: 133px;
+        height: 133px;
+        overflow: hidden;
+        margin-top: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    @media screen and (max-width: 320px) {
+        &__container {
+            padding-top: 30px;
+        }
+    }
+}
+
+.pck-additions {
+    background-image: url('/assets/img/packages/additions-background.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+    &__container {
+        width: 100%;
+        margin: 0 auto;
+        max-width: 920px;
+        padding: 60px 15px;
+    }
+    &__headline {
+        font-size: 38px;
+        line-height: 47px;
+        text-align: center;
+        padding-bottom: 30px;
+        text-transform: uppercase;
+        font-family: 'Fjalla One', serif;
+    }
+
+    @media screen and (max-width: 1024px) {
+        &__container {
+            max-width: 750px;
+        }
+        &__headline {
+            padding-bottom: 5px;
+        }
+    }
+}
+
+.pck-service {
+    $root: &;
+    width: 100%;
+    height: 169px;
+    max-width: 721px;
+    padding: 15px 0;
+    margin-top: 20px;
+    border: 1px solid #000000;
+    display: flex;
+    &__body {
+        width: calc(100% - 168px);
+        padding: 3px 14px 20px;
+    }
+    &__title {
+        color: #000000;
+        font-size: 22px;
+        line-height: 27px;
+        text-transform: uppercase;
+        font-family: 'Fjalla One', serif;
+    }
+    &__text {
+        margin-top: 14px;
+        color: #54575a;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 0.1px;
+    }
+    &__price {
+        width: 100%;
+        max-width: 168px;
+        padding: 0 27px;
+        border-left: 1px solid #000000;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &__number {
+        color: $primary-color;
+        font-size: 38px;
+        line-height: 55px;
+        font-family: 'Fjalla One', serif;
+    }
+    &__info {
+        color: #757575;
+        font-size: 22px;
+        line-height: 27px;
+        margin-top: 10px;
+        text-align: center;
+        letter-spacing: -0.5px;
+        text-transform: uppercase;
+        font-family: 'Fjalla One', serif;
+    }
+    &__message {
+        color: #757575;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: 'Fjalla One', serif;
+    }
+    &--right {
+        margin: 20px 0 0 auto;
+        #{$root}__body {
+            width: calc(100% - 166px);
+            padding: 0 15px;
+        }
+        #{$root}__text {
+            padding: 3px 0 0;
+        }
+        #{$root}__price {
+            max-width: 166px;
+        }
+    }
+
+    @media screen and (max-width: 320px) {
+        height: 100px;
+        margin-top: 15px;
+        padding-bottom: 0;
+        flex-direction: column;
+        &__body {
+            width: 100%;
+            padding-bottom: 0;
+        }
+        &__title {
+            text-align: center;
+        }
+        &__text {
+            display: none;
+        }
+        &__price {
+            padding: 0 15px;
+            max-width: 100%;
+            text-align: center;
+            flex-direction: row;
+        }
+        &__number {
+            margin-right: 10px;
+        }
+        &__info {
+            font-size: 16px;
+            line-height: 19px;
+            max-width: 100px;
+        }
+        &--right {
+            #{$root}__body {
+                width: 100%;
+            }
+            #{$root}__price {
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+.swiper-wrapper {
+    @media screen and (max-width: 575px) {
+        height: auto !important;
+        transform: none !important;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.swiper-button-next {
+    z-index: 2;
+    width: 150px;
+    right: -175px;
+    color: #ffffff;
+    text-align: center;
+    background-color: transparent;
+    background-image: none;
+    background-color: $primary-color;
+    transition: all 0.35s linear;
+    &.special {
+        background-color: $additional-color;
+    }
+    &.swiper-button-disabled {
+        opacity: 1;
+        cursor: pointer;
+        pointer-events: all !important;
+    }
+
+    @media screen and (min-width: 991px) {
+        display: none !important;
+    }
+    @media screen and (max-width: 767px) {
+        right: -120px;
+        transform: rotate(90deg);
+        transition: all 0.35s linear;
+    }
+    @media screen and (max-width: 575px) {
+        display: none !important;
+    }
+}
+
+.swiper-button-prev {
+    z-index: 2;
+    width: 150px;
+    left: -175px;
+    color: #ffffff;
+    text-align: center;
+    background-image: none;
+    background-color: $primary-color;
+    transition: all 0.35s linear;
+    &.special {
+        background-color: $additional-color;
+    }
+    &.swiper-button-disabled {
+        opacity: 1;
+        cursor: pointer;
+        pointer-events: all !important;
+    }
+
+    @media screen and (min-width: 991px) {
+        display: none !important;
+    }
+    @media screen and (max-width: 767px) {
+        left: -120px;
+        transform: rotate(-90deg);
+        transition: all 0.35s linear;
+    }
+    @media screen and (max-width: 575px) {
+        display: none !important;
+    }
+}

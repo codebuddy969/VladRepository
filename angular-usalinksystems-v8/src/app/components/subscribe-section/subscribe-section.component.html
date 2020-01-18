@@ -1,0 +1,40 @@
+<div class="subscribe" id="subscribe">
+    <div class="subscribe__component">
+        <h3 class="subscribe__headline">Make smarter marketing decisions</h3>
+        <div class="subscribe__subline">Get our best marketing advice in your inbox each week when you sign-up.</div>
+        <form class="subscribe__form" #formReference (submit)="submitForm($event)" [formGroup]="form" novalidate enctype="multipart/form-data">
+            <div class="subscribe__fields">
+                <div class="subscribe__input">
+                    <label for="modal_email">Email</label>
+                    <input type="text"
+                           id="modal_email"
+                           name="email"
+                           placeholder="add your email"
+                           [formControl]="form.controls.email">
+                    <div class="subscribe__errors" *ngIf="form.controls.email.dirty && !form.controls.email.valid">
+                        <small *ngIf="form.controls.email.errors.required">This field is required</small>
+                        <small *ngIf="form.controls.email.errors.minlength">Minimal length of this field is: {{form.controls.email.errors.minlength.requiredLength}}</small>
+                        <small *ngIf="form.controls.email.errors.invalidEmail && form.controls.email.value != ''">Incorrect email address</small>
+                    </div>
+                </div>
+                <div class="subscribe__input">
+                    <label for="modal_name">Name</label>
+                    <input type="text"
+                           id="modal_name"
+                           name="name"
+                           placeholder="insert your name"
+                           [formControl]="form.controls.name">
+                    <div class="subscribe__errors" *ngIf="form.controls.name.dirty && !form.controls.name.valid">
+                        <small *ngIf="form.controls.name.errors.required">This field is required</small>
+                        <small *ngIf="form.controls.name.errors.minlength">Minimal length of this field is: {{form.controls.name.errors.minlength.requiredLength}}</small>
+                        <small *ngIf="form.controls.name.errors.maxlength">Maximal length of this field is: {{form.controls.name.errors.maxlength.requiredLength}}</small>
+                        <small *ngIf="form.controls.name.errors?.pattern">Only characters and spaces are allowed</small>
+                    </div>
+                </div>
+            </div>
+            <button class="subscribe__button">Sign up</button>
+        </form>
+    </div>
+</div>
+
+<app-alert-modal [message]='popup_message()' [action_value]='action' (returnEvent)=checkModal($event)></app-alert-modal>

@@ -1,0 +1,379 @@
+@import '../../../styles';
+
+.home {
+    &__content {
+        margin-top: 25vh;
+        position: relative;
+        min-height: calc(100vh - 25vh);
+    }
+    &__background {
+        top: 0;
+        z-index: -1;
+        width: get-vw(350,1060);
+        height: 100%;
+        overflow: hidden;
+        position: fixed;
+        text-align: center;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__container {
+        width: 100%;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        justify-content: space-between;
+    }
+    &__info {
+        max-width: 600px;
+        display: flex;
+        position: absolute;
+        justify-content: center;
+        flex-direction: column;
+        &--hidden {
+            display: none;
+        }
+    }
+    &__title {
+        font-size: 85px;
+        line-height: 85px;
+        letter-spacing: 0.5px;
+        color: $font-color;
+        text-transform: uppercase;
+    }
+    &__subtitle {
+        font-size: 22px;
+        line-height: 30px;
+        letter-spacing: 1px;
+        color: $font-color;
+        margin-top: 10px;
+        text-transform: uppercase;
+    }
+    &__full {
+        right: 80px;
+        display: flex;
+        position: absolute;
+        .at-synopsis {
+            &__container {
+                padding-left: 20px;
+            }
+        }
+    }
+    &__books {
+        width: 100%;
+        max-width: 440px;
+    }
+
+    @media screen and (max-width: $break-xl) {
+        &__full {
+            right: 45px;
+        }
+        &__container {
+            justify-content: flex-start;
+        }
+        &__title {
+            font-size: 70px;
+            line-height: 70px;
+        }
+    }
+    @media screen and (max-width: $break-lg) {
+        &__content {
+            padding-left: 15px;
+            padding-right: 35px;
+        }
+        &__container {
+            justify-content: space-between;
+        }
+        &__info {
+            margin-right: 0;
+            max-width: 520px;
+        }
+        &__books {
+            margin-right: 0;
+        }
+        &__full {
+            .at-synopsis {
+                &__container {
+                    padding-left: 80px;
+                }
+            }
+        }
+        .at-large-title {
+            font-size: 70px;
+            line-height: 70px;
+        }
+        .at-assets {
+            &__block {
+                width: 100%;
+            }
+            .at-btn-colored {
+                &__item {
+                    width: 100%;
+                    margin-bottom: 10px;
+                }
+            }
+            .at-btn-default {
+                width: 100%;
+                margin-bottom: 15px;
+                &__item {
+                    width: 100%;
+                    margin-bottom: 10px;
+                }
+            } 
+        }
+    }
+    @media screen and (max-width: $break-md) {
+        &__content {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        &__container {
+            text-align: center;
+            flex-direction: column;
+        }
+        &__background {
+            width: 100%;
+        }
+        &__books {
+            order: 1;
+            max-width: 100%;
+            .at-book-cover {
+                margin: 0 auto;
+            }
+        }
+        &__info {
+            order: 2;
+            max-width: none;
+            margin-bottom: 50px;
+            position: static;
+            .at-btn-group {
+                margin: 0 auto;
+            }
+            .at-btn-default {
+                margin: 0 auto;
+            }
+        }
+        &__full {
+            position: static;
+            align-items: center;
+            flex-direction: column;
+            .at-synopsis {
+                align-items: center;
+                flex-direction: column;
+                &__container {
+                    order: 2;
+                    padding-left: 0;
+                    margin-top: 50px;
+                }
+                &__content {
+                    width: 100%;
+                }
+                &__type {
+                    padding-right: 0;
+                    text-align: center;
+                }
+                &--title {
+                    max-width: 100%;
+                    padding-left: 0;
+                }
+            }
+            .at-assets {
+                max-width: 100%;
+                padding: 0;
+                &__block {
+                    max-width: 48%;
+                }
+            }
+            .at-btn-group {
+                max-width: 520px;
+                margin: 20px auto;
+            }
+        }
+    }
+    @media screen and (max-width: $break-sm) {
+        &__info {
+            .at-btn-default {
+                width: 48%;
+            }
+        }
+    }
+    @media screen and (max-width: $break-xs) {
+        &__content {
+            margin-top: 20vh;
+            padding-left: 15px;
+            padding-right: 15px;
+            min-height: calc(100vh - 20vh);
+        }
+        &__info {
+            .at-btn-default {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+        &__title {
+            font-size: 40px;
+            line-height: 45px;
+        }
+        &__full {
+            .at-assets {
+                &__block {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.at-synopsis {
+    display: flex;
+    padding-left: 15px;
+    padding-right: 15px;
+    &__title {
+        font-size: 85px;
+        line-height: 85px;
+        letter-spacing: 0.5px;
+        color: $font-color;
+        text-transform: uppercase;
+    }
+    &__small-title {
+        font-size: 22px;
+        line-height: 30px;
+        letter-spacing: 1px;
+        color: $font-color;
+        text-transform: uppercase;
+    }
+    &__container {
+        width: 760px;
+    }
+    &__type {
+        width: 170px;
+        text-align: right;
+        padding-right: 30px;
+        color: $font-color-light-t2;
+    }
+    &__content {
+        width: calc(100% - 170px);
+        p {
+            padding-bottom: 40px;
+        }
+    }
+    &--title {
+        padding-left: 185px;
+        flex-direction: column;
+    }
+    
+    @media screen and (max-width: $break-xl) {
+        &__title {
+            font-size: get-vw(40,70);
+            line-height: get-vw(45,70);
+        }
+        &__container {
+            width: get-vw(400,760);
+        }
+    }
+    @media screen and (max-width: $break-lg) {
+        width: 100%;
+        max-width: 100%;
+        flex-direction: column;
+        padding-left: 0;
+        padding-right: 0;
+        &__container {
+            width: get-vw(200,700);
+        }
+        &__type {
+            text-align: left;
+        }
+        &__content {
+            width: auto;
+        }
+        &--title {
+            width: 100%;
+            padding-left: 0;
+        }
+    }
+    @media screen and (max-width: $break-md) {
+        &--title {
+            width: 100%;
+            padding-right: 0;
+        }
+        &__container {
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+    @media screen and (max-width: $break-xs) {
+        &__title {
+            font-size: 40px;
+            line-height: 45px;
+        }
+    }
+}
+
+.at-assets {
+    max-width: 800px;
+    padding: 15px 15px 70px 185px;
+    .at-btn-group {
+        width: get_vw(480,530);
+    }
+    
+    @media screen and (max-width: $break-lg) {
+        padding: 15px 15px 70px 0;
+        .at-btn-group {
+            max-width: 100%;
+        }
+    }
+}
+
+.at-btn-group {
+    max-width: 520px;
+    margin-top: 20px;
+}
+
+.at-btn-colored, 
+.at-btn-default {
+    width: 250px;
+    height: 60px;
+    line-height: 60px;
+    &--cover {
+        z-index: 0;
+        margin: 40px auto 0;
+    }
+}
+
+.at-book-cover {
+    &__arrows {
+        z-index: 2;
+        width: 100%;
+        display: none;
+        margin: 0 auto;
+        max-width: 35px;
+        justify-content: space-between;
+    }
+    &__arrow {
+        width: 12px;
+        height: 12px;
+        cursor: pointer;
+        border-radius: 50%;
+        background-color: #4d525f;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &.active {
+            background-color: #ff8000;
+        }
+    }
+    
+    @media screen and (max-width: $break-lg) {
+        &__arrows {
+            display: flex;
+            margin-bottom: 30px;
+        }
+    }
+}
+

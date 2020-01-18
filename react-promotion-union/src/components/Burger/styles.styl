@@ -1,0 +1,79 @@
+ /* Position and sizing of burger button */
+.burgerButton {
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  left: 36px;
+  top: 36px;
+  z-index 30 !important
+}
+
+/* Color/shape of burger icon bars */
+.burgerBars{
+  background: #373a47;
+  transition all 0.2s
+}
+
+.burgerBarsWhite {
+  background: #fafafa;
+  transition all 0.2s
+}
+
+.burgerBarsBlack {
+  background: #373a47;
+  transition all 0.2s
+}
+
+/* Position and sizing of clickable cross button */
+.burgerCrossBtn {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.burgerCross {
+  background: #373a47;
+  z-index 99 !important
+}
+
+/* General sidebar styles */
+.burgerMenu {
+  background: #ffffff;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.burgerMorph{
+  fill: #ffffff;
+}
+
+/* Wrapper for item list */
+.BurgerItemList {
+  color: #373a47;
+  padding: 0.8em;
+  top 0
+  left 0
+}
+
+/* Styling of overlay */
+.burgerOverlay {
+  left 0
+  top 0
+  background: rgba(0, 0, 0, 0.5);
+}
+
+:global(.bm-menu-wrap) {
+  z-index 99 !important
+}
+
+:global(.bm-cross-button) {
+  z-index 100 !important
+  button {
+    z-index 1000
+  }
+}
+:global(.bm-burger-button>span>span:last-child) {
+  &::after {
+    content ''
+  }
+}
+

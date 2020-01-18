@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Medrex Theme Documentation</title>
+
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+        
+        <script type="text/javascript" src="./assets/jquery.js"></script>
+        <script type="text/javascript" src="./assets/prism.js"></script>
+        <link rel="stylesheet" href="./assets/prism.css">
+        
+        <script>
+            
+            $(document).ready(function() {
+                
+                $("[scroll-aim]").on('click', function( event ) {
+
+                    event.preventDefault();
+
+                    var scroll_aim = String($(this).attr('scroll-aim'));
+
+                    $("[scroll-target]").each(function() {
+                        var scroll_target = String($(this).attr('scroll-target'));
+                        var top_distance = $(this).offset().top;
+
+                        if(scroll_aim === scroll_target) {
+                            $("html, body").animate({ scrollTop: top_distance }, 600);
+                        }
+                    });
+                });
+                
+            });
+        
+        </script>
+        
+        <style>
+            html,body,div,ul,li,p,a,h1,h2,h3,h4,h5,h6,span,button,input {
+                color: #23282d;
+                @include font-size(16);
+                font-family: 'Open Sans', sans-serif;
+                margin: 0;
+                padding: 0;
+                border: none;
+                outline: none;
+                word-wrap: break-word;
+                list-style: none;
+                font-weight: 400;
+                -webkit-box-sizing: border-box;
+                        box-sizing: border-box;
+            }
+            .mt-sidebar {
+                width: 280px;
+                height: 100%;
+                position: fixed;
+                padding: 150px 15px 0;
+                background-color: #fff;
+                -webkit-box-shadow: 13px 0px 101px 0px rgba(21, 21, 21, 0.08);
+                        box-shadow: 13px 0px 101px 0px rgba(21, 21, 21, 0.08);
+            }
+            .mt-sidebar-title {
+                font-size: 24px;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+            .mt-sidebar-title span{
+                color: #56c1b2;
+            }
+            .mt-sidebar-list {
+                margin-top: 55px;
+                padding-left: 20px;
+            }
+            .mt-sidebar-list li {
+                cursor: pointer;
+                margin-bottom: 20px;
+            }
+            
+            .mt-sidebar-list li:hover {
+                color: #56c1b2;
+            }
+            .mt-content {
+                margin-left: 280px;
+            }
+            .mt-title-row {
+                padding: 25px 65px;
+                text-align: right;
+                background-color: #f4fffd;
+            }
+            .mt-title-row span {
+                font-weight: 600;
+            }
+            .mt-info-row {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: justify;
+                    -ms-flex-pack: justify;
+                        justify-content: space-between;
+                padding: 25px 85px;
+            }
+            .mt-info-row-list {
+                font-size: 18px;
+                line-height: 36px;
+            }
+            .mt-info-row-list a,
+            .mt-info-row-list span {
+                color: #56c1b2;
+                text-decoration: none;
+            }
+            .mt-info-gratitude {
+                color: #5a5a5a;
+                font-size: 18px;
+                max-width: 750px;
+                line-height: 36px;
+            }
+            .mt-info-gratitude span {
+                color: #000;
+                font-weight: 600;
+            }
+            .mt-info-gratitude a {
+                color: #56c1b2;
+                text-decoration: none;
+            }
+            .mt-section {
+                padding: 0 85px 25px;
+            }
+            .mt-section-title {
+                font-size: 30px;
+                font-weight: 600;
+                padding: 0 35px;
+                text-align: right;
+                text-transform: uppercase;
+            }
+            .mt-section-title span {
+                color: #56c1b2;
+                font-size: 30px;
+                font-weight: 400;
+            }
+            .mt-section-text {
+                font-size: 18px;
+                line-height: 32px;
+                color: #232323;
+            }
+            .mt-section-tips {
+                padding: 15px;
+                margin-bottom: 30px;
+                background-color: #e9fff1;
+                border: 1px solid #e8f5f2;
+                border-radius: 5px;
+            }
+            :not(pre) > code[class*="language-"] {
+                padding: 15px;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class="mt-sidebar">
+            <div class="mt-sidebar-title"><span>Table</span> of Contents</div>
+            <ul class="mt-sidebar-list">
+                <li scroll-aim="html">HTML Structure</li>
+                <li scroll-aim="css">SCSS/CSS Structure</li>
+                <li scroll-aim="js">JavaScript</li>
+                <li scroll-aim="youtube">Youtube API Usage</li>
+                <li scroll-aim="google">Google maps API Usage</li>
+                <li scroll-aim="credits">Sources and Credits</li>
+            </ul>
+        </div>
+        <div class="mt-content">
+            <div class="mt-title-row"><span>Medrex Template</span> Documentation by Vlad Secrier v 1.0</div>
+            <div class="mt-info-row">
+                <div class="mt-info-col">
+                    <ul class="mt-info-row-list">
+                        <li>Created : <span>09/07/2018</span></li>
+                        <li>By : <span>Vlad Secrier</span></li>
+                        <li>Email : <a href="mailto:mymailboxmd@gmail.com">mymailboxmd@gmail.com</a></li>
+                    </ul>
+                </div>
+                <div class="mt-info-col">
+                    <div class="mt-info-gratitude">
+                        <span>Dear Customer</span>, thank you for purchasing my theme. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="#">here.</a> <span>Thanks so much!</span>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-section">
+                <div class="mt-section-title"><span>Useful</span> Tips</div>
+                <hr><br>
+                <div class="mt-section-text">
+                    <div class="mt-section-tips">*Due to local security restrictions, some things will not work locally, especially in Chrome for example Google maps will not work until you will not activate API key.</div>
+                    <div class="mt-section-tips">*If you encounter an error <strong>Failed to execute 'postMessage' on 'DOMWindow': The target origin provided ('https://www.youtube.com') does not match the recipient window's origin</strong>, you need an SSL certificate for your website, all youtube video will work the same as before even if your not having one installed.</div>
+                </div>
+            </div>
+            <div class="mt-section" scroll-target='html'>
+                <div class="mt-section-title"><span>Html</span> Structure</div>
+                <hr><br>
+                <div class="mt-section-text">
+                Html structure of this template is divided by sections, you will find <strong>header, main, and footer</strong> area. You can choose between headers in case if you need map or usual info header. Build your page from existing code blocks. Each block is separated and has his own styles.
+                Buttons, texts are all standard and were used multiple times.
+                <br><br>In order to disable ease effect, on page scroll, just remove a div with <strong>mt-momentum</strong> class and the page will act like a regular one with normal scrolling.
+                <br><br>Each element outside <strong>"mt-momentum"</strong> has position fixed. Please note that <strong>position fixed does not work inside "mt-momentum" div</strong> because page actually is not scrollable, so all fixed elements remain in the same position, even if the page is scrolled.
+                <br><br>In order to make navbar static and not fixed just remove <strong>"mt-t1-navbar--fixed"</strong> class and place all navbar code inside of the header tag.
+                <br><br> You can control your page layout with entire bootstrap 4 style library, all components you can find here "<a target="_blank" href="https://getbootstrap.com/docs/4.0/components/buttons/">https://getbootstrap.com/docs/4.0/components/buttons/</a>" as well you can adjust paddings and margins between elements by playing with additional classes like:
+                <br><br> <strong>pt-10 pr-10 pb-10 pl-10</strong> - will set padding 10 on each side of selected element.
+                <br><br> Same structure for margins:
+                <br><br> <strong>mt-10 mt-10 mt-10 mt-10</strong> - will set margin 10 on each side of selected element.
+                <br><br> Each class on resolution lower than 1200px will be converted to half of it`s value for example if you used <strong>mt-50</strong> it will set <strong>25px margin top</strong>, on screens less than 1200px and so on for the other classes. Exception are only classes with value less than 20px. Space amounts used in this template (0, 5, 10, 15, 20, 30, 40, 50, 60, 80, 90, 100, 250), you can modify scss mixin called <strong>spaces</strong> inside of <strong>__general.scss</strong> file and recompile it with sass/scss compiler.
+                <br><br> Each section can be easily animated by adding <strong>"animated" class</strong>, please also specify animation type required inside <strong>animation attribute</strong>. For example see this code structure below:
+                <br><br>
+                <code class="language-markup">&lt;div class="mt-t1-benefits animated" data-animation="fadeInRight">&lt;/div></code>
+                <br><br>
+                for animation was used <strong>animate.css</strong> stylesheet. <a href="https://daneden.github.io/animate.css/" target="_blank">https://daneden.github.io/animate.css/</a>, you can find all animations on developers website.
+                
+                <br><br> Each element on the page can be scroll trigger or scroll target, for example:
+                
+                <br><br>
+                <code class="language-markup">&lt;div class="mt-t1-benefits" data-scroll-aim='my-form'>&lt;/div></code>
+                <br><br>Will scroll the page to:<br><br>
+                <code class="language-markup">&lt;div class="mt-t1-form" data-scroll-target='my-form'>&lt;/div></code>
+                
+                <br><br> as you can see above, element with <strong>data-scroll-aim</strong> attribute is the trigger in these case, and the element with a <strong>data-scroll target</strong> attribute is the scroll point. You can place as much scroll triggers as you want.
+                <br><br>In such way you can set menu links, buttons a.o elements to scroll to any selected element target on the page.
+                <br><br>All tempale svg icons were converted to icon-font, using fontello service,
+                <a href="http://fontello.com/" target="_blank">http://fontello.com/</a>.<br><br>
+                Each icon contain <strong>mt-icon</strong> class, all used icons can be found by accesing <strong>demo.html</strong> file inside of <strong>fontello-aa311037</strong> folder. All svg files are maintained as well, if you would like to add new icons to the set, you can upload font inside <strong>fontello-aa311037</strong> folder to fontello website in order to modify it. Please be careful while changing font structure, make a copy before doing that.
+                <br><br>
+                </div>
+                <br>
+            </div>
+            <div class="mt-section" scroll-target='css'>
+                <div class="mt-section-title"><span>Scss/Css</span> Structure</div>
+                <hr><br>
+                <div class="mt-section-text">
+                    In order to edit page css please use scss to css converter like <strong>Koala</strong> or <strong>Scout</strong> application for example. If you would like to use clean css whithout preprocessors use this <a href="https://unminify.com/" target="_blank">https://unminify.com/</a> or any other related service to unminify css code. 
+                    Styles are separated and all are imported into <strong>main.scss</strong> file. Styles are written mostly using BEM methodology.<br><br>
+                    <strong>__animate.scss</strong> contain all animations from Animate.css library.<br>
+                    <strong>__elements.scss</strong> styles for each section.<br>
+                    <strong>__footer.scss</strong> styles for footer.<br>
+                    <strong>__general.scss</strong> mixins, variables, and general style rules.<br>
+                    <strong>__headers.scss</strong> styles for all page headers are here.<br>
+                    <strong>__helpers.scss</strong> additional classes for small elements on the page like buttons, text a.o.<br>
+                    <strong>__navigation.scss</strong> styles for navigation bar.<br>
+                    <strong>__plugins.scss</strong> contain styles modifications for included plugins and G-maps API.<br><br>
+                    Media Queries are included into each class, for example you can include media mixin in such way:
+                    
+                    <br><br>
+                    <pre>
+                    <code class="language-css">
+                        .mt-t1-element {
+                            &__block {
+                               "Css rules before breakpoint"
+                            }
+                            @include max-media($break-xs) {
+                                &__block {
+                                    "Css rules after breakpoint"
+                                }
+                            }
+                        }
+                    </code> 
+                    </pre>
+                    <br>
+                    As well you can set min-media: 
+                    <br><br>
+                    <pre>
+                    <code class="language-css">
+                        .mt-t1-element {
+                            &__block {
+                               "Css rules before breakpoint"
+                            }
+                            @include min-media($break-xs) {
+                                &__block {
+                                    "Css rules after breakpoint"
+                                }
+                            }
+                        }
+                    </code> 
+                    </pre>
+                    
+                    <br><br>
+                    Below you can find variables used for this template:
+                    <br><br>
+                    Breakpoints:
+                    <br>
+                    <strong>$break-xs</strong> = 575px<br>
+                    <strong>$break-sm</strong> = 767px<br>
+                    <strong>$break-md</strong> = 991px<br>
+                    <strong>$break-lg</strong> = 1199px<br>
+                    <br>
+                    Colors :
+                    <br>
+                    <strong>$dark-color</strong> = #23282d;<br>
+                    <strong>$base-color</strong> = #56c1b2;<br>
+                    <strong>$border-color</strong> = #d6e7e4;<br>
+                    <strong>$highlight-color</strong> = #706f6f;<br>
+                    <strong>$background-color</strong> = #d8f4f0;<br>
+                    <strong>$white-color</strong> = #fff;<br>
+                    <br>
+                    Fonts :
+                    <br>
+                    <strong>$heading-font</strong> = 'Questrial', 'Arial', sans-serif;<br>
+                    <strong>$titles-font</strong> = 'Arimo', 'Arial', sans-serif;<br>
+                    <strong>$text-font</strong> = 'Pontano Sans', 'Arial', sans-serif;<br>
+                </div>
+            </div>
+            <div class="mt-section" scroll-target='js'>
+                <div class="mt-section-title"><span>Javascript</span> Structure</div>
+                <hr><br>
+                <div class="mt-section-text">
+                    In this template, few plugins were used, all plugins you can find in the plug folder, also CSS styles for each plugin are included as well. The initialization of the plugins, as well as custom JavaScript code is in the main.js file, in the js folder.<br>
+                    To initialize Google maps, please follow this link to get detailed instruction from google official documentation on how to generate unique API key.<br>
+                    <strong><a target="_blank" href="https://developers.google.com/maps/documentation/javascript/get-api-key">https://developers.google.com/maps/documentation/javascript/get-api-key</a></strong><br><br>
+                </div>
+            </div>
+            <div class="mt-section" scroll-target='youtube'>
+                <div class="mt-section-title"><span>Youtube</span> API</div>
+                <hr><br>
+                <div class="mt-section-text">
+                    <pre>
+                        <code class="language-javascript">
+var tag = document.createElement('script');
+tag.src = "http://www.youtube.com/player_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+var player;
+var page_url = window.location.href;
+var page_url = String(page_url.replace("http", "https"));
+
+function onYouTubePlayerAPIReady() {
+    player = new YT.Player('mt-t2-video__box', {    <<--- class for Youtube embed.
+        height: '100%',
+        width: '100%',
+        playerVars: {            <<--- You can set youtube API options here.
+            'controls': 0, 
+            'autohide': 1,
+            'showinfo' : 0,
+            'wmode': 'opaque',
+            'rel': 0,
+            'modestbranding': 1
+        },
+        host: page_url,
+        videoId: 'XKu_SEDAykw'     <<--- video id, you can find it at the end of any video url.
+    });
+}
+                        </code>
+                    </pre>
+                </div>
+            </div>
+            <div class="mt-section" scroll-target='google'>
+                <div class="mt-section-title"><span>Google Maps</span> API</div>
+                <hr><br>
+                <div class="mt-section-text">
+                    <pre>
+                        <code class="language-javascript">
+function CoordMapType(tileSize) {
+    this.tileSize = tileSize;
+}
+
+CoordMapType.prototype.getTile = function(coord, zoom, ownerDocument) { 
+    var div = ownerDocument.createElement('span');
+    div.style.display = 'block';
+    div.style.width = this.tileSize.width + 'px';
+    div.style.height = this.tileSize.height + 'px';
+    div.style.backgroundColor = '#000';                      <<--- map overlay color
+    div.style.opacity = 0.5;                                 <<--- map opacity
+    return div;
+};
+
+var map;
+
+function initMap() {
+    var myLatLng = {lat: 41.875671, lng: -87.634224};         <<--- marker coordinates
+
+    var icon = {                                              <<--- icon settings
+        url: '../img/icons/google-maps/marker.svg',
+        scaledSize: new google.maps.Size(38, 53),
+        origin: new google.maps.Point(0,0),
+        anchor: new google.maps.Point(0, 0)
+    };
+
+    map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 16,                                              <<--- set map zoom here
+        center: myLatLng
+    });
+
+    var marker = new google.maps.Marker({                      <<--- marker options
+        position: myLatLng,
+        map: map,
+        icon: icon,
+        title: 'Click to open'
+    });
+
+    var contentString =                                        <<--- Info window on marker click
+        "&lt;div class='mt-gmaps'>" +
+        "&lt;div class='mt-gmaps__street'>NE Killingsworth St 62&lt;/div>" +
+        "&lt;div class='mt-gmaps__city'>Hopewell, VA 23860&lt;/div>" +
+        "&lt;/div>";
+
+    var infowindow = new google.maps.InfoWindow({
+        content: contentString
+    });
+
+    marker.addListener('click', function() {
+        infowindow.open(map, marker);
+    });
+
+    map.overlayMapTypes.insertAt(0, new CoordMapType(new google.maps.Size(256, 256)));
+}
+                        </code>
+                    </pre>
+                </div>
+            </div>
+            <div class="mt-section" scroll-target='credits'>
+                <div class="mt-section-title"><span>Sources</span> and Credits</div>
+                <hr><br>
+                <strong>Third party conten used in this template:</strong><br><br>
+                Slick Slider 
+                <strong><a target="_blank" href="http://kenwheeler.github.io/slick/">http://kenwheeler.github.io/slick/</a></strong><br><br>
+                Izi modal <a target="_blank" href="http://izimodal.marcelodolce.com/">http://izimodal.marcelodolce.com/</a>
+                <br><br>
+                Object-fit-images <a target="_blank" href="https://github.com/bfred-it/object-fit-images">https://github.com/bfred-it/object-fit-images</a>
+                <br><br>
+                Retina.js <a href="http://imulus.github.io/retinajs/" target="_blank">http://imulus.github.io/retinajs/</a>
+                <br><br>
+                Images from <a href="https://pixabay.com/" target="_blank">https://pixabay.com/</a>
+                and <a href="https://www.pexels.com/" target="_blank">https://www.pexels.com/</a>
+                <br><br>Freepic "Doctor and patient" image <a href="http://www.freepik.com">Designed by ijeab / Freepik</a>
+            </div>
+            <div class="mt-section">
+                <hr><br>
+                <div class="mt-section-text">Thank you for your purchase, as author of this template I tried to automate all functions as much as possible for you. This template will expand and grow, with new functionality, based on customers requests. As I said at the beginning, I'd be glad to help you if you have any questions relating to this theme. No guarantees, but I'll do my best to assist. If you have a more general question relating to the themes on ThemeForest, you might consider visiting the forums and asking your question in the "Item Discussion" section.</div>
+                <br><hr>
+                <div class="mt-section-title">Vlad Secrier</div>
+            </div>
+        </div>
+    </body>
+</html>

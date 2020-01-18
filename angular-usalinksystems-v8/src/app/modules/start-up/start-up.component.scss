@@ -1,0 +1,322 @@
+@function get-vw($min,$target) {
+    $vw-context: (1920*.01) * 1;
+    $vw-converted: ($min/$vw-context);
+    @return calc(#{$min + px} + #{($target/$vw-context - $vw-converted + vw)});
+}
+
+.header {
+    height: 600px;
+    overflow: hidden;
+    background:
+        linear-gradient(
+                rgba(0, 0, 0, 0.45),
+                rgba(0, 0, 0, 0.45)
+        ),
+        url('/assets/img/start-up/image-1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__quotation {
+        width: 100%;
+        padding: 40px;
+        margin: 0 15px;
+        font-size: 38px;
+        max-width: 530px;
+        color: #ffffff;
+        text-align: center;
+        font-weight: normal;
+        text-transform: uppercase;
+        border: 5px solid #ffffff;
+        font-family: 'Fjalla One', serif;
+    }
+
+    @media screen and (max-width: 575px) {
+        height: 400px;
+        &__quotation {
+            padding: 15px;
+            font-size: 28px;
+        }
+    }
+}
+
+.pre-form-container {
+    max-width: 630px;
+    padding: get-vw(15,40) 15px get-vw(15,60);
+    margin: 0 auto;
+    text-align: center;
+    font-size: 15px;
+    line-height: 20px;
+    p {
+        color: inherit;
+        font-size: inherit;
+        line-height: inherit;
+    }
+}
+
+.headline {
+    margin: 0;
+    font-size: 38px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Fjalla One', serif;
+}
+
+
+h2 {
+    text-align: center;
+    text-transform: uppercase;
+    margin: 60px 0;
+    @media screen and (max-width: 1440px) {
+        font-size: 33px;
+        margin: 30px 0;
+    }
+    @media screen and (max-width: 787px) {
+        font-size: 18px;
+        margin: 20px 0;
+    }
+}
+
+form {
+    overflow: hidden;
+    width: 100%;
+    max-width: 780px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: get-vw(15,60) auto get-vw(15,40);
+    position: relative;
+    justify-content: space-between;
+    font-size: 0;
+    custom-select {
+        width: 100%;
+    }
+    label {
+        text-align: left;
+        font-size: 15px;
+        font-weight: 500;
+        display: inline-block;
+        text-transform: uppercase;
+        color: #000;
+        margin-bottom: 5px;
+    }
+    fieldset {
+        border: none;
+        margin-bottom: get-vw(2, 40);
+        padding: 0;
+        display: block;
+        &.input-text-full {
+            width: 100%;
+            display: inline-block;
+        }
+        &.input-text {
+            width: 330px;
+            display: inline-block;
+            @media screen and (max-width: 767px) {
+                width: 100%;
+            }
+        }
+        &.input-textarea {
+            margin: 0 0;
+            width: 100%;
+            label {
+                margin-bottom: 15px;
+            }
+            @media screen and (max-width: 640px) {
+                margin: 5px 0;
+            }
+        }
+        .errors {
+            margin-top: 5px;
+            height: 14px;
+            small {
+                display: none;
+                &:first-child {
+                    display: block;
+                }
+                color: red;
+                font-size: 13px;
+            }
+        }
+    }
+    input[type="text"],
+    textarea {
+        border-radius: 0;
+        font-family: 'Roboto', Roboto, sans-serif;
+        font-size: 16px;
+        width: 100%;
+        padding: 10px 0;
+        border: none;
+        outline: none;
+        transition: border-color .3s ease;
+        transition: padding 0.35s ease;
+        &::-webkit-input-placeholder { color: #cacbcc; font-family: 'Roboto', sans-serif; }
+        &::-moz-placeholder { color: #cacbcc; font-family: 'Roboto', sans-serif; }
+        &:-ms-input-placeholder { color: #cacbcc; font-family: 'Roboto', sans-serif; }
+        &:focus {
+            outline: none;
+            padding-left: 10px;
+            padding-right: 10px;
+            transition: padding 0.35s ease;
+            &::-webkit-input-placeholder { color:transparent; transition: all 0.35s linear; }
+            &::-webkit-input-placeholder { color:transparent; transition: all 0.35s linear; }
+            &:-moz-placeholder { color:transparent; transition: all 0.35s linear; }
+            &::-moz-placeholder { color:transparent; transition: all 0.35s linear; }
+            &:-ms-input-placeholder { color:transparent; transition: all 0.35s linear; }
+        }
+    }
+    input[type="text"] {
+        border-bottom: 2px solid #000;
+    }
+    textarea {
+        height: 45px;
+        resize: none;
+        border-bottom: 2px solid #000;
+    }
+    button[type="submit"] {
+        width: 220px;
+        height: 65px;
+        color: #fff;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 62px;
+        text-align: center;
+        margin: 30px auto 30px;
+        background-color: #000;
+        text-transform: uppercase;
+        border: 2px solid #000;
+        transition: all .35s linear;
+        &:hover {
+            color: #000;
+            background-color: #fff;
+            transition: all .35s linear;
+        }
+    }
+}
+
+.quote-background {
+    padding: 100px 0 140px;
+    background-color: #25526d;
+    text-align: center;
+    color: #fff;
+    @media screen and (max-width: 1024px) {
+        padding-bottom: 100px;
+    }
+    h2 {
+        text-transform: uppercase;
+        font-family: 'Fjalla One', serif;
+        font-size: 50px;
+        margin-top: 0;
+        @media screen and (max-width: 640px) {
+            font-size: 40px;
+        }
+    }
+    blockquote {
+        margin: 0 auto;
+        padding: 0 15px;
+        font-size: 30px;
+        width: 650px;
+        @media screen and (max-width: 680px) {
+            width: auto;
+        }
+        @media screen and (max-width: 640px) {
+            font-size: 24px;
+        }
+    }
+}
+
+.form-state {
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    background-color: #fff;
+    height: 70px;
+    line-height: 70px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: transform .3s ease;
+    transform: translateY(100%);
+    &.success {
+        color: #2d9f32;
+    }
+    &.error {
+        color: #df2e21;
+    }
+    &.notify {
+        transform: translateY(0);
+    }
+}
+
+.loading-form {
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+    background-color: #fff;
+    height: 70px;
+    line-height: 70px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: transform .3s ease;
+    transform: translateY(100%);
+    &.notify {
+        transform: translateY(0);
+    }
+}
+
+.success-form-sent {
+    margin-bottom: 90px;
+    h2 {
+        font-family: 'Fjalla One', sans-serif;
+        font-size: 61px;
+        text-transform: uppercase;
+        margin: 120px 0 50px 0;
+        @media screen and (max-width: 940px) {
+            font-size: 40px;
+            padding: 0 30px;
+        }
+        @media screen and (max-width: 400px) {
+            font-size: 30px;
+        }
+    }
+    p {
+        max-width: 750px;
+        font-size: 17px;
+        text-align: center;
+        margin: 0 auto 30px auto;
+        @media screen and (max-width: 800px) {
+            padding: 0 50px;
+        }
+    }
+}
+
+.pre-form-container {
+    max-width: 630px;
+    padding: get-vw(15,40) 15px get-vw(15,60);
+    margin: 0 auto;
+    text-align: center;
+    font-size: 15px;
+    line-height: 20px;
+    p {
+        color: inherit;
+        font-size: inherit;
+        line-height: inherit;
+    }
+}
+
+.headline {
+    margin: 0;
+    font-size: 38px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Fjalla One', serif;
+}

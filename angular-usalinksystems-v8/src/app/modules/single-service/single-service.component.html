@@ -1,0 +1,112 @@
+<div class="ul-service">
+    <div class="ul-service__header"
+         [style.background-image]="content_data?.picture ? 'url(' + content_data?.picture + ')' : ''">
+        <a href="{{ content_data?.youtube }}" class="ul-service__youtube-link" target="_blank"></a>
+        <video class="ul-service__video" [autoplay]="true" [loop]="true" [muted]="true" #videoplayer>
+            <source [src]="content_data?.video" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <h2 class="ul-service__title">Services</h2>
+
+    <ul class="ul-service__list">
+        <li class="ul-service__list-item">
+            <a class="ul-service__link"
+               (click)="refreshVideo()"
+               routerLink="/services/advertising"
+               routerLinkActive="ul-service__link-active"
+               [routerLinkActiveOptions]="{exact:true}">
+                Advertising
+            </a>
+        </li>
+        <li class="ul-service__list-item">
+            <a class="ul-service__link"
+               (click)="refreshVideo()"
+               routerLink="/services/branding"
+               routerLinkActive="ul-service__link-active"
+               [routerLinkActiveOptions]="{exact:true}">
+                Branding
+            </a>
+        </li>
+        <li class="ul-service__list-item ul-service__list-item--social-media">
+            <a class="ul-service__link"
+               (click)="refreshVideo()"
+               routerLink="/services/social-media"
+               routerLinkActive="ul-service__link-active"
+               [routerLinkActiveOptions]="{exact:true}">
+                Social Media
+            </a>
+        </li>
+        <li class="ul-service__list-item ul-service__list-item--design">
+            <a class="ul-service__link"
+               (click)="refreshVideo()"
+               routerLink="/services/design"
+               routerLinkActive="ul-service__link-active"
+               [routerLinkActiveOptions]="{exact:true}">
+                Design
+            </a>
+        </li>
+        <li class="ul-service__list-item">
+            <a class="ul-service__link"
+               (click)="refreshVideo()"
+               routerLink="/services/media"
+               routerLinkActive="ul-service__link-active"
+               [routerLinkActiveOptions]="{exact:true}">
+                Media
+            </a>
+        </li>
+        <li class="ul-service__list-item">
+            <a class="ul-service__link"
+               (click)="refreshVideo()"
+               routerLink="/services/strategy"
+               routerLinkActive="ul-service__link-active"
+               [routerLinkActiveOptions]="{exact:true}">
+                Strategy
+            </a>
+        </li>
+        <li class="ul-service__list-item">
+            <a class="ul-service__link"
+               (click)="refreshVideo()"
+               routerLink="/services/technology"
+               routerLinkActive="ul-service__link-active"
+               [routerLinkActiveOptions]="{exact:true}">
+                Technology
+            </a>
+        </li>
+        <li class="ul-service__list-item ul-service__list-item--marketing">
+            <a class="ul-service__link"
+               (click)="refreshVideo()"
+               routerLink="/services/marketing"
+               routerLinkActive="ul-service__link-active"
+               [routerLinkActiveOptions]="{exact:true}">
+                Marketing
+            </a>
+        </li>
+        <li class="ul-service__list-item ul-service__list-item--digital">
+            <a class="ul-service__link"
+               (click)="refreshVideo()"
+               routerLink="/services/digital"
+               routerLinkActive="ul-service__link-active"
+               [routerLinkActiveOptions]="{exact:true}">
+                Digital
+            </a>
+        </li>
+        <li class="ul-service__list-item ul-service__list-item--more">
+            <a class="ul-service__link"
+               routerLink="/services/much-more">
+                And Much More!
+            </a>
+        </li>
+    </ul>
+
+    <div class="ul-service__info">
+        <h1 class="ul-service__title">{{ content_data?.title }}</h1>
+        <div class="ul-service__text" [innerHTML]="content_data?.text"></div>
+        <div class="ul-service__info-link">
+            <a routerLink="/lets-talk">#LetsTalk</a>
+        </div>
+    </div>
+</div>
+
+<app-quote-section></app-quote-section>

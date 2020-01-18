@@ -1,0 +1,211 @@
+
+/*---------- Google maps ----------*/
+
+.mt-gmaps {
+    &__street {
+        @include font-size(16);
+        color: $dark-color;
+    }
+    &__city {
+        @include font-size(16);
+        color: $base-color;
+    }
+}
+
+
+/*---------- Custom Select ----------*/
+
+.mt-t1-select {
+    .mt-select {
+        position: relative;
+        &__btn {
+            @include font-size(20);
+            border: 2px solid $border-color;
+            color: $highlight-color;
+            background-color: $white-color;
+            width: 100%;
+            height: 70px;
+            cursor: pointer;
+            border-radius: 4px;
+            padding-left: 40px;
+            padding-right: 40px;
+            display: flex;
+            align-items: center;
+            span {
+                @include text-overflow(90%);
+                display: block;
+                font-size: inherit;
+                font-family: inherit;
+                color: inherit;
+            }
+        }
+        &__arrow {
+            color: $border-color;
+            top: 22px;
+            right: 25px;
+            font-size: 12px;
+            position: absolute;
+            pointer-events: none;
+            transition: all 0.35s linear;
+            &.active {
+                transform: rotate(180deg);
+                transition: all 0.35s linear;
+            }
+        }
+        &__content {
+            border: 2px solid $border-color;
+            border-top: 2px solid $white-color;
+            background-color: $white-color;
+            top: 68px;
+            width: 100%;
+            z-index: 10;
+            display: none;
+            position: absolute;
+            box-shadow: 5.5px 9.526px 40px 0px rgba(1, 19, 17, 0.11);
+        }
+        &__label {
+            @include font-size(18);
+            @include text-overflow(100%);
+            display: block;
+            padding: 5px 20px 10px;
+            font-weight: bold;
+        }
+        &__option {
+            @include font-size(18);
+            @include text-overflow(100%);
+            display: block;
+            padding: 5px 40px;
+            cursor: pointer;
+            &:hover {
+                color: $white-color;
+                background-color: $base-color;
+            }
+        }
+    }
+}
+
+.mt-t2-select {
+    .mt-select {
+        width: 200px;
+        position: relative;
+        &__btn {
+            @include font-size(20);
+            color: $highlight-color;
+            background-color: $white-color;
+            width: 100%;
+            height: 60px;
+            cursor: pointer;
+            border-radius: 4px;
+            padding-left: 15px;
+            padding-right: 15px;
+            display: flex;
+            align-items: center;
+            span {
+                @include font-size(18);
+                @include text-overflow(90%);
+                display: block;
+                font-size: inherit;
+                font-family: inherit;
+                color: inherit;
+            }
+        }
+        &__arrow {
+            color: $border-color;
+            top: 17px;
+            right: 15px;
+            font-size: 12px;
+            position: absolute;
+            pointer-events: none;
+            transition: all 0.35s linear;
+            &.active {
+                transform: rotate(180deg);
+                transition: all 0.35s linear;
+            }
+        }
+        &__content {
+            background-color: $white-color;
+            top: 58px;
+            width: 100%;
+            z-index: 10;
+            display: none;
+            position: absolute;
+            border-bottom: 2px solid $border-color;
+            box-shadow: 5.5px 9.526px 40px 0px rgba(1, 19, 17, 0.11);
+        }
+        &__label {
+            @include font-size(18);
+            @include text-overflow(100%);
+            display: block;
+            padding: 5px 20px 15px;
+            font-weight: bold;
+        }
+        &__option {
+            @include font-size(18);
+            @include text-overflow(100%);
+            display: block;
+            padding: 10px 15px;
+            cursor: pointer;
+            &:hover {
+                color: $white-color;
+                background-color: $base-color;
+            }
+        }
+    }
+
+    @include max-media($break-md) {
+        .mt-select {
+            width: 130px;
+        }
+    }
+    @include max-media($break-sm) {
+        width: 100%;
+        .mt-select {
+            width: 100%;
+            &__btn {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+    }
+}
+
+/*---------- Bubble effect on button hover ----------*/
+
+.mt-button-component {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: transparent;
+}
+
+.mt-button-component__elem {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(216, 244, 240, .45);
+    .mt-button-component.is-active & {
+        animation: mt-btn-anim .4s ease-in;
+        @keyframes mt-btn-anim {
+            0% {
+                opacity: 0;
+            }
+            25% {
+                opacity: 1;
+            }
+            100% {
+                width: 200%;
+                padding-bottom: 200%;
+                opacity: 0;
+            }
+        }
+    }
+}
+

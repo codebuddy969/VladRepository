@@ -1,0 +1,196 @@
+<div class="pck-page">
+    <div class="pck-header">
+        <div class="pck-header__info">
+            <h1 class="pck-header__title">Thinkers. doers. agents of change.</h1>
+        </div>
+    </div>
+
+    <app-packages-contact *ngIf="showSoniaModal" (returnEvent)=contactModalStatus($event)></app-packages-contact>
+
+    <app-packages-modal *ngIf="modalStatus"
+                        [originalPrice] = 'originalPrice'
+                        [packagePrice]='packagePrice'
+                        [packageTime]='packageTime'
+                        [packageType]='packageType'
+                        [modalStatus]='modalStatus'
+                        (returnEvent)=packagesModalStatus($event)></app-packages-modal>
+
+    <div class="pck-promotions">
+        <h2 class="pck-promotions__headline">Find the best package that fits your business’ needs. Select a package or an a-la-carte option.</h2>
+        <div class="pck-promotions__subline">Flexibility is key to your success.<br>We offer several packages you can choosе from to help strengthen your online presence.<br>You also have an a-la-carte option for specific business needs.</div>
+        <div class="pck-promotions__container">
+            <button class="swiper-button-prev" [class.special]="swiperPrev == 'Most popular'" [innerHTML]="swiperPrev"></button>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="pck-card pck-card--regular swiper-slide" data-name="Basic">
+                        <div class="pck-card__headline">
+                            <h3>Basic</h3>
+                        </div>
+                        <div class="pck-card__body">
+                            <div class="pck-card__prices">
+                                <div>8 Hours</div>
+                                <div>$500</div>
+                            </div>
+                            <ul class="pck-card__services">
+                                <li class="pck-card__services-item">o On-Site Optimization</li>
+                                <li class="pck-card__services-item">o Update images, functionality, content</li>
+                                <li class="pck-card__services-item">o Fix Site/Page Errors</li>
+                                <li class="pck-card__services-item">o Make responsive</li>
+                                <li class="pck-card__services-item">o Repair Broken links, buttons, imagery</li>
+                                <li class="pck-card__services-item">o eCommerce integration/Shopify</li>
+                                <li class="pck-card__services-item">o Server moves & configuration</li>
+                                <li class="pck-card__services-item">o Adding/Removing Upcoming Events/meetings/products</li>
+                                <li class="pck-card__services-item">o Adding Past Event Notes</li>
+                                <li class="pck-card__services-item">o Adding/Removing Services/Categories/Products</li>
+                                <li class="pck-card__services-item">o SSL certificates</li>
+                                <li class="pck-card__services-item">o Any Ad-hoc tasks to maintain the site</li>
+                            </ul>
+                            <ul class="pck-card__details">
+                                <li class="pck-card__details-item">2 Hours - Design</li>
+                                <li class="pck-card__details-item">2 Hours - Development</li>
+                                <li class="pck-card__details-item">2 Hours - Project Management / Research</li>
+                                <li class="pck-card__details-item">2 Hours - Copy / Content creation</li>
+                            </ul>
+                            <div class="pck-card__action-row">
+                                <button class="pck-card__button" type="button"
+                                        [attr.data-price]="500"
+                                        [attr.data-type]="'basic'"
+                                        [attr.data-time]="8"
+                                        (click)="openPackagesModal(500, 'basic', 8)">
+                                    Choose this package
+                                </button>
+                            </div>
+                        </div>
+                        <div class="pck-card__additional">
+                            <span>Items within package can be omitted or replaced with a-la-carte options but the allotted time remains the same.</span>
+                            <span>Any additional time spent on design, content creation, development, or management will be charged at standard price.</span>
+                        </div>
+                    </div>
+                    <div class="pck-card pck-card--special swiper-slide" data-name="Most Popular">
+                        <div class="pck-card__headline">
+                            <h3>Most Popular</h3>
+                        </div>
+                        <div class="pck-card__body">
+                            <div class="pck-card__prices">
+                                <div>13 Hours</div>
+                                <div>$750</div>
+                            </div>
+                            <ul class="pck-card__services">
+                                <li class="pck-card__services-item">o Maintain blog</li>
+                                <li class="pck-card__services-item">o On-Site Optimization</li>
+                                <li class="pck-card__services-item">o Update images, functionality, content</li>
+                                <li class="pck-card__services-item">o Fix Site/Page Errors</li>
+                                <li class="pck-card__services-item">o Make responsive</li>
+                                <li class="pck-card__services-item">o Repair Broken links, buttons, imagery</li>
+                                <li class="pck-card__services-item">o eCommerce integration/Shopify</li>
+                                <li class="pck-card__services-item">o Server moves & configuration</li>
+                                <li class="pck-card__services-item">o Adding/Removing Upcoming Events/meetings/products</li>
+                                <li class="pck-card__services-item">o Adding Past Event Notes</li>
+                                <li class="pck-card__services-item">o Adding/Removing Services/Categories/Products</li>
+                                <li class="pck-card__services-item">o SSL certificates</li>
+                                <li class="pck-card__services-item">o Any Ad-hoc tasks to maintain the site</li>
+                            </ul>
+                            <ul class="pck-card__details">
+                                <li class="pck-card__details-item">3 Hours - Design</li>
+                                <li class="pck-card__details-item">3 Hours - Development</li>
+                                <li class="pck-card__details-item">5 Hours - Project Management / Research</li>
+                                <li class="pck-card__details-item">2 Hours - Copy / Content creation</li>
+                            </ul>
+                            <div class="pck-card__action-row">
+                                <button class="pck-card__button"
+                                        [attr.data-price]="750"
+                                        [attr.data-type]="'most-popular'"
+                                        [attr.data-time]="13"
+                                        (click)="openPackagesModal(750, 'most-popular', 13)">
+                                    Choose this package
+                                </button>
+                            </div>
+                        </div>
+                        <div class="pck-card__additional">
+                            <span>Items within package can be omitted or replaced with a-la-carte options but the allotted time remains the same.</span>
+                            <span>Any additional time spent on design, content creation, development, or management will be charged at standard price.</span>
+                        </div>
+                    </div>
+                    <div class="pck-card pck-card--regular swiper-slide" data-name="Advanced">
+                        <div class="pck-card__headline">
+                            <h3>Advanced</h3>
+                        </div>
+                        <div class="pck-card__body">
+                            <div class="pck-card__prices">
+                                <div>18 Hours</div>
+                                <div>$1000</div>
+                            </div>
+                            <ul class="pck-card__services">
+                                <li class="pck-card__services-item">o Maintain blog</li>
+                                <li class="pck-card__services-item">o On-Site Optimization</li>
+                                <li class="pck-card__services-item">o Update images, functionality, content</li>
+                                <li class="pck-card__services-item">o Fix Site/Page Errors</li>
+                                <li class="pck-card__services-item">o Make responsive</li>
+                                <li class="pck-card__services-item">o Repair Broken links, buttons, imagery</li>
+                                <li class="pck-card__services-item">o eCommerce integration/Shopify</li>
+                                <li class="pck-card__services-item">o Server moves & configuration</li>
+                                <li class="pck-card__services-item">o Adding/Removing Upcoming Events/meetings</li>
+                                <li class="pck-card__services-item">o Adding Past Event Notes</li>
+                                <li class="pck-card__services-item">o Adding/Removing Services/Categories/Products</li>
+                                <li class="pck-card__services-item">o SSL certificates</li>
+                                <li class="pck-card__services-item">o Any Ad-hoc tasks to maintain the site</li>
+                            </ul>
+                            <ul class="pck-card__details">
+                                <li class="pck-card__details-item">4 Hours - Design</li>
+                                <li class="pck-card__details-item">4 Hours - Development</li>
+                                <li class="pck-card__details-item">5 Hours - Project Management / Research</li>
+                                <li class="pck-card__details-item">5 Hours - Copy / Content creation</li>
+                            </ul>
+                            <div class="pck-card__action-row">
+                                <button class="pck-card__button"
+                                        [attr.data-price]="1000"
+                                        [attr.data-type]="'advanced'"
+                                        [attr.data-time]="18"
+                                        (click)="openPackagesModal(1000, 'advanced', 18)">
+                                    Choose this package
+                                </button>
+                            </div>
+                        </div>
+                        <div class="pck-card__additional">
+                            <span>Items within package can be omitted or replaced with a-la-carte options but the allotted time remains the same.</span>
+                            <span>Any additional time spent on design, content creation, development, or management will be charged at standard price.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="swiper-button-next" [class.special]="swiperNext == 'Most popular'" [innerHTML]="swiperNext"></button>
+        </div>
+    </div>
+
+    <div class="pck-contact">
+        <div class="pck-contact__container">
+            <h2 class="pck-contact__headline">Not seeing what you like?</h2>
+            <div class="pck-contact__subline">Send us a message and we will get back to you soon.</div>
+            <div class="pck-contact__avatar">
+                <img src="/assets/img/packages/avatar.png" alt="sonia">
+            </div>
+            <button class="pck-contact__link" (click)="contactModalStatus($event)">Contact Us</button>
+        </div>
+    </div>
+
+    <div class="pck-additions">
+        <div class="pck-additions__container">
+            <h2 class="pck-additions__headline">Optional a-la-carte package additions:</h2>
+            <div class="pck-service" *ngFor="let service of services" [class.pck-service--right]="service?.class">
+                <div class="pck-service__body">
+                    <h3 class="pck-service__title">{{service?.title}}</h3>
+                    <div class="pck-service__text">{{service?.description}}</div>
+                </div>
+                <div class="pck-service__price">
+                    <div class="pck-service__number">{{service?.price}}</div>
+                    <div class="pck-service__info">{{service?.info}}</div>
+                    <div class="pck-service__message">{{service?.message}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<app-quote-section></app-quote-section>
+<!--<app-alert [message]='messageData' [action_value]='action' (returnEvent)=checkModal($event)></app-alert>-->

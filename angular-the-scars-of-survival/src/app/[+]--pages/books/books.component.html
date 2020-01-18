@@ -1,0 +1,101 @@
+<div class="books">
+    <div>
+        <div class="books__background" 
+             [@pageState]="stateName[1]" 
+             [style.width.px]="background_width">
+            <img src="assets/images/home-background-1.jpg" alt="The scars of survival">
+        </div>
+
+
+        <div class="books__content" 
+             [@pageState]="stateName[2]" 
+             *ngFor="let content of page_content; index as i; let first = first; let last = last"
+             [class.books__content--first]="first"
+             [class.books__content--last]="last">
+            <div class="books__container" 
+                 [class.books__container--inactive]="synopsis_index !== 100 && i !== synopsis_index">
+                <div class="books__block" [class.books__block--description]="book_width">
+
+                    <div class="at-book-cover" [class.at-book-cover--fixed]="scroll_state">
+                        <div class="at-book-cover__circle">
+                            {{content.circle_message}}
+                            <i class="at-icon">&#xe80d;</i>
+                        </div>
+                        <div class="at-book-cover__front-image">
+                            <img src="assets/images/the-scars-of-survival-{{content.active_book}}.png" alt="the-scars-of-survival">
+                            <img src="assets/images/cover-shadow.png" alt="the-scars-of-survival" class="at-book-cover__back-image">
+                        </div>
+                        <a href="#" 
+                           class="at-btn-colored at-btn-colored--cover" 
+                           *ngIf="content.button"
+                           [@buttonState]="stateName[4]">
+                            Get it on Amazon
+                        </a>
+                    </div>
+
+                </div>
+                <div class="books__info" [@elementState]="stateName[3]">
+                    <h1 class="books__small-title">{{content.title}}</h1>
+                    <h2 class="books__large-title">{{content.subtitle}}</h2>
+                    <div class="books__text">
+                        <p>{{content.text}}</p>
+                    </div>
+                    <div class="at-btn-group">
+                        <a href="#" 
+                           class="at-btn-colored" 
+                           *ngIf="content.button">
+                            Get it on Amazon
+                        </a>
+                        <button type="button"
+                                class="at-btn-default" 
+                                (click)="get_full_description(i)">
+                            Full description
+                        </button>
+                    </div>
+                </div>
+                <div class="at-synopsis__container" [@synopsisState]="stateName[2]">
+                    <div class="at-synopsis at-synopsis--title">
+                        <h1 class="at-synopsis__title">{{content.title}}</h1>
+                        <h2 class="at-synopsis__small-title mt-40 mb-40">{{content.subtitle}}</h2>
+                    </div>
+                    <div class="at-synopsis">
+                        <div class="at-synopsis__type">One line:</div>
+                        <div class="at-synopsis__content">
+                            <p>Follow in the agonizing footsteps of a young girl as she grows into a woman, her development stunted and scarred by the war raging around her.</p>
+                        </div>
+                    </div>
+                    <div class="at-synopsis">
+                        <div class="at-synopsis__type">Short Synopsis:</div>
+                        <div class="at-synopsis__content">
+                            <p>There’s more to war than the front lines. With Russian forces invading Ukraine, the civilians running away from the combat have as many stories to share as the soldiers marching towards it. Some of their stories tell us the value of hope, some others show us the cost of survival, but all can teach us some sort of lesson…if we take the time to listen.</p>
+                        </div>
+                    </div>
+                    <div class="at-synopsis">
+                        <div class="at-synopsis__type">Full Synopsis:</div>
+                        <div class="at-synopsis__content">
+                            <p>There’s more to war than the front lines.</p>
+                            <p>With Russian forces invading Ukraine, the civilians running away from the combat have as many stories to share as the soldiers marching towards it. Some of their stories tell us the value of hope, some others show us the cost of survival, but all can teach us some sort of lesson…if we take the time to listen.</p>
+                            <p>A girl coming of age in this tumultuous era is shaped and scarred by her fight for survival.</p>
+                            <p>A soldier worried for the family he left behind questions just who the real enemy is, and where his allegiances lie.</p>
+                            <p>A spoiled daughter separated from her loved ones is forced to walk down an unforgiving path to humility, due to her own actions as much as the invasion.</p>
+                            <p>These and other such tales of trauma and triumph await within the pages of…{{ 'a collection of suffering and sacrifice' | uppercase}}<span></span></p>
+                        </div>
+                    </div>
+                    <div class="at-assets">
+                        <div class="at-small-title">Download assets for media</div>
+                        <div class="at-btn-group">
+                            <div class="at-assets__block">
+                                <a href="#" class="at-btn-colored">Download Cover File</a>
+                                <div class="at-btn-colored__item">Cover.pdf (23 kb)</div>
+                            </div>
+                            <div class="at-assets__block">
+                                <a href="#" class="at-btn-default">Download Logo File</a>
+                                <div class="at-btn-default__item">Logo.svg (18 kb)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

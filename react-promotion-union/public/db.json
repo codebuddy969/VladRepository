@@ -1,0 +1,89 @@
+{
+  "bannerForm" : {
+    "Repokar" : [
+      {
+        "id":"add",
+        "label":"Homepage - Right Side",
+        "size":"450x175",
+        "cost":"$0.82",
+        "costAll":"$728.46",
+        "value":"add",
+        "tipImg":"http://localhost:3000/popup.png"
+      },
+      {
+        "id":"add1",
+        "label":"Homepage - Right Side1",
+        "size":"450x175",
+        "cost":"$0.82",
+        "costAll":"$728.46",
+        "value":"add",
+        "tipImg":"http://localhost:3000/popup.png"
+      },
+      {
+        "id":"add2",
+        "label":"Homepage - Right Side2",
+        "size":"450x175",
+        "cost":"$0.82",
+        "costAll":"$728.46",
+        "value":"add",
+        "tipImg":"http://localhost:3000/popup.png"
+      },
+      {
+        "id":"add3",
+        "label":"Homepage - Right Side2",
+        "size":"450x175",
+        "cost":"$0.82",
+        "costAll":"$728.46",
+        "value":"add",
+        "tipImg":"http://localhost:3000/popup.png"
+      },
+      {
+        "id":"add4",
+        "label":"Homepage - Right Side2",
+        "size":"450x175",
+        "cost":"$0.82",
+        "costAll":"$728.46",
+        "value":"add",
+        "tipImg":"http://localhost:3000/popup.png"
+      }
+    ],
+    "Car Liquidation" : [
+      {
+        "id":"add5",
+        "label":"Homepage - Right Side2",
+        "size":"450x175",
+        "cost":"$0.82",
+        "costAll":"$728.46",
+        "value":"add",
+        "tipImg":"http://localhost:3000/popup.png"
+      },
+      {
+        "id":"add6",
+        "label":"Homepage - Right Side2",
+        "size":"450x175",
+        "cost":"$0.82",
+        "costAll":"$728.46",
+        "value":"add",
+        "tipImg":"http://localhost:3000/popup.png"
+      },
+      {
+        "id":"add7",
+        "label":"Homepage - Right Side2",
+        "size":"450x175",
+        "cost":"$0.82",
+        "costAll":"$728.46",
+        "value":"add",
+        "tipImg":"http://localhost:3000/popup.png"
+      },
+      {
+        "id":"add8",
+        "label":"Homepage - Right Side2",
+        "size":"450x175",
+        "cost":"$0.82",
+        "costAll":"$728.46",
+        "value":"add",
+        "tipImg":"http://localhost:3000/popup.png"
+      }
+    ]
+  }
+}

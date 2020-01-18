@@ -1,0 +1,16 @@
+<div class="popular__container" *ngIf="blogList?.length != 0">
+    <div class="popular">
+        <h2 class="popular__headline">Most popular blogs</h2>
+        <div class="popular__row">
+            <div class="popular__column" *ngFor="let blog of blogList">
+                <a class="popular__link" itemprop="url" [routerLink]="getLink(blog.title, blog.id)">
+                <span class="popular__image">
+                    <img src="{{blog?.image}}" alt="{{blog?.title}}">
+                </span>
+                    <span class="popular__title">{{blog?.title}}</span>
+                    <span class="popular__date">{{blog?.published_date | date}}</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+/*--------------------- Variables ---------------------*/
+/*--------------------- Mixins ---------------------*/
+.main {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  border: 5px solid #fff;
+  background: -moz-linear-gradient(0deg, #e4eef2 0%, white 100%);
+  background: -webkit-linear-gradient(0deg, #e4eef2 0%, white 100%);
+  background: -ms-linear-gradient(0deg, #e4eef2 0%, white 100%);
+  box-shadow: inset 0px 0px 5.76px 0.24px rgba(0, 0, 0, 0.35); }

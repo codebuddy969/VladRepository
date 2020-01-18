@@ -1,0 +1,82 @@
+@mixin fontface($name, $file, $weight: normal, $style: normal){
+    @font-face {
+        font-family: "#{$name}";
+        font-display: swap;
+        src: url('/assets/fonts/#{$file}.eot');
+        src: url('/assets/fonts/#{$file}.eot?#iefix') format('embedded-opentype'),
+        url('/assets/fonts/#{$file}.woff') format('woff'),
+        url('/assets/fonts/#{$file}.woff2') format('woff2'),
+        url('/assets/fonts/#{$file}.ttf') format('truetype'),
+        url('/assets/fonts/#{$file}.svg?#webfont') format('svg');
+        font-weight: $weight;
+        font-style: $style;
+    }
+}
+
+@include fontface('Roboto', 'roboto-light', 300);
+@include fontface('Roboto', 'roboto-regular', 400);
+@include fontface('Roboto', 'roboto-medium', 500);
+
+@include fontface('Fjalla One', 'fjallaone');
+
+@include fontface('Futura-cond', 'futura-m-cond');
+@include fontface('Futura-italic', 'futura-m-italic');
+@include fontface('Futura-medium', 'futura-medium');
+
+html,
+body,
+div,
+ul,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+a,
+input,
+textarea,
+fieldset {
+    margin: 0;
+    padding: 0;
+    color: #000000;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-weight: normal;
+    list-style: none;
+    line-height: 22px;
+    text-decoration: none;
+    box-sizing: border-box;
+    word-break: break-word;
+    font-family: "Roboto", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+    color: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+    font-weight: inherit;
+}
+
+small {
+    color: red;
+    display: block;
+}
+
+.block-scroll {
+    width: 100%;
+    position: fixed !important;
+    overflow: hidden;
+}

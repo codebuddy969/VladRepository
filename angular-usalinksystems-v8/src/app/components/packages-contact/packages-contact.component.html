@@ -1,0 +1,69 @@
+<div class="popup">
+    <div class="popup__window">
+        <div class="popup__image">
+            <img src="/assets/img/subscribe.jpg" alt="usa-link-system">
+        </div>
+        <div class="popup__container">
+            <div class="popup__message" [class.active]="messageData.title">
+                <h3 class="popup__headline">{{messageData?.title}}</h3>
+                <div class="popup__text" [innerHTML]="messageData?.text"></div>
+            </div>
+            <div class="popup__headline">Contact Us!</div>
+            <form class="popup__form"
+                  #formReference
+                  (submit)="submitForm($event)"
+                  [formGroup]="form" novalidate
+                  enctype="multipart/form-data">
+                <div class="popup__input">
+                    <label for="first_name"><span>*</span> Name</label>
+                    <input type="text"
+                           id="first_name"
+                           name="first_name"
+                           placeholder="insert your name"
+                           [formControl]="form.controls.first_name">
+                    <div class="popup__errors" *ngIf="form.controls.first_name.dirty && !form.controls.first_name.valid">
+                        <small *ngIf="form.controls.first_name.errors.required">This field is required</small>
+                        <small *ngIf="form.controls.first_name.errors.minlength">Minimal length of this field is: {{form.controls.first_name.errors.minlength.requiredLength}}</small>
+                        <small *ngIf="form.controls.first_name.errors.invalidCharacters">Only alphabetic characters</small>
+                        <small *ngIf="form.controls.first_name.errors.maxlength">Maximal length of this field is: {{form.controls.first_name.errors.maxlength.requiredLength}}</small>
+                        <small *ngIf="form.controls.first_name.errors?.pattern">Only characters and spaces are allowed</small>
+                    </div>
+                </div>
+                <div class="popup__input">
+                    <label for="email"><span>*</span> Email</label>
+                    <input type="text"
+                           id="email"
+                           name="email"
+                           placeholder="add your email"
+                           [formControl]="form.controls.email">
+                    <div class="popup__errors" *ngIf="form.controls.email.dirty && !form.controls.email.valid">
+                        <small *ngIf="form.controls.email.errors.required">This field is required</small>
+                        <small *ngIf="form.controls.email.errors.minlength">Minimal length of this field is: {{form.controls.email.errors.minlength.requiredLength}}</small>
+                        <small *ngIf="form.controls.email.errors.invalidEmail && form.controls.email.value != ''">Incorrect email address</small>
+                    </div>
+                </div>
+                <div class="popup__input">
+                    <label for="message"><span>*</span> Your Message</label>
+                    <textarea name="message"
+                              id="message"
+                              [formControl]="form.controls.message"
+                              placeholder="message"
+                              minlength="2"
+                              maxlength="501"></textarea>
+                    <div class="popup__errors">
+                        <div *ngIf="form.controls.message.dirty && !form.controls.message.valid">
+                            <small *ngIf="form.controls.message.errors.required">This field is required</small>
+                            <small *ngIf="form.controls.message.errors.minlength">Minimal length of this field is: {{form.controls.message.errors.minlength.requiredLength}}</small>
+                            <small *ngIf="form.controls.message.errors.maxlength">Maximal length of this field is: {{form.controls.message.errors.maxlength.requiredLength}}</small>
+                        </div>
+                    </div>
+                </div>
+                <button class="popup__button">Contact</button>
+            </form>
+            <div class="popup__cross" (click)="closeModal($event)">
+                <div class="popup__line"></div>
+                <div class="popup__line"></div>
+            </div>
+        </div>
+    </div>
+</div>

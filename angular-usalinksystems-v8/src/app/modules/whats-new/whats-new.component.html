@@ -1,0 +1,62 @@
+<div class="header">
+    <h1 class="header__quotation">To a great mind, nothing is little.
+        <span class="header__author">— Sherlock Holmes</span>
+    </h1>
+</div>
+
+<div class="info-text">
+    <p>Engage with us! Our team of bloggers and copywriters love pop culture. Get a feel of our thoughts and perspectives on the latest trends in technology, design, lifestyle, & everything in between. We provide our readers quality content that is both informative and entertaining.</p>
+</div>
+
+<div class="blog" *ngIf="blogsList && blogsList.length">
+    <h2 class="blog__headline">Company Blog</h2>
+    <div class="blog__row">
+        <div class="blog__column" *ngFor="let blog of blogsList; let i = index">
+            <a class="blog__link"
+               *ngIf="i < maxBlogs"
+               [class.active]="i < maxBlogs"
+               [routerLink]="getLink(blog.title, blog.id)"
+               itemprop="url">
+                <span class="blog__image">
+                    <img src={{blog.image}} alt="Usa-link-system-blog">
+                </span>
+                <span class="blog__title">{{blog.title}}</span>
+                <span class="blog__date">{{blog.published_date | date}}</span>
+            </a>
+        </div>
+    </div>
+    <a class="blog__more" routerLink="/whats-new/blog">View more</a>
+</div>
+
+<app-vlog-section></app-vlog-section>
+
+<div class="events">
+    <h2 class="events__headline">Company Events</h2>
+    <div class="events__row">
+        <div class="events__column" *ngFor="let event of eventsList; let i = index">
+            <div class="events__link"
+                 *ngIf="i < maxEvent"
+                 [class.active]="i < maxEvent"
+                 (click)="getGalleryImages(event.gallery_images)"
+                 itemprop="url">
+                <span class="events__image">
+                    <img src={{event.image}} alt="Usa-link-system-blog">
+                </span>
+                <span class="events__title">{{event.title}}</span>
+                <span class="events__date">{{event.output_date}}</span>
+            </div>
+        </div>
+    </div>
+    <a class="events__more" routerLink="/whats-new/events">View more</a>
+</div>
+
+<div class="gallery-wrap" *ngIf="showGallery">
+    <ngx-gallery [options]="galleryOptions" [images]="galleryImages"></ngx-gallery>
+    <div class="close">
+        <img src="/assets/img/close.png" alt="Close" (click)="closePopup()">
+    </div>
+</div>
+
+<app-subscribe-section headline="Blog"></app-subscribe-section>
+
+<app-quote-section></app-quote-section>

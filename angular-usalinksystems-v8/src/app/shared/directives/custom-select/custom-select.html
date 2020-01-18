@@ -1,0 +1,24 @@
+<fieldset>
+
+    <input #inputRef type="hidden" [id]="inputID" [formControl]="inputFormControl" [name]="inputName">
+
+    <label [attr.for]="inputID" (click)="toggleOptions()">
+        <span [innerText]="currentOption ? inputOptions[currentOption] : inputLabel"></span>
+        <i class="fa" [class.fa-angle-down]="!optionsExpanded" [class.fa-angle-up]="optionsExpanded"></i>
+    </label>
+    <div class="errors">
+        <div *ngIf="inputFormControl.dirty && !inputFormControl.valid">
+            <small *ngIf="inputFormControl.errors.required">This field is required</small>
+        </div>
+    </div>
+
+    <div class="custom-select-options" [class.expanded]="optionsExpanded">
+        <ul [class.dual-column]="inputOptionDual">
+            <li *ngFor="let option of keys(inputOptions)" [innerText]="inputOptions[option]"
+                (click)="selectOption(option)"></li>
+        </ul>
+    </div>
+
+    <div class="custom-select-backdrop" [class.visible]="optionsExpanded" (click)="hideOptions()"></div>
+
+</fieldset>

@@ -1,0 +1,103 @@
+.form {
+  display flex
+  width 710px
+  flex-wrap wrap
+  justify-content space-between
+  margin-top 60px
+  margin-bottom 10px
+  @media (max-width: 1330px) {
+    width 620px
+  }
+  @media (max-height: 991px) {
+    margin-top 20px
+  }
+  @media (max-width: 991px) {
+    margin-top 30px
+  }
+  @media (max-width: 767px) {
+    width auto
+    padding 0 25px
+  }
+  &>div {
+    width 340px
+    @media (max-width: 1330px) {
+      width 300px
+    }
+    @media (max-width: 767px) {
+      width 49%
+    }
+    @media (max-width: 480px) {
+      width 100%
+    }
+  }
+  &>div.textAreaBlock {
+    width 100%
+  }
+  button {
+    color #222222
+    font-size 16px
+    line-height 55px
+    background-color #ffffff
+    border-radius 4px
+    width 180px
+    text-align center
+    display block
+    margin-left 0
+    margin-right auto
+    cursor pointer
+    transition all 0.1s
+    border 0
+    font-family: 'Montserrat', sans-serif
+    &:hover,
+    &:active,
+    &:focus {
+      background-color #222222
+      color #fefefe
+    }
+    @media (max-width: 767px) {
+      width 100%
+    }
+  }
+}
+
+.field {
+  width 100%
+  box-sizing border-box
+  height 60px
+  background-color rgba(255, 255, 255, 0.6)
+  border 0
+  padding-left 20px
+  padding-right 20px
+  margin-bottom 40px
+  font-size 14px
+  color rgba(34, 34, 34, 0.7)
+  font-weight 400
+  font-family: 'Montserrat', sans-serif
+  transition all 0.1s
+  &::placeholder {
+    color rgba(34, 34, 34, 0.7)
+  }
+  &:hover,
+  &:focus,
+  &:active {
+    outline-color #222222
+  }
+  @media (max-height: 800px) {
+    margin-bottom 20px
+  }
+  @media (max-width: 480px) {
+    margin-bottom 15px
+  }
+}
+
+
+.textArea {
+  width 100%
+  resize none
+  height 210px
+  line-height 18px
+  font-size 14px
+  font-weight 400
+  padding-top 25px
+}
+

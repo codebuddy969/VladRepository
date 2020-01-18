@@ -1,0 +1,33 @@
+<h1 id="title" class="title">Member login</h1>
+
+<br>
+
+<form [formGroup]="memberLogin" (ngSubmit)="login()">
+    <div class="form-control-group">
+        <label class="label" for="input-accountNumber"> Enter Account Number</label>
+        <input id="input-accountNumber"
+               placeholder="Enter Account Number"
+               formControlName="accountNumber" class="form-control">
+        <div *ngIf="submitted && memberLogin.controls.accountNumber.errors || memberLogin.controls.accountNumber.touched"
+             class="caption status-danger">
+            <div *ngIf="memberLogin.controls.accountNumber.errors?.required">Account Number is required</div>
+        </div>
+    </div>
+    <div class="form-control-group">
+        <label class="label" for="input-AccessCardId"> Enter Access Card ID</label>
+        <input id="input-AccessCardId" placeholder="Enter Access Card ID" formControlName="accessId"
+               class="form-control">
+        <div *ngIf="submitted && memberLogin.controls.accessId.errors || memberLogin.controls.accessId.touched"
+             class="caption status-danger">
+            <div *ngIf="memberLogin.controls.accessId.errors?.required">Access Card Id is required</div>
+        </div>
+    </div>
+
+    <button class="btn form-control" [ngClass]="memberLogin.invalid ? 'button-cursor' : 'button-valid'"
+            [disabled]="submitted || memberLogin.invalid">LOG IN
+    </button>
+</form>
+
+<div>
+    <label>Don't have an account? </label> <a [routerLink]="['/auth/member-registration']"> Register</a>
+</div>

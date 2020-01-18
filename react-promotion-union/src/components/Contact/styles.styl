@@ -1,0 +1,62 @@
+.section {
+  height 100vh
+  display flex
+  flex-direction column
+  @media (max-width: 1200px) {
+    height auto
+  }
+  @media (max-height: 750px) {
+    height auto
+  }
+}
+
+.mainPart {
+  background: linear-gradient(-270deg, #154ec0, #d33f8d);
+  display flex
+  flex-grow 1
+  @media (max-width: 991px) {
+    flex-direction column
+    align-items center
+  }
+  @media (max-width: 1200px) {
+    padding 20px 0
+  }
+  @media (max-height: 750px) {
+    padding 20px 0
+  }
+}
+
+.contactPart {
+  margin-left 130px
+  @media (max-width: 1450px) {
+    margin-left 20px
+  }
+  @media (max-width: 991px) {
+    margin-left 0
+  }
+}
+
+.locationPart {
+  flex-grow 1
+  text-align center
+  @media (max-width: 991px) {
+    text-align left
+  }
+}
+
+.contactTitle,
+.locationTitle {
+  text-transform uppercase
+  font-family 'Anton', sans-serif
+  letter-spacing 2px
+  color #ffffff
+  font-size 48px
+  margin 0
+  padding-top 50px
+  @media (max-width: 1430px) {
+    padding-top 5px
+  }
+  @media (max-width: 767px) {
+    text-align center
+  }
+}

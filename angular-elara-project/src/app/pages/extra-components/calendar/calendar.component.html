@@ -1,0 +1,37 @@
+<nb-card>
+  <nb-card-header>
+    Points Redeemed Transactions
+  </nb-card-header>
+
+  <nb-card-body>
+    <ng2-smart-table [settings]="settings" [source]="source" (deleteConfirm)="onDeleteConfirm($event)">
+    </ng2-smart-table>
+  </nb-card-body>
+</nb-card>
+
+
+<!--
+<div class="calendars">
+  <div class="calendar-container">
+    <span class="subtitle">
+      Selected date: {{ date | date }}
+    </span>
+    <nb-calendar [(date)]="date" [boundingMonth]="true"></nb-calendar>
+  </div>
+  <div class="calendar-container">
+    <span class="subtitle">
+      Selected range: {{ range.start | date }} - {{ range.end | date }}
+    </span>
+    <nb-calendar-range [(range)]="range"></nb-calendar-range>
+  </div>
+  <div class="calendar-container">
+    <span class="subtitle">
+      Selected date: {{ date2 | date }}
+    </span>
+    <nb-calendar
+      [(date)]="date2"
+      [dayCellComponent]="dayCellComponent"
+    ></nb-calendar>
+  </div>
+</div>
+-->

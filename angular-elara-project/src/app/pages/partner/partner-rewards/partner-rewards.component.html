@@ -1,0 +1,15 @@
+<nb-card>
+    <nb-card-header>Rewards</nb-card-header>
+
+    <nb-card-body>
+        <ng2-smart-table #smartTable
+                         [settings]="settings"
+                         [source]="source"
+                         (delete)="onDelete($event)"
+                         (create)="openCreateDialog()"
+                         (createConfirm)="onCreateConfirm($event)"
+                         (editConfirm)="onEditConfirm($event)"
+                         (deleteConfirm)="onDeleteConfirm($event)">
+        </ng2-smart-table>
+    </nb-card-body>
+</nb-card>

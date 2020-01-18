@@ -1,0 +1,288 @@
+.en-details-page {
+    @extend .en-container;
+    padding-top: 43px;
+    display: flex;
+    justify-content: space-between;
+    &__content {
+        width: calc(100% - 410px);
+    }
+    &__sidebar {
+        width: 100%;
+        max-width: 380px;
+    }
+    &__sidebar-block {
+        margin-top: 67px;
+    }
+
+    @media only screen and (max-width: $break-md) {
+        flex-direction: column;
+        &__content {
+            width: 100%;
+        }
+        &__sidebar {
+            max-width: 100%;
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        &__sidebar-block {
+            margin-bottom: 67px;
+        }
+    }
+    @media only screen and (max-width: $break-xs) {
+        &__sidebar-block {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.en-details-stats {
+    display: flex;
+    &__views {
+        @extend .en-default-views;
+        margin-left: 30px;
+    }
+    &__chats {
+        @extend .en-default-chats;
+        margin-left: 30px;
+    }
+    &__date {
+        @extend .en-default-date;
+        margin-left: 30px;
+    }
+    &__location {
+        @extend .en-default-location;
+    }
+
+    @media only screen and (max-width: $break-xs) {
+        flex-wrap: wrap;
+        &__location {
+            width: 100%;
+            display: block;
+            margin-bottom: 5px;
+        }
+        &__date {
+            margin-left: 0;
+        }
+    }
+}
+
+.en-details {
+    &__title {
+        margin-top: 20px;
+        font-size: 30px;
+        line-height: 36px;
+        font-family: "Kazimir-medium", sans-serif;
+    }
+    &__content {
+        margin-top: 25px;
+        p {
+            font-size: 20px;
+            line-height: 32px;
+            font-family: "Georgia", sans-serif;
+        }
+        img {
+            max-width: 100%;
+        }
+    }
+
+    @media only screen and (max-width: $break-xs) {
+        &__title {
+            font-size: 20px;
+            line-height: 26px;
+        }
+        &__content {
+            p {
+                font-size: 14px;
+                line-height: 22px;
+            }
+        }
+    }
+}
+
+.en-details-socials {
+    margin-top: 45px;
+    padding: 15px 15px 15px 30px;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    justify-content: space-between;
+    &__title {
+        font-size: 16px;
+        line-height: 22px;
+        &:before {
+            content: "\e90b";
+            font-size: 13px;
+            color: $base-color;
+            margin-right: 13px;
+            font-family: 'icomoon';
+        }
+    }
+    &__links {
+        display: flex;
+        align-items: center;
+    }
+    &__link {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        font-size: 18px;
+        color: #ffffff;
+        margin-right: 6px;
+        align-items: center;
+        justify-content: center;
+        &:hover {
+            color: #ffffff;
+        }
+        &:last-of-type {
+            margin-right: 0;
+        }
+    }
+    &__facebook {
+        background-color: #3A579A;
+    }
+    &__twitter {
+        background-color: #00ABF0;
+    }
+    &__linkedin {
+        background-color: #72A2CF;
+    }
+    &__thumblr {
+        background-color: #32506D;
+    }
+    &__google {
+        background-color: #DD4B39;
+    }
+
+    @media only screen and (max-width: $break-xs) {
+        padding: 15px;
+        flex-direction: column;
+        &__links {
+            margin-top: 15px;
+        }
+        &__link {
+            width: 40px;
+            height: 40px;
+        }
+    }
+}
+
+.en-details-recommendation {
+    margin-top: 55px;
+    &__headline {
+        font-size: 18px;
+        line-height: 22px;
+        font-family: "Roboto-bold", sans-serif;
+    }
+    &__slider {
+        margin-top: 25px;
+        position: relative;
+        padding-left: 25px;
+        padding-right: 25px;
+        .slick-arrow {
+            top: 10px;
+            bottom: 0;
+            margin: auto;
+            font-size: 0;
+            outline: none;
+            cursor: pointer;
+            position: absolute;
+            background-color: transparent;
+        }
+        .slick-prev {
+            left: 0;
+            &:before {
+                content: "";
+                padding: 6px;
+                display: inline-block;
+                border: solid $details-color;
+                border-width: 0 2px 2px 0;
+                transform: rotate(135deg);
+            }
+            &.slick-disabled {
+                &:before {
+                    content: "";
+                    border: solid $base-color;
+                    border-width: 0 2px 2px 0;
+                }
+            }
+        }
+        .slick-next {
+            right: 10px;
+            &:after {
+                content: "";
+                padding: 6px;
+                display: inline-block;
+                border: solid $details-color;
+                border-width: 0 2px 2px 0;
+                transform: rotate(-45deg);
+            }
+            &.slick-disabled {
+                &:after {
+                    content: "";
+                    border: solid $base-color;
+                    border-width: 0 2px 2px 0;
+                }
+            }
+        }
+    }
+    &__slide {
+        display: flex;
+        margin: 0 auto;
+        max-width: 230px;
+    }
+    &__image {
+        width: 90px;
+        height: 58px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__info {
+        width: calc(100% - 100px);
+        padding: 0 10px;
+    }
+    &__title {
+        @extend .en-default-location;
+        @extend .en-truncate;
+        font-size: 10px;
+        line-height: 16px;
+        display: block;
+    
+    }
+    &__text {
+        font-size: 12px;
+        line-height: 14px;
+        display: block;
+        max-height: 43px;
+    }
+}
+
+.en-details-comments {
+    padding-top: 58px;
+    padding-bottom: 76px;
+}
+
+.en-sidebar-topics {
+    .en-popular-topics__tab {
+        width: 100%;
+        margin-right: 0;
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
+    @media only screen and (max-width: $break-sm) {
+        .en-popular-topics__tab {
+            margin-left: 0;
+        }
+    }
+}

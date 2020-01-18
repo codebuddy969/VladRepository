@@ -1,0 +1,73 @@
+.container {
+  height 45px
+  display flex
+  justify-content space-between
+  align-items center
+  transition all 0.1s
+  padding 0 15px
+  &:hover,
+  &:active,
+  &:focus {
+    background-color rgba(0, 0, 0, 0.05)
+  }
+}
+
+.label {
+  cursor pointer
+  width 200px
+  overflow hidden
+  text-overflow ellipsis
+  height 25px
+  white-space nowrap
+  display flex
+  align-items center
+}
+
+.field {
+  margin 0
+  appearance none
+  border-radius 1px
+  border 1px solid #bdbdbd
+  background-color #ffffff
+  width 22px
+  height 22px
+  margin-right 25px
+  outline none
+  &:checked {
+    background-color #d23f8d
+    border-color #d23f8d
+    background-image url('./checkbox.png')
+    background-repeat no-repeat
+    background-position center
+    outline none
+  }
+}
+
+.checkboxWrapper {
+  display flex
+  align-items center
+  width 300px
+  overflow-x hidden
+  text-overflow ellipsis
+}
+
+.size {
+  color #8e8e8e
+  font-size 14px
+  width 140px
+}
+
+.cost {
+  color #2562c0
+  font-family: 'Anton', sans-serif
+  font-size 20px
+  width 140px
+}
+
+.costAll {
+  color #d23f8d
+  font-size 20px
+  font-family: 'Anton', sans-serif
+  width 140px
+  text-align right
+}

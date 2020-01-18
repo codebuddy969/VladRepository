@@ -1,0 +1,157 @@
+<div class="pcc-page">
+    <div class="pcc-page__lines"></div>
+    <div class="pcc-header"></div>
+    <div class="pcc-phones">
+        <div class="pcc-phones__phone">Call: <a href="tel:18009086782">1(800)908-6782</a></div>
+        <div class="pcc-phones__phone">Text: (747) 249-5235</div>
+    </div>
+    <div class="pcc-page__container">
+        <div class="pcc-page__selection">
+            <h1 class="pcc-page__headline">It’s your best choice!</h1>
+            <div class="pcc-package">
+                <div class="pcc-package__label">Package:</div>
+                <div class="pcc-package__info">
+                    <div class="pcc-package__type">{{collection?.type.replace("-", " ")}}</div>
+                    <div class="pcc-package__description">({{collection?.time}} hours)</div>
+                    <a class="pcc-package__change" routerLink="/packages">Change</a>
+                </div>
+            </div>
+            <div class="pcc-options">
+                <div class="pcc-options__label">A-La-Carte:</div>
+                <div class="pcc-options__info">
+                    <div *ngFor="let entry of collection?.options | keys">
+                        <div class="pcc-options__row" *ngIf="entry.value">
+                            <span>{{entry.value.title}}</span>
+                            <span>{{entry.value.price === 0 ? '' : '/ $' + entry.value.price}} {{entry.value.info}}</span>
+                        </div>
+                    </div>
+                    <a class="pcc-options__change" routerLink="/packages/options">Change</a>
+                </div>
+            </div>
+            <div class="pcc-total">
+                <div class="pcc-total__label">Total:</div>
+                <div class="pcc-total__info">
+                    <div class="pcc-total__price">${{collection?.price}}</div>
+                </div>
+            </div>
+            <div class="pcc-page__additions">
+                <span>Items within package can be omitted or replaced with a-la-carte options but the allotted time remains the same.</span>
+                <span>Any additional time spent on design, content creation, development, or management will be charged at standard price.</span>
+            </div>
+        </div>
+        <form class="pcc-page__form" *ngIf="form" (submit)="submitForm($event)" novalidate [formGroup]="form">
+            <div class="pcc-page__row">
+                <label class="pcc-page__label" for="first-name"><span>*</span> First name</label>
+                <input class="pcc-page__field"
+                       type="text"
+                       id="first-name"
+                       name="first_name"
+                       placeholder="your first name"
+                       [formControl]="form.controls.first_name">
+                <div class="pcc-page__errors">
+                    <div *ngIf="form.controls.first_name.dirty && !form.controls.first_name.valid">
+                        <small *ngIf="form.controls.first_name.errors.required">This field is required</small>
+                        <small *ngIf="form.controls.first_name.errors.invalidCharacters">Only alphabetic characters</small>
+                        <small *ngIf="form.controls.first_name.errors.minlength">Minimal length of this field is: {{form.controls.first_name.errors.minlength.requiredLength}}</small>
+                        <small *ngIf="form.controls.first_name.errors.maxlength">Maximal length of this field is: {{form.controls.first_name.errors.maxlength.requiredLength}}</small>
+                    </div>
+                </div>
+            </div>
+            <div class="pcc-page__row">
+                <label class="pcc-page__label" for="last-name"><span>*</span> Last name</label>
+                <input class="pcc-page__field"
+                       type="text"
+                       id="last-name"
+                       name="last_name"
+                       placeholder="your last name"
+                       [formControl]="form.controls.last_name">
+                <div class="pcc-page__errors">
+                    <div *ngIf="form.controls.last_name.dirty && !form.controls.last_name.valid">
+                        <small *ngIf="form.controls.last_name.errors.required">This field is required</small>
+                        <small *ngIf="form.controls.last_name.errors.invalidCharacters">Only alphabetic characters</small>
+                        <small *ngIf="form.controls.last_name.errors.minlength">Minimal length of this field is: {{form.controls.last_name.errors.minlength.requiredLength}}</small>
+                        <small *ngIf="form.controls.last_name.errors.maxlength">Maximal length of this field is: {{form.controls.last_name.errors.maxlength.requiredLength}}</small>
+                    </div>
+                </div>
+            </div>
+            <div class="pcc-page__row">
+                <label class="pcc-page__label" for="email"><span>*</span> Email</label>
+                <input class="pcc-page__field"
+                       type="text"
+                       id="email"
+                       name="email"
+                       placeholder="your email"
+                       [formControl]="form.controls.email">
+                <div class="pcc-page__errors">
+                    <div *ngIf="form.controls.email.dirty && !form.controls.email.valid">
+                        <small *ngIf="form.controls.email.errors.required">This field is required</small>
+                        <small *ngIf="form.controls.email.errors.invalidEmail">Incorrect email address</small>
+                    </div>
+                </div>
+            </div>
+            <div class="pcc-page__row">
+                <label class="pcc-page__label" for="phone"><span>*</span> Phone</label>
+                <input class="pcc-page__field"
+                       type="text"
+                       id="phone"
+                       name="phone"
+                       placeholder="your phone"
+                       [textMask]="phoneMask"
+                       [formControl]="form.controls.phone">
+                <div class="pcc-page__errors">
+                    <div *ngIf="form.controls.phone.dirty && !form.controls.phone.valid">
+                        <small *ngIf="form.controls.phone.errors.required">This field is required</small>
+                        <small *ngIf="form.controls.phone.errors.invalidPhone">Incorrect phone number format</small>
+                    </div>
+                </div>
+            </div>
+            <div class="pcc-page__row">
+                <label class="pcc-page__label" for="url"><span>*</span> Company url</label>
+                <input class="pcc-page__field"
+                       type="text"
+                       id="url"
+                       name="url"
+                       placeholder="company url"
+                       [formControl]="form.controls.url">
+                <div class="pcc-page__errors">
+                    <div *ngIf="form.controls.url.dirty && !form.controls.url.valid">
+                        <small *ngIf="form.controls.url.errors.required">This field is required</small>
+                        <small *ngIf="form.controls.url.errors.invalidUrl">Incorrect URL format</small>
+                    </div>
+                </div>
+            </div>
+            <div class="pcc-page__row">
+                <label class="pcc-page__label" for="message"><span>*</span> Your message</label>
+                <textarea class="pcc-page__textarea"
+                          type="text"
+                          id="message"
+                          name="message"
+                          minlength="2"
+                          maxlength="501"
+                          placeholder="message"
+                          [formControl]="form.controls.message"
+                          (keyup)="updateTextareaHeight($event)"></textarea>
+                <div class="pcc-page__errors">
+                    <div *ngIf="form.controls.message.dirty && !form.controls.message.valid">
+                        <small *ngIf="form.controls.message.errors.required">This field is required</small>
+                        <small *ngIf="form.controls.message.errors.minlength">Minimal length of this field is: {{form.controls.message.errors.minlength.requiredLength}}</small>
+                        <small *ngIf="form.controls.message.errors.maxlength">Maximal length of this field is: {{form.controls.message.errors.maxlength.requiredLength}}</small>
+                    </div>
+                </div>
+            </div>
+            <button class="pcc-page__submit" [class.active]="form.valid">Submit</button>
+        </form>
+    </div>
+
+    <div class="pcc-footer">
+        <div class="pcc-footer__column">
+            <div class="pcc-footer__info">
+                <h1 class="pcc-footer__title">Thinkers. doers. agents of change.</h1>
+                <div class="pcc-footer__subtitle">Your brand is important to you, and we'll make it matter to people who see it. We help boost brands by imagining and building a user experience consumers love. Whether it's branding, digital marketing, social media, SEO, design, or development, we'll push our limits to bring amazing campaigns to your table.
+                    <br><br><em>Your brand success is our state of mind.</em></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-alert-modal [message]='popup_message()' [action_value]='action' (returnEvent)=checkModal($event)></app-alert-modal>

@@ -1,0 +1,23 @@
+<div class="vlog" *ngIf="vlogList && vlogList.length">
+    <h2 class="vlog__headline">Uls tv</h2>
+    <div class="vlog__row">
+        <div class="vlog__column" *ngFor="let vlog of vlogList; let i = index">
+            <div class="vlog__link active" itemprop="url">
+                <div class="vlog__image" (click)="playVideo(vlog.title, vlog.link)">
+                    <div class="vlog__play">
+                        <img src="/assets/img/video_icon.svg" alt="video-icon">
+                    </div>
+                    <img src="{{vlog?.image}}" alt="{{vlog?.title}}">
+                </div>
+                <div class="vlog__title" (click)="playVideo(vlog.title, vlog.link)">{{vlog?.title}}</div>
+                <div class="vlog__date">{{vlog?.published_date | date}}</div>
+            </div>
+        </div>
+    </div>
+    <a class="vlog__more" routerLink="/vlogs-page">View more</a>
+</div>
+
+<app-youtube-modal [title]='vlog_modal_title'
+                   [link]='vlog_modal_link'
+                   *ngIf="vlog_modal_status"
+                   (returnEvent)=youtubeModalStatus($event)></app-youtube-modal>

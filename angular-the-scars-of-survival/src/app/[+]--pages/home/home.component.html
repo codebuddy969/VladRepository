@@ -1,0 +1,115 @@
+<div class="home">
+    <div *ngFor="let content of page_content; index as i;">
+        <div *ngIf="i === page_index">
+                       
+            <div class="home__background" [style.width.px]="background_width">
+                <img src={{content.background}} alt="The scars of survival">
+            </div>
+            <div class="home__content">
+
+                <div class="home__container">
+                    <div class="home__info" 
+                           [@infoState]="stateName[1]" 
+                           (@infoState.start)="InfoAnimationTrigger()" 
+                           (@infoState.done)="InfoAnimationTrigger()" 
+                           [ngClass]="{'home__info--hidden' : stop_animation}">
+                        <h1 class="home__title">{{content.title}}</h1>
+                        <h2 class="home__subtitle">{{content.subtitle}}</h2>
+                        <p class="mt-35">{{content.text}}</p>
+                        <div class="at-btn-group mt-35">
+                            <a href="#" 
+                               class="at-btn-colored" 
+                               *ngIf="content.button">
+                                Get it on Amazon
+                            </a>
+                            <button type="button"
+                                    class="at-btn-default" 
+                                    (click)="get_full_description()">
+                                Full description
+                            </button>
+                        </div>
+                    </div>
+                    <div class="home__full" [@pageState]="stateName[0]">
+                        <div class="home__books">
+                            <div class="at-book-cover" [class.at-book-cover--fixed]="scroll_state">
+                                <div class="at-book-cover__circle">
+                                    {{content.circle_message}}
+                                    <i class="at-icon">&#xe80d;</i>
+                                </div>
+                                <div class="at-book-cover__front-image" 
+                                     (touchstart)="swipe($event, 'start')" 
+                                     (touchend)="swipe($event, 'end')">
+                                    <img src="assets/images/the-scars-of-survival-{{content.active_book}}.png" alt="the-scars-of-survival">
+                                    <img src="assets/images/cover-shadow.png" alt="the-scars-of-survival" class="at-book-cover__back-image">
+                                </div>
+                                <a href="#" 
+                                   [@buttonState]="stateName[4]"
+                                   class="at-btn-colored at-btn-colored--cover">
+                                    Get it on Amazon
+                                </a>
+                                
+                                <div class="at-book-cover__arrows" *ngIf="!page_left">
+                                    <button class="at-book-cover__arrow active"
+                                            *ngFor="let content of page_content; index as i;"
+                                            [class.active]="page_index === i"
+                                            (click)="replace_content(i); page_index = i">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="at-synopsis__container" [@synopsisState]="stateName[2]">
+                            <div class="at-synopsis at-synopsis--title">
+                                <h1 class="at-synopsis__title">{{content.title}}</h1>
+                                <h2 class="at-synopsis__small-title mt-40 mb-40">{{content.subtitle}}</h2>
+                            </div>
+                            <div class="at-synopsis">
+                                <div class="at-synopsis__type">One line:</div>
+                                <div class="at-synopsis__content">
+                                    <p>Follow in the agonizing footsteps of a young girl as she grows into a woman, her development stunted and scarred by the war raging around her.</p>
+                                </div>
+                            </div>
+                            <div class="at-synopsis">
+                                <div class="at-synopsis__type">Short Synopsis:</div>
+                                <div class="at-synopsis__content">
+                                    <p>There’s more to war than the front lines. With Russian forces invading Ukraine, the civilians running away from the combat have as many stories to share as the soldiers marching towards it. Some of their stories tell us the value of hope, some others show us the cost of survival, but all can teach us some sort of lesson…if we take the time to listen.</p>
+                                </div>
+                            </div>
+                            <div class="at-synopsis">
+                                <div class="at-synopsis__type">Full Synopsis:</div>
+                                <div class="at-synopsis__content">
+                                    <p>There’s more to war than the front lines.</p>
+                                    <p>With Russian forces invading Ukraine, the civilians running away from the combat have as many stories to share as the soldiers marching towards it. Some of their stories tell us the value of hope, some others show us the cost of survival, but all can teach us some sort of lesson…if we take the time to listen.</p>
+                                    <p>A girl coming of age in this tumultuous era is shaped and scarred by her fight for survival.</p>
+                                    <p>A soldier worried for the family he left behind questions just who the real enemy is, and where his allegiances lie.</p>
+                                    <p>A spoiled daughter separated from her loved ones is forced to walk down an unforgiving path to humility, due to her own actions as much as the invasion.</p>
+                                    <p>These and other such tales of trauma and triumph await within the pages of…{{ 'a collection of suffering and sacrifice' | uppercase}}<span></span></p>
+                                </div>
+                            </div>
+                            <div class="at-assets">
+                                <div class="at-small-title">Download assets for media</div>
+                                <div class="at-btn-group">
+                                    <div class="at-assets__block">
+                                        <a href="#" class="at-btn-colored">Download Cover File</a>
+                                        <div class="at-btn-colored__item">Cover.pdf (23 kb)</div>
+                                    </div>
+                                    <div class="at-assets__block">
+                                        <a href="#" class="at-btn-default">Download Logo File</a>
+                                        <div class="at-btn-default__item">Logo.svg (18 kb)</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="at-book-cover at-book-cover--small" (click)="next_book(i)" [@bookState]="stateName[3]">
+                    <div class="at-book-cover__front-image">
+                        <img src="assets/images/the-scars-of-survival-{{content.inactive_book}}.png" alt="the-scars-of-survival">
+                        <img src="assets/images/cover-shadow.png" alt="the-scars-of-survival" class="at-book-cover__back-image">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

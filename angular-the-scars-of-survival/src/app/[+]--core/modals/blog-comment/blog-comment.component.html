@@ -1,0 +1,21 @@
+<div class="modal" [class.active]="action_value" (click)="closeModal($event)">
+    <div class="modal__window">
+        <div class="modal__headline">Leave a comment</div>
+        <div class="modal__cross" (click)="closeModal($event)">
+            <div class="modal__cross-line"></div>
+            <div class="modal__cross-line"></div>
+        </div>
+        <form class="form" action="">
+            <div class="form__input-group">
+                <input type="text" placeholder="First Name">
+            </div>
+            <div class="form__input-group">
+                <input type="text" placeholder="Last Name">
+            </div>
+            <div class="form__textarea-row">
+                <textarea placeholder="Your comment here"></textarea>
+            </div>
+            <button class="form__btn-submit" type="submit">Submit</button>
+        </form>
+    </div>
+</div>

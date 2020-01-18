@@ -1,0 +1,259 @@
+@import '../../../styles';
+
+.contact {
+    &__background {
+        top: 0;
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+        max-width: 310px;
+        position: fixed;
+        background-color: #f3f3f3;
+    }
+    &__container {
+        width: 100%;
+        max-width: 1380px;
+        margin: 150px auto 0;
+    }
+    &__image-container {
+        width: 100%;
+        max-width: 416px;
+        position: fixed;
+        bottom: 0;
+        display: flex;
+        align-items: flex-end;
+        img {
+            width: 100%;
+        }
+    }
+    &__info-container {
+        margin-left: 400px;
+    }
+    &__info {
+        width: 100%;
+        margin: 0 auto;
+        max-width: 515px;
+    }
+    &__name {
+        font-size: 22px;
+        text-transform: uppercase;
+        color: $font-color-light-t1;
+    }
+    &__title {
+        font-size: 50px;
+        margin-top: 35px;
+        line-height: 55px;
+        text-transform: uppercase;
+    }
+    &__text {
+        margin-top: 30px;
+        color: $font-color-light-t1;
+    }
+    &__small-image {
+        display: none;
+        img {
+            width: 100%;
+        }
+    }
+
+    @media screen and (max-width: $break-md) {
+        &__background {
+            display: none;
+        }
+        &__info {
+            max-width: get-vw(0,400,991);
+        }
+    }
+    @media screen and (max-width: $break-sm) {
+        &__info-container {
+            margin-left: 0;
+        }
+        &__image-container {
+            display: none;
+        }
+        &__small-image {
+            display: block;
+        }
+        &__info {
+            max-width: 100%;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        &__heading {
+            display: flex;
+            align-items: center;
+        }
+        &__title {
+            margin-top: get-vw(0,35,767);
+            font-size: get-vw(0,50,767);
+            line-height: get-vw(0,55,767);
+            text-transform: uppercase;
+        }
+    }
+    @media screen and (max-width: $break-xs) {
+        &__info {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+    @media screen and (max-width: 400px) {
+        &__title {
+            font-size: 26px;
+            line-height: 30px;
+        }
+        &__heading {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+    @media screen and (max-height: 800px) {
+        &__image-container {
+            bottom: -200px;
+        }
+    }
+}
+
+.contacts {
+    $root: &;
+    margin-top: 30px;
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 30px;
+    }
+    &__link {
+        width: 165px;
+        height: 60px;
+        display: block;
+        cursor: pointer;
+        border-radius: 30px;
+        padding-left: 5px;
+        padding-right: 5px;
+        margin-bottom: 20px;
+        color: $primary-color;
+        background-color: #ffffff;
+        transition: $fast-transition;
+        border: 1px solid $primary-color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .at-icon {
+            font-size: 16px;
+            margin-right: 10px;
+        }
+        &:hover {
+            color: $font-color;
+            transition: $fast-transition;
+            background-color: $primary-color;
+            box-shadow: 0px 3px 76px 0px rgba(255, 192, 89, 0.35);
+        }
+    }
+    &__list-item:nth-last-child(-n+3) {
+        #{$root}__link {
+            color: $border-color;
+            border: 1px solid $border-color;
+            &:hover {
+                color: $font-color;
+                transition: $fast-transition;
+                background-color: $primary-color;
+                border-color: $primary-color;
+                box-shadow: 0px 3px 76px 0px rgba(255, 192, 89, 0.35);
+            }
+        }
+    }
+    
+    @media screen and (max-width: $break-lg) {
+        &__list-item {
+            width: 32%;
+        }
+        &__link {
+            width: 100%;
+        }
+    }
+    @media screen and (max-width: $break-md) {
+        &__list-item {
+            width: 49%;
+        }
+    }
+    @media screen and (max-width: $break-sm) {
+        &__list-item {
+            width: 32%;
+        }
+    }
+    @media screen and (max-width: $break-xs) {
+        &__list-item {
+            width: 49%;
+        }
+    }
+    @media screen and (max-width: 400px) {
+        &__list-item {
+            width: 100%;
+        }
+    }
+}
+
+.social {
+    margin-top: 45px;
+    &__title {
+        font-size: 22px;
+        text-transform: uppercase;
+    }
+    &__text {
+        margin-top: 30px;
+        color: $font-color-light-t1;
+    }
+    &__block {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 70px;
+        justify-content: space-between;
+    }
+    &__facebook {
+        width: 50%;
+        display: flex;
+        margin-top: 50px;
+        justify-content: center;
+    }
+    &__instagram {
+        width: 45%;
+        max-width: 230px;
+        margin-top: 50px;
+    }
+
+    @media screen and (max-width: $break-md) {
+        &__facebook {
+            width: 100%;
+            margin: 50px auto 0;
+        }
+        &__instagram {
+            width: 100%;
+            margin: 50px auto 0;
+        }
+    }
+    @media screen and (max-width: $break-sm) {
+        &__block {
+            margin: 0 auto;
+            max-width: 500px;
+        }
+        &__facebook {
+            width: auto;
+            margin: 50px 0 0;
+        }
+        &__instagram {
+            width: auto;
+            margin: 50px 0 0;
+        }
+    }
+    @media screen and (max-width: $break-xs) {
+        &__facebook {
+            width: 100%;
+            margin: 50px auto 0;
+        }
+        &__instagram {
+            width: 100%;
+            margin: 50px auto 0;
+        }
+    }
+}
+  

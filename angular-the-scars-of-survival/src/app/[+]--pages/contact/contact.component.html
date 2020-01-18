@@ -1,0 +1,80 @@
+<div class="contact">
+    <div class="contact__background"></div>
+    <div class="contact__container">
+        <div class="contact__image-container">
+            <img src="assets/images/author.png" alt="Ally-Trust">
+        </div>
+        <div class="contact__info-container">
+            <div class="contact__info">
+                <div class="contact__heading">
+                    <div class="contact__small-image">
+                        <img src="assets/images/author-small.png" alt="Ally-trust">
+                    </div>
+                    <div class="contact__heading-info">
+                        <div class="contact__name">Ally Spinu</div>
+                        <h1 class="contact__title">Contact with me</h1>
+                    </div>
+                </div>
+                <div class="contact__text">
+                    <p>Feel free to send Ally an email anytime you need her help and assistance.</p>
+                </div>
+                <div class="contacts">
+                    <div class="at-small-title">Contact with me</div>
+                    <ul class="contacts__container">
+                        <li class="contacts__list-item">
+                            <button class="contacts__link" (click)="checkModal($event,'email')">Send email</button>
+                        </li>
+                        <li class="contacts__list-item">
+                            <button class="contacts__link" (click)="checkModal($event,'call')">Call me</button>
+                        </li>
+                        <li class="contacts__list-item">
+                            <button class="contacts__link" (click)="checkModal($event,'subscribe')">Subscribe</button>
+                        </li>
+                        <li class="contacts__list-item">
+                            <a class="contacts__link" 
+                                href="https://www.facebook.com/AuthorAllyTrust"
+                                target="_blank">
+                                <i class="at-icon">&#xe801;</i>
+                                Facebook
+                            </a>
+                        </li>
+                        <li class="contacts__list-item">
+                            <a class="contacts__link" 
+                                href="https://twitter.com/AllyTrust_"
+                                target="_blank">
+                                <i class="at-icon">&#xe804;</i>
+                                Twitter
+                            </a>
+                        </li>
+                        <li class="contacts__list-item">
+                            <a class="contacts__link"               href="https://www.goodreads.com/user/show/76016085-ally-trust"
+                            target="_blank">
+                                <i class="at-icon">&#xe80a;</i>
+                                Goodreads
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="social">
+                    <h2 class="social__title">We are social</h2>
+                    <div class="social__text">
+                        <p>Feel free to send Ally an email anytime you need her help and assistance.</p>
+                    </div>
+                    <div class="social__block">
+                        <div class="social__facebook">
+                            <fb-page href="https://www.facebook.com/AuthorAllyTrust" tabs="timeline" width={{facebook_width}}></fb-page>
+                        </div>
+                        <div class="social__instagram">
+                            <ngx-twitter-timeline 
+                                [data]="{sourceType: 'url', url: 'https://twitter.com/AllyTrust_?ref_src=twsrc%5Etfw%7Ctwcamp%5Eembeddedtimeline%7Ctwterm%5Eprofile%3AAllyTrust_&ref_url=http%3A%2F%2Fthescarsofsurvival.com%2F'}"
+                                [opts]="{tweetLimit: 2}"
+                            ></ngx-twitter-timeline>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-contact-modal [action_value]='action' [modal_type]='modal_type' (returnEvent)=checkModal($event)></app-contact-modal>

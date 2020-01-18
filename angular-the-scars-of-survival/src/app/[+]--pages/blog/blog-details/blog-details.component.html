@@ -1,0 +1,103 @@
+<div class="details">
+    <div class="details__background" [style.width.px]="background_width"></div>
+    <div class="details__cover-container">
+        <div class="details__cover">
+            <div class="details__label">Human Trafficking</div>
+            <img src="assets/images/blog-cover.jpg" alt="Ally-trust">
+        </div>
+    </div>
+    <div class="details__container">
+        <div class="details__date">April 12, 2018</div>
+        <div class="details__title">How to Fight Human Trafficking</div>
+        <div class="details__text">
+            <p>One of the main reasons I started my Scars of Survival series is because I wanted to open the world’s eyes.  While many people use books as an escape from the real world and all its hardships, the most compelling stories are often the ones based on the very reality we as readers are looking to distance ourselves from.  Taking the time to immerse one’s self in the experiences of someone far less fortunate not only makes our own problems feel that much smaller, but it can also inspire us to help prevent such tales from happening again.</p><br>
+            <p>Thankfully, there are other authors who feel the same way:<br>Sold by Patricia McCormick</p><br>
+            <i>A Long Way Gone: Memoirs of a Boy Soldier by Ishmael Beah</i><br>
+            <a href="#">Test link somewhere</a><br><br>
+            <p>What is war like through the eyes of a child soldier?  How does one become a killer?  How does one stop?  Child soldiers have been profiled by journalists, and novelists have struggled to imagine their lives. But until now, there has not been a first-person account from someone who came through this hell and survived.</p><br>
+            <i>Enrique's Journey: The Story of a Boy's Dangerous Odyssey to Reunite with His Mother by Sonia Nazario</i><br><br>
+            <p>Enrique’s Journey recounts the unforgettable quest of a Honduran boy looking for his mother, eleven years after she is forced to leave her starving family to find work in the United States.</p><br>
+            <p>Braving unimaginable peril, often clinging to the sides and tops of freight trains, Enrique travels through hostile worlds full of thugs, bandits, and corrupt cops.  But he pushes forward, relying on his wit, courage, hope, and the kindness of strangers.</p>
+        </div>
+
+        <div class="details__block-share" (click)="checkSocials($event)">
+            <div class="details__social-title">
+                <i class="at-icon">&#xe809;</i>
+                <span>Share</span>
+            </div>
+            <a class="details__btn-social details__btn-facebook" href="#">
+                <i class="at-icon">&#xe801;</i>
+            </a>
+            <a class="details__btn-social details__btn-twitter" href="#">
+                <i class="at-icon">&#xe804;</i>
+            </a>
+            <a class="details__btn-social details__btn-goodread" href="#">
+                <i class="at-icon">&#xe80a;</i>
+            </a>
+            <a class="details__btn-social details__btn-mail" href="#">
+                <i class="at-icon">&#xe802;</i>
+            </a>
+        </div>
+
+        <div class="comments">
+            <div class="comments__label">Comments&nbsp;&nbsp;<span>{{comments_content.length}}</span></div>
+
+            <div *ngFor="let comment of comments_content; index as i;">
+                <div class="comments__block" [class.active]="i <= comments_count">
+                    <em>{{comment.text}}</em>
+                    <div class="comments__data">
+                        <div class="comments__author">{{comment.author}}</div>
+                        <div class="comments__date">{{comment.date}}</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="comments__btn-group">
+                <button class="comments__btn-more" [disabled]="block_btn" (click)="addComment()">More</button>
+                <button class="comments__btn-comment" (click)="checkModal($event)">Leave a comment</button>
+            </div>
+            <div class="comments__label">Recommended reading</div>
+
+            <div class="slider">
+                <div class="post">
+                    <div class="post__cover">
+                        <div class="post__label">Test Label</div>
+                        <img src="assets/images/book-cover.jpg" alt="Ally-trust">
+                    </div>
+                    <div class="post__data">
+                        <div class="post__date">test date</div>
+                        <div class="post__separator">|</div>
+                        <div class="post__comments">Comments (0)</div>
+                    </div>
+                    <div class="post__title">Test Title</div>
+                    <div class="post__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id ullam eligendi soluta at saepe est sint, ratione reprehenderit, porro incidunt esse harum iste enim quod magnam mollitia quo cum perspiciatis!</div>
+                    <div class="post__btn-group">
+                        <a class="post__btn-more" href="#">Read More</a>
+
+                        <div class="details__block-share" (click)="checkSocials($event)">
+                            <div class="details__social-title">
+                                <i class="at-icon">&#xe809;</i>
+                                <span>Share</span>
+                            </div>
+                            <a class="details__btn-social details__btn-facebook" href="#">
+                                <i class="at-icon">&#xe801;</i>
+                            </a>
+                            <a class="details__btn-social details__btn-twitter" href="#">
+                                <i class="at-icon">&#xe802;</i>
+                            </a>
+                            <a class="details__btn-social details__btn-goodread" href="#">
+                                <i class="at-icon">&#xe80a;</i>
+                            </a>
+                            <a class="details__btn-social details__btn-mail" href="#">
+                                <i class="at-icon">&#xe804;</i>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-blog-comment [action_value]='action' (returnEvent)=checkModal($event)></app-blog-comment>

@@ -1,0 +1,56 @@
+<h1 id="title" class="title">Login</h1>
+<div>
+  <select class="custom-select" [(ngModel)]="userType" (change)="onChanges($event.target.value)">
+    <option value="" disabled>Choose User Type</option>
+    <option value="partner">Partner Login</option>
+    <option value="member">Member Login</option>
+  </select>
+</div>
+<br>
+<div *ngIf="userType === 'partner'">
+    <form [formGroup]="partnerLogin" (ngSubmit)="login()">
+      <div class="form-control-group">
+          <label class="label" for="input-partnerID">Enter Partner ID</label>
+          <input id="input-partnerID"
+                 placeholder="Enter Partner ID"
+                 formControlName="accountPartnerId" class="form-control">
+        <div *ngIf="submitted && partnerLogin.controls.accountPartnerId.errors || partnerLogin.controls.accountPartnerId.touched" class="caption status-danger">
+          <div *ngIf="partnerLogin.controls.accountPartnerId.errors?.required" >Partner ID is required</div>
+        </div>
+      </div>
+      <div class="form-control-group">
+          <label class="label" for="input-AccessID"> Enter Access Card ID</label>
+          <input id="input-AccessID" formControlName="accessId" placeholder="Enter Access Card Id" class="form-control">
+        <div *ngIf="submitted && partnerLogin.controls.accessId.errors || partnerLogin.controls.accessId.touched" class="caption status-danger">
+          <div *ngIf="partnerLogin.controls.accessId.errors?.required">Access Card Id is required</div>
+        </div>
+      </div>
+      <button class="btn form-control" [ngClass]="partnerLogin.invalid ? 'button-cursor' : 'button-valid'" [disabled]="submitted || partnerLogin.invalid">LOG IN</button>
+    </form>
+</div>
+
+<div *ngIf="userType === 'member'">
+    <form [formGroup]="memberLogin" (ngSubmit)="login()">
+      <div class="form-control-group">
+        <label class="label" for="input-accountNumber"> Enter Account Number</label>
+        <input id="input-accountNumber"
+               placeholder="Enter Account Number"
+               formControlName="accountNumber" class="form-control">
+        <div *ngIf="submitted && memberLogin.controls.accountNumber.errors || memberLogin.controls.accountNumber.touched" class="caption status-danger">
+          <div *ngIf="memberLogin.controls.accountNumber.errors?.required" >Account Number is required</div>
+        </div>
+      </div>
+      <div class="form-control-group">
+        <label class="label" for="input-AccessCardId"> Enter Access Card ID</label>
+        <input id="input-AccessCardId" placeholder="Enter Access Card ID" formControlName="accessId" class="form-control">
+        <div *ngIf="submitted && memberLogin.controls.accessId.errors || memberLogin.controls.accessId.touched" class="caption status-danger">
+          <div *ngIf="memberLogin.controls.accessId.errors?.required">Access Card Id is required</div>
+        </div>
+      </div>
+
+      <button class="btn form-control" [ngClass]="memberLogin.invalid ? 'button-cursor' : 'button-valid'" [disabled]="submitted || memberLogin.invalid">LOG IN</button>
+    </form>
+</div>
+<div>
+  <label>Don't have an account? </label> <a [routerLink]="['/auth/register']"> Register</a>
+</div>

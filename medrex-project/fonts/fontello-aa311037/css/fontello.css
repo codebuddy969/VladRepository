@@ -1,0 +1,87 @@
+@font-face {
+  font-family: 'fontello';
+  src: url('../font/fontello.eot?99577667');
+  src: url('../font/fontello.eot?99577667#iefix') format('embedded-opentype'),
+       url('../font/fontello.woff2?99577667') format('woff2'),
+       url('../font/fontello.woff?99577667') format('woff'),
+       url('../font/fontello.ttf?99577667') format('truetype'),
+       url('../font/fontello.svg?99577667#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?99577667#fontello') format('svg');
+  }
+}
+*/
+ 
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+ 
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.icon-google-maps__marker:before { content: '\e800'; } /* '' */
+.icon-left-arrow:before { content: '\e801'; } /* '' */
+.icon-right-arrow:before { content: '\e802'; } /* '' */
+.icon-social__facebook:before { content: '\e803'; } /* '' */
+.icon-social__google:before { content: '\e804'; } /* '' */
+.icon-social__instagram:before { content: '\e805'; } /* '' */
+.icon-social__linkedin:before { content: '\e806'; } /* '' */
+.icon-social__tweet:before { content: '\e807'; } /* '' */
+.icon-t1-appointment__cross:before { content: '\e809'; } /* '' */
+.icon-t1-benefits__cross:before { content: '\e80a'; } /* '' */
+.icon-t1-benefits__personnel:before { content: '\e80b'; } /* '' */
+.icon-t1-benefits__pill:before { content: '\e80c'; } /* '' */
+.icon-t1-benefits__support:before { content: '\e80d'; } /* '' */
+.icon-t1-contact__phone:before { content: '\e80e'; } /* '' */
+.icon-t1-faq__cross:before { content: '\e80f'; } /* '' */
+.icon-t1-faq__search:before { content: '\e811'; } /* '' */
+.icon-t1-form__select-arrow:before { content: '\e813'; } /* '' */
+.icon-t1-gallery__arrow_up:before { content: '\e814'; } /* '' */
+.icon-t1-gallery-arrow:before { content: '\e815'; } /* '' */
+.icon-t1-profile__star-filled:before { content: '\e81a'; } /* '' */
+.icon-t1-profile__thumb-down:before { content: '\e81b'; } /* '' */
+.icon-t1-profile__thumb-up:before { content: '\e81c'; } /* '' */
+.icon-t2-video__play:before { content: '\e820'; } /* '' */
+.icon-t6-header__user:before { content: '\e822'; } /* '' */
+.icon-autoscroll-arrow:before { content: '\e823'; } /* '' */
+.icon-t1-contact__letter:before { content: '\e824'; } /* '' */
+.icon-t1-contact__earth:before { content: '\e825'; } /* '' */
+.icon-t1-profile__clock:before { content: '\e827'; } /* '' */
+.icon-t1-profile__star-empty:before { content: '\e828'; } /* '' */
+.icon-t6-header__mail:before { content: '\e829'; } /* '' */

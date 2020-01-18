@@ -1,0 +1,202 @@
+<div class="media">
+    <div class="media__background" [style.width.px]="background_width"></div>
+    <div class="media__container">
+        <div class="media__undertitle">17 files</div>
+        <div class="media__title">Image gallery</div>
+    </div>
+    <div class="gallery">
+        <div class="gallery__row">
+            <div class="gallery__block gallery__block-1" [class.mobile]="is_mobile">
+                <img class="gallery__image" src="assets/images/media/image-1.jpg" alt="Ally-Trust">
+                <div class="gallery__btn-block">
+                    <button class="gallery__btn-view" (click)="checkModal($event, 1)"></button>
+                    <a class="gallery__btn-download" href="assets/images/media/large/image-1.jpg" download>
+                    </a>
+                </div>
+            </div>
+            <div class="gallery__block gallery__block-2" [class.mobile]="is_mobile">
+                <img class="gallery__image" src="assets/images/media/image-2.jpg" alt="Ally-Trust">
+                <div class="gallery__btn-block">
+                    <button class="gallery__btn-view" (click)="checkModal($event, 2)"></button>
+                    <a class="gallery__btn-download" href="assets/images/media/large/image-2.jpg" download>
+                    </a>
+                </div>
+            </div>
+            <div class="gallery__block-3">
+                <div class="gallery__block block-3-image-1" [class.mobile]="is_mobile">
+                    <img class="gallery__image" src="assets/images/media/image-3.jpg" alt="Ally-Trust">
+                    <div class="gallery__btn-block">
+                        <button class="gallery__btn-view" (click)="checkModal($event, 3)"></button>
+                        <a class="gallery__btn-download" href="assets/images/media/large/image-3.jpg" download>
+                        </a>
+                    </div>
+                </div>
+                <div class="gallery__block block-3-image-2" [class.mobile]="is_mobile">
+                    <img class="gallery__image" src="assets/images/media/image-4.jpg" alt="Ally-Trust">
+                    <div class="gallery__btn-block">
+                        <button class="gallery__btn-view" (click)="checkModal($event, 4)"></button>
+                        <a class="gallery__btn-download" href="assets/images/media/large/image-4.jpg" download>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="gallery__row">
+            <div class="gallery__block gallery__block-4" [class.mobile]="is_mobile">
+                <img class="gallery__image" src="assets/images/media/image-5.jpg" alt="Ally-Trust">
+                <div class="gallery__btn-block">
+                    <button class="gallery__btn-view" (click)="checkModal($event, 5)"></button>
+                    <a class="gallery__btn-download" href="assets/images/media/large/image-5.jpg" download>
+                    </a>
+                </div>
+            </div>
+            <div class="gallery__block-5">
+                <div class="gallery__block block-5-image-1" [class.mobile]="is_mobile">
+                    <img class="gallery__image" src="assets/images/media/image-6.jpg" alt="Ally-Trust">
+                    <div class="gallery__btn-block">
+                        <button class="gallery__btn-view" (click)="checkModal($event, 6)"></button>
+                        <a class="gallery__btn-download" href="assets/images/media/large/image-6.jpg" download>
+                        </a>
+                    </div>
+                </div>
+                <div class="gallery__block block-5-image-2" [class.mobile]="is_mobile">
+                    <img class="gallery__image" src="assets/images/media/image-7.jpg" alt="Ally-Trust">
+                    <div class="gallery__btn-block">
+                        <button class="gallery__btn-view" (click)="checkModal($event, 7)"></button>
+                        <a class="gallery__btn-download" href="assets/images/media/large/image-7.jpg" download>
+                        </a>
+                    </div>
+                </div>
+                <div class="gallery__block block-5-image-3" [class.mobile]="is_mobile">
+                    <img class="gallery__image" src="assets/images/media/image-8.jpg" alt="Ally-Trust">
+                    <div class="gallery__btn-block">
+                        <button class="gallery__btn-view" (click)="checkModal($event, 8)"></button>
+                        <a class="gallery__btn-download" href="assets/images/media/large/image-8.jpg" download>
+                        </a>
+                    </div>
+                </div>
+                <div class="gallery__block block-5-image-4" [class.mobile]="is_mobile">
+                    <img class="gallery__image" src="assets/images/media/image-9.jpg" alt="Ally-Trust">
+                    <div class="gallery__btn-block">
+                        <button class="gallery__btn-view" (click)="checkModal($event, 9)"></button>
+                        <a class="gallery__btn-download" href="assets/images/media/large/image-9.jpg" download>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="gallery__row">
+            <div class="gallery__block-6">
+                <div class="gallery__block block-6-image-1" [class.mobile]="is_mobile">
+                    <img class="gallery__image" src="assets/images/media/image-10.jpg" alt="Ally-Trust">
+                    <div class="gallery__btn-block">
+                        <button class="gallery__btn-view" (click)="checkModal($event, 10)"></button>
+                        <a class="gallery__btn-download" href="assets/images/media/large/image-10.jpg" download>
+                        </a>
+                    </div>
+                </div>
+                <div class="gallery__block block-6-image-2" [class.mobile]="is_mobile">
+                    <img class="gallery__image" src="assets/images/media/image-11.jpg" alt="Ally-Trust">
+                    <div class="gallery__btn-block">
+                        <button class="gallery__btn-view" (click)="checkModal($event, 11)"></button>
+                        <a class="gallery__btn-download" href="assets/images/media/large/image-11.jpg" download>
+                        </a>
+                    </div>
+                </div>
+                <div class="gallery__block block-6-image-3" [class.mobile]="is_mobile">
+                    <img class="gallery__image" src="assets/images/media/image-12.jpg" alt="Ally-Trust">
+                    <div class="gallery__btn-block">
+                        <button class="gallery__btn-view" (click)="checkModal($event, 12)"></button>
+                        <a class="gallery__btn-download" href="assets/images/media/large/image-12.jpg" download>
+                        </a>
+                    </div>
+                </div>
+                <div class="gallery__block block-6-image-4" [class.mobile]="is_mobile">
+                    <img class="gallery__image" src="assets/images/media/image-13.jpg" alt="Ally-Trust">
+                    <div class="gallery__btn-block">
+                        <button class="gallery__btn-view" (click)="checkModal($event, 13)"></button>
+                        <a class="gallery__btn-download" href="assets/images/media/large/image-13.jpg" download>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery__block gallery__block-7" [class.mobile]="is_mobile">
+                <img class="gallery__image" src="assets/images/media/image-14.jpg" alt="Ally-Trust">
+                <div class="gallery__btn-block">
+                    <button class="gallery__btn-view" (click)="checkModal($event, 14)"></button>
+                    <a class="gallery__btn-download" href="assets/images/media/large/image-14.jpg" download>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="gallery__row">
+            <div class="gallery__block gallery__block-8" [class.mobile]="is_mobile">
+                <img class="gallery__image" src="assets/images/media/image-15.jpg" alt="Ally-Trust">
+                <div class="gallery__btn-block">
+                    <button class="gallery__btn-view" (click)="checkModal($event, 15)"></button>
+                    <a class="gallery__btn-download" href="assets/images/media/large/image-15.jpg" download>
+                    </a>
+                </div>
+            </div>
+            <div class="gallery__block gallery__block-9" [class.mobile]="is_mobile">
+                <img class="gallery__image" src="assets/images/media/image-16.jpg" alt="Ally-Trust">
+                <div class="gallery__btn-block">
+                    <button class="gallery__btn-view" (click)="checkModal($event, 16)"></button>
+                    <a class="gallery__btn-download" href="assets/images/media/large/image-16.jpg" download>
+                    </a>
+                </div>
+            </div>
+            <div class="gallery__block gallery__block-0" [class.mobile]="is_mobile">
+                <img class="gallery__image" src="assets/images/media/image-17.jpg" alt="Ally-Trust">
+                <div class="gallery__btn-block">
+                    <button class="gallery__btn-view" (click)="checkModal($event, 17)"></button>
+                    <a class="gallery__btn-download" href="assets/images/media/large/image-17.jpg" download>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="media__container">
+        <div class="media__undertitle">April 12, 2018</div>
+        <div class="media__title">Press Release</div>
+        <div class="media__text">
+            <p>When the lines on a map are being redrawn, the lives of those living within them can never be the same.
+                Step into the shoes of people caught in the crosshairs of history, as Russian forces invade Ukraine to
+                reclaim the former Soviet territory and bring it back into the fold…whether the Ukrainians want to or
+                not. Surviving in such trying times is never easy, what’s worse, dying in them can be just as
+                difficult.</p>
+            <p>While centered around a war, the combat and casualties themselves are less the focus of the books so
+                much as the catalyst for the themes explored in the character’s experiences. The concepts of love and
+                loyalty are put to the test. Faith and religion amid utter madness is closely examined. The value of
+                hope is questioned, and the cost of survival is weighed alongside it. If your think you can handle it,
+                then come explore the physical and mental lengths a person can push themselves through for a cause they
+                believe in, as well as the sheer depths their spirit can sink to along the way, here in the pages
+                of…THE SCARS OF SURVIVAL</p>
+        </div>
+        <div class="media__label">Both books will soon be available on Amazon</div>
+        <a class="media__btn-amazon" href="#">Go to Amazon</a>
+        <div class="info">
+            <h2 class="info__heading">Interview Questions</h2>
+            <ul class="info__list">
+                <li class="info__list-item">How did you come up with these stories?</li>
+                <li class="info__list-item">What made you choose to write these stories?</li>
+                <li class="info__list-item">Why did you self-publish through Amazon?</li>
+                <li class="info__list-item">Are there any authors or stories that inspired your writing?</li>
+                <li class="info__list-item">Do you have any other projects planned for the future?</li>
+            </ul>
+            <div class="info__heading">Download media kit</div>
+            <div class="info__btn-group">
+                <div class="info__block">
+                    <a href="#" class="info__btn-asset">Small file</a>
+                    <div class="info__item-name">Small Media Kit.pdf (123 kb)</div>
+                </div>
+                <div class="info__block">
+                    <a href="#" class="info__btn-default">Large File</a>
+                    <div class="info__item-name">Large Media Kit.pdf (423 kb)</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-media-image [action_value]='action' [image_count]='image_count' (returnEvent)=checkModal($event)></app-media-image>

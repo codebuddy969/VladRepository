@@ -1,0 +1,500 @@
+@import '../../../styles';
+
+.media {
+    padding-top: 215px;
+    padding-bottom: 65px;
+    &__background {
+        top: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        max-width: 310px;
+        position: fixed;
+        background-color: #f3f3f3;
+    }
+    &__gallery {
+        max-width: 1170px;
+    }
+    &__container {
+        margin: 0 auto;
+        max-width: 1170px;
+        padding-left: 270px;
+        padding-right: 180px;
+    }
+    &__undertitle {
+        color: $font-color-light-t2;
+    }
+    &__title {
+        font-size: 50px;
+        line-height: 55px;
+        margin-top: 15px;
+        text-transform: uppercase;
+    }
+    &__text {
+        p {
+            margin-top: 30px;
+        }
+    }
+    &__label {
+        margin-top: 30px;
+        color: $primary-color;
+    }
+    &__btn-amazon {
+        @extend .at-btn-colored;
+        height: 60px;
+        margin-top: 30px;
+        line-height: 58px;
+        box-shadow: 0px 3px 76px 0px rgba(255, 192, 89, 0.35);
+    }
+    
+    @media screen and (max-width: $break-md) {
+        &__container {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        &__background {
+            display: none;
+        }
+    }
+    @media screen and (max-width: $break-sm) {
+        padding-top: 150px;
+    }
+    @media screen and (max-width: $break-xs) {
+        &__container {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+}
+
+.gallery {
+    $root: &;
+    max-width: 1170px;
+    margin: 50px auto 60px;
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 11px;
+        justify-content: space-between;
+    }
+    &__block {
+        display: flex;
+        align-items: center;
+        position: relative;
+        justify-content: center;
+        overflow: hidden;
+        &.mobile {
+            align-items: flex-end;
+            #{$root}__btn-view {
+                opacity: 1;
+                margin-bottom: 20px;
+                transition: $slow-transition;
+            }
+            #{$root}__btn-download {
+                opacity: 1;
+                margin-bottom: 20px;
+                transition: $slow-transition;
+            }
+        }
+        &:hover {
+            #{$root}__btn-view {
+                opacity: 1;
+                transition: $slow-transition;
+            }
+            #{$root}__btn-download {
+                opacity: 1;
+                transition: $slow-transition;
+            }
+        }
+    }
+    &__block-1 {
+        width: 382px;
+        height: 570px;
+        overflow: hidden;
+        border-radius: 5px;
+    }
+    &__block-2 {
+        width: 382px;
+        height: 570px;
+        overflow: hidden;
+        border-radius: 5px;
+    }
+    &__block-3 {
+        width: 382px;
+        height: 570px;
+        border-radius: 5px;
+        display: flex;
+        overflow: hidden;
+        border-radius: 5px;
+        flex-direction: column;
+        justify-content: space-between;
+        .block-3-image-1 {
+            width: 100%;
+            height: 280px;
+        }
+        .block-3-image-2 {
+            width: 100%;
+            height: 280px;
+        }
+    }
+    &__block-4 {
+        width: 685px;
+        height: 495px;
+        overflow: hidden;
+        border-radius: 5px;
+    }
+    &__block-5 {
+        width: 475px;
+        height: 495px;
+        overflow: hidden;
+        border-radius: 5px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: space-between;
+        .block-5-image-1 {
+            width: 48.75%;
+            height: 68.75%;
+        }
+        .block-5-image-2 {
+            width: 48.75%;
+            height: 68.75%;
+        }
+        .block-5-image-3 {
+            width: 48.75%;
+            height: 28.75%;
+        }
+        .block-5-image-4 {
+            width: 48.75%;
+            height: 28.75%;
+        }
+    }
+    &__block-6 {
+        width: 475px;
+        height: 495px;
+        overflow: hidden;
+        border-radius: 5px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: space-between;
+        .block-6-image-1 {
+            width: 48.75%;
+            height: 68.75%;
+        }
+        .block-6-image-2 {
+            width: 48.75%;
+            height: 68.75%;
+        }
+        .block-6-image-3 {
+            width: 48.75%;
+            height: 28.75%;
+        }
+        .block-6-image-4 {
+            width: 48.75%;
+            height: 28.75%;
+        }
+    }
+    &__block-7 {
+        width: 685px;
+        height: 495px;
+        overflow: hidden;
+        border-radius: 5px;
+    }
+    &__block-8 {
+        width: 383px;
+        height: 384px;
+        overflow: hidden;
+        border-radius: 5px;
+    }
+    &__block-9 {
+        width: 383px;
+        height: 384px;
+        overflow: hidden;
+        border-radius: 5px;
+    }
+    &__block-0 {
+        width: 383px;
+        height: 384px;
+        overflow: hidden;
+        border-radius: 5px;
+    }
+    &__btn-block {
+        width: 100%;
+        text-align: center;
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+    &__btn-view {
+        opacity: 0;
+        width: 70px;
+        height: 70px;
+        cursor: pointer;
+        margin-left: 5px;
+        margin-right: 5px;
+        position: relative;
+        border-radius: 50%;
+        background-size: 50%;
+        transition: $fast-transition;
+        background-color: $primary-color;
+        &:before {
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            font-size: 22px;
+            content: '\e80c';
+            font-family: "Fontello";
+        }
+    }
+    &__btn-download {
+        opacity: 0;
+        width: 70px;
+        height: 70px;
+        cursor: pointer;
+        margin-left: 5px;
+        margin-right: 5px;
+        position: relative;
+        border-radius: 50%;
+        background-size: 30%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: $fast-transition;
+        background-color: $primary-color;
+        &:before {
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            font-size: 30px;
+            content: '\e807';
+            font-family: "Fontello";
+        }
+    }
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+    }
+    
+    @media screen and (max-width: $break-lg) {
+        padding-left: 30px;
+        padding-right: 30px;
+        &__block-1 {
+            width: get-vw(0, 365, 1199);
+            height: get-vw(0, 570, 1199); 
+        }
+        &__block-2 {
+            width: get-vw(0, 365, 1199);
+            height: get-vw(0, 570, 1199);
+        }
+        &__block-3 {
+            width: get-vw(0, 365, 1199);
+            height: get-vw(0, 570, 1199);
+        }
+        &__block-4 {
+            width: get-vw(0, 665, 1199);
+            height: get-vw(0, 495, 1199);
+        }
+        &__block-5 {
+            width: get-vw(0, 445, 1199);
+            height: get-vw(0, 495, 1199);
+        }
+        &__block-6 {
+            width: get-vw(0, 445, 1199);
+            height: get-vw(0, 495, 1199);
+        }
+        &__block-7 {
+            width: get-vw(0, 665, 1199);
+            height: get-vw(0, 495, 1199);
+        }
+        &__block-8 {
+            width: get-vw(0, 360, 1199);
+            height: get-vw(0, 384, 1199);
+        }
+        &__block-9 {
+            width: get-vw(0, 360, 1199);
+            height: get-vw(0, 384, 1199);
+        }
+        &__block-0 {
+            width: get-vw(0, 360, 1199);
+            height: get-vw(0, 384, 1199);
+        }
+    }
+    @media screen and (max-width: $break-md) {
+        padding-left: 15px;
+        padding-right: 15px;
+        &__btn-view {
+            width: 50px;
+            height: 50px;
+        }
+        &__btn-download {
+            width: 50px;
+            height: 50px;
+        }
+    }
+    @media screen and (max-width: $break-sm) {
+        &__row {
+            margin-bottom: 0;
+        }
+        &__block-1 {
+            width: 49%;
+            height: get-vw(0,700,767);
+        }
+        &__block-2 {
+            width: 49%;
+            height: get-vw(0,700,767);
+        }
+        &__block-3 {
+            width: 100%;
+            height: auto;
+            margin-top: 2vw;
+            flex-direction: row;
+            .block-3-image-1 {
+                width: 49%;
+                height: get-vw(0,280,767);
+            }
+            .block-3-image-2 {
+                width: 49%;
+                height: get-vw(0,280,767);
+            }
+        }
+        &__block-4 {
+            width: 100%;
+            height: get-vw(0,500,767);
+            margin-top: 2vw;
+        }
+        &__block-5 {
+            width: 100%;
+            height: get-vw(0,900,767);
+            margin-top: 2vw;
+        }
+        &__block-6 {
+            width: 100%;
+            height: get-vw(0,900,767);
+            margin-top: 2vw;
+        }
+        &__block-7 {
+            width: 100%;
+            height: get-vw(0,500,767);
+            margin-top: 2vw;
+        }
+        &__block-8 {
+            width: 100%;
+            height: get-vw(0,460,767);
+            margin-top: 2vw;
+        }
+        &__block-9 {
+            width: 100%;
+            height: get-vw(0,460,767);
+            margin-top: 2vw;
+        }
+        &__block-0 {
+            width: 100%;
+            height: get-vw(0,460,767);
+            margin-top: 2vw;
+        }
+        &__btn-view {
+            width: 70px;
+            height: 70px;
+        }
+        &__btn-download {
+            width: 70px;
+            height: 70px;
+        }
+    }
+    @media screen and (max-width: 400px) {
+        &__block-1 {
+            width: 100%;
+            height: get-vw(0,700,400);
+        }
+        &__block-2 {
+            width: 100%;
+            margin-top: 2vw;
+            height: get-vw(0,700,400);
+        }
+        &__block-3 {
+            flex-direction: column;
+            .block-3-image-1 {
+                width: 100%;
+                height: get-vw(0,280,400);
+            }
+            .block-3-image-2 {
+                width: 100%;
+                height: get-vw(0,280,400);
+            }
+        }
+        &__btn-view {
+            width: 50px;
+            height: 50px;
+        }
+        &__btn-download {
+            width: 50px;
+            height: 50px;
+        }
+    }
+}
+
+.info {
+    &__heading {
+        font-size: 22px;
+        margin-top: 60px;
+        text-transform: uppercase;
+        &:first-of-type {
+            margin-top: 70px;
+        }
+    }
+    &__list {
+        margin-top: 25px;
+    }
+    &__list-item {
+        &:before {
+            content: "•";
+            margin-right: 8px;
+            color: $primary-color;
+        }
+    }
+    &__btn-group {
+        width: 100%;
+        max-width: 530px;
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__btn-asset {
+        @extend .at-btn-colored;
+        width: 255px;
+        height: 60px;
+        line-height: 58px;
+        box-shadow: 0px 3px 76px 0px rgba(255, 192, 89, 0.35);
+    }
+    &__btn-default {
+        @extend .at-btn-default;
+        width: 255px;
+        height: 60px;
+        line-height: 58px;
+    }
+    &__item-name {
+        width: 260px;
+        font-size: 18px;
+        margin-top: 10px;
+        text-align: center;
+        color: $font-color-light-t3;
+    }
+    
+    @media screen and (max-width: $break-xs) {
+        &__block:last-of-type {
+            margin-top: 20px;
+        }
+        &__btn-group {
+            flex-direction: column;
+        }
+    }
+}
+
+

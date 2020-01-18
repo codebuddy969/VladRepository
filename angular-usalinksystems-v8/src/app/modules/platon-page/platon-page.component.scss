@@ -1,0 +1,252 @@
+@function get-vw($min,$target) {
+    $vw-context: (1920*.01) * 1;
+    $vw-converted: ($min/$vw-context);
+    @return calc(#{$min + px} + #{($target/$vw-context - $vw-converted + vw)});
+}
+
+.header {
+    height: get-vw(0,1050);
+    overflow: hidden;
+    position: relative;
+    background:
+        url('/assets/img/platon-page/header_BL.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__quotation {
+        z-index: 1;
+        padding: 40px;
+        margin: 0 15px;
+        font-size: 38px;
+        max-width: 530px;
+        color: #ffffff;
+        text-transform: uppercase;
+        border: 5px solid #ffffff;
+        font-family: 'Fjalla One', serif;
+    }
+    &__author {
+        display: block;
+        font-size: 21px;
+        margin-top: 10px;
+        font-weight: 400;
+        text-transform: none;
+        font-family: 'Roboto', sans-serif;
+    }
+    &__video {
+        top: 0;
+        left: 0;
+        width: 100%;
+        position: absolute;
+    }
+
+    @media screen and (max-width: 991px) {
+        background:
+            url('/assets/img/platon-page/header_BM.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    @media screen and (max-width: 575px) {
+        height: 300px;
+        background:
+            url('/assets/img/platon-page/header_BS.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        &__quotation {
+            padding: 15px;
+            font-size: 24px;
+        }
+        &__author {
+            font-size: 16px;
+        }
+        &__video {
+            width: auto;
+            height: 300px;
+        }
+    }
+}
+
+.about {
+    width: 100%;
+    margin: 55px auto 0;
+    max-width: 1140px;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.favourite {
+    width: 100%;
+    height: 364px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('/assets/img/platon-page/favourite-food.jpg');
+    &__info {
+        width: 100%;
+        max-width: 280px;
+        height: 100%;
+        margin-left: 85px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &__title {
+        font-size: 48px;
+        line-height: 58px;
+        text-transform: uppercase;
+        letter-spacing: -1.5px;
+        font-family: 'Fjalla One', sans-serif;
+    }
+    &__text {
+        font-size: 16px;
+    }
+
+    @media screen and (max-width: 767px) {
+        background:
+            linear-gradient(
+                    rgba(255, 255, 255, 0.45),
+                    rgba(255, 255, 255, 0.45)
+            ),
+            url('/assets/new-design/images/platon-page/favourite-food.jpg');
+        background-position: center;
+    }
+    @media screen and (max-width: 575px) {
+        &__info {
+            margin: 0;
+            max-width: 100%;
+            text-align: center;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+}
+
+.tasks {
+    width: 100%;
+    height: 364px;
+    max-width: calc(50% - 15px);
+    margin-top: 30px;
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-image: url('/assets/img/platon-page/daily-tasks.jpg');
+    &__info {
+        width: 100%;
+        max-width: 150px;
+        height: 100%;
+        margin-left: 40px;
+        padding-top: 40px;
+        display: flex;
+        flex-direction: column;
+    }
+    &__title {
+        font-size: 48px;
+        line-height: 58px;
+        text-transform: uppercase;
+        letter-spacing: -1.5px;
+        font-family: 'Fjalla One', sans-serif;
+    }
+    &__text {
+        font-size: 16px;
+    }
+
+    @media screen and (max-width: 991px) {
+        background:
+            linear-gradient(
+                    rgba(255, 255, 255, 0.45),
+                    rgba(255, 255, 255, 0.45)
+            ),
+            url('/assets/new-design/images/platon-page/daily-tasks.jpg');
+        background-position: right;
+    }
+    @media screen and (max-width: 575px) {
+        max-width: 100%;
+        &__info {
+            margin-left: 0;
+            max-width: 100%;
+            text-align: center;
+            justify-content: center;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+}
+
+.loves {
+    width: 100%;
+    height: 364px;
+    max-width: calc(50% - 15px);
+    margin-top: 30px;
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-image: url('/assets/img/platon-page/loves.jpg');
+    &__info {
+        width: 100%;
+        max-width: 150px;
+        height: 100%;
+        margin-left: 40px;
+        padding-top: 45px;
+        display: flex;
+        flex-direction: column;
+    }
+    &__title {
+        font-size: 48px;
+        line-height: 58px;
+        text-transform: uppercase;
+        letter-spacing: -1.5px;
+        font-family: 'Fjalla One', sans-serif;
+    }
+    &__text {
+        font-size: 16px;
+    }
+
+    @media screen and (max-width: 991px) {
+        background:
+            linear-gradient(
+                    rgba(255, 255, 255, 0.45),
+                    rgba(255, 255, 255, 0.45)
+            ),
+            url('/assets/new-design/images/platon-page/loves.jpg');
+        background-position: right;
+    }
+    @media screen and (max-width: 575px) {
+        max-width: 100%;
+        &__info {
+            margin-left: 0;
+            max-width: 100%;
+            text-align: center;
+            justify-content: center;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+}
+
+.description {
+    padding: 85px 15px 100px;
+    &__title {
+        margin: 0 auto;
+        font-size: 48px;
+        line-height: 58px;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: 'Fjalla One', serif;
+    }
+    &__text {
+        font-size: 21px;
+        line-height: 32px;
+        width: 100%;
+        font-weight: 300;
+        margin: 15px auto 0;
+        max-width: 760px;
+        text-align: center;
+    }
+}

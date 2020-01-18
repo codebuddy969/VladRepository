@@ -1,0 +1,14 @@
+<div class="enjoy" *ngIf="blogList?.length != 0">
+    <h2 class="enjoy__headline">You may also enjoy reading</h2>
+    <div class="enjoy__row">
+        <div class="enjoy__column" *ngFor="let blog of blogList; let i = index">
+            <a class="enjoy__link" itemprop="url" [routerLink]="getLink(blog.title, blog.id)">
+                <span class="enjoy__image">
+                    <img src="{{blog?.image}}" alt="{{blog?.title}}">
+                </span>
+                <span class="enjoy__title">{{blog?.title}}</span>
+                <span class="enjoy__date">{{blog?.published_date | date}}</span>
+            </a>
+        </div>
+    </div>
+</div>

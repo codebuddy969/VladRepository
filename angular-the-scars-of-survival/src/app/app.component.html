@@ -1,0 +1,48 @@
+<div class="page-container" (scroll)="switch_navbar($event)">
+
+    <div class="navigation" [class.navigation--scroll]="navbar_state">
+        <nav class="navigation__container">
+
+            <div class="burger-toggler {{menu_state}}" *ngIf="nav_state">
+                <div class="burger-toggler-block">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+
+            <div class="navigation__backdrop {{menu_state}}"></div>
+
+            <a class="navigation__logo" href="#">Ally <span>Trust</span></a>
+
+            <button type="button" class="navigation__mail" *ngIf="nav_state" (click)="checkModal($event,'select')">
+                <i class="at-icon">&#xe803;</i>
+            </button>
+
+            <app-navlist *ngIf="!nav_state"></app-navlist>
+        </nav>
+    </div>
+
+    <div class="drawer {{menu_state}}" appDrawer>
+        <div class="burger">
+            <div class="burger-toggler {{menu_state}}">
+                <div class="burger-toggler-block">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="burger__title">Menu</div>
+        </div>
+        <app-navlist *ngIf="nav_state"></app-navlist>
+    </div>
+    
+    <main [@routeAnimation]="outlet.isActivated && !isIE ? outlet.activatedRoute : ''">
+        <router-outlet #outlet="outlet"></router-outlet>
+    </main>
+
+    <app-contact-modal [action_value]='action' [modal_type]='modal_type' [select_modal]='select_modal' (returnEvent)=checkModal($event)></app-contact-modal>
+</div>  
+
+
+

@@ -1,0 +1,119 @@
+.footer {
+  height 130px
+  background-color #fafafa
+  display flex
+  justify-content space-around
+  align-items center
+  &>div {
+    display flex
+    @media (max-width: 767px) {
+      flex-direction column
+    }
+    @media (max-width: 480px) {
+      width 100%
+    }
+  }
+  @media (max-width: 1430px) {
+    flex-wrap wrap
+    height auto
+    padding 20px 10px
+  }
+}
+
+.copy {
+  color rgba(34, 34, 34, 0.7)
+  font-size 12px
+  text-align center
+  max-width 450px
+  padding-left 5px
+  @media (max-width: 1430px) {
+    width 100%
+    padding-top 10px
+  }
+  @media (max-width: 767px) {
+    padding-top 20px
+  }
+}
+
+.title {
+  color #222222
+  font-size 18px
+  font-weight 500
+  padding-right 45px
+  @media (max-width: 767px) {
+    text-align center
+    padding-right 0
+  }
+}
+
+.form {
+  &>div {
+    display flex
+    align-items center
+    @media (max-width: 480px) {
+      width 100%
+    }
+  }
+  display flex
+  button {
+    font-family: 'Montserrat', sans-serif
+    font-weight 500
+    color #222222
+    font-size 14px
+    text-align center
+    display block
+    box-sizing border-box
+    background-color #fefefe
+    border 2px solid #222222
+    border-radius 4px
+    width 140px
+    line-height 35px
+    height 45px
+    align-self center
+    cursor pointer
+    transition all 0.1s
+    &:hover,
+    &:active,
+    &:focus {
+      color #fefefe
+      background-color #222222
+    }
+    @media (max-width: 480px) {
+      width 100%
+      margin-top 20px
+    }
+  }
+  @media (max-width: 480px) {
+    flex-direction column
+    align-items center
+    justify-content center
+  }
+}
+
+.field {
+  color rgba(34, 34, 34, 0.7)
+  background-color transparent
+  border 0
+  border-bottom 1px solid #222222
+  box-sizing border-box
+  padding-right 10px
+  line-height 45px
+  transition all 0.1s
+  width 260px
+  margin-right 65px
+  &::placeholder {
+     color rgba(34, 34, 34, 0.7)
+  }
+  &:hover,
+  &:active,
+  &:focus {
+    outline none 
+    border-bottom-color #f90081
+  }
+  @media (max-width: 480px) {
+    margin-right 0
+    width 100%
+    text-align center
+    padding-left 10px
+  }
+}

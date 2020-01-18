@@ -1,0 +1,494 @@
+@import '../../../../styles';
+
+::ng-deep .drag-scroll-content {
+    overflow: hidden !important;
+}
+
+drag-scroll {
+    height: auto;
+}
+
+.details {
+    $root: &;
+    padding-top: 180px;
+    padding-bottom: 140px;
+    &__background {
+        top: 0;
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+        max-width: 310px;
+        position: fixed;
+        background-color: #f3f3f3;
+    }
+    &__cover {
+        width: 100%;
+        height: 555px;
+        max-width: 1230px;
+        overflow: hidden;
+        border-radius: 12px;
+        display: flex;
+        position: relative;
+        align-items: center;
+        margin: 0 auto;
+        border-radius: 10px;
+        justify-content: center;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__cover-container {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    &__label {
+        top: 40px;
+        left: 0;
+        height: 60px;
+        max-width: 250px;
+        line-height: 60px;
+        position: absolute;
+        padding-left: 25px;
+        padding-right: 40px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        background-color: $primary-color;
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+    }
+    &__container {
+        z-index: 1;
+        margin: 0 auto;
+        max-width: 1170px;
+        position: relative;
+        padding-left: 270px;
+        padding-right: 170px;
+    }
+    &__date {
+        font-size: 20px;
+        margin-top: 35px;
+        color: $font-color-light-t2;
+    }
+    &__title {
+        font-size: 50px;
+        margin-top: 10px;
+        line-height: 55px;
+        text-transform: uppercase;
+    }
+    &__text {
+        margin-top: 25px;
+        margin-bottom: 45px;
+        color: $font-color-light-t1;
+        a { 
+            color: $primary-color 
+        }
+    }
+    &__block-share {
+        width: 160px;
+        position: relative;
+        &.active {
+            #{$root}__btn-facebook {
+                left: 170px;
+            }
+            #{$root}__btn-twitter {
+                left: 240px;
+            }
+            #{$root}__btn-goodread {
+                left: 310px;
+            }
+            #{$root}__btn-mail {
+                left: 378px;
+            }
+        }
+    }
+    &__social-title {
+        z-index: 1;
+        width: 160px;
+        height: 58px;
+        cursor: pointer;
+        font-size: 18px;
+        position: relative;
+        border-radius: 29px;
+        color: $font-color-light-t2;
+        background-color: #ffffff;
+        transition: $fast-transition;
+        border: 1px solid $font-color-light-t2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .at-icon {
+            pointer-events: none;
+        }
+        span {
+            margin-left: 10px;
+            pointer-events: none;
+            transition: $fast-transition;
+        }
+    }
+    &__btn-social {
+        top: 0;
+        left: 100px;
+        width: 57px;
+        height: 57px;
+        display: flex;
+        border-radius: 50%;
+        position: absolute;
+        align-items: center;
+        color: $primary-color;
+        justify-content: center;
+        border: 1px solid $primary-color;
+        transition: $fast-transition;
+        &:hover {
+            color: #ffffff;
+            background-color: $primary-color;
+        }
+        .at-icon {
+            font-size: 16px;
+        }
+    }
+
+    @media screen and (max-width: $break-md) {
+        &__background {
+            display: none;
+        }
+        &__container {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        &__cover {
+            height: get-vw(300,400);
+        }
+    }
+    @media screen and (max-width: $break-sm) {
+        &__block-share {
+            width: auto;
+            display: flex;
+            &.active {
+                #{$root}__social-title {
+                    width: 58px;
+                    transition: $fast-transition;
+                    span {
+                        width: 0;
+                        margin-left: 0;
+                        overflow: hidden;
+                        transition: $fast-transition;
+                    }
+                }
+                #{$root}__btn-facebook {
+                    left: 65px;
+                }
+                #{$root}__btn-twitter {
+                    left: 130px;
+                }
+                #{$root}__btn-goodread {
+                    left: 198px;
+                }
+                #{$root}__btn-mail {
+                    left: 260px;
+                }
+            }
+        }
+    }   
+    @media screen and (max-width: $break-xs) {
+        &__background {
+            display: none;
+        }
+        &__cover-container {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        &__container {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        &__block-share {
+            width: 250px;
+            margin: 20px auto 0;
+            &.active {
+                #{$root}__btn-facebook {
+                    left: 65px;
+                }
+                #{$root}__btn-twitter {
+                    left: 130px;
+                }
+                #{$root}__btn-goodread {
+                    left: 195px;
+                }
+                #{$root}__btn-mail {
+                    display: none;
+                }
+            }
+        }
+        &__btn-social {
+            margin-right: 5px;
+        }
+        &__social-title {
+            width: 100%;
+        }
+        &__title {
+            font-size: get-vw(20,50);
+            line-height: get-vw(25,55);
+        }
+    }
+}
+
+.comments {
+    margin-top: 70px;
+    &__label {
+        font-size: 22px;
+        text-transform: uppercase;
+        span {
+            color: #7e8187;
+        }
+    }
+    &__block {
+        display: none;
+        margin-top: 35px;
+        position: relative;
+        transition: $slow-transition;
+        &:before {
+            left: -60px;
+            content: '\e800';
+            color: #eeeeee;
+            position: absolute;
+            font-family: "Fontello";
+        }
+        &:first-of-type {
+            margin-top: 50px;
+        }
+        &.active {
+            display: block;
+            animation: fadeIn 1s;
+            transition: $slow-transition;
+            @keyframes fadeIn {
+                from { 
+                    opacity: 0; 
+                }
+                to { 
+                    opacity: 1; 
+                }
+            }
+        }
+    }
+    &__data {
+        display: flex;
+        margin-top: 15px;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__author {
+        color: $primary-color;
+    }
+    &__date {
+        color: $font-color-light-t2;
+    }
+    &__btn-group {
+        display: flex;
+        margin-top: 0;
+        align-items: center;
+        margin-bottom: 65px;
+        justify-content: space-between;
+    }
+    &__btn-more {
+        width: 160px;
+        height: 58px;
+        cursor: pointer;
+        font-size: 18px;
+        margin-top: 40px;
+        border-radius: 29px;
+        color: $primary-color;
+        background-color: #ffffff;
+        transition: $fast-transition;
+        border: 1px solid $primary-color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+            margin-right: 10px;
+        }
+        &:hover {
+            color: $font-color-light-t2;
+            transition: $fast-transition;
+            border: 1px solid $border-color;
+        }
+        &:disabled {
+            cursor: not-allowed;
+            background-color: #fbfbfb;
+            color: $font-color-light-t2;
+            border: 1px solid $border-color;
+        }
+    }
+    &__btn-comment {
+        width: 260px;
+        height: 58px;
+        cursor: pointer;
+        font-size: 18px;
+        margin-top: 40px;
+        border-radius: 29px;
+        background-color: #ffffff;
+        color: $font-color-light-t2;
+        transition: $fast-transition;
+        border: 1px solid $border-color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+            margin-right: 10px;
+        }
+        &:hover {
+            color: $primary-color;
+            transition: $fast-transition;
+            border: 1px solid $primary-color;
+        }
+    }
+
+    @media screen and (max-width: $break-xs) {
+        &__btn-group {
+            flex-direction: column;
+        }
+        &__btn-more {
+            width: 250px;
+        }
+        &__btn-comment {
+            width: 250px;
+            margin-top: 20px;
+        }
+    }
+}
+
+.slider {
+    padding-top: 30px;
+}
+
+.post {
+    width: 100%;
+    margin-right: 95px;
+    vertical-align: top;
+    &__cover {
+        height: 350px;
+        overflow: hidden;
+        border-radius: 15px;
+        position: relative;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 0 0;
+        }
+    }
+    &__label {
+        top: 40px;
+        height: 60px;
+        max-width: 250px;
+        line-height: 60px;
+        position: absolute;
+        padding-left: 25px;
+        padding-right: 40px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        background-color: $primary-color;
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+    }
+    &__title {
+        font-size: 28px;
+        margin-top: 24px;
+        text-transform: uppercase;
+        color: $font-color-light-t1;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    &__text {
+        margin-top: 20px;
+        white-space: normal;
+    }
+    &__data {
+        display: flex;
+        margin-top: 25px;
+        align-items: center;
+    }
+    &__date {
+        color: $font-color-light-t2;
+    }
+    &__comments {
+        color: $font-color-light-t2;
+    }
+    &__separator {
+        margin: 0 30px;
+        color: $font-color-light-t2;
+    }
+    &__btn-group {
+        width: 100%;
+        display: flex;
+        max-width: 340px;
+        margin-top: 20px;
+        align-items: center;
+    }
+    &__btn-more {
+        width: 160px;
+        height: 58px;
+        font-size: 18px;
+        margin-right: 15px;
+        border-radius: 29px;
+        color: $primary-color;
+        background-color: #ffffff;
+        transition: $fast-transition;
+        border: 1px solid $primary-color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover {
+            transition: $fast-transition;
+            color: $font-color-light-t2;
+            border: 1px solid $border-color;
+        }
+    }
+    &__btn-share {
+        width: 160px;
+        height: 58px;
+        font-size: 18px;
+        border-radius: 29px;
+        background-color: #ffffff;
+        color: $font-color-light-t2;
+        transition: $fast-transition;
+        border: 1px solid $border-color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+            margin-right: 10px;
+        }
+        &:hover {
+            color: $primary-color;
+            transition: $fast-transition;
+            border: 1px solid $primary-color;
+        }
+    }
+
+    @media screen and (max-width: $break-sm) {
+        &__btn-group {
+            margin-top: 20px;
+            align-items: flex-start;
+        }
+    }
+
+    @media screen and (max-width: $break-xs) {
+        &__btn-more {
+            width: 250px;
+            margin: 0 auto;
+        }
+        &__btn-group {
+            display: block;
+            margin: 25px auto 0;
+        }
+        &__btn-share {
+            width: 100%;
+            margin-top: 20px;
+        }
+    }
+}

@@ -1,0 +1,45 @@
+<nb-layout>
+  <nb-layout-header class="header-img">
+    <div class="logo-center">
+        <img src="/assets/images/logo/elara-logo.jpg" height="77px" width="420px">
+      </div>
+    </nb-layout-header>
+  <nb-layout-column>
+    <nb-card>
+      <div>
+        <h1 class="card-header">Members</h1>
+        <p class="card-description">Track your loyalty programs, exchange points and miles between programs, and redeem them for rewards</p>
+        <div>
+          <button class="btn btn-info card-button" [routerLink]="['/auth/member-login']">Sign In</button>
+          <button class="btn btn-info card-button" [routerLink]="['/auth/member-registration']">Registration</button>
+        </div>
+      </div>
+    </nb-card>
+  </nb-layout-column>
+ 
+  <nb-layout-column>
+    
+    <nb-card>
+      <h1 class="card-header">Partners</h1>
+      <p class="card-description">Elara loyalty solutions drive member engagement for airlines, hotels, financial services, and businesses worldwide.</p>
+      <div class="content-data">
+        <button class="btn btn-info card-button" [routerLink]="['/auth/partner-login']">Sign In</button>
+        
+        <button class="btn btn-info card-button" [routerLink]="['/auth/partner-registration']">Registration</button>
+       
+      </div>
+     
+    </nb-card>
+
+ 
+  </nb-layout-column>
+
+  <nb-layout-footer>
+     
+          <img src="/assets/images/back1.gif" height="180px" width="220px">
+      
+      </nb-layout-footer>
+  
+</nb-layout>
+
+

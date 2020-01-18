@@ -1,0 +1,30 @@
+.box {
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
+  border-color:  #ebebeb;
+  box-sizing: border-box;
+  background-color:  #ffffff;
+  width: 270px;
+  line-height: 60px;
+  border-left 6px solid #d13f8c
+  margin-left 20px
+  text-align center
+  color #222222
+  font-weight 500
+  &>span {
+    color #d13f8c
+  }
+  @media (max-width: 767px) {
+    width 49%
+    margin-left 0
+  }
+  @media (max-width: 480px) {
+    width 100%
+  }
+}
+
+.price {
+  color #222222
+}

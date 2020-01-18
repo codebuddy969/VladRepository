@@ -1,0 +1,266 @@
+.section {
+  background-color #fafafa
+  height 100vh
+  display: flex
+  flex-direction: column
+  justify-content: center
+  @media (max-width: 1200px) {
+    height auto
+    padding 0 0 20px
+  }
+  @media (max-height: 750px) {
+    height auto
+    padding 0 0 20px
+  }
+}
+
+.title {
+  font-family 'Anton', sans-serif
+  color #222222
+  font-size 48px
+  margin 0
+  letter-spacing 2px
+  padding-left 130px
+  padding-top 50px
+  @media (max-width: 1400px) {
+    padding-left 20px
+  }
+  @media(max-width:1200px) {
+    padding-left 20px
+    padding-top 20px
+  }
+  @media (max-height: 950px) {
+    padding-top 5px
+  }
+  @media (max-width: 767px) {
+    text-align center
+    padding-right 20px
+    font-size 36px
+  }
+}
+
+.subtitle {
+  padding-left 130px
+  color #222222
+  font-size 16px
+  line-height 24px
+  padding-bottom 45px
+  @media (max-width: 1400px) {
+    padding-left 20px
+  }
+  @media(max-width:1200px) {
+    padding-bottom  20px
+  }
+  @media (max-height: 950px) {
+    padding-bottom 15px
+  }
+  @media(max-width: 1200px) {
+    padding-left 20px
+  }
+  @media (max-width: 767px) {
+    text-align center
+    padding-right 20px
+    font-size 14px
+  }
+  a {
+    color #85c5e4
+    text-decoration none
+    transition all 0.1s
+    &:hover,
+    &:active,
+    &:focus {
+      color #fd0084
+    }
+  }
+}
+
+.containerBanner {
+  height 550px
+  display flex
+  flex-direction column
+  background-color #ffffff
+  @media (max-width: 767px) {
+    &>div {
+      min-width 650px 
+    }
+    overflow-x scroll
+    overflow-y scroll
+    -webkit-overflow-scrolling: touch;
+    -webkit-overflow-scrolling-x: touch;
+  }
+  @media (max-height: 870px) {
+    height 400px
+  }
+  @media (max-width: 1200px) {
+    height 550px
+  }
+  @media (max-height: 750px) {
+    height auto
+  }
+}
+
+.shadow {
+  box-shadow 0 0 20px 2px rgba(34, 34, 34, 0.2)
+  margin-right 60px
+  margin-left 130px
+  @media (max-width: 1400px) {
+    margin-left 20px
+    margin-right 20px
+  }
+  @media(max-width:1200px) {
+    margin-left 20px
+    margin-right 20px
+  }
+}
+
+.labels {
+  display flex
+  justify-content space-between
+  margin 0 90px 0 45px
+  border-bottom 1px solid rgba(34, 34, 34, 0.2)
+  @media (max-width: 1200px) {
+    margin 0 45px 0 20px
+  }
+}
+
+.label {
+  color #1b1e25
+  text-transform uppercase
+  font-size 16px
+  font-weight 700
+  padding-top 35px
+  padding-bottom 10px
+  width 140px
+  &:first-child {
+    width 300px
+  }
+  &:last-child {
+    text-align right
+  }
+  @media (max-height: 860px) {
+    padding-top 15px
+    padding-bottom 5px
+  }
+}
+
+.bannerForm {
+  padding-right 40px
+}
+
+.thick {
+  height 1000px
+}
+
+.scrollWrapper {
+  padding 0 30px
+  height 450px
+  @media (max-height: 860px) and (min-width: 1200px){
+    padding 0 10px 10px 10px
+    height 350px
+  }
+  @media (max-width: 1200px) {
+    height 480px
+  }
+}
+
+.entryTitle {
+  color #222222
+  font-size 16px
+  font-weight 500
+  padding-left 15px
+  padding-top 20px
+  padding-bottom 10px
+}
+
+.thumbVertical {
+  background-color #d33f8d
+  border-radius 4px
+  cursor pointer
+}
+
+.buttonZone {
+  display flex
+  align-items center
+  margin-left 130px
+  margin-top 30px
+  @media (max-width: 1400px) {
+    margin-left 20px
+  }
+  @media (max-width: 767px) {
+    flex-wrap wrap
+    justify-content space-around
+    margin-right 20px
+  }
+  @media (max-width: 480px) {
+    flex-direction column
+  }
+}
+
+.orderBtn {
+  border-radius 4px
+  box-shadow 0px 12px 32px 0px rgba(0, 0, 0, 0.2)
+  width 230px
+  line-height 60px
+  background-color #d13f8c
+  color #ffffff
+  font-size 18px
+  text-align center
+  text-transform uppercase
+  border 0
+  cursor pointer
+  transition all 0.1s
+  &:hover,
+  &:active,
+  &:focus {
+    background-color #222222
+  }
+  @media (max-width: 767px) {
+    width 49%
+  }
+  @media (max-width: 480px) {
+    width 100%
+    margin-bottom 15px
+  }
+}
+
+.faqLink, .askLink {
+  color #d33f8d
+  transition all 0.1s
+  &:hover,
+  &:active,
+  &:focus {
+    color #222222
+  }
+  @media (max-width: 767px) {
+    margin-top 15px
+    margin-left 0
+  }
+}
+
+.faqLink {
+  margin-left 35px
+  @media (max-width: 480px) {
+    margin-left 0
+  }
+  &::after {
+    content ''
+    height 13px
+    width 1px
+    background-color #e69cc3
+    margin 0 10px
+    @media (max-width: 480px) {
+      margin 0
+    }
+  }
+}
+
+.tooltip {
+  opacity 1 !important
+  padding 0 !important
+}
+
+.loader {
+  display flex
+  align-items center
+  justify-content center
+}

@@ -1,0 +1,53 @@
+<div class="popup" *ngIf="!finalClose">
+    <div class="popup__window">
+        <div class="popup__image">
+            <img src="/assets/img/subscribe.jpg" alt="usa-link-system">
+        </div>
+        <div class="popup__container">
+            <div class="popup__message" [class.active]="messageData.title">
+                <h3 class="popup__headline">{{messageData?.title}}</h3>
+                <div class="popup__text" [innerHTML]="messageData?.text"></div>
+            </div>
+            <div class="popup__headline">Subscribe to our Blog!</div>
+            <div class="popup__subline">Stay up to date with the latest marketing, sales, and service tips and news.</div>
+            <form class="popup__form"
+                  #formReference
+                  (submit)="submitForm($event)"
+                  [formGroup]="form" novalidate
+                  enctype="multipart/form-data">
+                <div class="popup__input">
+                    <label for="name">Name</label>
+                    <input type="text"
+                           id="name"
+                           name="name"
+                           placeholder="insert your name"
+                           [formControl]="form.controls.name">
+                    <div class="popup__errors" *ngIf="form.controls.name.dirty && !form.controls.name.valid">
+                        <small *ngIf="form.controls.name.errors.required">This field is required</small>
+                        <small *ngIf="form.controls.name.errors.minlength">Minimal length of this field is: {{form.controls.name.errors.minlength.requiredLength}}</small>
+                        <small *ngIf="form.controls.name.errors.maxlength">Maximal length of this field is: {{form.controls.name.errors.maxlength.requiredLength}}</small>
+                        <small *ngIf="form.controls.name.errors?.pattern">Only characters and spaces are allowed</small>
+                    </div>
+                </div>
+                <div class="popup__input">
+                    <label for="email">Email</label>
+                    <input type="text"
+                           id="email"
+                           name="email"
+                           placeholder="add your email"
+                           [formControl]="form.controls.email">
+                    <div class="popup__errors" *ngIf="form.controls.email.dirty && !form.controls.email.valid">
+                        <small *ngIf="form.controls.email.errors.required">This field is required</small>
+                        <small *ngIf="form.controls.email.errors.minlength">Minimal length of this field is: {{form.controls.email.errors.minlength.requiredLength}}</small>
+                        <small *ngIf="form.controls.email.errors.invalidEmail && form.controls.email.value != ''">Incorrect email address</small>
+                    </div>
+                </div>
+                <button class="popup__button">Subscribe</button>
+            </form>
+            <div class="popup__cross" (click)="closeModal($event)">
+                <div class="popup__line"></div>
+                <div class="popup__line"></div>
+            </div>
+        </div>
+    </div>
+</div>

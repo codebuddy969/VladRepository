@@ -1,0 +1,124 @@
+.mt-t1-footer {
+    background-color: $white-color;
+    padding-top: 45px;
+    margin-bottom: 40px;
+    padding-bottom: 35px;
+    box-shadow: 3px 5.196px 65px 0px rgba(1, 19, 17, 0.12);
+    &__logo {
+        font-family: $titles-font;
+        @include font-size(30);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-weight: bold;
+        text-transform: uppercase;
+        span {
+            color: $base-color;
+            @include font-size(22);
+            display: block;
+            letter-spacing: 4px;
+        }
+    }
+    &__text {
+        margin-top: 40px;
+    }
+    &__menu {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-end;
+        li {
+            padding-left: 30px;
+        }
+        a {
+            &:hover {
+                color: $base-color;
+            }
+        }
+    }
+    &__subscribe {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 25px;
+    }
+    &__input {
+        width: 100%;
+        max-width: 330px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+        border: 1px solid $border-color;
+        &::placeholder {
+            color: $highlight-color;
+            @include font-size(14);
+            font-style: oblique;
+        }
+        &:-ms-input-placeholder {
+            color: $highlight-color;
+            @include font-size(14);
+            font-style: oblique;
+        }
+        &::-ms-input-placeholder {
+            color: $highlight-color;
+            font-style: oblique;
+            @include font-size(14);
+        }
+    }
+    &__btn {
+        @include font-size(12);
+        color: $white-color;
+        font-family: $titles-font;
+        background-color: $base-color;
+        width: 100%;
+        max-width: 110px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-transform: uppercase;
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+    }
+    
+    @include max-media($break-md) {
+        &__menu {
+            li {
+                padding-left: 15px;
+            }
+        }
+    }
+    @include max-media($break-sm) {
+        &__logo {
+            align-items: center;
+        }
+        &__text {
+            margin-top: 20px;
+            text-align: center;
+        }
+        &__menu {
+            margin-top: 40px;
+            justify-content: center;
+            li {
+                padding-right: 15px;
+                padding-bottom: 15px;
+            }
+        }
+        &__social {
+            margin-top: 10px;
+            justify-content: center;
+        }
+        &__subscribe {
+            margin-top: 40px;
+            align-items: center;
+            flex-direction: column;
+        }
+        &__input {
+            height: 50px;
+            border-radius: 25px;
+        }
+        &__btn {
+            margin-top: 20px;
+            max-width: 330px;
+            border-radius: 25px;
+        }
+    }
+}

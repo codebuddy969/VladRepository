@@ -1,0 +1,102 @@
+<div class="header">
+    <h1 class="header__quotation">Non Profit</h1>
+</div>
+
+<div class="pre-form-container">
+    <p>
+        We're helping non-profit organizations reach its targeted audience by creating all its marketing materials and campaigns! We are dedicating 5-6 hours of our time a week for free. For services that go beyond the allotted time, businesses will be charged if the projects or campaigns need extra time, the non-profit will receive a discounted rate.
+    </p>
+</div>
+
+<h2 class="headline">Say what’s up</h2>
+
+<form (submit)="submitForm($event)" novalidate [formGroup]="form">
+
+    <fieldset class="input-text">
+        <label for="form-input-first_name">First name</label>
+        <input name="first_name" id="form-input-first_name" [formControl]="form.controls.first_name" type="text" placeholder="your first name">
+        <div class="errors">
+            <div *ngIf="form.controls.first_name.dirty && !form.controls.first_name.valid">
+                <small *ngIf="form.controls.first_name.errors.required">This field is required</small>
+                <small *ngIf="form.controls.first_name.errors.minlength">Minimal length of this field is: {{form.controls.first_name.errors.minlength.requiredLength}}</small>
+                <small *ngIf="form.controls.first_name.errors.maxlength">Maximal length of this field is: {{form.controls.first_name.errors.maxlength.requiredLength}}</small>
+            </div>
+        </div>
+    </fieldset>
+
+    <fieldset class="input-text">
+        <label for="form-input-last_name">Last name</label>
+        <input name="last_name" id="form-input-last_name" [formControl]="form.controls.last_name" type="text" placeholder="your last name">
+        <div class="errors">
+            <div *ngIf="form.controls.last_name.dirty && !form.controls.last_name.valid">
+                <small *ngIf="form.controls.last_name.errors.required">This field is required</small>
+                <small *ngIf="form.controls.last_name.errors.minlength">Minimal length of this field is: {{form.controls.last_name.errors.minlength.requiredLength}}</small>
+                <small *ngIf="form.controls.last_name.errors.maxlength">Maximal length of this field is: {{form.controls.last_name.errors.maxlength.requiredLength}}</small>
+            </div>
+        </div>
+    </fieldset>
+
+    <fieldset class="input-text">
+        <label for="form-input-email">Email</label>
+        <input name="email" id="form-input-email" [formControl]="form.controls.email" type="text" placeholder="your email">
+        <div class="errors">
+            <div *ngIf="form.controls.email.dirty && !form.controls.email.valid">
+                <small *ngIf="form.controls.email.errors.required">This field is required</small>
+                <small *ngIf="form.controls.email.errors.invalidEmail">Incorrect email address</small>
+            </div>
+        </div>
+    </fieldset>
+
+    <fieldset class="input-text">
+        <label for="form-input-phone">Phone number</label>
+        <input name="phone" id="form-input-phone" [textMask]="phoneMask" [formControl]="form.controls.phone" type="text" placeholder="(xxx) xxx-xxxx">
+        <div class="errors">
+            <div *ngIf="form.controls.phone.dirty && !form.controls.phone.valid">
+                <small *ngIf="form.controls.phone.errors.required">This field is required</small>
+                <small *ngIf="form.controls.phone.errors.invalidPhone">Incorrect phone number format</small>
+            </div>
+        </div>
+    </fieldset>
+
+    <fieldset class="input-text">
+        <label for="form-input-name">Name of organization</label>
+        <input name="organisation_name" id="form-input-name" [formControl]="form.controls.organisation_name" type="text" placeholder="organization name">
+        <div class="errors">
+            <div *ngIf="form.controls.organisation_name.dirty && !form.controls.organisation_name.valid">
+                <small *ngIf="form.controls.organisation_name.errors.required">This field is required</small>
+                <small *ngIf="form.controls.organisation_name.errors.minlength">Minimal length of this field is: {{form.controls.organisation_name.errors.minlength.requiredLength}}</small>
+                <small *ngIf="form.controls.organisation_name.errors.maxlength">Maximal length of this field is: {{form.controls.organisation_name.errors.maxlength.requiredLength}}</small>
+            </div>
+        </div>
+    </fieldset>
+
+    <fieldset class="input-text">
+        <label for="form-input-name">Business license</label>
+        <input name="business_license" id="form-input-license" [formControl]="form.controls.business_license" type="text" placeholder="license">
+        <div class="errors">
+            <div *ngIf="form.controls.business_license.dirty && !form.controls.business_license.valid">
+                <small *ngIf="form.controls.business_license.errors.required">This field is required</small>
+            </div>
+        </div>
+    </fieldset>
+
+    <fieldset class="input-textarea">
+        <label for="form-input-message">Tell us what you need</label>
+        <textarea name="message" id="form-input-message" [formControl]="form.controls.message" rows="3" placeholder="how can we assist you"></textarea>
+        <div class="errors">
+            <div *ngIf="form.controls.message.dirty && !form.controls.message.valid">
+                <small *ngIf="form.controls.message.errors.required">This field is required</small>
+                <small *ngIf="form.controls.message.errors.minlength">Minimal length of this field is: {{form.controls.message.errors.minlength.requiredLength}}</small>
+                <small *ngIf="form.controls.message.errors.maxlength">Maximal length of this field is: {{form.controls.message.errors.maxlength.requiredLength}}</small>
+            </div>
+        </div>
+    </fieldset>
+
+    <button type="submit">Submit</button>
+</form>
+
+<app-quote-section></app-quote-section>
+
+<app-alert-modal [message]='popup_message()'
+                 [action_value]='action'
+                 (returnEvent)=checkModal($event)></app-alert-modal>

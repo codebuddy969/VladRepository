@@ -1,0 +1,20 @@
+.blue-footer {
+    z-index: 1;
+    color: #ffffff;
+    text-align: center;
+    position: relative;
+    padding: 30px 15px 100px;
+    background-color: #25526d;
+    &__title {
+        color: #ffffff;
+        font-size: 22px;
+        text-transform: uppercase;
+        font-family: 'Fjalla One', serif;
+    }
+    &__quotation {
+        width: 100%;
+        color: #ffffff;
+        margin: 30px auto 0;
+        max-width: 350px;
+    }
+}

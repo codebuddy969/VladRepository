@@ -1,0 +1,105 @@
+.country {
+    &__header {
+        min-height: 500px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url('/assets/img/profile_philippines/profile_BL.jpg');
+    }
+    &__headline {
+        margin: 80px 0 10px;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: bold;
+        font-family: 'Fjalla One', sans-serif;
+        font-size: 62px;
+        line-height: 72px;
+        @media screen and (max-width: 1440px) {
+            margin-top: 60px;
+            font-size: 33px;
+            line-height: 40px;
+        }
+        @media screen and (max-width: 640px) {
+            margin-top: 30px;
+        }
+    }
+    &__subline {
+        margin: 0 0 60px;
+        text-transform: capitalize;
+        text-align: center;
+        font-style: italic;
+        font-size: 30px;
+        font-weight: 100;
+        line-height: 1;
+        @media screen and (max-width: 640px) {
+            font-size: 24px;
+            margin-bottom: 40px;
+        }
+        &::before,
+        &::after {
+            font-size: 0;
+            content: '';
+            width: 80px;
+            height: 1px;
+            background-color: #000;
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 40px;
+            @media screen and (max-width: 640px) {
+                width: 40px;
+                margin: 0 10px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 1440px) {
+        &__header {
+            min-height: 400px;
+        }
+    }
+    @media screen and (max-width: 787px) {
+        &__header {
+            min-height: 250px;
+        }
+    }
+}
+
+.content-container {
+    display: flex;
+    width: 60%;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    @media screen and (max-width: 1024px) {
+        width: 70%;
+    }
+    @media screen and (max-width: 640px) {
+        justify-content: center;
+        width: 85%;
+    }
+}
+
+.main-content {
+    text-align: center;
+    margin-bottom: 100px;
+    justify-content: center;
+    @media screen and (max-width: 992px) {
+        margin-bottom: 60px;
+    }
+    @media screen and (max-width: 640px) {
+        margin-bottom: 40px;
+    }
+}
+
+.text-paragraph {
+    font-size: 24px;
+    line-height: 1.8;
+    flex-basis: 60%;
+    @media screen and (max-width: 1440px) {
+        font-size: 13px !important;
+        margin: 0;
+    }
+    @media screen and (max-width: 1024px) {
+        flex-basis: 100%;
+    }
+}

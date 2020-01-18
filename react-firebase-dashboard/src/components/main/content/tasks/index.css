@@ -1,0 +1,281 @@
+/*--------------------- Variables ---------------------*/
+/*--------------------- Mixins ---------------------*/
+.tasks {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-animation: opacity 1s linear;
+  -moz-animation: opacity 1s linear;
+  -ms-animation: opacity 1s linear;
+  -o-animation: opacity 1s linear;
+  animation: opacity 1s linear; }
+
+@-webkit-keyframes opacity {
+  0% {
+    opacity: 0; }
+  90% {
+    opacity: 1; } }
+
+@-moz-keyframes opacity {
+  0% {
+    opacity: 0; }
+  90% {
+    opacity: 1; } }
+
+@-ms-keyframes opacity {
+  .tasks 0% {
+    opacity: 0; }
+  .tasks 90% {
+    opacity: 1; } }
+
+@-o-keyframes opacity {
+  0% {
+    opacity: 0; }
+  90% {
+    opacity: 1; } }
+
+@keyframes opacity {
+  0% {
+    opacity: 0; }
+  90% {
+    opacity: 1; } }
+  .tasks .tabtype-1 {
+    width: 100%;
+    height: 410px;
+    max-width: 726px;
+    border-radius: 7px;
+    margin-bottom: 50px;
+    padding: 35px 35px 20px;
+    background-color: #f3f5f6;
+    box-shadow: 0px 3px 20.79px 0.21px rgba(131, 153, 212, 0.31); }
+    .tasks .tabtype-1 .head-row {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      margin-bottom: 25px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #c4a2de; }
+      .tasks .tabtype-1 .head-row span {
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 900;
+        text-align: center;
+        text-transform: uppercase;
+        color: #c487e6; }
+      .tasks .tabtype-1 .head-row .number {
+        width: 22%; }
+      .tasks .tabtype-1 .head-row .customer {
+        width: 24%; }
+      .tasks .tabtype-1 .head-row .status {
+        width: 29%; }
+      .tasks .tabtype-1 .head-row .date {
+        width: 25%; }
+    .tasks .tabtype-1 .display-row .row {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      padding: 0 0 15px; }
+      .tasks .tabtype-1 .display-row .row div {
+        font-size: 16px;
+        text-align: center;
+        color: #cc82e4; }
+      .tasks .tabtype-1 .display-row .row .number {
+        width: 22%; }
+      .tasks .tabtype-1 .display-row .row .customer {
+        width: 24%; }
+      .tasks .tabtype-1 .display-row .row .status {
+        width: 29%;
+        font-weight: 300; }
+        .tasks .tabtype-1 .display-row .row .status.refund {
+          font-weight: 700;
+          color: #b91414; }
+      .tasks .tabtype-1 .display-row .row .date {
+        width: 25%; }
+      .tasks .tabtype-1 .display-row .row .stock {
+        width: 29%;
+        font-weight: 700; }
+      .tasks .tabtype-1 .display-row .row .request {
+        width: 25%;
+        font-weight: 700; }
+    .tasks .tabtype-1 .pagination-row {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      padding-top: 10px;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      -webkit-justify-content: space-between;
+      -moz-justify-content: space-between;
+      justify-content: space-between; }
+      .tasks .tabtype-1 .pagination-row .pagination-block {
+        width: 100%;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex;
+        max-width: 205px;
+        -webkit-box-align: end;
+        -ms-flex-align: end;
+        -webkit-align-items: flex-end;
+        -moz-align-items: flex-end;
+        align-items: flex-end;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        -webkit-justify-content: space-between;
+        -moz-justify-content: space-between;
+        justify-content: space-between; }
+        .tasks .tabtype-1 .pagination-row .pagination-block .pagination-btn {
+          width: 36px;
+          height: 36px;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -moz-flex;
+          display: -ms-flexbox;
+          display: flex;
+          cursor: pointer;
+          font-size: 18px;
+          font-weight: 700;
+          border-radius: 4px;
+          color: #fff;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          -webkit-align-items: center;
+          -moz-align-items: center;
+          align-items: center;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          -webkit-justify-content: center;
+          -moz-justify-content: center;
+          justify-content: center;
+          background-color: #cc82e4;
+          box-shadow: 0px 0px 8.55px 0.45px rgba(211, 146, 219, 0.51); }
+          .tasks .tabtype-1 .pagination-row .pagination-block .pagination-btn-points {
+            font-size: 30px;
+            padding-left: 4px;
+            text-align: center;
+            letter-spacing: 6px;
+            color: #cc82e4; }
+      .tasks .tabtype-1 .pagination-row .newUser-button {
+        width: 149px;
+        height: 37px;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex;
+        cursor: pointer;
+        font-weight: 700;
+        border-radius: 4px;
+        color: #fff;
+        text-transform: uppercase;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        justify-content: center;
+        background-color: #cc82e4;
+        box-shadow: 0px 0px 8.55px 0.45px rgba(211, 146, 219, 0.51); }
+  .tasks .tabtype-2 {
+    width: 100%;
+    height: 395px;
+    max-width: 521px;
+    overflow: hidden;
+    border-radius: 7px;
+    position: relative;
+    background-color: #f3f5f6;
+    box-shadow: 0px 3px 20.79px 0.21px rgba(131, 153, 212, 0.31); }
+    .tasks .tabtype-2 .H2 {
+      top: 35px;
+      left: 30px;
+      z-index: 2;
+      font-size: 24px;
+      position: absolute;
+      color: #c487e6; }
+    .tasks .tabtype-2 #Customers-Chart {
+      position: relative; }
+  .tasks .tabtype-3 {
+    width: 100%;
+    height: 395px;
+    max-width: 360px;
+    border-radius: 7px;
+    padding: 35px 35px 25px;
+    background-color: #f3f5f6;
+    box-shadow: 0px 3px 20.79px 0.21px rgba(131, 153, 212, 0.31); }
+    .tasks .tabtype-3 .H2 {
+      font-size: 24px;
+      margin-bottom: 25px;
+      color: #c487e6; }
+      .tasks .tabtype-3 .H2 span {
+        display: block;
+        font-size: 10px; }
+    .tasks .tabtype-3 .row {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      padding-left: 20px;
+      margin-bottom: 25px;
+      -webkit-box-direction: normal;
+      -webkit-box-orient: vertical;
+      -webkit-flex-direction: column;
+      -moz-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+      -webkit-align-items: flex-start;
+      -moz-align-items: flex-start;
+      align-items: flex-start;
+      border-left: 5px solid #cc82e4; }
+      .tasks .tabtype-3 .row .title {
+        font-size: 18px;
+        cursor: pointer;
+        font-weight: 700;
+        color: #cc82e4; }
+      .tasks .tabtype-3 .row .date {
+        margin: 5px 0;
+        font-size: 8px;
+        color: #cc82e4;
+        color: #8d9ed1; }
+      .tasks .tabtype-3 .row .text {
+        font-size: 10px;
+        font-weight: 700;
+        color: #656668; }
+    .tasks .tabtype-3 .button-group {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      -webkit-justify-content: space-between;
+      -moz-justify-content: space-between;
+      justify-content: space-between; }
+      .tasks .tabtype-3 .button-group .button {
+        width: 30%;
+        margin-top: 5px; }

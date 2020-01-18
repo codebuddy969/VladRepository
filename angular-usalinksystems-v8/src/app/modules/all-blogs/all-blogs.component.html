@@ -1,0 +1,43 @@
+<div class="header">
+    <h1 class="header__quotation">To a great mind, nothing is little.
+        <span class="header__author">— Sherlock Holmes</span>
+    </h1>
+</div>
+
+<div class="blog">
+    <div class="blog__options">
+        <button class="blog__return" routerLink="/whats-new"><i></i> <span>Back</span></button>
+        <h2 class="blog__headline">Company Blog</h2>
+    </div>
+    <div class="blog__row" #container>
+        <div class="blog__preloader" *ngIf="blogPreloader"></div>
+        <div class="blog__column" *ngFor="let blog of blogsList; let i = index">
+            <a class="blog__link"
+               *ngIf="i < maxBlogs"
+               [class.active]="i < maxBlogs"
+               [routerLink]="getLink(blog.title, blog.id)"
+               itemprop="url">
+                <span class="blog__image">
+                    <img src={{blog.image}} alt="Usa-link-system-blog">
+                </span>
+                <span class="blog__title">{{blog.title}}</span>
+                <span class="blog__date">{{blog.published_date | date}}</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<ul class="pagination" *ngIf="showPagination">
+    <li class="pagination__link"
+        *ngFor="let page of totalPages;"
+        [class.active]="page.number === currentPage"
+        (click)="switchContent(page.link, page.number)">
+        {{page.number}}
+    </li>
+</ul>
+
+<app-enjoy-reading></app-enjoy-reading>
+
+<app-most-popular></app-most-popular>
+
+<app-quote-section></app-quote-section>

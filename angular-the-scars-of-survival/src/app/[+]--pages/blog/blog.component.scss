@@ -1,0 +1,282 @@
+@import '../../../styles';
+
+.blog {
+    &__background {
+        top: 0;
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+        max-width: 310px;
+        position: fixed;
+        background-color: #f3f3f3;
+    }
+    &__container {
+        z-index: 1;
+        width: 100%;
+        max-width: 1230px;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin: 180px auto 0;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+
+    @media screen and (max-width: $break-md) {
+        &__background {
+            display: none;
+        }
+    }
+}
+
+.post {
+    $root: &;
+    width: 100%;
+    max-width: 870px;
+    margin: 0 0 50px auto;
+    &__cover {
+        height: 415px;
+        cursor: pointer;
+        overflow: hidden;
+        border-radius: 15px;
+        position: relative;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+    &__label {
+        top: 40px;
+        left: 0;
+        height: 60px;
+        max-width: 250px;
+        line-height: 60px;
+        position: absolute;
+        padding-left: 25px;
+        padding-right: 40px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        background-color: $primary-color;
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+    }
+    &__title {
+        cursor: pointer;
+        font-size: 28px;
+        margin-top: 20px;
+        text-transform: uppercase;
+        color: $font-color-light-t1;
+    }
+    &__text {
+        margin-top: 20px;
+    }
+    &__data {
+        display: flex;
+        margin-top: 40px;
+        align-items: center;
+    }
+    &__date {
+        color: $font-color-light-t2;
+    }
+    &__comments {
+        color: $font-color-light-t2;
+    }
+    &__separator {
+        margin: 0 30px;
+        color: $font-color-light-t2;
+    }
+    &__btn-group {
+        display: flex;
+        margin-top: 25px;
+        align-items: center;
+    }
+    &__btn-more {
+        width: 160px;
+        height: 58px;
+        cursor: pointer;
+        font-size: 18px;
+        border-radius: 29px;
+        color: $primary-color;
+        transition: $fast-transition;
+        background-color: transparent;
+        border: 1px solid $primary-color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover {
+            transition: $fast-transition;
+            color: $font-color-light-t2;
+            border: 1px solid $border-color;
+        }
+    }
+    &__btn-share {
+        width: 160px;
+        height: 58px;
+        font-size: 18px;
+        border-radius: 29px;
+        position: relative;
+        color: $font-color-light-t2;
+        transition: $fast-transition;
+        border: 1px solid $border-color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+            margin-right: 10px;
+        }
+        &:hover {
+            color: $primary-color;
+            transition: $fast-transition;
+            border: 1px solid $primary-color;
+        }
+    }
+    &__block-share {
+        width: 160px;
+        cursor: pointer;
+        position: relative;
+        &.active {
+            #{$root}__btn-facebook {
+                left: 185px;
+                transition-delay: 0.6;
+            }
+            #{$root}__btn-twitter {
+                left: 255px;
+                transition-delay: 0.4;
+            }
+            #{$root}__btn-goodread {
+                left: 325px;
+                transition-delay: 0.2;
+            }
+            #{$root}__btn-mail {
+                left: 395px;
+            }
+        }
+    }
+    &__social-title {
+        z-index: 1;
+        width: 160px;
+        height: 58px;
+        cursor: pointer;
+        font-size: 18px;
+        margin-left: 15px;
+        position: relative;
+        border-radius: 29px;
+        transition: $fast-transition;
+        color: $font-color-light-t2;
+        background-color: #ffffff;
+        border: 1px solid $border-color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .at-icon {
+            pointer-events: none;
+        }
+        span {
+            margin-left: 10px;
+            pointer-events: none;
+            transition: $fast-transition;
+        }
+    }
+    &__btn-social {
+        top: 0;
+        left: 100px;
+        width: 57px;
+        height: 57px;
+        display: flex;
+        border-radius: 50%;
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+        color: $primary-color;
+        border: 1px solid $primary-color;
+        transition: $fast-transition;
+        &:hover {
+            color: #ffffff;
+            background-color: $primary-color;
+        }
+        .at-icon {
+            font-size: 16px;
+        }
+    }
+
+    @media screen and (max-width: $break-sm) {
+        &__cover {
+            height: get-vw(200,415);
+        }
+        &__block-share {
+            width: auto;
+            display: flex;
+            &.active {
+                #{$root}__social-title {
+                    width: 58px;
+                    transition: $fast-transition;
+                    span {
+                        width: 0;
+                        margin-left: 0;
+                        overflow: hidden;
+                        transition: $fast-transition;
+                    }
+                }
+                #{$root}__btn-facebook {
+                    left: 80px;
+                }
+                #{$root}__btn-twitter {
+                    left: 145px;
+                }
+                #{$root}__btn-goodread {
+                    left: 210px;
+                }
+                #{$root}__btn-mail {
+                    left: 275px;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: $break-xs) {
+        &__comments {
+            margin-top: 5px;
+        }
+        &__btn-group {
+            display: block;
+            margin: 25px 0 0;
+        }
+        &__btn-more {
+            width: 250px;
+            margin: 0 auto;
+        }
+        &__block-share {
+            width: 250px;
+            margin: 20px auto 0;
+            &.active {
+                #{$root}__btn-facebook {
+                    left: 65px;
+                }
+                #{$root}__btn-twitter {
+                    left: 130px;
+                }
+                #{$root}__btn-goodread {
+                    left: 195px;
+                }
+                #{$root}__btn-mail {
+                    display: none;
+                }
+            }
+        }
+        &__social-title {
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+    @media screen and (max-width: 400px) {
+        &__data {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        &__separator {
+            display: none;
+        }
+    }
+}
